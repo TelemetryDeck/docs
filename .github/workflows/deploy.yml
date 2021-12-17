@@ -14,8 +14,8 @@ jobs:
       - uses: jnanadarshan/mkdocs-build-action@v0.24
       - uses: actions/upload-artifact@v2
         with:
-          name: dist
-          path: dist
+          name: docs
+          path: site
           retention-days: 1
 
   upload:
@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: dist
+          name: docs
       - uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
