@@ -1,0 +1,20 @@
+site_name: TelemetryDeck Documentation
+site_url: https://docs.telemetrydeck.com/
+theme:
+  name: material
+  features:
+    - content.tabs.link
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
