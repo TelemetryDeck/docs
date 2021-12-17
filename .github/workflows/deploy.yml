@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: jnanadarshan/mkdocs-build-action
+      - uses: jnanadarshan/mkdocs-build-action@v0.24
       - uses: actions/upload-artifact@v2
         with:
           name: dist
