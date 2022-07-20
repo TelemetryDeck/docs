@@ -6,7 +6,7 @@ tags:
   - Code
   - Kotlin
 testedOn: Android Studio 2021.1.1.21
-
+featured: true
 description: How to configure the TelemetryDeck SDK in Your Android Application
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Kotlin Package in your application.
 order: 3000

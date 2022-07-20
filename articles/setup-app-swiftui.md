@@ -4,6 +4,7 @@ tags:
   - Setup
   - Quickstart
   - Code
+featured: true
 testedOn: Xcode 12.2 & Swift 5.3
 description: How to configure TelemetryClient in SwiftUI based applications
 lead: In Scene-based SwiftUI applications, this is how you configure TelemetryClient
