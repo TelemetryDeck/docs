@@ -1,5 +1,6 @@
 ---
 title: Time intervals and relative time intervals
+order: 10000
 ---
 
 A TelemetryDeck query only always needs a specified time interval. You can either specify a specific time interval (such as "June 1st, 2022 to June 31st, 2022"), or you can use a relative time interval (such as "the last 30 days").

@@ -8,6 +8,7 @@ tags:
 TestedOn: Xcode 12.2 & Swift 5.3
 description: How to quickly get up and running with TelemetryDeck.
 lead: This document should get you up and running with TelemetryDeck as quickly as possible!
+order: 4000
 ---
 
 Let's send a signal to show the app has launched correctly. To do that, first, what is a signal?

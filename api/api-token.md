@@ -4,6 +4,7 @@ featured: true
 tags: advanced
 description: How to get a Bearer Token to authenticate against the TelemetryDeck API
 lead: To interact with the TelemetryDeck API, you'll have to supply a 🐻 bearer token with each request that authenticates you with the API servers. Treat the bearer token as a secret, and store it as safely as a password.
+order: 1
 ---
 
 {% note "Heads up!" %}

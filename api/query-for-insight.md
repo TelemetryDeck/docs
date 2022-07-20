@@ -1,5 +1,6 @@
 ---
 title: Get the query for an Insight
+order: 10
 ---
 
 ## Heads up!
