@@ -1,0 +1,101 @@
+---
+title: Sending Signals via HTTP Post
+tags: Signals
+description: A reference of all properties of the Signal Ingestion API
+lead: While we have SDKs available for Swift, Kotlin, JavaScript and Unity, developers who work with other languages and frameworks can also use TelemetryDeck by sending signals via HTTP POST request directly to our ingestion API. This is what our SDKs do.
+---
+
+This article will first show the minimal structure needed for a signal to send, and then talk about some of the optional extensions.
+
+## Ingest Endpoint
+
+Please send your signals as POST request to our ingestion server at `https://nom.telemetrydeck.com/v1/`, with the headers `Content-Type: application/json` and `charset=utf-8`.
+
+Here's an example in cURL:
+
+```bash
+curl -X POST "https://nom.telemetrydeck.com/v1/" \
+    -H "Content-Type: application/json; charset=utf-8" \
+    --data-raw "$body"
+```
+
+## Body Structure
+
+The post body should be an **array of JSON objects**, because you can send multiple signals at once. Each signal object should have at least these properties:
+
+- `appID` _(String)_: Your app's ID in TelemetryDeck (check the app settings to find that out)
+- `clientUser` _(String)_: The hash of some sort of non-changing identifier of your user. This can be their email address, user ID, an identifier you gathered from their phone, etc. You **need to pseudonymize this** with at least SHA256, otherwise you'll be in breach of the GDPR. We'll use this value to count users, so anything that distinguishes one of your users from the next is fine.
+- `sessionID` _(String)_: Any string that identifies the user's current session. We usually use a UUID that we regenerate when a new session starts (e.g. the user launches the app). If you don't want to count or track sessions, it's okay to add an empty string here.
+- `type` _(String)_: The signal type, usually the name of the event that caused the signal to send like `settingsShown` or `upgradeScreenOpened`.
+- `payload` _(Array of String)_: Optional metadata to send along with your signal. Note that this is not a dictionary, but instead strings that delimit key and value with a colon `:` character. See below for more info. If you don't want to send a payload, put an empty array here.
+- `isTestMode` _(Optional String, either `"true"` or `"false"`)_: Optionally mark the signal as a **Test Signal**. Test signals are only counted when the app is in test mode. See below for details. When this property is not present or anything other than `"true"` (as string, not as boolean), it will be set to `"false"` at ingestion time. We recommend setting this to `"true"` when your app running in development or debug mode.
+
+```json
+[
+  {
+    "isTestMode": "false",
+    "appID": "YOUR-APP-ID",
+    "clientUser": "sha256(CLIENT-USER-ID)",
+    "sessionID": "RANDOM-UUID",
+    "type": "appLaunchedSuccessfully",
+    "payload": ["platform:curl", "systemVersion:curl 7.77.0"]
+  }
+  // more signals here...
+]
+```
+
+## Payload Structure
+
+For reasons of mostly performance and database compatibility, the payload must not be a dictionary but instead an array of strings with a colon, like so:
+
+```json
+[
+  "platform:curl",
+  "systemVersion:curl 7.77.0",
+  "appVersion:1.3.4",
+  "locale:en_US"
+]
+```
+
+This means you cannot use a colon in the _key_ part of the payload. Using it in the _value_ part is fine, we only match the first colon in the string as the delimiter.
+
+(Note: This is a daft implementation and we will change this in the next version of the API to just accept a dict, but for now it is what it is.)
+
+## Extension: Default Payloads
+
+Our own implementations of the SDK will try and send these keys along with each signal. This might be a good way to start:
+
+- `platform`: e.g. `iOS` or `Android`
+- `systemVersion`: e.g. `iOS 15.3.0`
+- `majorSystemVersion`: e.g. `iOS 15`
+- `majorMinorSystemVersion`: e.g. `iOS 15.3`
+- `appVersion`: e.g. `1.2.4`
+- `buildNumber`: e.g. `235`
+- `modelName`: e.g. `iPhone 13 Pro Max Plus Ultra`
+- `architecture`: `x86-64`, `arm64`, or similar
+- `operatingSystem`: e.g. `iOS`
+- `locale`: e.g. `en_US`
+- `telemetryClientVersion`: e.g. `SwiftSDK 1.1.16`
+
+## Extension: Custom signal timestamp for Caching
+
+If you implement a caching solution where signals are not sent immediately in order to save battery or work around a network availability issue, you can store them locally and send them later.
+
+In that case it might be helpful to store the time at which the signal was triggered locally and pass it along to the server.
+
+To do this, you can optionally supply a `receivedAt` property for each signal. The value must be an ISO8601 string with time zone like so:
+
+```json
+[
+  {
+    "receivedAt": "2022-01-31T09:59:12.250723+00:00",
+    "appID": "YOUR-APP-ID"
+    // other properties here
+  }
+  // more signals here...
+]
+```
+
+Note that when the `receivedAt` property will be rounded down to hourly granularity on receiving.
+
+Dates that lie more than 24 hours in the past will be replaced by a date that lies exactly 24 hours in the past.
