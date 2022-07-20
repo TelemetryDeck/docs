@@ -1,4 +1,14 @@
-# Sending Signals from your App
+---
+title: Sending Signals
+featured: true
+tags:
+  - Setup
+  - Quickstart
+  - Code
+TestedOn: Xcode 12.2 & Swift 5.3
+description: How to quickly get up and running with TelemetryDeck.
+lead: This document should get you up and running with TelemetryDeck as quickly as possible!
+---
 
 Let's send a signal to show the app has launched correctly. To do that, first, what is a signal?
 
@@ -33,10 +43,12 @@ TelemetryManager.send(
     ])
 ```
 
-And you're done! You are now sending signals to the TelemetryDeck server. 
+And you're done! You are now sending signals to the TelemetryDeck server.
 
 ## Weee! We made it!
 
-You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention... a lot! 
+You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention... a lot!
 
-After a while, you can add a send call for each screen in your app, so you can see which screens are used most. I also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user of course). This way you can see which settings most of your users use. 
+After a while, you can add a send call for each screen in your app, so you can see which screens are used most. I also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user of course). This way you can see which settings most of your users use.
+
+<a href="/pages/insights-reference.html" class="btn btn-secondary btn-large">Read More about Insights in the Insights Reference Document &rarr;</a>
