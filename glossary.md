@@ -1,10 +1,11 @@
+---
 title: Glossary of Terms
-tags: Docs, Glossary
-Modified: 2022-07-15
+tags:
+  - Glossary
+  - intro
 description: A list of common terms used in the TelemetryDeck ecosystem and what they mean
 lead: A list of common terms used in the TelemetryDeck ecosystem and what they mean.
-Dripicon: dripicons-document
-Slug: glossary
+---
 
 TelemetryDeck
 : TelemetryDeck is a platform for collecting and visualizing data from apps and web apps. It is a powerful tool for building data-driven applications and dashboards, all while respecting the privacy of user privacy. Because of our _Double Hashing_ algorithm, TelemetryDeck is able to guarantee that no personal data is ever collected or stored, making TelemetryDeck a solution that is safe, trustworthy and 100% compatible with the GDPR and other privacy regulations.  
