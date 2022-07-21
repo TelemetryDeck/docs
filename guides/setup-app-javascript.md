@@ -15,7 +15,7 @@ To get started with TelemetryDeck, you need to include the TelemetryClient Packa
 - **With a simple script tag, similar to Google Analytics.** This is our recommended way to include the TelemetryClient Package into blogs and most websites.
 - **Using an NPM package directly.** We recommend this for developers who know what an NPM package is and are writing more complex apps.
 
-Be sure to also check out the [TelemeetryDeck JavaScript SDK on GitHub](https://github.com/TelemetryDeck/JavaScriptSDK).
+Be sure to also check out the [TelemetryDeck JavaScript SDK on GitHub](https://github.com/TelemetryDeck/JavaScriptSDK).
 
 ---
 
