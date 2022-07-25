@@ -1,5 +1,5 @@
 ---
-title: How To Find Out Which Operating System Your Users Are Using
+title: How to Find Out Which Operating System Your Users Are Using
 tags: Beginner, How-to, User-cohorts, Insights, Quickstart, Docs
 description: A guide on how to create an insight that shows all operating systems used by users
 lead: Insights around used operating systems help you with planning features, and to understand how technologically advanced your users are. This step-by-step guide explains how you can create and configure your insights
@@ -7,7 +7,7 @@ lead: Insights around used operating systems help you with planning features, an
 
 ## Step One: Navigate To Your App
 
-To create insights, you first need to create an app. If you have not created and linked your app yet, check out our guide [Making an Account](/pages/making-an-account.html) first.
+To create insights, you first need to create an app. If you have not created and linked your app yet, check out our guide [Making an Account](/docs/articles/making-account/) first.
 
 In your browser, navigate to the [dashboard](https://dashboard.telemetrydeck.com). There you will find a drop-down menu on the top left side, next to the TelemetryDeck logo. Choose your app from here.
 
