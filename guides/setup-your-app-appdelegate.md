@@ -7,7 +7,7 @@ tags:
 testedOn: Xcode 12.2 & Swift 5.3
 description: How to configure TelemetryClient in AppDelegate based applications
 lead: If you use `AppDelegate` to manage your app's life cycle, this is how you setup your application so it can send TelemetryDeck signals
-order: 12
+order: 120
 ---
 
 If you use `AppDelegate` to manage your app's life cycle, open the file `AppDelegate.swift` and look for the method `application(:didFinishLaunchingWithOptions:)`. It will probably look similar to this:

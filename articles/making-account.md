@@ -3,7 +3,6 @@ title: Making an Account
 tags: Docs, Setup, Quickstart, Beginner, How-to
 description: Register an account and create an organization
 lead: Let's register for an account, create an app, and set up your application so you can get started with receiving signals from your app!
-Dripicon: dripicons-lock-open
 ---
 
 ## Step One: Register an Account

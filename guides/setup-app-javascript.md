@@ -7,7 +7,7 @@ tags:
   - JavaScript
 description: How to configure the TelemetryDeck SDK in Your JavaScript Application or website
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your website or JS application.
-order: 30
+order: 300
 ---
 
 To get started with TelemetryDeck, you need to include the TelemetryClient Package in your website or JS application. You can do this in one of two ways:

@@ -8,7 +8,7 @@ featured: true
 testedOn: Xcode 12.2 & Swift 5.3
 description: How to configure TelemetryClient in Your Application
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Swift Package in your application.
-order: 10
+order: 100
 ---
 
 ## Get TelemetryClient
