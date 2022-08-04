@@ -14,6 +14,10 @@ TelemetryDeck also aims to be simple, easy to use, and easy to understand. You s
 App
 : In TelemetryDeck, an app is a reference to one of your released apps. The _app_ object's most important properties are its _App Identifier_, which uniquely references your app to the TelemetryDeck API, and its _App Name_, which is the name of your app.
 
+Organization
+: Because TelemetryDeck allows multiple users to share access to their apps, an _organization_ is a group of users who have access to the same apps.  
+If you belong to a company or non-profit, your organization name will usually be the name of that organization. If you're a single developer, feel free to choose a fun name for your organization, or just use your first and last name.
+
 App Identifier
 : A unique identifier for your app. This is used to reference your app to the TelemetryDeck API and when sending signals out of your app using the _TelemetryDeck Package_.
 
