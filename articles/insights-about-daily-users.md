@@ -5,7 +5,8 @@ description: A guide on how to create an insight that displays the number of dai
 lead: As creators of apps, the feeling of knowing that your app gets used is amazing. Here is our step-by-step guide for getting a handy insight into your daily active users' statistics!
 ---
 
-Insights of daily active users are the best way to see how your app is doing. You will know if your app is on track, you can get helpful information during specific periods (holidays, product launches, etc.), and just the general feeling of knowing your app gets used is not to be underestimated. 
+Insights of daily active users are the best way to see how your app is doing. You will know if your app is on track, you can get helpful information during specific periods (holidays, product launches, etc.), and just the general feeling of knowing your app gets used is not to be underestimated (it certainly gives us a warm glowy feeling ☺️). 
+
 We will help you set up your insight so you can track your users right away, privacy-friendly and anonymized!
 
 ## Step One: Navigate to Your App
