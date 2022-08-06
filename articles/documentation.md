@@ -7,7 +7,7 @@ order: 999999999
 
 ## Document Metadata
 
-All metadata for a documentation article is specified in the YAML header at the top of each markdown file (also called the frontmatter of the document). Most of the metadata is optional, but the `title` and `lead` are required:
+All metadata for a documentation page is specified in the YAML header at the top of its markdown file (also called the frontmatter of the document). Most of the metadata is optional, but the `title` and `lead` are required:
 
 ```yaml
 ---
@@ -37,21 +37,21 @@ order: 1337
 
 ### Title, Lead and Description
 
-The `title` string is how your article is titled in the left sidebar, at the top of the documentation page and in the "Getting Started" page, should it appear there.
+The `title` string is how the page is titled in the left sidebar, at the top of the documentation page and in the "Getting Started" page, should it appear there.
 
-The `lead` string is shown on the documentation page, right underneath the title. It is a short description of the article.
+The `lead` string is shown on the documentation page, right underneath the title. It is a short description of the documentation page.
 
 The `description` is used to generate the short descriptive text shown in the "Getting Started" page for `featured` pages. If not specified, the `lead` string is used.
 
 ### Search Engine Title and Description
 
-The `searchEngineTitle` string is used to generate the title of the search engine result for your article. If not specified, it defaults to the `title` string.
+The `searchEngineTitle` string is used to generate the title of the search engine result for the doc page. If not specified, it defaults to the `title` string.
 
-The `searchEngineDescription` string is used to generate the description of the search engine result for your article. If not specified, it defaults to the `description` string.
+The `searchEngineDescription` string is used to generate the description of the search engine result for the documentation page. If not specified, it defaults to the `description` string.
 
 ### Tags
 
-Tags are used to organize documentation articles in the sidebar and to link related articles together.
+Tags are used to organize documentation pages in the sidebar and to link related pages.
 
 One tag:
 
@@ -71,7 +71,7 @@ tags:
 
 Organizational tags like `docs` and `guides` are automatically applied. Use the `tags` metadata to add additional tags that link articles together, such as
 
-- The type of article (`setup`, `code`)
+- The type of page (`setup`, `code`)
 - The software stack or language (`swiftui`, `android`, `kotlin` etc.)
 - The experience level of the reader (`beginner`, `intermediate`, `advanced`)
 - The type of query (`filter`, `cohorts`, etc.)
