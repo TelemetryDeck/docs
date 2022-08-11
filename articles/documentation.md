@@ -1,7 +1,10 @@
 ---
+searchEngineTitle: "How To: TelemetryDeck Markup"
 title: How to write this Documentation
 tags: documentation
 lead: The TelemetryDeck documentation lives in a public Github repository. Here's how to contribute.
+description: Here's how to contribute to the public TelemetryDeck documentation.
+searchEngineDescription: Here's how to contribute to the public documentation for TelemetryDeck
 order: 999999999
 ---
 
