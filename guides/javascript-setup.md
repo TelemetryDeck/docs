@@ -1,11 +1,13 @@
 ---
-title: Setting Up Your JavaScript App or Website
+title: JavaScript Setup Guide
 tags:
   - Setup
-  - Quickstart
-  - Code
   - JavaScript
-description: How to configure the TelemetryDeck SDK in Your JavaScript Application or website
+  - Node
+  - NPM
+  - Websites
+featured: true
+description: How to include the TelemetryDeck SDK in Your JavaScript Application or website
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your website or JS application.
 order: 300
 ---
