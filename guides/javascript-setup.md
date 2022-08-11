@@ -19,6 +19,11 @@ To get started with TelemetryDeck, you need to include the TelemetryClient Packa
 
 Be sure to also check out the [TelemetryDeck JavaScript SDK on GitHub](https://github.com/TelemetryDeck/JavaScriptSDK).
 
+{% noteinfo "You need an App ID" %}
+
+Every application and website registered to TelemetryDeck has its own unique ID that we use to assign incoming signals to the correct app. To get started, create a new app in the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) and copy its ID.
+{% endnoteinfo %}
+
 ---
 
 ## Usage via Script tag
@@ -102,10 +107,6 @@ Please replace `YOUR_APP_ID` with the app ID you received from TelemetryDeck. If
 If you want to pass optional parameters to the signal being sent, add them to the optional payload object.
 
 ---
-
-## You need an App ID
-
-Every application and website registered to TelemetryDeck has its own unique ID that we use to assign incoming signals to the correct app. To get started, create a new app in the TelemetryDeck UI and copy its ID.
 
 ## Optional: User Identifiers
 
