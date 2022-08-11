@@ -1,5 +1,5 @@
 ---
-searchEngineTitle: "How To: TelemetryDeck Markup"
+meta_title: "How To: TelemetryDeck Markup"
 title: How to write this Documentation
 tags: documentation
 lead: The TelemetryDeck documentation lives in a public Github repository. Here's how to contribute.
@@ -32,8 +32,8 @@ testedOn: Xcode 12.2 & Swift 5.3
 featured: true
 description: How to configure TelemetryClient in SwiftUI based applications
 lead: In Scene-based SwiftUI applications, this is how you configure TelemetryClient
-searchEngineTitle: Setting up your SwiftUI application with TelemetryDeck
-searchEngineDescription: How to configure TelemetryDeck SDK in SwiftUI based applications
+meta_title: Setting up your SwiftUI application with TelemetryDeck
+meta_description: How to configure TelemetryDeck SDK in SwiftUI based applications
 order: 1337
 ---
 ```
@@ -48,9 +48,9 @@ The `description` is used to generate the short descriptive text shown in the "G
 
 ### Search Engine Title and Description
 
-The `searchEngineTitle` string is used to generate the title of the search engine result for the doc page. If not specified, it defaults to the `title` string.
+The `meta_title` string is used to generate the title of the search engine result for the doc page. If not specified, it defaults to the `title` string.
 
-The `searchEngineDescription` string is used to generate the description of the search engine result for the documentation page. If not specified, it defaults to the `description` string.
+The `meta_description` string is used to generate the description of the search engine result for the documentation page. If not specified, it defaults to the `description` string.
 
 ### Tags
 
