@@ -1,11 +1,13 @@
 ---
-title: Setting Up Your JavaScript App or Website
+title: JavaScript Setup Guide
 tags:
   - Setup
-  - Quickstart
-  - Code
   - JavaScript
-description: How to configure the TelemetryDeck SDK in Your JavaScript Application or website
+  - Node
+  - NPM
+  - Websites
+featured: true
+description: How to include the TelemetryDeck SDK in Your JavaScript Application or website
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your website or JS application.
 order: 300
 ---
@@ -16,6 +18,11 @@ To get started with TelemetryDeck, you need to include the TelemetryClient Packa
 - **Using an NPM package directly.** We recommend this for developers who know what an NPM package is and are writing more complex apps.
 
 Be sure to also check out the [TelemetryDeck JavaScript SDK on GitHub](https://github.com/TelemetryDeck/JavaScriptSDK).
+
+{% noteinfo "You need an App ID" %}
+
+Every application and website registered to TelemetryDeck has its own unique ID that we use to assign incoming signals to the correct app. To get started, create a new app in the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) and copy its ID.
+{% endnoteinfo %}
 
 ---
 
@@ -100,10 +107,6 @@ Please replace `YOUR_APP_ID` with the app ID you received from TelemetryDeck. If
 If you want to pass optional parameters to the signal being sent, add them to the optional payload object.
 
 ---
-
-## You need an App ID
-
-Every application and website registered to TelemetryDeck has its own unique ID that we use to assign incoming signals to the correct app. To get started, create a new app in the TelemetryDeck UI and copy its ID.
 
 ## Optional: User Identifiers
 
