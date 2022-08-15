@@ -1,6 +1,6 @@
 ---
 title: Apple App Privacy Details
-tags: Docs, Setup
+tags: setup
 description: Apple's App Store now requires developers to show a Privacy Details section. Here's how to fill out this section when you are using TelemetryDeck.
 lead: Apple's App Store now requires developers to show a Privacy Details section. How hard is it to comply with these guidelines when you're using TelemetryDeck for Analytics? Spoiler -- Super Easy! Here's how to fill out the assistant in App Store Connect when you are using TelemetryDeck.
 ---

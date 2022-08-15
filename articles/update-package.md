@@ -1,8 +1,8 @@
 ---
 title: How to update a Swift Package
 tags:
-  - Setup
-  - Package
+  - setup
+  - package
   - SDK
 testedOn: Xcode 13.1 & Swift 5.5
 description: Xcode doesn't update packages automatically. How do you tell Xcode to update to the newest version of a Swift Package? Or update all packages at once?
