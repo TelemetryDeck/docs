@@ -17,13 +17,9 @@ App Tracking Transparency (ATT) is an iOS 14.5 feature that requires apps to be 
 their users. For example, Twitter can still track how users use its app and website, but couldn't then track their
 usage of other companies’ apps without now getting permission first.
 
-According to Apple
+According to Apple in [User Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/):
 
-<blockquote class="theme-blockquote p-5 m-lg-5">
-    <div class="quote-icon-holder mb-2"><img src="/theme/images/quote-icon.svg" alt="quote"></div>
-    <p class="mb-0 font-italic">Tracking refers to the act of linking user or device data collected from your app with user or device data collected from other companies’ apps, websites, or offline properties for targeted advertising or advertising measurement purposes. Tracking also refers to sharing user or device data with data brokers.</p>
-    <footer class="blockquote-footer">Apple in <cite title="User Privacy and Data Use">User Privacy and Data Use</cite></footer>
-</blockquote>
+> Tracking refers to the act of linking user or device data collected from your app with user or device data collected from other companies’ apps, websites, or offline properties for targeted advertising or advertising measurement purposes. Tracking also refers to sharing user or device data with data brokers.
 
 What this means is that the **Tracking** part of App Tracking Transparency refers explicitly to **tracking users across
 apps**. Here are some more examples of tracking from the [User Privacy and Data Use page](https://developer.apple.com/app-store/user-privacy-and-data-use/):
