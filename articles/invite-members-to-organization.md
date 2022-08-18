@@ -1,11 +1,11 @@
 ---
 title: How to Invite Members to Your Organization
 tags:
-	- beginner
-	- how-to
-	- quickstart
-	- collaboration
-	- user-cohorts
+  - beginner
+  - how-to
+  - quickstart
+  - collaboration
+  - user-cohorts
 testedOn:
 featured:
 description: A guide on how to add members to your organization and collaborate

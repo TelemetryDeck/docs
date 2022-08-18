@@ -1,11 +1,11 @@
 ---
 title: How to Track the Number of Daily Users in Your App
 tags:
-	- beginner
-	- how-to
-	- quickstart
-	- user-cohorts
-	- insights
+  - beginner
+  - how-to
+  - quickstart
+  - user-cohorts
+  - insights
 testedOn:
 featured:
 description: A guide on how to create an insight that displays the number of daily users

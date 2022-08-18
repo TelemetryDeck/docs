@@ -1,11 +1,11 @@
 ---
 title: How to Find Out Which Operating System Your Users Are Using
 tags:
-	- beginner
-	- how-to
-	- quickstart
-	- user-cohorts
-	- insights
+  - beginner
+  - how-to
+  - quickstart
+  - user-cohorts
+  - insights
 testedOn:
 featured:
 description: A guide on how to create an insight that shows all operating systems used by users

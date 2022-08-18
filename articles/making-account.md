@@ -1,10 +1,10 @@
 ---
 title: Making an Account
 tags:
-	- setup
-	- quickstart
-	- beginner
-	- how-to
+  - setup
+  - quickstart
+  - beginner
+  - how-to
 testedOn:
 featured:
 description: Register an account and create an organization

@@ -1,10 +1,10 @@
 ---
 title: Create Custom Dashboards With Insight Groups
 tags:
-	- setup
-	- beginner
-	- quickstart
-	- insights
+  - setup
+  - beginner
+  - quickstart
+  - insights
 testedOn:
 featured: 
 description: Getting started with custom dashboards

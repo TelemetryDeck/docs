@@ -1,8 +1,8 @@
 ---
 title: TelemetryDeck Swift Client Reference
 tags:
-	- TelemetryManager
-	- SwiftClient
+  - TelemetryManager
+  - SwiftClient
 testedOn: Xcode 12.4 & Swift 5.3
 description: Reference documentation for the Swift Client for TelemetryDeck-using apps
 lead: The TelemetryDeck Swift Client is a Swift Package to include in your app
