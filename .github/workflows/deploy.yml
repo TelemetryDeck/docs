@@ -11,5 +11,5 @@ jobs:
               owner: 'TelemetryDeck',
               repo: 'website',
               workflow_id: 'azure-deploy.yml',
-              ref: 'main'
+              ref: 'eleventy'
             })
