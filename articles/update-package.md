@@ -21,7 +21,7 @@ With that in mind, here's how to manually update a Swift package using Xcode:
 
 ## How to update a Swift Package in XCode
 
-<img class="img img-fluid shadow rounded" alt="A screenshot of Xcode. The user has right-clicked on the TelemetryClient Package and selected 'Update Package'." src="/images/updatepackage.png">
+[Screenshot missing]
 
 Updating packages in Xcode can be done using one of two ways. If you want to just update a single package individually – which we recommend by the way – do this:
 
