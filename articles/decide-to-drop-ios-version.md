@@ -22,19 +22,7 @@ Instead of using these absolute rules, consider using a data-based heuristic app
 
 The TelemetryDeck SDK by default tries to collect data about the user's operating system version. You can then use this data to decide when to drop the OS version. Our recommendation is: drop a version when less than **10% of your users** are using it.
 
-To find out which percentage of your users are using a certain OS version, use a **Breakdown Insight** (also known as a **Top N Insight**). Then you'll have multiple options for the breakdown key:
-
-<div class="row my-5">
-<div class="col">
-<img class="img img-fluid shadow rounded" src="/images/topNSystemVersions.png">
-</div>
-<div class="col">
-<img class="img img-fluid shadow rounded" src="/images/topNMajorMinorVersions.png">
-</div>
-<div class="col">
-<img class="img img-fluid shadow rounded" src="/images/topNMajorVersions.png">
-</div>
-</div>
+To find out which percentage of your users are using a certain OS version, use a **Breakdown Insight** (also known as a **Top N Insight**). Then you'll have multiple options for the breakdown key.
 
 ### Top N `systemVersion`
 
