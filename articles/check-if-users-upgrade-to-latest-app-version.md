@@ -31,18 +31,22 @@ To create a group in the dashboard, look at the left sidebar. Here you can find 
 While in your group, create a new insight field. Choose `App Versions` from our templates. Now you can get started.
 We recommend using the donut chart or the table view. Make sure the following settings are selected and filled:
 
-#### Signal
--Signal Type: `All Signals`
--Granularity: any of the given options
+**Signal**
 
-#### Query Type
--Query Type: `Top N`
+- Signal Type: `All Signals`
+- Granularity: any of the given options
 
-#### Top N Configuration
--Breakdown Key: `appVersion`
+**Query Type**
 
-#### Filters
--You can customize your filter depending on your needs. Make sure the **field is not empty**, and it contains at least an empty dictionary `{}`.
+- Query Type: `Top N`
+
+**Top N Configuration**
+
+- Breakdown Key: `appVersion`
+
+**Filters**
+
+- You can customize your filter depending on your needs. Make sure the **field is not empty**, and it contains at least an empty dictionary `{}`.
 
 ## The Importance of User Upgrade Behavior
 
@@ -55,6 +59,3 @@ On the other hand, if they tend not to upgrade, you might want to make it a prio
 With API-driven apps, it is also exciting to see what endpoints get used the most and which might even be deprecated.
 
 If a small user group is stuck on an older version, consider investigating what keeps them from upgrading. These insights also help you further improve your update process, allowing you to see which method works best and which does not.
-
-   
-
