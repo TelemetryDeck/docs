@@ -2,7 +2,7 @@
 title: Apple App Privacy Details
 tags: setup
 description: Apple's App Store now requires developers to show a Privacy Details section. Here's how to fill out this section when you are using TelemetryDeck.
-lead: Apple's App Store now requires developers to show a Privacy Details section. How hard is it to comply with these guidelines when you're using TelemetryDeck for Analytics? Spoiler -- Super Easy! Here's how to fill out the assistant in App Store Connect when you are using TelemetryDeck.
+lead: Apple's App Store now requires developers to show a Privacy Details section. Here's how to fill out this section when you are using TelemetryDeck.
 ---
 
 Starting December 8, 2020, the Apple App Store will require developers to include a section on [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/) with their App Store listing.
@@ -14,7 +14,7 @@ Since TelemetryDeck's analytics are private by default, you can include this inf
 
 This means your app will get an excellent privacy rating.
 
-<img class="img img-fluid shadow rounded mb-3 mt-3" alt="A screenshot of Apple's Privacy Overview" src="/images/privacy-overview.png">
+![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
 
 ## How do I start?
 
@@ -32,13 +32,14 @@ In the second screen, scroll down until you see the **Identifiers** section.
 
 In TelemetryDeck's **default mode**, with no user identifier specified, check the **Device ID** checkmark. This is what identifies individual users to TelemetryDeck.
 
-<div class="alert alert-secondary" role="alert">
-<h4 class="alert-heading">Note</h4>
-<p><small>In case you use TelemetryDeck in a more advanced way where you supply a custom user identifier, you'll need to think about this for a second:</small></p>
-<p><small>If you instead specify a User Identifier such as email address or username to TelemetryDeck, check instead the <strong>User ID</strong> checkmark. The identifier is only transmitted as a hash, but it still counts as a user identifier.</small></p>
-<p><small>If you instead are purposefully disabling user tracking by handing the same string to TelemetryDeck for each user, you don't need to check any of the checkboxes in the <strong>Identifiers</strong> section.</small></p>
+{% noteinfo "Other Types of Identifiers" %}
 
-</div>
+In case you use TelemetryDeck in a more advanced way where you supply a custom user identifier, you'll need to think about this for a second:
+
+- If you instead specify a User Identifier such as email address or username to TelemetryDeck, check instead the **User ID** checkmark. The identifier is only transmitted as a hash, but it still counts as a user identifier.
+- If you instead are purposefully disabling user tracking by handing the same string to TelemetryDeck for each user, you don't need to check any of the checkboxes in the **Identifiers** section.
+
+{% endnoteinfo %}
 
 ### Usage Data
 
