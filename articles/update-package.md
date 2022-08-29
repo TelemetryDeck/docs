@@ -13,24 +13,7 @@ Even if you tell XCode to accept all versions of a Swift package up to the next 
 
 Every time you add a Swift package, the Swift Package Manager will download the newest version of that package that conforms to your version requirements, and add a reference to the exact version number to its [Package.resolved](https://github.com/apple/swift-package-manager/blob/main/Documentation/Usage.md#resolving-versions-packageresolved-file) file. Some people check this file into version control – in that case, this ensures that the whole team is working with the exact same version of the package.
 
-<div class="row">
-<div class="col-md">
-<p>
-While most Swift packages adhere to a <a href="https://semver.org">Semantic Versioning Scheme</a> that promises that no breaking changes occur in a point release, sometimes accidents still happen: A bug will slip into the newest version, or a change will break compatibility with your code. This is why Swift Package Manager, like most package managers, pins down the exact version being used in the <code>Package.resolved</code> file, and expects you to update your packages manually. 
-</p>
-</div>
-<div class="col-md" style="font-size: 0.8rem;">
-<div class="text-white rounded shadow-sm p-3" style="background:#6c757d;">
-<img src="/images/Mac App 512pt@2x.png" width="88" /> 
-<p>
-<strong>Hi, we're TelemetryDeck.</strong> Need analytics for your Swift app? Install our tiny Swift Package and get privacy-conscious analytics for free (except if your app is huge). 
-</p>
-<p>
-<a class="btn btn-sm btn-gradient text-white" href="https://telemetrydeck.com/pages/know-your-users.html?source=update-package">Learn more...</a>
-</p>
-</div>
-</div>
-</div>
+While most Swift packages adhere to a <a href="https://semver.org">Semantic Versioning Scheme</a> that promises that no breaking changes occur in a point release, sometimes accidents still happen: A bug will slip into the newest version, or a change will break compatibility with your code. This is why Swift Package Manager, like most package managers, pins down the exact version being used in the <code>Package.resolved</code> file, and expects you to update your packages manually.
 
 When updating manually, you can run the update at a time of your choosing. This ensures that you are aware that something in your code has changed, and you can test your application and check if everything is still working as expected.
 
@@ -38,7 +21,7 @@ With that in mind, here's how to manually update a Swift package using Xcode:
 
 ## How to update a Swift Package in XCode
 
-<img class="img img-fluid shadow rounded" alt="A screenshot of Xcode. The user has right-clicked on the TelemetryClient Package and selected 'Update Package'." src="/images/updatepackage.png">
+[Screenshot missing]
 
 Updating packages in Xcode can be done using one of two ways. If you want to just update a single package individually – which we recommend by the way – do this:
 

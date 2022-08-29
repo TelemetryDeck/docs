@@ -10,7 +10,7 @@ lead: The TelemetryDeck Swift Client is a Swift Package to include in your app
 
 ## Include the Swift Client in your Xcode Project
 
-See the Article [Setting up your App](/pages/setting-up-your-application.html) on how to set up your app to use the TelemetryDeck Swift Client.
+See the [Swift Guide](/docs/guides/swift-setup/) on how to set up your app to use the TelemetryDeck Swift Client.
 
 ## Initialization
 
