@@ -32,13 +32,14 @@ In the second screen, scroll down until you see the **Identifiers** section.
 
 In TelemetryDeck's **default mode**, with no user identifier specified, check the **Device ID** checkmark. This is what identifies individual users to TelemetryDeck.
 
-<div class="alert alert-secondary" role="alert">
-<h4 class="alert-heading">Note</h4>
-<p><small>In case you use TelemetryDeck in a more advanced way where you supply a custom user identifier, you'll need to think about this for a second:</small></p>
-<p><small>If you instead specify a User Identifier such as email address or username to TelemetryDeck, check instead the <strong>User ID</strong> checkmark. The identifier is only transmitted as a hash, but it still counts as a user identifier.</small></p>
-<p><small>If you instead are purposefully disabling user tracking by handing the same string to TelemetryDeck for each user, you don't need to check any of the checkboxes in the <strong>Identifiers</strong> section.</small></p>
+{% noteinfo "Other Types of Identifiers" %}
 
-</div>
+In case you use TelemetryDeck in a more advanced way where you supply a custom user identifier, you'll need to think about this for a second:
+
+- If you instead specify a User Identifier such as email address or username to TelemetryDeck, check instead the **User ID** checkmark. The identifier is only transmitted as a hash, but it still counts as a user identifier.
+- If you instead are purposefully disabling user tracking by handing the same string to TelemetryDeck for each user, you don't need to check any of the checkboxes in the **Identifiers** section.
+
+{% endnoteinfo %}
 
 ### Usage Data
 
