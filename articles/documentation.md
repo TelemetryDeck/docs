@@ -156,6 +156,29 @@ and [links](https://www.markdownguide.org/basic-syntax/#link).
 1. are just numbers
 ```
 
+## Images
+
+To display an image in a docs article, add it to the `images` directory. You can then link it using regular markdown image syntax, adding `/docs/images/` before the images' name.
+
+Example: You just added the file `privacy-overview.png` to the `images` folder. You can now display that image like so:
+
+```markdown
+![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
+```
+
+The first part is the image's alt text. The second part is the path (`/docs/images/`) and the image file name `privacy-overview.png`.
+
+Here's what it looks like:
+
+![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
+
+{% notewarning "Image File Locations" %}
+
+Image files need to live in the `images` directory at the root of the `docs` repository. Image files that are elsewhere in the file hierarchy will be ignored.
+
+You need to prefix `/docs/images/` to the path when linking to the image, since the Docs repository lives inside a `/docs` folder on deployment.
+{% endnotewarning %}
+
 ## Code Blocks
 
 Code blocks begin with three backticks (\`) and end with three backticks (\`). On the same line as the opening backticks, you **must** specify the programming language of the code block.
