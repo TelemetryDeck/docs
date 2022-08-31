@@ -9,8 +9,8 @@ testedOn:
 featured: 
 description: Getting started with custom dashboards
 lead: Customizing your dashboard helps you get a better overview of the signals you are most interested in - so let's have a look at how to configure them!
-searchEngineTitle: How to Create Custom Dashboards With Insight Groups
-searchEngineDescription: Set up your dashboard with insight groups that will give you a useful overview and will lead to better decision making and faster reaction time on your end.
+searchEngineTitle:
+searchEngineDescription: Set up your dashboard with insight groups - leading to better decision making and faster reaction time on your end.
 order:
 ---
 

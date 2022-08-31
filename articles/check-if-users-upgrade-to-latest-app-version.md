@@ -8,8 +8,8 @@ tags:
   - insights
 description: From your vision into the app - Let's find out if your users update to the newest version and make those changes worth it.
 lead: Do users like the newest features? What services can be shut down? And do people install security updates? - Whatever the occasion, getting insights into the update behavior of your users is a helpful and a compelling way to ensure you hit your user's needs.
-searchEngineTitle: How to Detect if Users Upgrade to the Latest App Version
-searchEngineDescription: From your vision into the app - Let's find out if your users update to the newest app version and the reasons behind it.
+searchEngineTitle:
+searchEngineDescription: Are your users updating to the newest app version? Let's find out the reason behind it and ways to improve upgrade behavior.
 ---
 
 ## Use Our App Overview

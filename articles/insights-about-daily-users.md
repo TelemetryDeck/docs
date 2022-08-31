@@ -10,8 +10,8 @@ testedOn:
 featured:
 description: A guide on how to create an insight that displays the number of daily users
 lead: As creators of apps, the feeling of knowing that your app gets used is amazing. Here is our step-by-step guide for getting a handy insight into your daily active users' statistics!
-searchEngineTitle:
-searchEngineDescription:
+searchEngineTitle: Track the Number of Daily Active Users in Your App
+searchEngineDescription: A guide on how to create an insight that displays the number of daily active users (DAU).
 order:
 ---
 

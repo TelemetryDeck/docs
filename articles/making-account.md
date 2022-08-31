@@ -9,8 +9,8 @@ testedOn:
 featured:
 description: Register an account and create an organization
 lead: Let's register for an account, create an app, and set up your application so you can get started with receiving signals from your app!
-searchEngineTitle:
-searchEngineDescription:
+searchEngineTitle: Create a TelemetryDeck Account
+searchEngineDescription: Go to the TelemetryDeck dashboard. Click on Register > Enter your details > Enter a name for your organization...
 order:
 ---
 

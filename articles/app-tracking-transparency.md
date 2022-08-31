@@ -1,10 +1,12 @@
 ---
-title: How App Tracking Transparency affects App Developers
+title: How App Tracking Transparency Affects App Developers
 tags:
   - privacy
   - ATT
 description: How iOS 14.5 is changing the playing field for App Developers and how it affects you.
 lead: With iOS 14.5, Apple is introducing App Tracking Transparency, a new feature to make sure apps and services are not tracking users between apps. Here's how that affects app developers
+searchEngineTitle: App Tracking Transparency and the Impact on Developers
+searchEngineDescription: How iOS 14.5 App Tracking Transparency (ATT) is changing the rule book for App Developers and how it affects you.
 ---
 
 As Apple is introducing this newest privacy feature, app developers will have to inform themselves whether the change

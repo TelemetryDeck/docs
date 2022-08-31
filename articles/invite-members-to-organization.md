@@ -11,7 +11,7 @@ featured:
 description: A guide on how to add members to your organization and collaborate
 lead: You have more than one person working on your app and want them to have access to all the insights? Great! This guide will tell you everything you need to know about adding new members to your organization.
 searchEngineTitle:
-searchEngineDescription: Learn how to add new members to your organization and share insights with them.
+searchEngineDescription: Learn how to add new members to your organization. Share insights and important changes by inviting them easily.
 order:
 ---
 
