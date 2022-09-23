@@ -192,7 +192,7 @@ Here's the final funnel query in all it's glory:
       {
         "dimension": "appID",
         "type": "selector",
-        "value": "B97579B6-FFB8-4AC5-AAA7-DA5796CC5DCE"
+        "value": "YOUR-APP-ID"
       },
       {
         "dimension": "isTestMode",
