@@ -13,7 +13,7 @@ searchEngineDescription: This is a quick overview on how to create funnels, or c
 order: 1000
 ---
 
- This article explains the thought process on how to create funnel-type queries; scroll to the bottom for a complete example.
+This article explains the thought process on how to create funnel-type queries; scroll to the bottom for a complete example.
 
 ## Think about your funnel stages
 
@@ -39,7 +39,7 @@ Alternatively, you can have more vague signal types such as `view` and `event` a
 }
 ```
 
-This is all very much up to you and how you set up your signals in the first place – it might require some experimentation with queries until you settle for good ones. For the rest of this example, we will use our two steps of `appLaunchedByNotification` and `dataEntered` as examples.
+This is all up to you and how you set up your signals in the first place–it might require some experimentation with queries until you settle for good ones. For the rest of this example, we will use our two steps of `appLaunchedByNotification` and `dataEntered` as examples.
 
 Once you have an idea how to express the stages of your funnel, we can write the individual aspects of our query:
 
@@ -73,7 +73,7 @@ We need a `groupBy` query with no explicit dimensions and we'll just chuck in ou
 
 ## Filters
 
-For our filters, we want to grab all signals that might be relevant for the funnel. This means filtering for the app ID, for testmode, and all the signals that are interesting for the different stages of the funnel. In our example, we can use an outer `and` filter to select `appID` and `isTestMode` and our inner `or` filter.
+For our filters, we want to grab all signals that might be relevant for the funnel. This means filtering for the app ID, for test mode, and all the signals that are interesting for the different stages of the funnel. In our example, we can use an outer `and` filter to select `appID` and `isTestMode` and our inner `or` filter.
 
 ```json
 {
@@ -106,11 +106,11 @@ For our filters, we want to grab all signals that might be relevant for the funn
 
 ## Aggregations
 
-We are going to use aggregations to split up (or aggregate) the signals into different buckets, and count them by `clientUser` which is the field for TelemetryDeck's user identifier. We're using Theta Sketches to count the number of different users for the funnel stage.
+We're going to use aggregations to split up (or aggregate) the signals into different buckets, and count them by `clientUser` which is the field for TelemetryDeck's user identifier. We're using Theta Sketches to count the number of different users for the funnel stage.
 
 {% noteinfo "What's a theta sketch?" %}
 
-A theta sketch is a probabilistic data structure used for the [count-distinct problem](https://en.wikipedia.org/wiki/Count-distinct_problem). It allows us to very quickly count elements in sets, such as the set of users in the aggregation buckets.
+A theta sketch is a probabilistic data structure used for the [count-distinct problem](https://en.wikipedia.org/wiki/Count-distinct_problem). It allows us to quickly count elements in sets, such as the set of users in the aggregation buckets.
 
 {% endnoteinfo %}
 
@@ -145,13 +145,13 @@ A theta sketch is a probabilistic data structure used for the [count-distinct pr
 ]
 ```
 
-## Post Aggregation
+## Post aggregation
 
 After the aggregation stage, we will have two sets of users: users who sent the `appLaunchedByNotification` signal at least once, and users who sent the `dataEntered` signal at least once.
 
-This might be enough for simpler use cases, but we have one more expectation for our funnel: we expect the second stage uniquely to consist of users who sent **both** analytics signals. For example, some users might not have come from the `appLaunchedByNotification` signal, but instead launched the app from the home screen, sending the `appLaunchedFromHomeScreen` signal instead. We don't want to count data entry for these users, so we'll have to discard them.
+This is enough for simpler use cases, but there is one more expectation for the funnel: we expect the second stage uniquely to consist of users who sent **both** analytics signals. For example, some users might not have come from the `appLaunchedByNotification` signal, but instead launched the app from the home screen, sending the `appLaunchedFromHomeScreen` signal instead. We don't want to count data entry for these users, so we'll have to discard them.
 
-To do that, we are calculating the _intersection_ of the two aggregation buckets generated in the previous step, discarding all users that are not in both buckets.
+To do that, we're calculating the _intersection_ of the two aggregation buckets generated in the earlier step, discarding all users that aren't in both buckets.
 
 ```json
 [
