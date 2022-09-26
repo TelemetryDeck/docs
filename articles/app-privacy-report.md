@@ -9,6 +9,8 @@ searchEngineDescription: What is the iOS and iPadOS App Privacy Report? And how 
 
 ## What Is the App Privacy Report?
 
+This is a no good chagne that will be hopefulle fund by reviewdog
+
 Starting in iOS 15.2, the operating system collects all domains that are contacted by an app. The App Privacy Report provides users with a summary of this information. The list shows: Which app has contacted which domain and how often. Also interesting: The report shows how often an app has requested the microphone, camera, GPS locations, photos and contacts.
 
 The purpose of the App Privacy Report is to make it easier for users to identify unfair app practices. For example, thanks to the new report, you can see if you have installed an app that constantly shares your location or if an app matches contacts from your address book.
