@@ -13,6 +13,6 @@ jobs:
             await github.rest.actions.createWorkflowDispatch({
               owner: 'TelemetryDeck',
               repo: 'website',
-              workflow_id: 'azure-deploy.yml',
+              workflow_id: 'trigger-content-change.yml',
               ref: 'eleventy'
             })
