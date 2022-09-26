@@ -13,7 +13,7 @@ searchEngineDescription: This is a quick overview on how to create funnels, or c
 order: 1000
 ---
 
- This article explains the thought process on how to create funnel-type queries; scroll to the bottom for a complete example.
+ This article explains the thought process on how to create funnel-type queries; scroll to the bottom for a complete example. 🧑‍💻
 
 ## Think about your funnel stages
 
