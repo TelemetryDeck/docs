@@ -1,0 +1,5 @@
+TelemetryDeck
+noteinfo
+endnoteinfo
+notewarning
+endnotewarning

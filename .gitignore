@@ -129,4 +129,7 @@ dmypy.json
 .pyre/
 site/
 .DS_Store
-/styles
+/.styles/Readability
+/.styles/proselint
+/.styles/Microsoft
+/.styles/alex
