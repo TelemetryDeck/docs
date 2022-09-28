@@ -5,13 +5,10 @@ tags:
   - quickstart
   - beginner
   - how-to
-testedOn:
-featured:
 description: Register an account and create an organization
 lead: Let's register for an account, create an app, and set up your application so you can get started with receiving signals from your app!
 searchEngineTitle: Create a TelemetryDeck Account
-searchEngineDescription: Go to the TelemetryDeck dashboard. Click on Register > Enter your details > Enter a name for your organization...
-order:
+searchEngineDescription: Register an account now and create an organization in the TelemetryDeck dashboard.
 ---
 
 ## Step One: Register an Account
