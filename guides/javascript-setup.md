@@ -73,7 +73,7 @@ td.push(["signal", { route: "some/page/path" }]);
 After installing the package via NPM, use it like this:
 
 ```js
-import { TelemetryDeck } from "telemetry-deck";
+import { TelemetryDeck } from '@telemetrydeck/sdk';
 
 const td = new TelemetryDeck({ app: YOUR_APP_ID, user: YOUR_USER_IDENTIFIER });
 
