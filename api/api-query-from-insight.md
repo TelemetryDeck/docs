@@ -14,11 +14,11 @@ Officially, we only allow API access for users in our Tier 2 Pricing tier and ab
 
 ## Authorization
 
-You need need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](api-token.html) explains how to get a Bearer Token.
+You need need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token]([api-token.html](/docs/api/api-token/)) explains how to get a Bearer Token.
 
 ## TelemetryDeck Query Language
 
-TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. To get the data for an insight, we have to get its query first. You can then [execute the query](api-run-query.html) and get the results.
+TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. To get the data for an insight, we have to get its query first. You can then [execute the query](/docs/api/api-run-query/) and get the results.
 
 ## Time intervals and relative time intervals
 
@@ -51,7 +51,7 @@ Then use that ID to generate an HTTP POST to the API. The POST body needs to be 
 
 Here's an example query:
 
-```
+```text
 POST /api/v3/insights/<insight-id>/query/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Content-Type: application/json
@@ -129,4 +129,4 @@ This will generate and return a complete query for the insight you specified:
 }
 ```
 
-You can [execute the query](api-run-query.html) to get its results.
+You can [execute the query](/docs/api/api-run-query/) to get its results.
