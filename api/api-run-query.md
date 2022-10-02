@@ -32,7 +32,7 @@ To submit your query to the API, POST it to the `/api/v3/query/calculate-async/`
 
 Request:
 
-```
+```text
 POST /api/v3/query/calculate-async/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Content-Type: application/json
@@ -109,12 +109,10 @@ This API endpoint will tell you if your query is finished or still running. It w
 - `successful` - The query has finished successfully. You can now retrieve the results.
 - `failed` - The query has failed. There will be a second key, `error` which will contain a description of the error.
 
-```
-
+```text
 GET /api/v3/task/<task-id>/status/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Host: api.telemetrydeck.com
-
 ```
 
 Response:
@@ -129,7 +127,7 @@ Response:
 
 Once your query task status is `successful`, you can retrieve the results.
 
-```
+```text
 GET /api/v3/task/55b3487da8018369/value/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Host: api.telemetrydeck.com
