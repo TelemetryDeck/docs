@@ -62,7 +62,7 @@ Host: api.telemetrydeck.com
 
 The response for this should look like this:
 
-````json
+```json
 {
   "email": "you@example.com",
   "emailIsVerified": true,
