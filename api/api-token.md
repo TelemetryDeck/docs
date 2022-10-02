@@ -77,6 +77,7 @@ The response for this should look like this:
   },
   "receiveReports": "weekly"
 }
+```
 
 ### Example 2: Retrieving your user information
 
@@ -86,7 +87,7 @@ As an example, lets retrieve your user information using the API:
 GET /api/v1/users/me HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Host: api.telemetrydeck.com
-````
+```
 
 The response for this should look like this:
 
