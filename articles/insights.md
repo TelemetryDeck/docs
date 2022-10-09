@@ -35,7 +35,8 @@ Signals have a **type**, which is the name of the signal, such as `AppLaunchedVi
 
 Calculating insight's data will yield several, for lack of a better word, rows of data, with each line having a title (either a string or a date) and a result (either a string or a number).
 
-Here are some examples of what a line of data could be:  
+Here are some examples of what a line of data could be:
+
 - a time series with each line representing a date, and the number of active users on that date
 - a breakdown of the usage of a feature, with one line "enabled" and the number of users who have that feature enabled, and one line called "disabled"
 - a single line for the active users in the current month
@@ -75,7 +76,7 @@ Whenever you choose TopN as a query type, you can configure it under _TopN Confi
 - TopN pairs well with the [Donut Chart](#donut-chart) as a Chart Type.
 
 - If you're interested in the number of users per e.g. system version instead of the number of signals, enable the _unique by user_ option in _Signal Type_.
-{% endnoteinfo %}
+  {% endnoteinfo %}
 
 ### Filters
 
@@ -101,7 +102,7 @@ No matter the data you want to get insight into, there is always a chart type th
 
 ---
 
-![An example of a table chart](/docs/images/table-chart.png)
+![An example of a table chart](/docs/images/table-chart.PNG)
 
 **Table**
 
@@ -111,7 +112,7 @@ If only one line of data is returned, that line will be displayed in large type.
 
 ---
 
-![An example of a table chart](/docs/images/bar-chart.png)
+![An example of a table chart](/docs/images/bar-chart.PNG)
 
 **Bar Chart**
 
@@ -119,7 +120,7 @@ It will display the query result as a vertical bar chart, one bar per line of da
 
 ---
 
-![An example of a table chart](/docs/images/line-chart.png)
+![An example of a table chart](/docs/images/line-chart.PNG)
 
 **Line Chart**
 
@@ -127,7 +128,7 @@ This chart will display the query result as a line chart, one bar per line of da
 
 ---
 
-![An example of a table chart](/docs/images/donut-chart.png)
+![An example of a table chart](/docs/images/donut-chart.PNG)
 
 **Donut Chart**
 
