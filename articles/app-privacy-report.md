@@ -49,4 +49,3 @@ Analytics is important and privacy is important. The app privacy report lets you
 
 Why not [try TelemetryDeck now](https://dashboard.telemetrydeck.com/registration/organization?source=doc_att)? It's free and easy to start, and your users' privacy will thank you! 😊
 
-<a class="nav-btn btn btn-gradient text-white" href="https://dashboard.telemetrydeck.com/registration/organization?source=doc_att">Try out TelemetryDeck Now</a>
