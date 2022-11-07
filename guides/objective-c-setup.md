@@ -110,7 +110,7 @@ And you're done! You are now sending signals to the TelemetryDeck server (the si
 
 {% notewarning "When running from Xcode, you're sending testing signals" %}
 
-If you app is built in `DEBUG` configuration (that is running from Xcode), your signals will be tagged as **Testing Signals**, meaning that you can filter them out later. You'll see them show up in the TelemetryDeck Dashboard when it's set to **Test Mode**.
+If you app is built in `DEBUG` configuration (that means running from Xcode), your signals will be tagged as **Testing Signals**, meaning that you can filter them out later. You'll see them show up in the TelemetryDeck Dashboard when it's set to **Test Mode**.
 {% endnotewarning %}
 
 ## You're all set!
