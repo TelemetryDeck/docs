@@ -82,19 +82,19 @@ Let's send a signal to show the app has launched correctly.
 
 Signals represent an **event** or a **view** that happened in your app, which is used by a **user**. Signals consist of these parts:
 
-- **Signal Type**–A string that indicates which kind of event happened
-- **Metadata Payload**–A dictionary of additional data about your app or the event triggering the signal
+- **Signal Type**: A string that indicates which kind of event happened
+- **Metadata Payload**: A dictionary of additional data about your app or the event triggering the signal
 
 See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
 {% endnoteinfo %}
 
-See the [TelemetryDeck SDKs `README.md` file](https://github.com/TelemetryDeck/SwiftClient/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
+See the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftClient/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
 
 ```objc
 [TelemetryManager send:@"applicationDidFinishLaunching"];
 ```
 
-Aaaand done. This is all you need to send a signal. You do not need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add custom metadata payload, add it to the function call like as a dictionary.
+We're done. This is all you need to send a signal. You don't need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add custom metadata payload, add it to the function call like as a dictionary.
 
 This is helpful for additional parameters for filtering or grouping signals. We'll auto add some metadata for you, like the app version, device model, etc.
 
@@ -110,7 +110,7 @@ And you're done! You are now sending signals to the TelemetryDeck server (the si
 
 {% notewarning "When running from Xcode, you're sending testing signals" %}
 
-If you app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Testing Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when it is set to **Test Mode**.
+If you app is built in `DEBUG` configuration (that is running from Xcode), your signals will be tagged as **Testing Signals**, meaning that you can filter them out later. You'll see them show up in the TelemetryDeck Dashboard when it's set to **Test Mode**.
 {% endnotewarning %}
 
 ## You're all set!
