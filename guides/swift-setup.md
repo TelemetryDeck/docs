@@ -7,7 +7,7 @@ tags:
   - watchOS
   - tvOS
 featured: true
-testedOn: Xcode 12.2 & Swift 5.3
+testedOn: Xcode 14.1 & Swift 5.5
 description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS and tvOS
 lead: Let's include the TelemetryClient Swift Package in your application and send signals!
 order: 100
@@ -21,17 +21,24 @@ This guide assumes you have already created a TelemetryDeck account. If you have
 
 The TelemetryDeck Swift package uses Swift Package Manager.
 
-- Open Xcode and navigate to the project you want to add TelemetryDeck to.
-- In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view.
-- Add the following as package repository and click <kbd>Next</kbd>:
+1. Open Xcode and navigate to the project you want to add TelemetryDeck to.
+1. In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view.
+1. Paste `https://github.com/TelemetryDeck/SwiftClient` into the search field.
+1. Select the `SwiftClient` package that appears in the list
+1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>.
+1. Click <kbd>Add Package</kbd>.
 
-```swift
-https://github.com/TelemetryDeck/SwiftClient
-```
-
-There will be one or two additional screens, but you can just click <kbd>Next</kbd> and <kbd>Finish</kbd> on them – Xcode will do the right thing by linking the package against your target. (In the unlikely case that you have multiple targets, link them each with the package's library.)
+![A screenshot of Xcode adding the TelemetryDeck Pacakge](/docs/images/xcode-swift-package.png)
 
 This will include the TelemetryDeck Swift Client into your app by downloading the source code. Feel free to browse the client's source code, it's very tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
+
+## Including the Package in your Target
+
+Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftClient</kbd>. Select the `TelemetryClient` library and click <kbd>Add Package</kbd>.
+
+{% noteinfo "Link Library with more than one Target" %}
+In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryClient` library.
+{% endnoteinfo %}
 
 ## Initializing the TelemetryDeck Swift Package
 
@@ -185,4 +192,4 @@ And you're done! You are now sending signals to the TelemetryDeck server.
 
 You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention... a lot!
 
-After a while, you can add a send call for each screen in your app, so you can see which screens are used most. I also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user of course). This way you can see which settings most of your users use.
+After a while, you can add a send call for each screen in your app, so you can see which screens are used most. We also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user of course). This way you can see which settings most of your users use.
