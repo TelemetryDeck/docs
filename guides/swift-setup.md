@@ -193,4 +193,4 @@ And you're done! You are now sending signals to the TelemetryDeck server.
 
 You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention... a lot!
 
-After a while, you can add a send call for each screen in your app, so you can see which screens your users use most. It is also recommended to add all your custom settings to your metadata each time (except the ones that might identify an individual user please). This way you can see which settings most of your users use.
+After a while, you can add a send call for each screen in your app, so you can see which screens your users use most. It's also recommended to add all your custom settings to your metadata each time (except the ones that might identify an individual user please). This way you can see which settings most of your users use.

@@ -16,7 +16,7 @@ order: 1000
 
 Lots of iOS and macOS application are still written in Objective-C, or a mixture of Swift and ObjC. We've got you covered either way, and this guide will show you how to set up the TelemetryDeck SDK in your Objective-C application.
 
-## Installing the Package
+## Installing the package
 
 The TelemetryDeck Swift package uses Swift Package Manager.
 
@@ -29,17 +29,18 @@ The TelemetryDeck Swift package uses Swift Package Manager.
 
 ![A screenshot of Xcode adding the TelemetryDeck Package](/docs/images/xcode-swift-package.png)
 
-This will include the TelemetryDeck Swift Client into your app by downloading the source code. Feel free to browse the client's source code, it's very tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
+This will include the TelemetryDeck Swift Client into your app by downloading the source code. Feel free to browse the client's source code. It's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
-## Including the Package in your Target
+## Including the package in your target
 
 Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftClient</kbd>. Select the `TelemetryClient` library and click <kbd>Add Package</kbd>.
 
 {% noteinfo "Link Library with more than one Target" %}
-In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryClient` library.
+
+In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator. Selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryClient` library.
 {% endnoteinfo %}
 
-## Initializing the TelemetryDeck Package
+## Initializing the TelemetryDeck package
 
 The `TelemetryClient` package will provide you with a class `TelemetryManager` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. The ideal place for this is your **App Delegate**'s `application:didFinishLaunchingWithOptions:` method:
 
@@ -73,21 +74,21 @@ TelemetryDeck assigns a unique identifier to your app, and you need to hand that
 Use the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) to create a new app and copy its unique identifier into your computer's clipboard.
 {% endnoteinfo %}
 
-## Sending Signals
+## Sending signals
 
 Let's send a signal to show the app has launched correctly.
 
-{% noteinfo "What is a signal?" %}
+{% noteinfo "What's a signal?" %}
 
-Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
+Signals represent an **event** or a **view** that happened in your app, which is used by a **user**. Signals consist of these parts:
 
-- **Signal Type** – A string that indicates which kind of event happened
-- **Metadata Payload** – A dictionary of additional data about your app or the event triggering the signal
+- **Signal Type**–A string that indicates which kind of event happened
+- **Metadata Payload**–A dictionary of additional data about your app or the event triggering the signal
 
 See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
 {% endnoteinfo %}
 
-See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/SwiftClient/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
+See the [TelemetryDeck SDKs `README.md` file](https://github.com/TelemetryDeck/SwiftClient/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
 
 ```objc
 [TelemetryManager send:@"applicationDidFinishLaunching"];
