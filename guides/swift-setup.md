@@ -28,15 +28,16 @@ The TelemetryDeck Swift package uses Swift Package Manager.
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>.
 1. Click <kbd>Add Package</kbd>.
 
-![A screenshot of Xcode adding the TelemetryDeck Pacakge](/docs/images/xcode-swift-package.png)
+![A screenshot of Xcode adding the TelemetryDeck Package](/docs/images/xcode-swift-package.png)
 
 This will include the TelemetryDeck Swift Client into your app by downloading the source code. Feel free to browse the client's source code, it's very tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
-## Including the Package in your Target
+## Including the package in your target
 
 Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftClient</kbd>. Select the `TelemetryClient` library and click <kbd>Add Package</kbd>.
 
 {% noteinfo "Link Library with more than one Target" %}
+
 In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryClient` library.
 {% endnoteinfo %}
 
@@ -145,7 +146,7 @@ If you already have code in this function, add the two new lines to the end.
 
 You are now ready to send signals!
 
-## Sending Signals
+## Sending signals
 
 Let's send a signal to show the app has launched correctly.
 
@@ -192,4 +193,4 @@ And you're done! You are now sending signals to the TelemetryDeck server.
 
 You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention... a lot!
 
-After a while, you can add a send call for each screen in your app, so you can see which screens are used most. We also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user of course). This way you can see which settings most of your users use.
+After a while, you can add a send call for each screen in your app, so you can see which screens your users use most. It is also recommended to add all your custom settings to your metadata each time (except the ones that might identify an individual user please). This way you can see which settings most of your users use.
