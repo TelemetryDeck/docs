@@ -4,6 +4,7 @@ description: Which minimum iOS or Android version should I pick?
 lead: New OS versions give us new features and new possibilities, but not everyone updates right away. When is the right time to upgrade your requirements?
 searchEngineTitle:
 searchEngineDescription: Choosing the minimum OS versions, both for iOS and Android, helps you understand how many versions you should support.
+order: 30
 ---
 
 New versions of the Operating System give us new features and new possibilities. They expose new APIs or update the capabilities of existing ones. However, you'll always lose a certain portion of your users because they are staying on the old version. Here are a few ways to help you decide:

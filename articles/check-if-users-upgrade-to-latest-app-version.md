@@ -10,6 +10,7 @@ description: From your vision into the app - Let's find out if your users update
 lead: Do users like the newest features? What services can be shut down? And do people install security updates? - Whatever the occasion, getting insights into the update behavior of your users is a helpful and a compelling way to ensure you hit your user's needs.
 searchEngineTitle:
 searchEngineDescription: Are your users updating to the newest app version? Let's find out the reason behind it and ways to improve upgrade behavior.
+order: 50
 ---
 
 ## Use Our App Overview
