@@ -4,9 +4,12 @@ tags:
   - setup
   - package
   - SDK
-testedOn: Xcode 13.1 & Swift 5.5
+  - Swift
+testedOn: Xcode 14.1 & Swift 5.6
 description: Xcode doesn't update packages automatically. How do you tell Xcode to update to the newest version of a Swift Package? Or update all packages at once?
+lead: Xcode doesn't update packages automatically. How do you tell Xcode to update to the newest version of a Swift Package? Or update all packages at once?
 keywords: Xcode, swift, package, update
+order: 10
 ---
 
 Even if you tell XCode to accept all versions of a Swift package up to the next major version, it will not automatically check and download new versions of the package unless you tell it to. Here is how!
@@ -21,7 +24,7 @@ With that in mind, here's how to manually update a Swift package using Xcode:
 
 ## How to update a Swift Package in XCode
 
-[Screenshot missing]
+![Screenshot of the left sidebar in Xcode 14, with the TelemetryDeck Swift Package highlighted](/docs/images/update_package.png)
 
 Updating packages in Xcode can be done using one of two ways. If you want to just update a single package individually – which we recommend by the way – do this:
 
@@ -31,7 +34,9 @@ Updating packages in Xcode can be done using one of two ways. If you want to jus
 
 And that's it.
 
-You can also update every single Swift Package in your project at once. To do this, open the **Files** menu, navigate to **Packages** and then click **Update to Latest Package Versions**. Afterwards, make sure to test your project to see if everything still works, especially in projects with a lot of package dependencies.
+You can also update every single Swift Package in your project at once. To do this, open the **Files** menu, navigate to **Packages** and then click **Update to Latest Package Versions**. Afterwards, make sure to test your project to see if everything still works, especially in projects with a lot of package dependencies. See further down for more troubleshooting tips.
+
+{% callToAction "Let's make your app awesome!" "Get swifty privacy-first analytics for your app" %}
 
 ## Troubleshooting
 
