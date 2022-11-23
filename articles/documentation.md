@@ -240,3 +240,31 @@ This is how the `notewarning` output looks like:
 {% notewarning "Take care of your pizza!" %}
 When removing your pizza out of the oven, please make sure to not burn your fingers. Also make sure your cat won't eat it while you look at this document.
 {% endnotewarning %}
+
+### Buttons
+
+You can use button links to link to especially important pages or resources. Make a button by supplying
+
+- a label
+- an URL to link to
+- and a boolean to indicate wether the button is a primary button (true) or a secondary button (false)
+
+```markdown
+{% raw %}{% bigButton "All your base" "https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" true %}
+{% bigButton "Main screen turn on." "https://en.wikipedia.org/wiki/Zero_Wing" true %}{% endraw %}
+```
+
+{% bigButton "All your base" "https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" true %}
+{% bigButton "Main screen turn on." "https://en.wikipedia.org/wiki/Zero_Wing" false %}
+
+### Call to Action
+
+In very rare cases, we want to display a call to action to register for TelemetryDeck. This is done using the `callToAction` shortcode. It needs needs to `string` parameters for the first and second line of text respectively.
+
+```markdown
+{% raw %}{% callToAction "Let's make your app awesome!" "Get swifty privacy-first analytics for your app" %}{% endraw %}
+```
+
+The shortcode will automatically link to the registration page and the docs:
+
+{% callToAction "Let's make your app awesome!" "Get swifty privacy-first analytics for your app" %}
