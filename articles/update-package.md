@@ -10,7 +10,7 @@ description: Xcode doesn't update packages automatically. How do you tell Xcode 
 lead: Xcode doesn't update packages automatically. How do you tell Xcode to update to the newest version of a Swift Package? Or update all packages at once?
 keywords: Xcode, swift, package, update
 order: 10
-headerImage: /docs/images/package.png
+headerImage: /img/sondrine-package.png
 ---
 
 Even if you tell XCode to accept all versions of a Swift package up to the next major version, it will not automatically check and download new versions of the package unless you tell it to. Here is how!
