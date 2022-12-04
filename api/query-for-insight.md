@@ -48,7 +48,7 @@ Then use that ID to generate an HTTP POST to the API. The POST body needs to be 
 
 Here's an example query:
 
-```
+```text
 POST /api/v3/insights/<insight-id>/query/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Content-Type: application/json
