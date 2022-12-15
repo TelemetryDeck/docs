@@ -1,5 +1,5 @@
 ---
-title: Making an Account
+title: Making an account
 tags:
   - setup
   - quickstart
@@ -7,7 +7,7 @@ tags:
   - how-to
 description: Register an account and create an organization
 lead: Let's register for an account, create an app, and set up your application so you can get started with receiving signals from your app!
-searchEngineTitle: Create a TelemetryDeck Account
+searchEngineTitle: Create a TelemetryDeck account
 searchEngineDescription: Register an account now and create an organization in the TelemetryDeck dashboard.
 ---
 

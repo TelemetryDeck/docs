@@ -1,5 +1,5 @@
 ---
-title: How to update a Swift Package
+title: How to update a Swift package
 tags:
   - setup
   - package

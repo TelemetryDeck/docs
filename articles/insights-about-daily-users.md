@@ -1,5 +1,5 @@
 ---
-title: How to Track the Number of Daily Users in Your App
+title: How to track the number of daily users in your app
 tags:
   - beginner
   - how-to
@@ -10,7 +10,7 @@ testedOn:
 featured:
 description: A guide on how to create an insight that displays the number of daily users
 lead: As creators of apps, the feeling of knowing that your app gets used is amazing. Here is our step-by-step guide for getting a handy insight into your daily active users' statistics!
-searchEngineTitle: Track the Number of Daily Active Users in Your App
+searchEngineTitle: Track the number of daily active users in your app
 searchEngineDescription: A guide on how to create an insight that displays the number of daily active users (DAU).
 order: 10
 ---

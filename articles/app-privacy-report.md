@@ -1,9 +1,9 @@
 ---
-title: Why Is Apple's App Privacy Report Important to You as an App Developer?
+title: Why is Apple's app privacy report important to you as an app developer?
 tags: privacy
 description: We evaluate Apple's App Privacy Report from the perspective of app developers and explain common misconceptions.
 lead: In this article, we'll take a look at the new privacy report that Apple is making available to iPhone users. We are particularly interested in. What are the implications of this feature for app developers?
-searchEngineTitle: How to use Apple's App Privacy Report as a Developer
+searchEngineTitle: How to use Apple's app privacy report as a developer
 searchEngineDescription: What is the iOS and iPadOS App Privacy Report? And how to use it as a privacy orientated app developer?
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Picking Your Minimum iOS or Android Version
+title: Picking your minimum iOS or Android version
 description: Which minimum iOS or Android version should I pick?
 lead: New OS versions give us new features and new possibilities, but not everyone updates right away. When is the right time to upgrade your requirements?
 searchEngineTitle:

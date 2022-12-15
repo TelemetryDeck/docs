@@ -1,5 +1,5 @@
 ---
-title: How to Find Out Which Operating System Your Users Are Using
+title: How to find out which operating system your users are using
 tags:
   - beginner
   - how-to
@@ -10,7 +10,7 @@ testedOn:
 featured:
 description: A guide on how to create an insight that shows all operating systems used by users
 lead: Insights around used operating systems help you with planning features, and to understand how technologically advanced your users are. This step-by-step guide explains how you can create and configure your insights
-searchEngineTitle: Which Operating Systems Are Your Users Using?
+searchEngineTitle: Which operating systems are your users using?
 searchEngineDescription: A guide on creating an insight that shows all used operating systems. See what OS your users are using the most - or least.
 order: 20
 ---

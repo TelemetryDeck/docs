@@ -1,5 +1,5 @@
 ---
-title: Getting Started With Test Mode
+title: Getting started with Test Mode
 tags:
   - setup
   - testmode
@@ -8,7 +8,7 @@ tags:
 testedOn: Xcode 13.1 & Swift 5.5 & TelemetryDeck SDK 1.1.5
 description: Here's how to use Test Mode to get started with TelemetryDeck
 lead: Test Mode helps you make sure that TelemetryDeck is set up correctly in your app and allows you to set up your insights even during development.
-searchEngineTitle: How to Run Test Signals
+searchEngineTitle: How to run test signals
 searchEngineDescription: Enable Test Mode now in your TelemetryDeck dashboard to easily send signals through debug mode.
 ---
 

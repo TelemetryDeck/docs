@@ -1,5 +1,5 @@
 ---
-title: Create Custom Dashboards With Insight Groups
+title: Create custom dashboards with insight groups
 tags:
   - setup
   - beginner

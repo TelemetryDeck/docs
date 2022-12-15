@@ -1,5 +1,5 @@
 ---
-title: How to Invite Members to Your Organization
+title: How to invite members to your organization
 tags:
   - beginner
   - how-to

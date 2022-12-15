@@ -1,5 +1,5 @@
 ---
-title: What Are Insight and How Do They Work?
+title: What are insights and how do they work?
 tags:
   - setup
   - beginner
@@ -7,7 +7,7 @@ tags:
 testedOn:
 description: A reference of all things configurable in an Insight and what they mean
 lead: An Insight is a configurable way of looking at your signal data. You can think of it as a pre-defined database query with filters and groupings. This query runs on the set of signals received in the currently visible date range and is displayed in a customizable way. This document gives you a reference to the various parts of the Insight configuration and what they mean.
-searchEngineTitle: What Are Insights and How Do They Work?
+searchEngineTitle: What are insights and how do they work?
 searchEngineDescription: At TelemetryDeck we want you to better understand your analytics data. Learn about the power of insights with this guide.
 order:
 ---

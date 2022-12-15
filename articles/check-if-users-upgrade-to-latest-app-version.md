@@ -1,5 +1,5 @@
 ---
-title: How to Detect if Users Update to the Latest App Version
+title: How to detect if users update to the latest app version
 tags:
   - setup
   - beginner
