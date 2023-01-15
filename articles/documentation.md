@@ -130,6 +130,22 @@ The right sidebar will also display a list of contributors who have written an g
 
 This will fail if the email is not found in the github API, or if the email is not set as "public email" in the contributor's github profile.
 
+## Tables
+
+Tables are supported in markdown. Here is an example:
+
+| Name    | Description                                                                                                        |
+| ------- | ------------------------------------------------------------------------------------------------------------------ |
+| `title` | The title of the page. This is used in the left sidebar, at the top of the page and in the "Getting Started" page. |
+
+Here is the markdown code for the previous table:
+
+```markdown
+| Name    | Description                                                                                                        |
+| ------- | ------------------------------------------------------------------------------------------------------------------ |
+| `title` | The title of the page. This is used in the left sidebar, at the top of the page and in the "Getting Started" page. |
+```
+
 ## Markdown
 
 Documentation is written in [Markdown](https://www.markdownguide.org). This means you can write documentation in plain text, and it will be converted to HTML. All standard Markdown elements are supported, such as **bold text**, _italic text_, `inline code`, and [links](https://www.markdownguide.org/basic-syntax/#link).

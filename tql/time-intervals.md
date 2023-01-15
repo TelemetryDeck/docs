@@ -3,7 +3,7 @@ title: Time intervals and relative time intervals
 tags: intervals
 description: How to to define absolute or relative time intervals for your queries
 lead: A TelemetryDeck query always affects a certain time interval, which you can specify either in absolute terms, or relative to the query execution time.
-order: 100
+order: 120
 ---
 
 A TelemetryDeck query always needs at least one specified time interval to run against. You can either specify a specific time interval (such as "June 1st, 2022 to June 31st, 2022"), or you can use a relative time interval (such as "the last 30 days").
