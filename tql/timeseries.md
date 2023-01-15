@@ -5,7 +5,7 @@ lead: Groups a set of events by time and aggregates them by the chosen granulari
 order: 20
 ---
 
-The timeseries query groups a set of events by time and aggregates them by the chosen granularity. E.g. "How many users used my app per day in the last 30 days?"
+The timeseries query groups a set of events by time and aggregates them by the chosen granularity. for example "How many users used my app per day in the last 30 days?"
 
 ## Examples
 

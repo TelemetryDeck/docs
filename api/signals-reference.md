@@ -107,4 +107,4 @@ set on the client.
 These are not implemented yet, but in future versions, the signal API will also accept these properties:
 
 - [Session ID](https://github.com/TelemetryDeck/TelemetryViewer/issues/59), so you can count sessions and session length
-- [Numerical Metrics](https://github.com/TelemetryDeck/TelemetryViewer/issues/60), so you can show, e.g., a graph of the average number of items in your users' databases
+- [Numerical Metrics](https://github.com/TelemetryDeck/TelemetryViewer/issues/60), so you can show, for example, a graph of the average number of items in your users' databases

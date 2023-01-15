@@ -75,7 +75,7 @@ Whenever you choose TopN as a query type, you can configure it under _TopN Confi
 
 - TopN pairs well with the [Donut Chart](#donut-chart) as a Chart Type.
 
-- If you're interested in the number of users per e.g. system version instead of the number of signals, enable the _unique by user_ option in _Signal Type_.
+- If you're interested in the number of users per for example system version instead of the number of signals, enable the _unique by user_ option in _Signal Type_.
   {% endnoteinfo %}
 
 ### Filters
