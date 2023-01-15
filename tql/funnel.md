@@ -5,7 +5,7 @@ lead: Groups a set of events by a set of steps and aggregates them by a set of m
 order: 50
 ---
 
-A funnel query is an easy way of generating a funnel chart. It is compiled at runtime into a [groupBy](/docs/tql/groupBy/) query, but has a vastly simpler syntax.
+A funnel query is a way of generating a funnel chart. It's compiled at runtime into a [groupBy](/docs/tql/groupBy/) query, but has a vastly simpler syntax.
 
 ## Example
 

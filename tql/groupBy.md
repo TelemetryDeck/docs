@@ -5,7 +5,7 @@ lead: Groups a set of events by a set of dimensions and aggregates them by a set
 order: 40
 ---
 
-A group by query can group arbitrary values using aggregatiosn and post-aggregations. This is slightly more complicated than the Top N query, but allows you more flexibility and more complex queries.
+A group by query can group arbitrary values using aggregations and post-aggregations. This is slightly more complicated than the Top N query, but allows you more flexibility and more complex queries.
 
 ## Example
 

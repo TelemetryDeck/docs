@@ -7,7 +7,7 @@ order: 110
 
 How fine-grained the query should be, for example per day, per hour, per minute, etc. `all` and `none` are special values that can be used to disable the granularity.
 
-Supported granularities are:
+Supported values are:
 
 - `all`
 - `none`
