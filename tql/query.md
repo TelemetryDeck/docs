@@ -72,10 +72,10 @@ The following properties are common to all query types. See pages for each query
 | [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                               |
 | [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                 |
 | [baseFilters](/docs/tql/basefilters/) (optional)          | A list of filters that are applied to all queries.                                                                                                 |
-| [filter](/docs/tql/filter/) (optional)                    | A filter that is applied to the query.                                                                                                             |
-| [limit](/docs/tql/limit/) (optional)                      | The maximum number of results to return.                                                                                                           |
-| aggregations (optional)                                   | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                             |
-| postAggregations (optional)                               | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                   |
+| [filter](/docs/tql/filters/) (optional)                   | A filter that is applied to the query.                                                                                                             |
+| **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                     |
+| **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                             |
+| **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                   |
 
 ## Additional Properties for Timeseries Queries
 
