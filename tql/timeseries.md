@@ -49,35 +49,7 @@ This query returns the number of users per week:
 
 ## Properties
 
-[type](/docs/tql/querytype/)
-: The type of query, in this case `"timeseries"`.
-
-[dataSource](/docs/tql/datasource/)
-: The data source to query. Must be `"telemetry-signals"`.
-
-[granularity](/docs/tql/granularity/)
-: The granularity of the query.
-
-[relativeIntervals](/docs/tql/time-intervals/) (optional)
-: The time intervals to query, specified as relative to time of query.
-
-[intervals](/docs/tql/time-intervals/) (optional)
-: The time intervals to query, specified as absolute time intervals.
+All [default properties](/docs/tql/query/) and the following properties are supported:
 
 [descending](/docs/tql/descending/) (optional)
-: Whether to sort the results in descending order.
-
-[baseFilters](/docs/tql/basefilters/) (optional)
-: A list of filters that are applied to all queries.
-
-[filter](/docs/tql/filter/) (optional)
-: A filter that is applied to the query.
-
-[aggregations](/docs/tql/aggregations/) (optional)
-: A list of aggregations to apply to the query.
-
-[postAggregations](/docs/tql/postaggregations/) (optional)
-: A list of post aggregations to apply to the query.
-
-[limit](/docs/tql/limit/) (optional)
-: The maximum number of results to return.
+: Whether to sort the results in descending order. The default is false.
