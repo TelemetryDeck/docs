@@ -52,7 +52,7 @@ The doubleSum aggregator takes the following properties:
 
 `doubleMean` computes and returns the arithmetic mean of a column's values as a 64-bit floating point value.
 
-Warning: this aggregator is very mean 😡😡
+Warning: this aggregator is mean 😡😡
 
 ```json
 { "type" : "doubleMean", "name" : <output_name>, "fieldName" : <metric_name> }
@@ -164,7 +164,7 @@ A filtered aggregator wraps any given aggregator, but only aggregates the values
 
 This makes it possible to compute the results of a filtered and an unfiltered aggregation simultaneously, without having to issue multiple queries, and use both results as part of post-aggregations.
 
-Note: If only the filtered results are required, consider putting the filter on the query itself, which will be much faster since it does not require scanning all the data.
+Note: If only the filtered results are required, consider putting the filter on the query itself, which will be much faster since it doesn't require scanning all the data.
 
 ```json
 {

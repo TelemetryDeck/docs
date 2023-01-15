@@ -13,7 +13,7 @@ Filters can be chained and combined with the `and` and `or` and `not` operators 
 
 ### and
 
-The `and` operator combines multipe filters into a single filter that only matches rows that match all sub-filters.
+The `and` operator combines multiple filters into a single filter that only matches rows that match all sub-filters.
 
 ```json
 "filter": { "type": "and", "fields": [<filter>, <filter>, ...] }
@@ -21,7 +21,7 @@ The `and` operator combines multipe filters into a single filter that only match
 
 ### or
 
-The `or` operator combines multipe filters into a single filter that matches rows that match any sub-filter.
+The `or` operator combines multiple filters into a single filter that matches rows that match any sub-filter.
 
 ```json
 "filter": { "type": "or", "fields": [<filter>, <filter>, ...] }

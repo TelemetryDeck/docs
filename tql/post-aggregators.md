@@ -7,9 +7,7 @@ order: 170
 
 ## Field accessor post-aggregator
 
-These post-aggregators return the value produced by the specified aggregator.
-`fieldName` refers to the output name of the aggregator given in the aggregations portion of the query. For compl
-"hyperUnique", the type of the post-aggregator determines what the post-aggregator will return. Use type "field
+These post-aggregators return the value produced by the specified aggregator. Use type "field
 object, or use type "finalizingFieldAccess" to return a finalized value, such as an estimated cardinality.
 
 ```json
@@ -34,8 +32,7 @@ Note:
 - / division always returns 0 if dividing by 0, regardless of the numerator.
 - quotient division behaves like regular floating point division
 - Arithmetic post-aggregators always use floating point arithmetic.
-- Arithmetic post-aggregators may also specify an ordering, which defines the order of resulting values w
-  Arithmetic post-aggregators may also specify an ordering, which defines the order of resulting values whe
+- Arithmetic post-aggregators may also specify an ordering, which defines the order of resulting values when sorting.
 - If no ordering (or null) is specified, the default floating point ordering is used.
 - numericFirst ordering always returns finite values first, followed by NaN, and infinite values last.
 
