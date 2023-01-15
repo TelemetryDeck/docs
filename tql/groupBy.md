@@ -1,0 +1,38 @@
+---
+title: Group By Query
+description: Groups a set of events by a set of dimensions and aggregates them by a set of metrics in the TelemetryDeck Query Language.
+lead: Groups a set of events by a set of dimensions and aggregates them by a set of metrics.
+order: 40
+---
+
+A group by query can group arbitrary values using aggregations and post-aggregations. This is slightly more complicated than the Top N query, but allows you more flexibility and more complex queries.
+
+## Example
+
+```json
+{
+  "aggregations": [
+    {
+      "fieldName": "count",
+      "name": "Number of Signals",
+      "type": "longSum"
+    }
+  ],
+  "dataSource": "telemetry-signals",
+  "dimensions": [
+    {
+      "dimension": "majorSystemVersion",
+      "outputName": "Major System Version",
+      "outputType": "STRING",
+      "type": "default"
+    }
+  ],
+  "filter": {
+    "dimension": "appID",
+    "type": "selector",
+    "value": "AAABBBCCC"
+  },
+  "granularity": "all",
+  "queryType": "groupBy"
+}
+```
