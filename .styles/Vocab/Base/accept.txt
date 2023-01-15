@@ -24,3 +24,8 @@ hyperUnique
 numericFirst
 doubleMax
 doubleGreatest
+DoubleSum
+DoubleMax
+DoubleAny
+StringAny
+HyperUnique
