@@ -48,7 +48,7 @@ Please replace `YOUR_APP_ID` with the app ID you received from TelemetryDeck, an
 
 <div class="alert alert-info" role="alert">
     In this example we do not get an individual <code>USER_IDENTIFIER</code> for each user. Theoretically, we could use the browser's 
-    `userAgent` string as an identifier, which is not very helpful for distinguishing users, but enough for some purposes.
+    `userAgent` string as an identifier, which is not helpful for distinguishing users, but enough for some purposes.
     To distinguish between individual users, we'd either need a login function, or to generate a 
     UUID for each user and store that in a cookie, which is outside of the scope of this example. (Also note that you might have to 
     ask for the user's consent to store an identifier for them in a cookie.)

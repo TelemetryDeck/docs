@@ -29,7 +29,7 @@ With that in mind, here's how to manually update a Swift package using Xcode:
 
 Updating packages in Xcode can be done using one of two ways. If you want to just update a single package individually – which we recommend by the way – do this:
 
-1. Navigate to the package you want to update in the Xcode navigator. It should be at the very bottom of the list, in a section called **Package Dependencies**.
+1. Navigate to the package you want to update in the Xcode navigator. It should be at the bottom of the list, in a section called **Package Dependencies**.
 2. Right-click the package you want to update.
 3. Choose **Update Package**.
 
@@ -44,4 +44,4 @@ You can also update every single Swift Package in your project at once. To do th
 Sometimes Xcode's package cache gets confused. This will usually result in weird build errors that can't really be explained. Here are two things that might help:
 
 1. **Resetting the Xcode Package Cache**: To reset the package cache, open the **File** menu, navigate to **Packages**, and click **Reset Package Caches**. This will delete all local package data and re-download each package from its source online.
-2. **Cleaning the Build Folder**: To clean your build folder, open the **Product** menu in Xcode, and click **Clean Build Folder**. This will clean the partial build caches, so that your next build will start from scratch. This can also sometimes help resolve an issue.
+2. **Cleaning the Build Folder**: To clean your build folder, open the **Product** menu in Xcode, and click **Clean Build Folder**. This will clean the partial build caches, so that your next build will start without any pre-compiled artifacts. This can also sometimes help resolve an issue.

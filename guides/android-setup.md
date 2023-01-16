@@ -60,7 +60,7 @@ The TelemetryManager can be initialized automatically by adding the application 
 
 And that's it! Your app is now ready to use TelemetryDeck. Hit the build button to check if everything is working – if not, check out the troubleshooting section below.
 
-Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/TelemetryDeck/KotlinSDK), it's very tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
+Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/TelemetryDeck/KotlinSDK), it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
 The [README file](https://github.com/TelemetryDeck/KotlinSDK/blob/main/README.md) also goes into more detail regarding the default configuration of TelemetryDeck, and how to customize it.
 

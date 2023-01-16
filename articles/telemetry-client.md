@@ -66,7 +66,7 @@ TelemetryManager.send("userLoggedIn", for: email)
 
 <p><small>I therefore strongly recommend to either use a unique identifier for your users, such as an email address, or to generate and store a `UUID().uuidString`, for example in `UserDefaults`, and always pass that to TelemetryDeck Manager as User ID.</small></p>
 
-<p><small>The reason why TelemetryDeck Manager can't do that itself is that it feels like crossing a line if this very simple tool would generate IDs itself and write those to a directory on disk. I feel that this is not expected behaviour for a privacy-first analytics package.</small></p>
+<p><small>The reason why TelemetryDeck Manager can't do that itself is that it feels like crossing a line if this simple tool would generate IDs itself and write those to a directory on disk. I feel that this is not expected behaviour for a privacy-first analytics package.</small></p>
 
 </div>
 

@@ -62,7 +62,7 @@ assumed to originate from the same user.
 By default, the client user will be a UUID, usually supplied by the devices `identifierForVendor` method. But you can
 overwrite this by supplying your own client user identifier: If you'd rather not track users at all, you can pass
 an empty string instead. This will effectively disable user counting, but you can still count sessions and signals,
-and get a very good idea of your user base this way.
+and get a good idea of your user base this way.
 
 The TelemetryDeck client library will hash any value saved into this property before sending it to the server. In
 addition, the server will _also_ hash any client user value _again_, just to be extra sure. We _really_ do not want to
