@@ -17,7 +17,7 @@ The purpose of the App Privacy Report is to make it easier for users to identify
 
 The App Privacy Report is a powerful tool that you can have a lot of fun with (fun in the sense of spooky insights). Unfortunately, it also holds a lot of potential for misunderstanding.
 
-If an app contacts a lot of domains, at first glance it might look like surveillance to inexperienced users. So you have to look closely at what the particular purpose of this app is and which domains are contacted. For example, an app that synchronizes files to different cloud storages logically needs to contact all these cloud storages as well. For a banking app, however, calling Facebook would be very unusual.
+If an app contacts a lot of domains, at first glance it might look like surveillance to inexperienced users. So you have to look closely at what the particular purpose of this app is and which domains are contacted. For example, an app that synchronizes files to different cloud storage providers logically needs to contact all these cloud storage providers as well. For a banking app, however, calling Facebook would be very unusual.
 
 You have to evaluate each app individually step by step and remind yourself what you actually use the app for in everyday life. Of course it looks strange when Instagram constantly accesses my microphone. But in fact, it's not because of a big bugging operation, but because I'm constantly making videos of myself.
 
@@ -25,12 +25,12 @@ To be able to interpret the list in the privacy report, users need some technica
 
 These contacted domains indicate that an app is intensively monitoring its users (and the data will most likely end up in an advertising network, which will then be used to play out personal ads):
 
-- admob
-- doubleclick
-- facebook
-- adcolony
-- fbcdn
-- ga
+- `admob`
+- `doubleclick`
+- `facebook`
+- `adcolony`
+- `fbcdn`
+- `ga`
 - and so on
 
 ## What Entry Do Users See When an App Uses TelemetryDeck?
@@ -48,4 +48,3 @@ Analytics is important and privacy is important. The app privacy report lets you
 ---
 
 Why not [try TelemetryDeck now](https://dashboard.telemetrydeck.com/registration/organization?source=doc_att)? It's free and easy to start, and your users' privacy will thank you! 😊
-

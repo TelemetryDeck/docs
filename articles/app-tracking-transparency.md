@@ -33,7 +33,7 @@ apps**. Here are some more examples of tracking from the [User Privacy and Data 
   information to retarget those users in other developers’ apps or to find similar users.
 - Placing a third-party SDK in your app that combines user data from your app with user data from other developers’ apps
   to target advertising or measure advertising efficiency, even if you don’t use the SDK for these purposes. For
-  example, using an analytics SDK that repurposes the data it collects from your app to enable targeted advertising in
+  example, using an analytics SDK that re-purposes the data it collects from your app to enable targeted advertising in
   other developers’ apps.
 
 ## What this is not
@@ -92,7 +92,7 @@ TelemetryDeck gives you completely anonymized usage data of how users use your a
 into usage patterns, flows, and configuration, without compromising your users' privacy.
 
 Your users will have the comfort of knowing their data is not being shared with other third parties, and they won't have
-to think about App Tracking Transparency dialogs. Meanwhile, you as the developer will be able to get all the
+to think about App Tracking Transparency dialogues. Meanwhile, you as the developer will be able to get all the
 information you need to improve, enhance and boost your app!
 
 Why not [try it out now](https://dashboard.telemetrydeck.com/registration/organization)? It's free and easy to start, and your users' privacy will thank you! 😊

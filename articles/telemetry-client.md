@@ -80,17 +80,17 @@ TelemetryManager.send("databaseUpdated", with: ["numberOfDatabaseEntries": "3831
 
 TelemetryDeck Manager will automatically send a base payload with these keys:
 
-- platform
-- systemVersion
-- appVersion
-- buildNumber
-- isSimulator
-- isTestFlight
-- isAppStore
-- modelName
-- architecture
-- operatingSystem
-- targetEnvironment
+- `platform`
+- `systemVersion`
+- `appVersion`
+- `buildNumber`
+- `isSimulator`
+- `isTestFlight`
+- `isAppStore`
+- `modelName`
+- `architecture`
+- `operatingSystem`
+- `targetEnvironment`
 
 ## Debug Mode
 

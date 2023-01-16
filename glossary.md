@@ -49,8 +49,8 @@ TelemetryDeck Query Language
 
 Double Hashing
 : TelemetryDeck uses a _Double Hashing_ algorithm to anonymize user data. On the device your user's app is running on, we salt and hash the user identifier you provide to TelemetryDeck. This way we can ensure that the TelemetryDeck API has no access to your actual user identifiers.  
-Because of the peculiarities of the GDPR, just hashing your identifier once does not count as anonymization – the identifier is ony \*_pseudonymized_. This is because you as our customer could in theory keep a list of all the identifiers you have provided to TelemetryDeck, hash them using the same salt, and then compare that rainbow table to our database of hashed identifiers. If the rainbow table matches, then you have access to your user data.  
-To prevent that, we add our own salt to the user identifiers on receival in the _Ingestion API_ and hash it again. This way, neither you nor us can reverse engineer the original identifier, even with additional data.
+Because of the peculiarities of the GDPR, just hashing your identifier once does not count as anonymization – the identifier is only \*_pseudonymized_. This is because you as our customer could in theory keep a list of all the identifiers you have provided to TelemetryDeck, hash them using the same salt, and then compare that rainbow table to our database of hashed identifiers. If the rainbow table matches, then you have access to your user data.  
+To prevent that, we add our own salt to the user identifiers when we receive it in the _Ingestion API_ and hash it again. This way, neither you nor us can reverse engineer the original identifier, even with additional data.
 
 TelemetryDeck Dashboard
 : Our main user interface for our customers. A web application available at https://dashboard.telemetrydeck.com that allows our customers to create and manage their _Apps_ and _Insight Groups_, and view and edit their _Insights_.

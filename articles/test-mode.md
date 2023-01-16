@@ -15,6 +15,7 @@ searchEngineDescription: Enable Test Mode now in your TelemetryDeck dashboard to
 During the development of your TelemetryDeck-enabled app - or even while you test it - your app sends signals. These signals are not from your users but rather from yourself or your development team. You might even send hundreds of signals during tests, which would mess up your insights if mixed with actual analytics data. Not cool!
 
 We do not recommend not doing any testing. The benefits of sending signals during test phases are enormous! If you have not considered it yet, here are some nifty reasons why you should start now:
+
 - You will be able to find errors in the configuration of the TelemetryDeck SDK
 - Working with test signals means you will know if your app works even before releasing your app
 - As well as being able to make preparations for new signal types or payload types until your app is released
@@ -35,7 +36,7 @@ Note: since signal payloads only support strings, the parameter needs to be eith
 
 ### Manually Set Test Mode in Swift SDK
 
-````swift
+```swift
 // An example variable to manually set test mode.
 // Set this to `true` or `false` depending on your app's configuration
 // or environment or state
@@ -46,11 +47,11 @@ TelemetryManager.send(
     for: "myUserIdentifier",
     with: ["isTestMode": customTestModeParameter ? "true" : "false"]
 )`
-````
+```
 
-### Manually Set Test Mode in Javascript SDK
+### Manually Set Test Mode in JavaScript SDK
 
-````javascript
+```javascript
 // Example initialisation of TelemetryDeck SDK
 `td = new TelemetryDeck({
   app: ENV.APP.telemetryAppID,
@@ -69,4 +70,4 @@ send(payload) {
 
   this.td.signal(payload);
 }
-````
+```

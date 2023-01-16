@@ -11,7 +11,7 @@ Officially, we only allow API access for users in our Tier 2 Pricing tier and ab
 
 ## Authorization
 
-You need need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](api-token.html) explains how to get a Bearer Token.
+You need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](api-token.html) explains how to get a Bearer Token.
 
 ## TelemetryDeck Query Language
 

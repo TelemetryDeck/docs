@@ -7,7 +7,7 @@ order: 200
 
 The default DimensionSpec returns dimension values as is and optionally renames the dimension.
 
-If an etraction function is set, it returns dimension values transformed using the given extraction function.
+If an extraction function is set, it returns dimension values transformed using the given extraction function.
 
 ## Default DimensionSpec
 

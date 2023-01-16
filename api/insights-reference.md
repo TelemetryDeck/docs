@@ -58,7 +58,7 @@ Chart Type can be one of these options
 
 ### Raw
 
-Will display the query result as a raw list of numbers. If the query results in a time series, this'll give you a list of dates and the numbers associated with those dates. If the query is a breakdown, this will give you a key-value list, such as the number of users per device type.
+Will display the query result as a raw list of numbers. If the query results in a time series, this will give you a list of dates and the numbers associated with those dates. If the query is a breakdown, this will give you a key-value list, such as the number of users per device type.
 
 If only one line of data is returned, that line will be displayed in large type. If exactly two rows of data are returned, the first one will be displayed in large type and the second one smaller below that, with the percentage difference between the two numbers. This allows you to have a "Active Users this Month" type of display, with a comparison to the previous month.
 

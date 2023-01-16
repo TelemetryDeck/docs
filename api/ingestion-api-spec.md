@@ -28,7 +28,7 @@ The post body should be an **array of JSON objects**, because you can send multi
 - `sessionID` _(String)_: Any string that identifies the user's current session. We usually use a UUID that we regenerate when a new session starts (e.g. the user launches the app). If you don't want to count or track sessions, it's okay to add an empty string here.
 - `type` _(String)_: The signal type, usually the name of the event that caused the signal to send like `settingsShown` or `upgradeScreenOpened`.
 - `payload` _(Array of String)_: Optional metadata to send along with your signal. Note that this is not a dictionary, but instead strings that delimit key and value with a colon `:` character. See below for more info. If you don't want to send a payload, put an empty array here.
-- `isTestMode` _(Optional String, either `"true"` or `"false"`)_: Optionally mark the signal as a **Test Signal**. Test signals are only counted when the app is in test mode. See below for details. When this property is not present or anything other than `"true"` (as string, not as boolean), it will be set to `"false"` at ingestion time. We recommend setting this to `"true"` when your app running in development or debug mode.
+- `isTestMode` _(Optional String, either `"true"` or `"false"`)_: Optionally mark the signal as a **Test Signal**. Test signals are only counted when the app is in test mode. See below for details. When this property is not present or anything other than `"true"` (as string, not as Boolean), it will be set to `"false"` at ingestion time. We recommend setting this to `"true"` when your app running in development or debug mode.
 
 ```json
 [

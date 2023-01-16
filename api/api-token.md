@@ -22,7 +22,7 @@ Officially, we only allow API access for users in our Tier 2 Pricing tier and ab
 
 ## Generating a Bearer Token with the API
 
-To retrieve a bearer token, send a a POST request to the following URL:
+To retrieve a bearer token, send a POST request to the following URL:
 
 `https://api.telemetrydeck.com/api/v1/users/login`
 

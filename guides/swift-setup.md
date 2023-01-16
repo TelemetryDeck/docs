@@ -175,7 +175,7 @@ TelemetryManager.initialize(with: configuration)
 TelemetryManager.send("applicationDidFinishLaunching")
 ```
 
-Aaaand done. This is all you need to send a signal. You do not need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add a custom user identifer or metadata payload, add them to the function call like this:
+And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add a custom user identifer or metadata payload, add them to the function call like this:
 
 ```swift
 TelemetryManager.send(
