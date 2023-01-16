@@ -38,14 +38,16 @@ This query returns the number of users that went through the funnel steps `Login
 
 ## Properties
 
+All [default properties](/docs/tql/query/) and the following properties are supported:
+
 [steps](/docs/tql/funnel/steps/) (required)
 : The steps of the funnel, expressed as a list of [Filters](/docs/tql/filters/). Each step is a filter that's applied to the data. The first step is applied to all data, the second step is applied to the data that passed the first step, and the third step is applied to the data that passed the first two steps.
 
-[stepNames] (optional)
+stepNames (optional, Array of Strings)
 : The names of the steps. If not given, the steps will be named `Step 0`, `Step 0`, etc.
 
 [filter](/docs/tql/filters/) (optional)
-: A filter to apply to the data to be queried. The default is no filter apart from the [base filters](/docs/tql/baseFilters/).
+: A [Filter](/docs/tql/filters/) to apply to the data to be queried. The default is no filter apart from the [base filters](/docs/tql/baseFilters/).
 
 [granularity](/docs/tql/granularity/) (optional)
 : The granularity of the results. The default is `all`.

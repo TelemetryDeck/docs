@@ -33,27 +33,27 @@ apps**. Here are some more examples of tracking from the [User Privacy and Data 
   information to retarget those users in other developers’ apps or to find similar users.
 - Placing a third-party SDK in your app that combines user data from your app with user data from other developers’ apps
   to target advertising or measure advertising efficiency, even if you don’t use the SDK for these purposes. For
-  example, using an analytics SDK that repurposes the data it collects from your app to enable targeted advertising in
+  example, using an analytics SDK that re-purposes the data it collects from your app to enable targeted advertising in
   other developers’ apps.
 
 ## What this is not
 
-It is important that Apple makes it very clear what falls under ATT and what does not. Specifically, that your own
+It is important that Apple makes it clear what falls under ATT and what does not. Specifically, that your own
 analytics does not fall under ATT, because it does not need to use the _Advertising Identifier_ (IDFA) and the data is
 not being linked to data from other sources.
 
-Another thing that is very clearly not related to ATT is the collection of anonymous usage data.
+Another thing that is clearly not related to ATT is the collection of anonymous usage data.
 
 A third thing that does not fall under ATT is the collection of user data that is relevant to your app and does not
-leave the app to be sold to some data brokers. For example, if your app is a shopping list, you are very clearly
+leave the app to be sold to some data brokers. For example, if your app is a shopping list, you are clearly
 allowed to save the user's shopping list items on a server in order to sync them.
 
 ## What does that mean for us indie developers?
 
-It is very likely that indie devs will only be affected by this if they are either
+It is likely that indie devs will only be affected by this if they are either
 
 1. using an external advertising SDK like Facebook Ads or Google Ads, or
-2. using a very intrusive analytics tool.
+2. using an intrusive analytics tool.
 
 The first case, external advertising SDKs, is pretty definitive: Those will extremely likely have to use the advertising
 identifier (IDFA), and therefore trigger the App Tracking Transparency dialog. Can't be helped. In this case, Apple has
@@ -74,27 +74,26 @@ Here are some directions you could go if you decide to part ways with analytics 
 ### No Analytics
 
 A drastic measure would be to just go without and hope your users are tweeting at you every now and then and telling you
-how they use your app. This is entirely possible, especially for smaller apps or developers who have impeccable taste.
-But I wouldn't recommend it.
+how they use your app. This is entirely possible, especially for smaller apps or developers who have impeccable taste – but I wouldn't recommend it.
 
 ### Apple's App Store Analytics
 
-Apple's own analytics are enabled by default, are very good for user privacy, and definitely won't trigger the ATT
+Apple's own analytics are enabled by default, are good for user privacy, and definitely won't trigger the ATT
 dialog. The only problem is, I wouldn't really call them analytics: The information you get is important, like how
-many downloads and app launches you got last week, but it is neither immediate nor very deep. You won't get live data
+many downloads and app launches you got last week, but it is neither immediate nor deep. You won't get live data
 and there is practically no information on _how_ users use your app. It's a good start, but for many, it won't be
 enough.
 
 ### TelemetryDeck
 
-I might be biased (spoiler: I am very biased in this regard), but I think TelemetryDeck is an amazing alternative here:
+I might be biased (spoiler: I am biased in this regard), but I think TelemetryDeck is an amazing alternative here:
 TelemetryDeck gives you completely anonymized usage data of how users use your app. This means you'll get a deep dive
 into usage patterns, flows, and configuration, without compromising your users' privacy.
 
 Your users will have the comfort of knowing their data is not being shared with other third parties, and they won't have
-to think about App Tracking Transparency dialogs. Meanwhile, you as the developer will be able to get all the
+to think about App Tracking Transparency dialogues. Meanwhile, you as the developer will be able to get all the
 information you need to improve, enhance and boost your app!
 
-Why not [try it out now](https://dashboard.telemetrydeck.com/registration/organization)? It's free and easy to start, and your users' privacy will thank you! 😊
+Why not [try it out now](https://dashboard.telemetrydeck.com/registration/organization)? It's quick, helpful, free, and your users' privacy will thank you! 😊
 
 <a class="nav-btn btn btn-gradient text-white" href="https://dashboard.telemetrydeck.com/registration/organization">Download the TelemetryDeck Beta Now</a>

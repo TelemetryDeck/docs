@@ -32,3 +32,13 @@ A Top N query allows you to list the top N values of a dimension, ordered by a m
   "threshold": 10
 }
 ```
+
+## Properties
+
+All [default properties](/docs/tql/query/) and the following properties are supported:
+
+| Property                              | Description                                                                        |
+| ------------------------------------- | ---------------------------------------------------------------------------------- |
+| [dimension](/docs/tql/dimensionSpec/) | A single DimensionSpec defining the dimension that you want the top taken for.     |
+| [metric](/docs/tql/topNMetricSpec/)   | A TopNMetricSpec object specifying the metric to sort by for the top list.         |
+| **threshold** (optional)              | An integer defining the N in the topN (how many results you want in the top list). |

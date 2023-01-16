@@ -1,6 +1,6 @@
 # TelemetryDeck Documentation
 
-Welcome to the public documentation for TelemetryDeck. The output of these pages is hosted at telemetrydeck.com.
+Welcome to the public documentation for TelemetryDeck. The output of these pages is hosted at https://telemetrydeck.com/docs.
 
 We're very grateful for pull requests or issues that improve things or let us know about errata and missing or unclear bits of information! <3
 

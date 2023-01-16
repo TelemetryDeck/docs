@@ -60,7 +60,7 @@ The TelemetryManager can be initialized automatically by adding the application 
 
 And that's it! Your app is now ready to use TelemetryDeck. Hit the build button to check if everything is working – if not, check out the troubleshooting section below.
 
-Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/TelemetryDeck/KotlinSDK), it's very tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
+Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/TelemetryDeck/KotlinSDK), it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
 The [README file](https://github.com/TelemetryDeck/KotlinSDK/blob/main/README.md) also goes into more detail regarding the default configuration of TelemetryDeck, and how to customize it.
 
@@ -74,7 +74,7 @@ After launching the app once, you can now go to the [Dashboard](https://dashboar
 
 ## Advanced: Sending Signals Manually
 
-Let's send a signal manually. Navigate to a Kotline file and add the following code at the top:
+Let's send a signal manually. Navigate to a Kotlin file and add the following code at the top:
 
 ```kotlin
 import com.telemetrydeck.sdk.TelemetryManager
@@ -82,7 +82,7 @@ import com.telemetrydeck.sdk.TelemetryManager
 
 Then, in an appropriate function, you can send your manual first signal.
 
-By default, you're not sending signals immediately; you're _enqueing_ them. Enqueing signals batches them up to be sent every now and then, and is the recommended way to send signals, as it will conserve a lot of battery life for your users. To enqueue a signal to be sent by TelemetryManager use this line:
+By default, you're not sending signals immediately; you're _enqueing_ them. This batches them up to be sent every now and then, and is the recommended way to send signals, as it will conserve a lot of battery life for your users. To enqueue a signal to be sent by TelemetryManager use this line:
 
 ```kotlin
 TelemetryManager.queue("pizzaOrderConfirmed")

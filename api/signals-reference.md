@@ -9,7 +9,7 @@ Signals are an indication that **an event** happened in your app, which is used 
 
 - **Signal Type** – A string that indicates which kind of event happened.<br>In this case we'll use `applicationDidFinishLaunching`, but it can be `databaseUpdated` or `settingsScreenOpened` or `pizzaModeActivated` (I totally love that last one!)
 - **User Identifer** – A string that identifies your user.<br>This can be an email address or a username, or a random ID that you generate once and store somewhere. It should always be the same for all the signals you send from a certain instance of the app. If you don't supply a user identifier, `TelemetryManager` will generate one for you.
-- **A Metadata Payload** – Metadata is a dictionary `[String: String]` of additional data about your app that might be interesting to analyze.<br>`TelemetryManager` will always add the user's OS Version, Platform, Build Number and App Version to the metadata, but you can specify additional info like, `numberOfEntriesInDatabase` (an int cast to string) or `pizzaModeAnchoviesEnabled` (a boolean cast to string).
+- **A Metadata Payload** – Metadata is a dictionary `[String: String]` of additional data about your app that might be interesting to analyze.<br>`TelemetryManager` will always add the user's OS Version, Platform, Build Number and App Version to the metadata, but you can specify additional info like, `numberOfEntriesInDatabase` (an int cast to string) or `pizzaModeAnchoviesEnabled` (a Boolean cast to string).
 
 As TelemetryDeck is an analytics software, it analyzes events that occur in your apps' life cycles. In TelemetryDeck,
 these events are called _Signals_. You can think about them like this: An **event** occurs, prompting your app to
@@ -62,7 +62,7 @@ assumed to originate from the same user.
 By default, the client user will be a UUID, usually supplied by the devices `identifierForVendor` method. But you can
 overwrite this by supplying your own client user identifier: If you'd rather not track users at all, you can pass
 an empty string instead. This will effectively disable user counting, but you can still count sessions and signals,
-and get a very good idea of your user base this way.
+and get a good idea of your user base this way.
 
 The TelemetryDeck client library will hash any value saved into this property before sending it to the server. In
 addition, the server will _also_ hash any client user value _again_, just to be extra sure. We _really_ do not want to
@@ -75,17 +75,17 @@ there. This is highly useful for filtering and aggregation insights.
 
 The default client library will automatically send a base payload with these keys:
 
-- platform
-- systemVersion
-- appVersion
-- buildNumber
-- isSimulator
-- isTestFlight
-- isAppStore
-- modelName
-- architecture
-- operatingSystem
-- targetEnvironment
+- `platform`
+- `systemVersion`
+- `appVersion`
+- `buildNumber`
+- `isSimulator`
+- `isTestFlight`
+- `isAppStore`
+- `modelName`
+- `architecture`
+- `operatingSystem`
+- `targetEnvironment`
 
 You can add any additional keys and values, or overwrite existing ones. For example, it might be a good idea to send
 your application's settings with each call. This way, you'll get a good overview of which percentage of your users

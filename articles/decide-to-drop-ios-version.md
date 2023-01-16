@@ -29,7 +29,7 @@ To find out which percentage of your users are using a certain OS version, use a
 
 ### Top N `systemVersion`
 
-The most detailed breakdown key is the `systemVersion`. It's a string that represents the complete version of the OS, major, minor, and patch. For example, `iOS 15.1.1`. This is helpful if you want an idea whether a certain patch has been applied, a certain bug has been fixed in the OS, that kind of thing. However, it's not very useful if you want to know how many users are using a certain _major_ version of the OS.
+The most detailed breakdown key is the `systemVersion`. It's a string that represents the complete version of the OS, major, minor, and patch. For example, `iOS 15.1.1`. This is helpful if you want an idea whether a certain patch has been applied, a certain bug has been fixed in the OS, that kind of thing. However, it's not useful if you want to know how many users are using a certain _major_ version of the OS.
 
 ### Top N `majorMinorVersion`
 

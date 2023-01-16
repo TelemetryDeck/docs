@@ -22,7 +22,7 @@ You need a Bearer Token to authenticate against the TelemetryDeck API. Our artic
 
 TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. You can either write a query by hand, or [generate a query from an insight](/docs/api/api-query-from-insight/).
 
-## It's all async!
+## It's all asynchronous!
 
 The query API is asynchronous. When you post a query to the API, it returns a task ID. You can then use the task ID to check the status of the query, and once it is succeeded, retrieve the last successful results.
 

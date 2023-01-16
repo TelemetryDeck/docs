@@ -31,7 +31,7 @@ In the following example, we're going to use relative time intervals. Here's an 
 }
 ```
 
-The `beginningDate` is the start of the interval, and the `endDate` is the end of the interval. The `component` is the time unit, and the `offset` is the number of units. The `position` is either "beginning" or "end", and determines whether the point in time is at the very `beginning` or the very `end` of the component – usually, you'll want `beginning` for the `beginningDate` and `end` for the `endDate`.
+The `beginningDate` is the start of the interval, and the `endDate` is the end of the interval. The `component` is the time unit, and the `offset` is the number of units. The `position` is either "beginning" or "end", and determines whether the point in time is at the `beginning` or the `end` of the component – usually, you'll want `beginning` for the `beginningDate` and `end` for the `endDate`.
 
 ## Absolute Time Intervals
 

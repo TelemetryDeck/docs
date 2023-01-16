@@ -57,7 +57,7 @@ The next question is **Are the device IDs collected from this app linked to the 
 
 The next screen defines various terms, such as _Tracking_ and _Third-Party Data_. After reading through it, click next, and next again until you reach the next question.
 
-TelemetryDeck does not fall under the definition of tracking. Care is taken to disassociate ID's in TelemetryDeck from any real world person. Unless you do other tracking unrelated to the Device ID, anser **No, we do not use device IDs for tracking purposes**.
+TelemetryDeck does not fall under the definition of tracking. Care is taken to dis-associate ID's in TelemetryDeck from any real world person. Unless you do other tracking unrelated to the Device ID, answer **No, we do not use device IDs for tracking purposes**.
 
 Next, we are back at the main screen and need to set up Usage Data.
 
@@ -73,4 +73,4 @@ Finally, we are asked if product information is used for tracking purposes. That
 
 ## That's it!
 
-And your're done! Your app now has a complete set of privacy details, and thanks to TelemetryDeck's privacy-first design, you'll still get all the value of analytics, while still giving your users excellent privacy!
+And you're done! Your app now has a complete set of privacy details, and thanks to TelemetryDeck's privacy-first design, you'll still get all the value of analytics, while still giving your users excellent privacy!

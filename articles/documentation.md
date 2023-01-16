@@ -10,7 +10,7 @@ order: 999999999
 
 ## Document Metadata
 
-All metadata for a documentation page is specified in the YAML header at the top of its markdown file (also called the frontmatter of the document). Most of the metadata is optional, but the `title` and `lead` are required:
+All metadata for a documentation page is specified in the YAML header at the top of its markdown file (also called the `frontmatter` of the document). Most of the metadata is optional, but the `title` and `lead` are required:
 
 ```yaml
 ---
@@ -122,13 +122,13 @@ The string value of the `testedOn` field is displayed in the right sidebar.
 
 The right sidebar contains a list of compatibility information for the documentation page. If `testedOn` is set, it will display the `testedOn` value. In addition, it will show the date when the markdown file for the documentation page was last updated. This gives the reader additional hints as to how outdated or current the page is.
 
-The right sidebar will also display a list of contributors who have written an git commit that touches the specific markdown file. The documentation system will try and retrieve the github avatar images for the contributors by
+The right sidebar will also display a list of contributors who have written an git commit that touches the specific markdown file. The documentation system will try and retrieve the GitHub avatar images for the contributors by
 
 1. Retrieving the committer email from the git commit
-1. Searching for that email in the github API
-1. Downloading the avatar image from the github API
+1. Searching for that email in the GitHub API
+1. Downloading the avatar image from the GitHub API
 
-This will fail if the email is not found in the github API, or if the email is not set as "public email" in the contributor's github profile.
+This will fail if the email is not found in the GitHub API, or if the email is not set as "public email" in the contributor's GitHub profile.
 
 ## Tables
 
@@ -263,7 +263,7 @@ You can use button links to link to especially important pages or resources. Mak
 
 - a label
 - an URL to link to
-- and a boolean to indicate wether the button is a primary button (true) or a secondary button (false)
+- and a Boolean to indicate wether the button is a primary button (true) or a secondary button (false)
 
 ```markdown
 {% raw %}{% bigButton "All your base" "https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" true %}
@@ -275,12 +275,12 @@ You can use button links to link to especially important pages or resources. Mak
 
 ### Call to Action
 
-In very rare cases, we want to display a call to action to register for TelemetryDeck. This is done using the `callToAction` shortcode. It needs needs to `string` parameters for the first and second line of text respectively.
+In rare cases, we want to display a call to action to register for TelemetryDeck. This is done using the `callToAction` shortcode. It needs to `string` parameters for the first and second line of text respectively.
 
 ```markdown
-{% raw %}{% callToAction "Let's make your app awesome!" "Get swifty privacy-first analytics for your app" %}{% endraw %}
+{% raw %}{% callToAction "Let's make your app awesome!" "Get awesome privacy-first analytics for your app" %}{% endraw %}
 ```
 
 The shortcode will automatically link to the registration page and the docs:
 
-{% callToAction "Let's make your app awesome!" "Get swifty privacy-first analytics for your app" %}
+{% callToAction "Let's make your app awesome!" "Get awesome privacy-first analytics for your app" %}

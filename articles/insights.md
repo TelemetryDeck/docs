@@ -19,7 +19,7 @@ Insights are a fundamental part of analytics. They describe how analytics data i
 The best way to read Insight data is by putting them into fancy **Insight cards**! An Insight card is one of the primary building blocks of TelemetryDeck. Essentially, they are one of the little cards in our dashboard, with data in an Insight group. They have a title, a query, and a display mode.  
 The query is used to retrieve data from the TelemetryDeck API, and the display mode is used to determine how the data gets displayed, for example, as a bar chart or a line chart.
 
-### Versatile and Adjustible
+### Versatile and Adjustable
 
 **Insights are incredibly versatile**: They can count either signal or users. If needed, they can be restricted to specific signal _types_, such as "the app launched" or "the user did x". Insights can be filtered by their metadata, too! For example, to only show signals from iOS or a specific app version.
 
