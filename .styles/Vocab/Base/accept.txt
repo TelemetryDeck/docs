@@ -29,3 +29,5 @@ DoubleMax
 DoubleAny
 StringAny
 HyperUnique
+DimensionSpec
+TopNMetricSpec

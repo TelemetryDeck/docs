@@ -64,18 +64,18 @@ This example groupBy query groups signals by the `majorSystemVersion` dimension 
 
 The following properties are common to all query types. See pages for each query type for additional properties only for those query types.
 
-| Property                                                  | Description                                                                                                                                               |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnels/). |
-| [dataSource](/docs/tql/datasource/)                       | The data source to query. Must be `"telemetry-signals"`.                                                                                                  |
-| [granularity](/docs/tql/granularity/)                     | The granularity of the query.                                                                                                                             |
-| [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                                      |
-| [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                        |
-| [baseFilters](/docs/tql/basefilters/) (optional)          | A list of filters that are applied to all queries.                                                                                                        |
-| [filter](/docs/tql/filters/) (optional)                   | A filter that's applied to the query.                                                                                                                     |
-| **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                            |
-| **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                    |
-| **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                          |
+| Property                                                  | Description                                                                                                                                              |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnel/). |
+| [dataSource](/docs/tql/datasource/)                       | The data source to query. Must be `"telemetry-signals"`.                                                                                                 |
+| [granularity](/docs/tql/granularity/)                     | The granularity of the query.                                                                                                                            |
+| [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                                     |
+| [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                       |
+| [baseFilters](/docs/tql/basefilters/) (optional)          | A list of filters that are applied to all queries.                                                                                                       |
+| [filter](/docs/tql/filters/) (optional)                   | A filter that's applied to the query.                                                                                                                    |
+| **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                           |
+| **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                   |
+| **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                         |
 
 ## Additional Properties for Timeseries Queries
 
@@ -87,15 +87,15 @@ The following properties are common to all query types. See pages for each query
 
 | Property                                     | Description                                                                        |
 | -------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [dimension](/docs/tql/dimension/)            | A DimensionSpec defining the dimension that you want the top taken for.            |
-| [metric](/docs/tql/metric/)                  | Specifying the metric to sort by for the top list.                                 |
+| [dimension](/docs/tql/dimensionSpec/)        | A DimensionSpec defining the dimension that you want the top taken for.            |
+| [metric](/docs/tql/topNMetricSpec/)          | A TopNMetricSpec object specifying the metric to sort by for the top list.         |
 | [threshold](/docs/tql/threshold/) (optional) | An integer defining the N in the topN (how many results you want in the top list). |
 
 ## Additional Properties for Group By Queries
 
-| Property                            | Description                                  |
-| ----------------------------------- | -------------------------------------------- |
-| [dimensions](/docs/tql/dimensions/) | A list of dimensions to do the groupBy over. |
+| Property                               | Description                                             |
+| -------------------------------------- | ------------------------------------------------------- |
+| [dimensions](/docs/tql/dimensionSpec/) | A list of DimensionSpec objects to do the groupBy over. |
 
 ## Additional Properties for Funnel Queries
 

@@ -36,3 +36,11 @@ A group by query can group arbitrary values using aggregations and post-aggregat
   "queryType": "groupBy"
 }
 ```
+
+## Properties
+
+All [default properties](/docs/tql/query/) and the following properties are supported:
+
+| Property                               | Description                                             |
+| -------------------------------------- | ------------------------------------------------------- |
+| [dimensions](/docs/tql/dimensionSpec/) | A list of DimensionSpec objects to do the groupBy over. |
