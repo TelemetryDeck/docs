@@ -4,6 +4,7 @@ tags: overview
 description: TelemetryDeck Query Language is the advanced query language for TelemetryDeck. This page describes the query object.
 lead: TelemetryDeck Query Language is the advanced query language for TelemetryDeck. You don't need to write all your queries by hand, but if you do, here's how.
 order: 0
+headerImage: /img/tql-header.png
 ---
 
 Most queries for TelemetryDeck can be constructed using the regular Insight Editor. However, if you need to construct a query that's not supported by the Insight Editor, or your query is more complicated and deeper than what the Insight Editor supports, you can use the TelemetryDeck Query Language (TQL) to construct your query.
