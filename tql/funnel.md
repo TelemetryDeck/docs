@@ -15,6 +15,7 @@ This query returns the number of users that went through the funnel steps `Login
 {
   "dataSource": "telemetry-signals",
   "queryType": "funnel",
+  "granularity": "all",
   "steps": [
     {
       "type": "selector",
