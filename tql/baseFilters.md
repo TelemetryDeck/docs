@@ -23,7 +23,7 @@ The default value is `thisOrganization`.
 : Attach test mode filter and filter for all apps of the executing user's organization.
 
 [`thisApp`](/docs/tql/thisapp/)
-: Attach test mode filter and filter for the app the insight lives in. This fails if the query doesn't belong to an insight.
+: Attach test mode filter and filter for the app the insight lives in. If the query does not belong to an insight, this value requires the query's `appID` property to be set.
 
 [`exampleData`](/docs/tql/exampledata/)
 : Attach test mode filter and filter for the example app's data. The server will execute this query as if the owner of the Example App is logged in, and it will always return example data instead of an actual user's data. This is great for showing a demo of the environment.

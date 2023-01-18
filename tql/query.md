@@ -68,39 +68,41 @@ The following properties are common to all query types. See pages for each query
 | Property                                                  | Description                                                                                                                                              |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnel/). |
-| [dataSource](/docs/tql/datasource/)                       | The data source to query. Must be `"telemetry-signals"`.                                                                                                 |
 | [granularity](/docs/tql/granularity/)                     | The granularity of the query.                                                                                                                            |
 | [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                                     |
 | [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                       |
 | [baseFilters](/docs/tql/basefilters/) (optional)          | A list of filters that are applied to all queries.                                                                                                       |
 | [filter](/docs/tql/filters/) (optional)                   | A filter that's applied to the query.                                                                                                                    |
+| [dataSource](/docs/tql/datasource/) (optional)            | The data source to query. Must be `"telemetry-signals"`. Defaults to "telemetry-signals".                                                                |
+| **testMode** (optional, Bool)                             | Wether to show test test data (`True`) or live data (`False`). Defaults to `False`. [More on Test Mode](/docs/articles/test-mode/)                       |
+| **appID** (optional)                                      | If [baseFilters](/docs/tql/basefilters/) is set to `thisApp`, the id for the app in question.                                                            |
 | **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                           |
 | **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                   |
 | **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                         |
 
-## Additional Properties for Timeseries Queries
+## Additional Properties for [Timeseries](/docs/tql/timeseries/) Queries
 
 | Property                                       | Description                                      |
 | ---------------------------------------------- | ------------------------------------------------ |
 | [descending](/docs/tql/descending/) (optional) | Whether to sort the results in descending order. |
 
-## Additional Properties for Top N Queries
+## Additional Properties for [Top N](/docs/tql/topN/) Queries
 
-| Property                                     | Description                                                                        |
-| -------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [dimension](/docs/tql/dimensionSpec/)        | A DimensionSpec defining the dimension that you want the top taken for.            |
-| [metric](/docs/tql/topNMetricSpec/)          | A TopNMetricSpec object specifying the metric to sort by for the top list.         |
-| [threshold](/docs/tql/threshold/) (optional) | An integer defining the N in the topN (how many results you want in the top list). |
+| Property                              | Description                                                                        |
+| ------------------------------------- | ---------------------------------------------------------------------------------- |
+| [dimension](/docs/tql/dimensionSpec/) | A DimensionSpec defining the dimension that you want the top taken for.            |
+| [metric](/docs/tql/topNMetricSpec/)   | A TopNMetricSpec object specifying the metric to sort by for the top list.         |
+| **threshold** (optional)              | An integer defining the N in the topN (how many results you want in the top list). |
 
-## Additional Properties for Group By Queries
+## Additional Properties for [Group By](/docs/tql/groupBy/) Queries
 
 | Property                               | Description                                             |
 | -------------------------------------- | ------------------------------------------------------- |
 | [dimensions](/docs/tql/dimensionSpec/) | A list of DimensionSpec objects to do the groupBy over. |
 
-## Additional Properties for Funnel Queries
+## Additional Properties for [Funnel](/docs/tql/funnel/) Queries
 
-| Property                                     | Description                                         |
-| -------------------------------------------- | --------------------------------------------------- |
-| [steps](/docs/tql/steps/)                    | A list of filters that form the steps of the funnel |
-| [stepNames](/docs/tql/stepnames/) (optional) | An optional List of names for the funnel steps      |
+| Property                                  | Description                                         |
+| ----------------------------------------- | --------------------------------------------------- |
+| [steps](/docs/tql/funnel/)                | A list of filters that form the steps of the funnel |
+| [stepNames](/docs/tql/funnel/) (optional) | An optional List of names for the funnel steps      |
