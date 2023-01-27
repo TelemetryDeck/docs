@@ -7,9 +7,6 @@ assignees: voidedmain, winsmith
 
 ---
 
-**Which documentation page are we talking about?**
-If possible, please link to the exact page you want to give feedback for.
-
 **Is your feedback related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
