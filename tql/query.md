@@ -45,7 +45,7 @@ This example groupBy query groups signals by the `majorSystemVersion` dimension 
   "granularity": "all",
   "dimensions": [
     {
-      "dimension": "",
+      "dimension": "majorSystemVersion",
       "outputName": "Major System Version",
       "outputType": "STRING",
       "type": "default"
