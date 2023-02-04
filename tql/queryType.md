@@ -16,5 +16,5 @@ The following query types are supported:
 [groupBy](/docs/tql/groupBy/)
 : Groups a set of events by a set of dimensions and aggregates them by a set of metrics. for example "How many users are there per country and per device?"
 
-[funnel](/docs/tql/funnels/)
+[funnel](/docs/tql/funnel/)
 : Groups a set of events by a set of steps and aggregates them by a set of metrics. for example "How many users went through the funnel steps 'Login' -> 'View Product' -> 'Purchase'?"
