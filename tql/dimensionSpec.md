@@ -48,6 +48,7 @@ Note: for functions taking string values (such as regular expressions), `__time`
 
 Returns the first matching group for the given regular expression. If there is no match, it returns the dimension value as is.
 
+```json
 {
   "type" : "regex",
   "expr" : <regular_expression>,
@@ -55,6 +56,7 @@ Returns the first matching group for the given regular expression. If there is n
   "replaceMissingValue" : true,
   "replaceMissingValueWith" : "foobar"
 }
+```
 
 For example, using `"expr" : "(\\w\\w\\w).*"` will transform `'Monday'`, `'Tuesday'`, `'Wednesday'` into `'Mon`', `'Tue'`, `'Wed'`.
 
