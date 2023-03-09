@@ -27,7 +27,7 @@ Let's have a look at how to use funnels in TelemetryDeck.
 ## How to use funnels
 Imagine you want to track how many users turn into customers. You can use funnels to track this conversion process. Since a funnel filters your insights by conditions, you must set up filters in your TelemetryDeck dashboard with the **filter editor**. These filters help you track how many users complete each funnel step, leading to a great visualization of your app's conversion. To create a **funnel chart**, just set the chart type to funnel and the query type to **funnel query** - or use our handy template to create an empty funnel!
 
-![Screenshot of the selected funnel query and chart type](/docs/images/funnel_type.png)
+![Screenshot of the selected funnel query and chart type](/docs/images/funnel_type.PNG)
 
 For example, let's say your funnel has three steps:
 
