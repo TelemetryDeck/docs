@@ -25,25 +25,26 @@ If there happens to be some confusion during the process, and users cancel it be
 Let's have a look at how to use funnels in TelemetryDeck.
 
 ## How to use funnels
-Imagine you want to track how many users turn into customers. You can use funnels to track this conversion process. Since a funnel filters your insights by conditions, you must set up filters in your TelemetryDeck dashboard. These filters help you track how many users complete each funnel step, leading to a great visualization of your app's conversion.
+Imagine you want to track how many users turn into customers. You can use funnels to track this conversion process. Since a funnel filters your insights by conditions, you must set up filters in your TelemetryDeck dashboard with the **filter editor**. These filters help you track how many users complete each funnel step, leading to a great visualization of your app's conversion. To create a **funnel chart**, just set the chart type to funnel and the query type to **funnel query** - or use our handy template to create an empty funnel!
 
-For example, let's say your funnel has four steps:
+![Screenshot of the selected funnel query and chart type](/docs/images/funnel_type.png)
 
-1. Logging in, or starting a new session
-2. Visiting the product page in your app
-3. Adding the product to the cart
-4. Completing the checkout process
+For example, let's say your funnel has three steps:
+
+1. Visiting the product page in your app
+2. Adding the product to the cart
+3. Completing the checkout process
 
 You can set up corresponding filters to track how many users complete each step of the funnel.
 
-For the first step, you can filter the data to only show users who visited the product page. For the second step, you can filter the data to only show users who added the product to their cart after visiting the product page. For the third step, you can filter the data to only show users who completed the checkout process after adding the product to their cart.
+For the first step, you can filter the data to only show users who visited the product page. For the second step, you can filter the data to only show users who added the product to their cart after visiting the product page. For the third step, you can filter the data to only show users who completed the checkout process after adding the product to their cart, and so on. You don't need to repeat filter steps, since the previous condition always applies to the following ones, too.
 
-Using filters to track each step of the funnel, you can see how many users make it through each step and where they drop off. This information can help you identify areas to improve your app to increase conversions!
+Using filters to track each step of the funnel, you can see how many users make it through each step and where they drop off. This information can help you identify areas to **improve** your app to **increase conversions**!
 
 
 {% callToAction "Check out funnels now!" "Go to your TelemetryDeck dashboard and start right away" %}
 
 ## Diving deeper into funnels
-You can already start using funnels in TelemetryDeck! And with this next step, you can learn how to extract funnels from your analytics data by using the TelemetryDeck Query Language (TQL)!
+You can already start using funnels in TelemetryDeck right now! And with this next step, you can learn more about how to extract funnels from your analytics data by using the **TelemetryDeck Query Language (TQL)**! 
 
 <a href="/docs/tql/funnel/" class="btn btn-secondary btn-large">Next Up: How to extract funnels from your analytics data →</a>
