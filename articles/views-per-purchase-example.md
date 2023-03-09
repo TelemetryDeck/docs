@@ -46,7 +46,7 @@ We'll start with the boilerplate of our query. We'll use the `groupBy` query typ
 
 ## Filtering
 
-We only want to consider the signals of type `upgradeDetailViewDidLoad` and `purchaseSuccessful`. We can achieve that with an `and` filter.
+We only want to consider the signals of type `upgradeDetailViewDidLoad` and `purchaseSuccessful`. We can achieve that with an `or` filter.
 
 ```json
 "filter": {
