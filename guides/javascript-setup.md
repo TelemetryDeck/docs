@@ -87,7 +87,7 @@ const queuedEvents = [
   ["signal"],
   ["signal", { route: "some/page/path" }],
 ];
-td.ingest(qeuedEvents);
+td.ingest(queuedEvents);
 
 // Basic signal
 td.signal();
