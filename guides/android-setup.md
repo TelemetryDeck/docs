@@ -34,8 +34,8 @@ After that is done, add the following to your `build.gradle` file, under `depend
 ```python
 dependencies {
     // ...
-    // Please replace 1.0.0 with the latest version of the SDK
-    implementation 'com.github.TelemetryDeck:KotlinSDK:1.0.0'
+    // Please replace 1.1.0 with the latest version of the SDK
+    implementation 'com.github.TelemetryDeck:KotlinSDK:1.1.0'
 }
 ```
 
