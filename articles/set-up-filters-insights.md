@@ -25,7 +25,7 @@ You can use analytics filters to refine your data and obtain precise insights. W
 - The **Selector** filter lets you compare any *payload key* (also known as a dimension) to a value. For instance, if you send a `shouldUseHealthKit` parameter as part of your payload in signals, you can filter for `shouldUseHealthKit = “true”`.
 - Additionally, you can use **Regular Expressions** (RegEx) to filter data based on *complex patterns or strings of text*. Sometimes it is not possible to match a value exactly, and in such cases, regular expressions can be incredibly useful to obtain more accurate and specific insights into user behavior. A good example for using RegEx is filtering by device type, locale, or anything else you would like a more precise view on!
 
-![Screenshot of how adding a condition changes the output. Adding that only iOS versions should be shown, and then wrapping the condition inside a NOT so that everything but iOS versions is shown.](/docs/images/filter_example.jpg)
+![Screenshot of how adding a condition changes the output. Adding that only iOS versions should be shown, and then wrapping the condition inside a NOT so that everything but iOS versions is shown.](/docs/images/filter_example.png)
  
 ## Query construction
 
