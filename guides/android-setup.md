@@ -5,7 +5,7 @@ tags:
   - Quickstart
   - Code
   - Kotlin
-testedOn: Android Studio 2021.1.1.21
+testedOn: Android Studio Electric Eel | 2022.1.1 Patch 2
 featured: true
 description: Include the TelemetryDeck SDK in Your Android Application
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Kotlin Package in your application.
@@ -34,8 +34,8 @@ After that is done, add the following to your `build.gradle` file, under `depend
 ```python
 dependencies {
     // ...
-    // Please replace 1.0.0 with the latest version of the SDK
-    implementation 'com.github.TelemetryDeck:KotlinSDK:1.0.0'
+    // Please replace 1.1.0 with the latest version of the SDK
+    implementation 'com.github.TelemetryDeck:KotlinSDK:1.1.0'
 }
 ```
 
@@ -113,6 +113,8 @@ The payload is a map of parameters to be sent with the signal, and can be any ke
 
 ## Requirements:
 
-- SDK 28 or later
+- SDK 21 or later
 - Kotlin 1.6.10 or later
 - Java Compatibility Version 1.8
+
+
