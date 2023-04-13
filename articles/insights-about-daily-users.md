@@ -1,5 +1,5 @@
 ---
-title: How to track the number of daily users in your app
+title: Track the number of daily users in your app
 tags:
   - beginner
   - how-to

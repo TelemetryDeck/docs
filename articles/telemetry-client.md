@@ -6,6 +6,8 @@ tags:
 testedOn: Xcode 12.4 & Swift 5.3
 description: Reference documentation for the Swift Client for TelemetryDeck-using apps
 lead: The TelemetryDeck Swift Client is a Swift Package to include in your app
+searchEngineTitle: How to add the TelemetryDeck Swift Client
+searchEngineDescription: Learn how to add the Swift Client for TelemetryDeck-using apps
 ---
 
 ## Include the Swift Client in your Xcode Project

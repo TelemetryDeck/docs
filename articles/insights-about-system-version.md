@@ -1,5 +1,5 @@
 ---
-title: How to find out which operating system your users are using
+title: Find out which operating system your users are using
 tags:
   - beginner
   - how-to

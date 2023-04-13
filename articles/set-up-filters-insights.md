@@ -1,11 +1,12 @@
 ---
-title: Refine your query, gain insights - the power of filters
+title: Filters - How to use the Filter Editor
 tags:
   - setup
   - quickstart
   - intermediate
   - how-to
 description: Sometimes, generic insights aren’t enough. With TelemetryDeck filters you can further specify what you’re really interested in your signals!
+searchEngineTitle: Refine your query, gain insights - the power of filters
 ---
 
 Filters are tools that allow you to segment and manipulate your analytics data in various ways. They help you exclude or include specific data sets and user groups based on parameters such as location, device, user behavior, and more.
