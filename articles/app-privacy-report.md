@@ -7,13 +7,13 @@ searchEngineTitle: How to use Apple's app privacy report as a developer
 searchEngineDescription: What is the iOS and iPadOS App Privacy Report? And how to use it as a privacy orientated app developer?
 ---
 
-## What Is the App Privacy Report?
+## What is the App Privacy Report?
 
 Starting in iOS 15.2, the operating system collects all domains that are contacted by an app. The App Privacy Report provides users with a summary of this information. The list shows: Which app has contacted which domain and how often. Also interesting: The report shows how often an app has requested the microphone, camera, GPS locations, photos and contacts.
 
 The purpose of the App Privacy Report is to make it easier for users to identify unfair app practices. For example, thanks to the new report, you can see if you have installed an app that constantly shares your location or if an app matches contacts from your address book.
 
-## How to Interpret the App Privacy Report Correctly
+## How to interpret the App Privacy Report correctly
 
 The App Privacy Report is a powerful tool that you can have a lot of fun with (fun in the sense of spooky insights). Unfortunately, it also holds a lot of potential for misunderstanding.
 
@@ -33,11 +33,11 @@ These contacted domains indicate that an app is intensively monitoring its users
 - `ga`
 - and so on
 
-## What Entry Do Users See When an App Uses TelemetryDeck?
+## What entry do users see when an app uses TelemetryDeck?
 
 Apps that have TelemetryDeck embedded contact the domain `nom.telemetrydeck.com`. And that is exactly what is seen in the App Privacy Report. "Nom" is the point where our server picks up the signals, that is, eats them. Nom Nom… you know what I mean? Maybe we should put a GIF of the Cookie Monster in there some time…
 
-## Is the App Privacy Report Good or Bad for App Developers?
+## Is the App Privacy Report good or ad for app developers?
 
 Our conclusion: The App Privacy Report helps users who have some prior technical knowledge to form a judgment about individual apps. It is fun to search for trackers and then raise an eyebrow in disdain when you discover one.
 

@@ -39,6 +39,6 @@ The `majorMinorVersion` breakdown key is a string that represents the major and 
 
 The `majorVersion` breakdown key is a string that represents the major version of the OS. For example, `iOS 15`. This is what most of your decisions in this space should be based on, since most of the time you'll want to drop a _major_ version of the operating system. Most operating system vendors release these major versions every few years. Using this data, you can decide when to maybe require iOS 15 instead of 14 for example.
 
-## That's It!
+## That's it!
 
 We hope this article gave you a little overview on what you can do to decide when to drop a previous version of the OS. If you have any questions, feel free to ask on [Twitter @Telemetry_Deck](https://twitter.com/telemetry_deck) and we'll be happy to talk.

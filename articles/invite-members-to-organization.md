@@ -20,14 +20,14 @@ Adding members to your organization lets you share groups and insights with them
 You can collaborate with your team, giving them more insight on - well - insights! And of course your members can work with real-life data and get instant feedback on their changes.
 
 
-## Navigate To Your Organization Settings
+## Navigate to your organization settings
 
 To add someone to your organization, you first need to create an account. If you have not created an account and named your organization yet, check out our guide [Making an Account](/docs/articles/making-account/) first.
 
 In your browser, navigate to the [dashboard](https://dashboard.telemetrydeck.com). There you will find your name on the top right side. Click on it to open the menu. Choose `Organization Settings` next.
 
 
-## Adding a New User
+## Adding a new user
 
 Under `Members`, you can see a list of all the current members with their corresponding email addresses who are part of your organization. You should only see yourself on the list if you have not added anyone. To invite a user, navigate to `Invite Someone`. Add your new member's email address in the text field and click on `Invite`.
 

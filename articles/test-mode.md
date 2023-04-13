@@ -22,7 +22,7 @@ We do not recommend not doing any testing. The benefits of sending signals durin
 
 Test Mode will let you easily and quickly test new features for your app, giving you the power to release the best product possible! Let's dive right in.
 
-## How It Works
+## How it works
 
 Each sent signal has a `isTestMode` parameter, which can either be `true` or `false`.
 Navigate to your TelemetryDeck [dashboard](https://dashboard.telemetrydeck.com/), where you will find the Test Mode toggle on the top left side, just above the sidebar.
@@ -34,7 +34,7 @@ The SDKs try to infer the isTestMode parameter as best as they can. For example,
 You can also override the isTestMode parameter just as you would add any other payload parameter to a signal
 Note: since signal payloads only support strings, the parameter needs to be either "true" or "false"
 
-### Manually Set Test Mode in Swift SDK
+### Manually det Test Mode in Swift SDK
 
 ```swift
 // An example variable to manually set test mode.
@@ -49,7 +49,7 @@ TelemetryManager.send(
 )`
 ```
 
-### Manually Set Test Mode in JavaScript SDK
+### Manually set Test Mode in JavaScript SDK
 
 ```javascript
 // Example initialisation of TelemetryDeck SDK

@@ -12,14 +12,14 @@ searchEngineDescription: At TelemetryDeck we want you to better understand your 
 order:
 ---
 
-## What Is an Insight?
+## What is an insight?
 
 Insights are a fundamental part of analytics. They describe how analytics data is translated in a readable way so developers can act accordingly. **Insights help us understand data**, both individually and as a conglomerate. They show us how our apps perform, how users adapt to new changes, tell us how willing they are to update, and a lot more!
 
 The best way to read Insight data is by putting them into fancy **Insight cards**! An Insight card is one of the primary building blocks of TelemetryDeck. Essentially, they are one of the little cards in our dashboard, with data in an Insight group. They have a title, a query, and a display mode.  
 The query is used to retrieve data from the TelemetryDeck API, and the display mode is used to determine how the data gets displayed, for example, as a bar chart or a line chart.
 
-### Versatile and Adjustable
+### Versatile and adjustable
 
 **Insights are incredibly versatile**: They can count either signal or users. If needed, they can be restricted to specific signal _types_, such as "the app launched" or "the user did x". Insights can be filtered by their metadata, too! For example, to only show signals from iOS or a specific app version.
 
@@ -27,7 +27,7 @@ They can show a breakdown of all available values for a given metadata key; this
 
 Finally, all insights can display their data as a table, bar chart, line chart, or donut chart. All these configurations can be changed and experimented with on the fly, allowing developers who use TelemetryDeck to dive into their data quickly and easily. In the following sections, we explain insight data and insight cards in more depth.
 
-## Insight Data - How It Works
+## Insight data - How it works
 
 Each insight runs its filters, groupings, and breakdowns (see below for more on those) on all Signals received for the currently selected app in the currently selected date range.
 
@@ -41,7 +41,7 @@ Here are some examples of what a line of data could be:
 - a breakdown of the usage of a feature, with one line "enabled" and the number of users who have that feature enabled, and one line called "disabled"
 - a single line for the active users in the current month
 
-## How To Configure Your Insight Card
+## How to configure your insight card
 
 **Title**  
 The title is displayed on top of any insight card. Example: "Daily Active Users"
