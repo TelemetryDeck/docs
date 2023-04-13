@@ -46,22 +46,26 @@ Here are some examples of what a line of data could be:
 **Title**  
 The title is displayed on top of any insight card. Example: "Daily Active Users"
 
-**Show Expanded**  
-If "Show Expanded" is active, the insight will be displayed in a larger frame before any non-expanded insight. This allows you to see your most important insight on top and with extra detail.
+**Compact and wide mode**  
+You can choose between "Compact" and "Wide". If "Wide" is active, the insight will be displayed in a larger frame. This allows you to see your most important insight with extra detail.
+
+![buttons for the compact mode](/docs/images/compact_wide_mode.PNG)
 
 **Display Mode**  
 Here, you can choose the most suitable chart type for your insight. Learn more about the chart types in the section [Chart Types](#chart-types).
 
-**Signal Type**  
-Insights that don't have a signal type specified will take all signals for the current app that were received in the currently selected date range. If you do specify a signal type, only signals of that type will be included in the insight's calculation.
+![icons for the display mode](/docs/images/display_mode.PNG)
 
-**Unique by User**  
-If "unique by user" is unchecked, an insight will count all signals by their type. If "unique by user" is checked, each user will only get counted once. Only the newest is selected if the set of signals counted by the insight contains multiple signals from the same user. This is great for counting users, for example, "How many users are using feature x?"
+**Counting**  
+If "Count Signals" is checked, an insight will count all signals by their type. If "Count Users" is checked, each user will only get counted once. Only the newest is selected if the set of signals counted by the insight contains multiple signals from the same user. This is great for counting users, for example, "How many users are using feature x?"
 
 **Granularity**  
 This lets you group signals by time interval - the more fine-grained the grouping, the more separate values you'll receive.
 
 This will put your signals in datetime-based buckets, depending on the time they were received. The more fine-grained settings, like hour and day, are great for looking at individual days or weeks. Settings like week and month are great for month-over-month or year-over-year comparisons and are especially important if your users don't use your app daily.
+
+**Filter**  
+Insights that don't have a signal type specified will take all signals for the current app that were received in the currently selected date range. If you do specify a signal type, only signals of that type will be included in the insight's calculation. You can add conditions to further filter your signals.
 
 ### Query Type
 
@@ -75,7 +79,7 @@ Whenever you choose TopN as a query type, you can configure it under _TopN Confi
 
 - TopN pairs well with the [Donut Chart](#donut-chart) as a Chart Type.
 
-- If you're interested in the number of users per for example system version instead of the number of signals, enable the _unique by user_ option in _Signal Type_.
+- If you're interested in the number of users per - for example - system version instead of the number of signals, enable the _unique by user_ option in _Signal Type_.
   {% endnoteinfo %}
 
 ### Filters
@@ -112,24 +116,32 @@ If only one line of data is returned, that line will be displayed in large type.
 
 ---
 
-![An example of a table chart](/docs/images/bar-chart.PNG)
+![An example of a bar chart](/docs/images/bar-chart.PNG)
 
 **Bar Chart**
 
-It will display the query result as a vertical bar chart, one bar per line of data. This works for both time series data and other types, such as breakdowns.
+It displays the query result as a vertical bar chart, one bar per line of data. This works for both time series data and other types, such as breakdowns.
 
 ---
 
-![An example of a table chart](/docs/images/line-chart.PNG)
+![An example of a line chart](/docs/images/line-chart.PNG)
 
 **Line Chart**
 
-This chart will display the query result as a line chart, one bar per line of data. This works best for time-series data. Displaying other data doesn't make a lot of sense in this chart type.
+This chart shows the query result as a line chart, one bar per line of data. This works best for time-series data. Displaying other data doesn't make a lot of sense in this chart type.
 
 ---
 
-![An example of a table chart](/docs/images/donut-chart.PNG)
+![An example of a donut chart](/docs/images/donut-chart.PNG)
 
 **Donut Chart**
 
 A pie/donut type chart that will sort the rows of data by number and visually show their percentage of the whole.
+
+---
+
+![An example of a funnel chart](/docs/images/funnels_example.png)
+
+**Funnel Chart**
+
+In combination with the filter editor, this chart displays when a user ends a process within your app - breaking it down into visual steps that show exactly how many users stayed in a process.
