@@ -189,6 +189,14 @@ TelemetryManager.send(
 
 And you're done! You are now sending signals to the TelemetryDeck server.
 
+## Fill out Apple's app privacy details
+
+Last thing you need to do before you can send signals is going through Apple's privacy details. This informs your users about what data is collected, and how it is collected.
+
+Also TelemetryDeck is privacy friendly, and we only handle not personally identifiable information, you still need to click through the privacy details.
+
+We have a [handy guide](/docs/articles/apple-app-privacy/) where we go over each step that is required.
+
 ## You're all set!
 
 You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention… a lot!
