@@ -32,8 +32,8 @@ This example compares **Payscreen A** and **Payscreen B** and will return metric
         "position": "beginning"
       },
       "endDate": {
-        "component": "month", "
-        offset": 0,
+        "component": "month",
+        "offset": 0,
         "position": "end"
       }
     }
