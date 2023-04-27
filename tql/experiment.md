@@ -24,20 +24,6 @@ This example compares **Payscreen A** and **Payscreen B** and will return metric
   "dataSource": "telemetry-signals",
   "granularity": "all",
   "queryType": "experiment",
-  "relativeIntervals": [
-    {
-      "beginningDate": {
-        "component": "month",
-        "offset": -1,
-        "position": "beginning"
-      },
-      "endDate": {
-        "component": "month",
-        "offset": 0,
-        "position": "end"
-      }
-    }
-  ],
   "sample1": {
     "filter": {
       "dimension": "type",
