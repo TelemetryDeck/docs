@@ -18,3 +18,6 @@ The following query types are supported:
 
 [funnel](/docs/tql/funnel/)
 : Groups a set of events by a set of steps and aggregates them by a set of metrics. for example "How many users went through the funnel steps 'Login' -> 'View Product' -> 'Purchase'?"
+
+[experiment](/docs/tql/experiment/)
+: Evaluates an A/B testing experiment.
