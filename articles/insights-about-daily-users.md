@@ -35,7 +35,10 @@ To create a group in the dashboard, have a look at the left sidebar. Here you ca
 ## Creating a new insight
 
 While in your group, you will see a `Create new Insight` field. Depending on if there are already existing insights, you may have to scroll down to find them.
-Click on _+ Create new Insight_. Here you will find `Daily Active Users` on the top. After clicking on it, a new insight card will be created. The default display type is a line chart that will show you the daily active user count at a specific time.
+Click on _+ Create new Insight_.
+
+### Use templates or create your own insight
+Here you will find `Daily Active Users` on the top. After clicking on it, a new insight card will be created. The default display type is a line chart that will show you the daily active user count at a specific time.
 
 ## Configure your insights to show daily active users
 
