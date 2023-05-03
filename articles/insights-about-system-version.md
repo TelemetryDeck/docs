@@ -23,19 +23,23 @@ In your browser, navigate to the [dashboard](https://dashboard.telemetrydeck.com
 
 ## Step two: Select or create a new group
 
-Grouping your insights is a great way to give a better overview of related topics. For example, grouping operating systems with insights about device types and app versions. In case you have not already created a group where your new insight fits into, here is a quick guide on how to create groups in the browser dashboard:
+Grouping your insights is a great way to give a better overview of related topics. For example, grouping operating systems with insights about device types and app versions. In case you have not already created a group where your new insight fits into [you can create a new one](/docs/articles/create-custom-dashboards/).
 
-To create a group in the dashboard, have a look at the left sidebar. Here you can find the `GROUPS` category. Click on _+ New Group_, give your group a name, and then click on `Create`. You now have a new group in your sidebar!
-
-## Step three: Creating a new insight
+## Step three: Create a new insight
 
 Getting insights on the operating system is essential. That is why we provide you with helpful templates to choose from, for example **System Versions**. This will give you insights on the operating systems your users are using. Let's have a look on how to create insights for **System Versions**.
 
 While in your group, you will see a `Create new Insight` field. Depending on if there are already existing insights, you may have to scroll down to find them.
-Click on _+ Create new Insight_. Here you will find `System Versions` on the bottom. After clicking on it, a new insight card will be created. You can hover over the pie chart to get information about how many users are using your app from a specific operating system. By default, the versions are grouped by minor versions (displayed as `15.x.x`).
+Click on _+ Create new Insight_ and give it a name. Now you can either build your own query by choosing a query type, or you can start right ahead by clicking on _I don’t know, show me some examples ->_. Now just pick _System Versions_ from the templates and you’re good to go!
+You can directly see how many users are using your app from a specific operating system.
+By default, the versions are grouped by minor versions (displayed as `15.x.x`).
+
+![Donut chart example of system versions](/docs/images/system-versions-example.png)
 
 ## Step four: Configure your insights
 
-In some cases, it is not necessary to know every minor version a user uses. In that case, we provide you with different breakdown keys to better filter your signals. When configuring an insight, the default key is `systemVersion`, displayed as `15.x.x`. You can switch to `majorMinorSystemVersion` to display the version as `15.x`, or `majorSystemVersion` to display it as `15`.
+In some cases, it is not necessary to know every minor version a user uses. In that case, we provide you with different breakdown keys to better filter your signals. When configuring an insight, the default key is `systemVersion`, displayed as `15.x.x`.
+Change the breakdown key under _Top N Dimension_. Here you can switch to `majorMinorSystemVersion` to display the version as `15.x`, or `majorSystemVersion` to display it as `15`.
 
-While you are in the **insight group**, click on the name of the insight you want to edit. Scroll down to `Top N Configuration` and click on the drop-down to change the `Breakdown Key`. Here you can switch to `majorMinorSystemVersion`or `majorSystemVersion`.
+Under _Counting_ you can also change what your insight is based on: either it counts the system versions based on the signals itself, or based on unique users.
+Counting them by user will show you how many of your users are using specific system versions, while counting them based on signals shows you which system version generates the most data and therefore is used more often.

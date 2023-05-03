@@ -23,31 +23,29 @@ The bar chart displays the distribution of your app's versions by day. Are you i
 
 ## Create a custom insight
 
-A general summary often does not fit your individual needs. That is where custom insights come to play! You can show the distribution of all used app versions with custom insights. First, we must navigate to a group or create a new one.
+A general summary often does not fit your individual needs. That is where custom insights come to play! You can show the distribution of all used app versions with custom insights. First, we must navigate to a group or [create a new one)](/docs/articles/create-custom-dashboards/).
 
-To create a group in the dashboard, look at the left sidebar. Here you can find the `GROUPS` category. Click `+ New Group`, give your group a name and then click `Create`. You now have a new group in your sidebar!
 
 ### Configuring your insight
 
-While in your group, create a new insight field. Choose `App Versions` from our templates. Now you can get started.
-We recommend using the donut chart or the table view. Make sure the following settings are selected and filled:
+While in your group, create a new [insight field](/docs/articles/insights/). Choose `App Versions` from our templates. Now you can get started.
+We recommend using the donut chart or the table view! If you’re not using our templates, make sure to configure the following fields accordingly to display app versions:
 
-**Signal**
+**Granularity**
 
-- Signal Type: `All Signals`
-- Granularity: any of the given options
+- any of the given options
 
 **Query Type**
 
 - Query Type: `Top N`
 
-**Top N Configuration**
+**Top N Dimension**
 
 - Breakdown Key: `appVersion`
 
 **Filters**
 
-- You can customize your filter depending on your needs. Make sure the **field is not empty**, and it contains at least an empty dictionary `{}`.
+- You can customize your filter depending on your needs.
 
 ## The importance of user upgrade behavior
 
