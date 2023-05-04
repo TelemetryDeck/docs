@@ -23,7 +23,7 @@ The bar chart displays the distribution of your app's versions by day. Are you i
 
 ## Create a custom insight
 
-A general summary often does not fit your individual needs. That is where custom insights come to play! You can show the distribution of all used app versions with custom insights. First, we must navigate to a group or [create a new one)](/docs/articles/create-custom-dashboards/).
+A general summary often does not fit your individual needs. That is where custom insights come to play! You can show the distribution of all used app versions with custom insights. First, we must navigate to a group or [create a new one](/docs/articles/create-custom-dashboards/).
 
 
 ### Configuring your insight
