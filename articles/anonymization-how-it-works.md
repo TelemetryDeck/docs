@@ -4,10 +4,10 @@ tags:
   - setup
   - how-to
   - privacy
-description: TelemetryDeck anonymizes user data, by salting and hashing IDs, to ensure anonymity and protect user privacy while still providing valuable insights.
-lead: We take user privacy seriously. To ensure the privacy of our users, we use various techniques to anonymize user data. One of the ways we do this is by using a salted hash algorithm to anonymize user identifiers.
+description: TelemetryDeck anonymizes user data, by double salting and hashing IDs, to ensure anonymity and protect user privacy while still providing valuable insights.
+lead: We take user privacy seriously. To ensure the privacy of our users, we use various techniques to anonymize user data. One of the ways we do this is by using a double hashing technique to anonymize user identifiers.
 searchEngineTitle: How TelemetryDeck anonymizes user data privacy-friendly
-searchEngineDescription: TelemetryDeck anonymizes user data, by salting and hashing IDs, to ensure anonymity and protect user privacy while still providing valuable insights.
+searchEngineDescription: TelemetryDeck anonymizes user data, by double hashing and salting IDs, to ensure anonymity and protect user privacy while still providing valuable insights.
 ---
 
 ![The hand of a person holding a phone that displays a modified version of the TelemetryDeck app](/docs/images/anonymization-display-image.jpg)
@@ -20,7 +20,7 @@ At TelemetryDeck, we even go a step further: the “identification date” is no
 
 ## User identifiers
 
-Our SDKs accept a **custom user identifier**, such as an email address or an internal identifier, to help you identify your users. If you don’t supply an identifier, we generate a random one for you. On some platforms, we may ask the operating system for one, such as the iOS “identifierForVendor”.
+Our SDKs accept a **custom user identifier**, such as an email address or an internal identifier, to help you identify your users. If you don’t supply an identifier, we generate a random one for you. On some platforms, we may ask the operating system for one, such as the iOS `identifierForVendor`.
 
 ## Salting and hashing
 
@@ -28,7 +28,7 @@ We salt and hash the identifier **on the user’s device**. If you have a custom
 
 ## Recognizing users
 
-If you use the same (custom) salt and provide the same original identifier, you can recognize the same user across different platforms. For example, if a user logs in to a website using their email address on one device and then switches to another device, they can still be recognized if the same salt and original identifier are used.
+If you use the same (custom) salt and provide the same original identifier, you can recognize the same user across different platforms. For example, if a user logs in to your website using their email address on one device and then switches to your app another device where they are logged in with the same email address, they can still be recognized if the same salt and original identifier are used.
 
 ## Conclusion
 
