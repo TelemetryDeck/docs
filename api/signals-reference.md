@@ -1,6 +1,9 @@
 ---
 title: Signals Reference
-tags: Headlinedocs, Docs, Signals
+tags:
+  - Headlinedocs
+  - Docs
+  - Signals
 description: A reference of all properties of a Signal
 lead: A Signal is the representation of one event happening in one instance of your app. Here is an overview of its properties.
 ---
