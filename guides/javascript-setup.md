@@ -1,16 +1,24 @@
 ---
-title: JavaScript Setup Guide
+title: Node Package Setup Guide
 tags:
   - Setup
   - JavaScript
   - Node
   - NPM
-  - Websites
 featured: true
-description: How to include the TelemetryDeck SDK in Your JavaScript Application or website
-lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your website or JS application.
+description: How to include the TelemetryDeck SDK in Your JavaScript Application or Web App
+lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your JS application or web app
 order: 300
 ---
+
+{% noteinfo "There are multiple ways of adding TelemetryDeck to a web site" %}
+
+There are different tutorials you should read depending on your use case.
+
+- If you are building a website or blog, and wait to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read the [Web Setup Guide](/docs/guides/web-setup).
+- If you are building a JavaScript application or web application, you should read this guide.
+
+{% endnoteinfo %}
 
 To get started with TelemetryDeck, you need to include the TelemetryClient Package in your website or JS application. You can do this in one of two ways:
 
