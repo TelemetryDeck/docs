@@ -10,14 +10,6 @@ lead: You have an account, and you have an app ID. Now let's include the Telemet
 order: 250
 ---
 
-{% noteinfo "Warning: Beta Version" %}
-
-We're still tweaking things on the backend for the Web SDK. As a result, some data might not be included in your signals, and there is a slight chance that identifiable data might not get filterered out correctly. Feel free to play around the Web SDK and [subscribe to our newsletter](https://telemetrydeck.com/newsletter/) to get notified when we release the stable version.
-
-If you need a safe version of the SDK for JavaScript and Websites, please check out our existing [JavaScript SDK](/docs/guides/javascript-setup).
-
-{% endnoteinfo %}
-
 ## Prerequisites
 
 - You'll need access to your website's code to install this package. If you're using a CMS like WordPress, you'll need to be able to edit the theme files.
