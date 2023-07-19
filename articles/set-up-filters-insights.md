@@ -21,7 +21,7 @@ In your insight group, you can add filters to any insight you want. With advance
 
 ## Filter conditions
 
-You can use analytics filters to refine your data and obtain precise insights. Want to dive deeper into filter conditions? Take a look at our [filter conditions](https://telemetrydeck.com/docs/tql/filters/) documentation!
+You can use analytics filters to refine your data and obtain precise insights. Want to dive deeper into filter conditions? Take a look at our [filter conditions](/docs/tql/filters/) documentation!
 - These filters include the **Signal Type** filter, which allows you to filter data by signal type, such as pageviews, clicks, or conversions. Having Signal Type as a filter condition makes it easier to combine multiple signal types using the *boolean operations*. Nest your insights with `AND`, `OR`, and `NOTs`!
 - The **Selector** filter lets you compare any *payload key* (also known as a dimension) to a value. For instance, if you send a `shouldUseHealthKit` parameter as part of your payload in signals, you can filter for `shouldUseHealthKit = “true”`.
 - Additionally, you can use **Regular Expressions** (RegEx) to filter data based on *complex patterns or strings of text*. Sometimes it is not possible to match a value exactly, and in such cases, regular expressions can be incredibly useful to obtain more accurate and specific insights into user behavior. A good example for using RegEx is filtering by device type, locale, or anything else you would like a more precise view on!
