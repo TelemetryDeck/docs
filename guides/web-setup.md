@@ -31,6 +31,10 @@ Once you have your App ID, edit the source code of your website and add the foll
 
 You don't need to write any code to use TelemetryDeck. Once you've installed the package, TelemetryDeck will automatically send `pageView` events for every page load.
 
+## Updating the Dashboard
+
+If you like, you can switch your [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com/) to Website mode. To do that, navigate to the relevant app in the Dashboard, click **App Setttings** in the sidebar, and change the **Overview Layout** to **Show Data for a blog or static website**.
+
 ## What data is collected?
 
 Signals automatically contain the following data, although various data points may be missing depending on the user's browser, privacy settings or network connection, or they might be not applicable.
