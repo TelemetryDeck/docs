@@ -72,6 +72,23 @@ After launching the app once, you can now go to the [Dashboard](https://dashboar
 
 ---
 
+
+{% notewarning "User Identifiers" %}
+
+The Kotlin SDK currently cannot automatically generate user identifiers for you so you won't be able to count users without some additional work. 
+
+Our current recommendation is to switch to a manual setup and add a user identifier like this;
+
+```kotlin
+val builder = TelemetryManager.Builder()
+           .appID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")
+           .defaultUser("some_user_id")
+```
+
+{% endnotewarning %}
+
+---
+
 ## Advanced: Sending Signals Manually
 
 Let's send a signal manually. Navigate to a Kotlin file and add the following code at the top:
