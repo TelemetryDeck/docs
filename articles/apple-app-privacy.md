@@ -20,6 +20,8 @@ This means your app will get an excellent privacy rating.
 
 With version 1.5.0 of the [TelemetryDeck Swfit SDK](https://github.com/TelemetryDeck/SwiftClient), you don't need to manually set up the App Store privacy details any more. Instead, the SDK includes a [Privacy Manifest](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files) that will automatically set up the correct labels for you.
 
+If you're using 1.5.0 or above, you can safely ignore the rest of this document.
+
 {% endnoteinfo %}
 
 ![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
