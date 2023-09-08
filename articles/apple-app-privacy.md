@@ -16,6 +16,12 @@ Since TelemetryDeck's analytics are private by default, you can include this inf
 
 This means your app will get an excellent privacy rating.
 
+{% noteinfo "Automatic Setup" %}
+
+With version 1.5.0 of the [TelemetryDeck Swfit SDK](https://github.com/TelemetryDeck/SwiftClient), you don't need to manually set up the App Store privacy details any more. Instead, the SDK includes a [Privacy Manifest](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files) that will automatically set up the correct labels for you.
+
+{% endnoteinfo %}
+
 ![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
 
 ## How do I start?
