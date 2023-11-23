@@ -5,12 +5,6 @@ lead: Extraction functions define the transformation applied to each dimension v
 order: 210
 ---
 
-{% noteinfo "Only One?" %}
-
-The Regular Expression Extraction Function is the only extraction function currently supported in TQL.
-
-{% endnoteinfo %}
-
 ## Regular Expression Extraction Function
 
 Returns the first matching group for the given regular expression. If there is no match, it returns the dimension value as is.
@@ -34,3 +28,70 @@ If the `replaceMissingValue` property is true, the extraction function will tr
 The `replaceMissingValueWith` property sets the String that unmatched dimension values will be replaced with, if `replaceMissingValue` is true. If `replaceMissingValueWith` is not specified, unmatched dimension values will be replaced with nulls.
 
 For example, if `expr` is `"(a\w+)"` in the example JSON above, a regex that matches words starting with the letter `a`, the extraction function will convert a dimension value like `banana` to `foobar`.
+
+## Registered lookup extraction function
+
+The TelemetryDeck servers have various **lookup tables** that can be used to translate extracted values into human readable names. The `registeredLookup` extraction function lets you refer to a lookup table that has been prepared by us. For example, the
+`appleModelNames` lookup table can be used to translate the model name of an Apple device into a human readable name.
+
+The following lookup tables are available:
+
+- `appleModelNames` - Translates Apple device model names into human readable names.
+- `deviceType` - Translates device device model names into a type such as "Desktop", "Phone", "Tablet", etc.
+
+Here's an example TQL query that uses the registered lookup extraction function to translate a dimension value into a human readable name:
+
+```json
+{
+  "dimension": {
+    "dimension": "modelName",
+    "extractionFn": {
+      "type": "registeredLookup"
+      "lookup": "appleModelNames",
+      "retainMissingValue": true,
+    },
+    "outputName": "modelName",
+    "type": "extraction"
+  },
+  // Other TQL query properties...
+}
+```
+
+A property of `retainMissingValue` and `replaceMissingValueWith` can be specified at query time to hint how to handle missing values. Setting `replaceMissingValueWith` to `""` has the same effect as setting it to `null` or omitting the property. Setting `retainMissingValue` to `true` will use the dimension's original value if it is not found in the lookup. The default values are `replaceMissingValueWith = null` and `retainMissingValue = false` which causes missing values to be treated as missing.
+
+It is illegal to set `retainMissingValue = true` and also specify a `replaceMissingValueWith`.
+
+The `injective` property can be set to `true` to indicate that the lookup is injective. This means that each key maps to a single value. If the lookup is not injective, then the first value found will be used. The default value is `false`.
+
+## Inline lookup extraction function
+
+The `inlineLookup` extraction function lets you specify a lookup table inline in the TQL query. This is useful if you want to use a lookup table that is not available as a registered lookup table.
+
+Here is an example TQL query that uses the inline lookup extraction function to translate a dimension value into a human readable name:
+
+```json
+{
+  "dimension": {
+    "dimension": "modelName",
+    "extractionFn": {
+      "type": "inlineLookup"
+      "lookup": {
+        "map": {
+          "AppleTV2,1": "Apple TV 2",
+          "AppleTV3,1": "Apple TV 3",
+          "AppleTV3,2": "Apple TV 3",
+        },
+        "type": "map"
+      },
+      "retainMissingValue": true,
+    },
+    "outputName": "modelName",
+    "type": "extraction"
+  },
+  // Other TQL query properties...
+}
+```
+
+The inline lookup should be of type `map`.
+
+The properties `retainMissingValue`, `replaceMissingValueWith`, and `injective` behave similarly to the registered lookup extraction function.
