@@ -4,15 +4,15 @@ tags:
   - Setup
   - Privacy
 featured: true
-
 description: Frequently asked questions about TelemetryDeck's Privacy Policy
-lead: TelemetryDeck is privacy friendly and will never collect personally identifiable information. This FAQ answers the most common questions about our Privacy Policy and how to answer your users' questions.
+lead: This FAQ answers the most common questions about our Privacy Policy and how to answer your users' questions.
 order: 10000
+headerImage: /docs/images/faq.jpg
 ---
 
 ## What is TelemetryDeck?
 
-TelemetryDeck is a privacy friendly analytics platform for mobile, desktop and web application. It helps you understand how your users are using your app, and how you can improve it.
+TelemetryDeck is a privacy friendly analytics platform for mobile, desktop and web application. It helps you understand how your users are using your app, and how you can improve it. TelemetryDeck is privacy friendly and will never collect personally identifiable information.
 
 ## What data does TelemetryDeck collect?
 

@@ -8,16 +8,14 @@ description: TelemetryDeck anonymizes user data, by double salting and hashing I
 lead: We take user privacy seriously. To ensure the privacy of our users, we use various techniques to anonymize user data. One of the ways we do this is by using a double hashing technique to anonymize user identifiers.
 searchEngineTitle: How TelemetryDeck anonymizes user data privacy-friendly
 searchEngineDescription: TelemetryDeck anonymizes user data, by double hashing and salting IDs, to ensure anonymity and protect user privacy while still providing valuable insights.
+headerImage: /docs/images/anonymization-display-image.jpg
 ---
-
-![The hand of a person holding a phone that displays a modified version of the TelemetryDeck app](/docs/images/anonymization-display-image.jpg)
 
 ## Methodology
 
 Anonymizing data involves transforming it to prevent direct linkage to a person. However, if the original data can be recreated with additional information, the transformation only qualifies as pseudonymization. **GDPR considers data truly anonymized** only if the original data can’t be recreated, even with additional information.
 
 At TelemetryDeck, we even go a step further: the “identification date” is no longer available; “re-identification” is thus ruled out and cannot be performed. Therefore, anonymized data is not personal data anymore. [You can check out our code](https://github.com/TelemetryDeck/SwiftClient/blob/main/Sources/TelemetryClient/SignalManager.swift#L84) to confirm the statement for yourself!
-
 
 ## User identifiers
 
