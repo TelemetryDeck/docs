@@ -108,6 +108,10 @@ td.signal("Volume.Set", {
 });
 ```
 
+## Privacy Policy and Opt-Out
+
+You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+
 ## Advanced: Queueing Signals
 
 The `TelemetryDeck` class comes with a built-in queuing mechanism for storing signals until they are flushed in a single request. Queued signals are sent with `receivedAt` prefilled with the time they were queued.

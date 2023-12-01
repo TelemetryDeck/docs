@@ -197,6 +197,10 @@ Also TelemetryDeck is privacy friendly, and we only handle not personally identi
 
 We have a [handy guide](/docs/articles/apple-app-privacy/) where we go over each step that is required.
 
+## Privacy Policy and Opt-Out
+
+You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+
 ## You're all set!
 
 You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention… a lot!

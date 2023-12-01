@@ -70,12 +70,15 @@ By default, the TelemetryDeck SDK will automatically send signals when the app s
 
 After launching the app once, you can now go to the [Dashboard](https://dashboard.telemetrydeck.com/) and watch your signals pour in, for example in the "Recent Signals" list. Signals produced while working in your IDE will automatically be tagged as **Test Signals** so remember to enable Test Mode in the Dashboard to see your testing data your Insights and charts. Disable Test Mode in the dashboard to see your production data once your app is live.
 
----
+## Privacy Policy and Opt-Out
 
+You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+
+---
 
 {% notewarning "User Identifiers" %}
 
-The Kotlin SDK currently cannot automatically generate user identifiers for you so you won't be able to count users without some additional work. 
+The Kotlin SDK currently cannot automatically generate user identifiers for you so you won't be able to count users without some additional work.
 
 Our current recommendation is to switch to a manual setup and add a user identifier like this;
 
@@ -133,5 +136,3 @@ The payload is a map of parameters to be sent with the signal, and can be any ke
 - SDK 21 or later
 - Kotlin 1.6.10 or later
 - Java Compatibility Version 1.8
-
-

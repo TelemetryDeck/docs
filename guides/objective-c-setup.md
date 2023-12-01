@@ -118,3 +118,7 @@ If you app is built in `DEBUG` configuration (that means running from Xcode), yo
 You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention… a lot!
 
 After a while, you can add a send call for each screen in your app, so you can see which screens are used most. We also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user please). This way you can see which settings most of your users use.
+
+## Privacy Policy and Opt-Out
+
+You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
