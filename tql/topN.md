@@ -13,11 +13,13 @@ A Top N query allows you to list the top N values of a dimension, ordered by a m
 {
   "aggregations": [{ "name": "count", "type": "count" }],
   "dataSource": "telemetry-signals",
-  "dimension": {
-    "dimension": "appVersion",
-    "outputName": "appVersion",
-    "type": "default"
-  },
+  "dimensions": [
+    {
+      "dimension": "appVersion",
+      "outputName": "appVersion",
+      "type": "default"
+    }
+  ],
   "granularity": "all",
   "metric": {
     "ordering": "version",
