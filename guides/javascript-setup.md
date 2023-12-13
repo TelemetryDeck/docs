@@ -52,7 +52,7 @@ import TelemetryDeck from '@telemetrydeck/sdk';
 
 const td = new TelemetryDeck({
   appID: '<YOUR_APP_ID>'
-  user: '<YOUR_USER_IDENTIFIER>',
+  clientUser: '<YOUR_USER_IDENTIFIER>',
 });
 ```
 
@@ -74,7 +74,7 @@ import crypto from 'crypto';
 
 const td = new TelemetryDeck({
   appID: '<YOUR_APP_ID>'
-  user: '<YOUR_USER_IDENTIFIER>',
+  clientUser: '<YOUR_USER_IDENTIFIER>',
   subtleCrypto: crypto.webcrypto.subtle,
 });
 ```
