@@ -35,7 +35,7 @@ Here are some examples:
 - `Main.AppLaunched`
 - `Preferences.ErrorModal.Shown`
 
-We recommend you don’t make the paths too specific or deeper than, say, 3 levels. OOtherwise, you’ll run into annoying mismatches when you move a feature around but can’t really rename the insight type to match.
+We recommend you don’t make the paths too specific or deeper than, say, 3 levels. Otherwise, you’ll run into annoying mismatches when you move a feature around but can’t really rename the insight type to match.
 
 ## Distinguishing between views, actions and events
 
