@@ -35,6 +35,10 @@ You don't need to write any code to use TelemetryDeck. Once you've installed the
 
 If you like, you can switch your [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com/) to Website mode. To do that, navigate to the relevant app in the Dashboard, click **App Setttings** in the sidebar, and change the **Overview Layout** to **Show Data for a blog or static website**.
 
+## Test Mode
+
+By default, all signals sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatcially marked as Test signals. This is to prevent test signals from polluting your data. To see test signals, you can enable **Test Mode** in the Dashboard.
+
 ## Privacy Policy and Opt-Out
 
 You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
