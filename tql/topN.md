@@ -41,4 +41,4 @@ All [default properties](/docs/tql/query/) and the following properties are supp
 | ------------------------------------- | ---------------------------------------------------------------------------------- |
 | [dimension](/docs/tql/dimensionSpec/) | A single DimensionSpec defining the dimension that you want the top taken for.     |
 | [metric](/docs/tql/topNMetricSpec/)   | A TopNMetricSpec object specifying the metric to sort by for the top list.         |
-| **threshold** (optional)              | An integer defining the N in the topN (how many results you want in the top list). |
+| **threshold**                         | An integer defining the N in the topN (how many results you want in the top list). |
