@@ -35,13 +35,13 @@ Here are some examples:
 - `Main.AppLaunched`
 - `Preferences.ErrorModal.Shown`
 
-We recommend you don’t make the paths too specific or deeper than, say, 3 levels. Otherwise you’ll run into annoying mismatches when you move a feature around but can’t really rename the insight type to match.
+We recommend you don’t make the paths too specific or deeper than, say, 3 levels. Otherwise, you’ll run into annoying mismatches when you move a feature around but can’t really rename the insight type to match.
 
 ## Distinguishing between views, actions and events
 
 If you want to distinguish between views, actions and events, or just views and actions, you can add that to the type, such as `InsightEditor.MetaEditor.actions.SaveInsight`. However, I personally don’t get much value from that. Instead, I usually annotate types implicitly using grammar:
 
-1. Present tense compount Verbs are actions:
+1. Present tense compound verbs are actions:
 
 - `InsightEditor.MetaEditor.SaveInsight`
 - `Preferences.SyncNow`
