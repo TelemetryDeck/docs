@@ -10,7 +10,7 @@ order: 230
 Indicates the metric to sort topN results by, e.g. "count" in this example:
 
 ```json
-{
+"metric": {
   "type": "numeric",
   "metric": "count"
 }
@@ -21,7 +21,7 @@ Indicates the metric to sort topN results by, e.g. "count" in this example:
 This metric specification sorts TopN results by dimension value.
 
 ```json
-{
+"metric": {
   "type": "dimension",
   "ordering": "lexicographic",
   "previousStop": "<previousStop_value>"
