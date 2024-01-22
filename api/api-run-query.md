@@ -10,7 +10,7 @@ lead: Using the TelemetryDeck API, you can run a query and retrieve its results
 
 We're still working a lot on the API, so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
 
-Officially, we only allow API access for users in our Tier 2 Pricing tier and above. However, this is currently not enforced by the API, and there will be a grace period before it is. Feel free to try things out and let us know what you think! <3
+Please note that we might restrict API access to paying tiers in the future. 
 
 {% endnotewarning %}
 
