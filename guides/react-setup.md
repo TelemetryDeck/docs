@@ -135,7 +135,7 @@ registerRootComponent(App);
 
 ## Sponsors
 
-[<img src="https://typedig.uber.space/assets/71ff4706-43e0-46f5-bab5-0fe6f07ad016" width=300 class="p-3 bg-white" />](https://typedigital.de)
+[<img src="/docs/images/typedigital.png" width=300 class="p-3 bg-white" />](https://typedigital.de)
 
 The development of the TelemetryDeck React SDK was graciously provided by our friends at Augsburg-based web development agencey [typedigital](https://typedigital.de). Thanks a lot, and check them out for your web application development needs. 🧡
 
