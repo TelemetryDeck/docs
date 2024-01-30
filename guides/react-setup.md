@@ -137,6 +137,6 @@ registerRootComponent(App);
 
 [<img src="/docs/images/typedigital.png" width=300 class="p-3 bg-white" />](https://typedigital.de)
 
-The development of the TelemetryDeck React SDK was graciously provided by our friends at Augsburg-based web development agencey [typedigital](https://typedigital.de). Thanks a lot, and check them out for your web application development needs. 🧡
+The development of the TelemetryDeck React SDK was graciously provided by our friends at Augsburg-based web development agency [typedigital](https://typedigital.de). Thanks a lot, and check them out for your web application development needs. 🧡
 
 [Follow the development on GitHub](https://github.com/typedigital/telemetrydeck-react)
