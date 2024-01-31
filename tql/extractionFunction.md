@@ -50,7 +50,7 @@ Here's an example TQL query that uses the registered lookup extraction function 
   "dimension": {
     "dimension": "modelName",
     "extractionFn": {
-      "type": "registeredLookup"
+      "type": "registeredLookup",
       "lookup": "appleModelNames",
       "retainMissingValue": true,
     },
