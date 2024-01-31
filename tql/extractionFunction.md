@@ -52,7 +52,7 @@ Here's an example TQL query that uses the registered lookup extraction function 
     "extractionFn": {
       "type": "registeredLookup",
       "lookup": "appleModelNames",
-      "retainMissingValue": true,
+      "retainMissingValue": true
     },
     "outputName": "modelName",
     "type": "extraction"
@@ -87,7 +87,7 @@ Here is an example TQL query that uses the inline lookup extraction function to 
         },
         "type": "map"
       },
-      "retainMissingValue": true,
+      "retainMissingValue": true
     },
     "outputName": "modelName",
     "type": "extraction"
