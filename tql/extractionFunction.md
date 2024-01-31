@@ -41,6 +41,8 @@ The following lookup tables are available:
 - `processorFamily` - Translates a device model name into a processor family such as "A12 Bionic" (the bionic part is very important!)
 - `processorType` - Translates a device model name into a processor type such as "Apple Silicon" or "Intel"
 
+(See our public [appleModelNames](https://github.com/TelemetryDeck/AppleModelNames) repo for a list of values in these.
+
 Here's an example TQL query that uses the registered lookup extraction function to translate a dimension value into a human readable name:
 
 ```json
