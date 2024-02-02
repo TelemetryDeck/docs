@@ -77,6 +77,7 @@ The following properties are common to all query types. See pages for each query
 | **testMode** (optional, Bool)                             | Wether to show test test data (`True`) or live data (`False`). Defaults to `False`. [More on Test Mode](/docs/articles/test-mode/)                       |
 | **appID** (optional)                                      | If [baseFilters](/docs/tql/basefilters/) is set to `thisApp`, the id for the app in question.                                                            |
 | **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                           |
+| **sampleFactor** (optional)                               | Include only every n-th signal in query. Possible values are `1`, `10`, `100` or `1000`. Defaults to `1`                                                 |
 | **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                   |
 | **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                         |
 
