@@ -17,7 +17,7 @@ Signals are an indication that **an event** happened in your app, which is used 
 As TelemetryDeck is an analytics software, it analyzes events that occur in your apps' life cycles. In TelemetryDeck,
 these events are called _Signals_. You can think about them like this: An **event** occurs, prompting your app to
 send a **signal** to the TelemetryDeck server. Through aggregation and statistical analysis, your
-[Insights](insights-reference.html) can then extract meaningful data out of the set of signals you have received.
+[Insights](/docs/api/insights-reference/) can then extract meaningful data out of the set of signals you have received.
 
 Here is an example signal:
 
@@ -54,7 +54,7 @@ recommended to use short, camel-cased half-sentences like these:
 - `appEnteredBackground`
 - `settingsOpened`
 
-When you're setting up your [Insights](insights-reference.html) later, you'll be able to **filter** by Signal Type.
+When you're setting up your [Insights](/docs/api/insights-reference/) later, you'll be able to **filter** by Signal Type.
 This is
 
 ## Client User
