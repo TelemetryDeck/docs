@@ -27,6 +27,8 @@ Once you have your App ID, edit the source code of your website and add the foll
 ></script>
 ```
 
+💡 If you use Google Tag Manager, please see our separate guide on [how to include TelemetryDeck in your website using Google Tag Manager](/docs/articles/web-setup-google-tag-manager/).
+
 ## Usage
 
 You don't need to write any code to use TelemetryDeck. Once you've installed the package, TelemetryDeck will automatically send `pageView` events for every page load.
