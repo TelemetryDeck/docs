@@ -26,7 +26,7 @@ npm install -S @typedigital/telemetrydeck-react
 
 ## Setup
 
-Once you have your App ID, create a TelemetryDeck instance with the factory `createrTelemetryDeck` and pass it to the `TelemetryDeckProvider`, which should sit relatively high up in your component tree.
+Once you have your App ID, create a TelemetryDeck instance with the factory `createTelemetryDeck` and pass it to the `TelemetryDeckProvider`, which should sit relatively high up in your component tree.
 
 ```tsx
 import * as React from "react";
