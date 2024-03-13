@@ -30,7 +30,7 @@ We host our servers in Amsterdam, The Netherlands. We use [Microsoft Azure](http
 
 No. TelemetryDeck does not collect any data governed by privacy laws such as GDPR or CCPA so you do not need to add TelemetryDeck to your privacy policy.
 
-However, we thinkt it's a good idea to mention TelemetryDeck in your privacy policy anyway. It's a good way to show your users that you care about their privacy and that you are transparent about the data you collect.
+However, we think it's a good idea to mention TelemetryDeck in your privacy policy anyway. It's a good way to show your users that you care about their privacy and that you are transparent about the data you collect.
 
 Here's an example of how you could mention TelemetryDeck in your privacy policy:
 
