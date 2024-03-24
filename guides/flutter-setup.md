@@ -44,7 +44,7 @@ Sending signals requires access to the internet so the following permission shou
 Send a signal using the following method:
 
 ```dart
-TelemetryManager.send("signal_type")
+Telemetrydecksdk.send("signal_type")
 ```
 
 ## Signals with additional attributes
@@ -52,7 +52,7 @@ TelemetryManager.send("signal_type")
 Append any number of custom attributes to a signal:
 
 ```dart
-TelemetryManager.send("signal_type",
+Telemetrydecksdk.send("signal_type",
   additionalPayload: {"attributeName": "value"});
 }
 ```
@@ -83,7 +83,7 @@ The Flutter SDK uses the native SDKs for Android and iOS which offer a number of
 Prevent signals from being sent using the stop method:
 
 ```dart
-TelemetryManager.stop()
+Telemetrydecksdk.stop()
 ```
 
 In order to restart sending events, you will need to call the `start` method again.
