@@ -27,7 +27,7 @@ Once you have your App ID, edit the source code of your website and add the foll
 ></script>
 ```
 
-💡 If you use Google Tag Manager, please see our separate guide on [how to include TelemetryDeck in your website using Google Tag Manager](/docs/articles/web-setup-google-tag-manager/).
+💡 If you use Google Tag Manager, please see our separate guide on [how to include TelemetryDeck in your website using Google Tag Manager](/docs/integrations/web-setup-google-tag-manager/).
 
 ## Usage
 
