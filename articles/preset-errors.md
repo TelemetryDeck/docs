@@ -10,7 +10,7 @@ lead: TelemetryDeck ships with a set of insights that can be useful to learn wha
 
 ## Why Track Errors?
 
-Success is often defined in numbers such as Monthly Active Users (MAU) or Monthly Recurring Revenue (MRR). Churn is a metric that tracks the percentage of active/paying users who stoped using/paying for your app.
+Success is often defined in numbers such as Monthly Active Users (MAU) or Monthly Recurring Revenue (MRR). Churn is a metric that tracks the percentage of active/paying users who stopped using/paying for your app.
 
 A smooth experience without bugs & issues is one of the key factors contributing to a lower churn rate. If you do a good job in continuuously fixing the most common issues with your product, you're on the right track for success. That's why it's important that you detect any common issues your users gets stuck at while using your app.
 
