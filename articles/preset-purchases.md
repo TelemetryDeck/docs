@@ -59,7 +59,7 @@ TelemetryManager.send(
 ```
 
 {% noteinfo "3rd-Party Services" %}
-> If you are using a third-party service like RevenueCat, you can access the `SKProduct` type on their own types. For example, for the `Package` type in RevenueCat, you would call `.storeProduct.skProduct`.
+> If you are using a third-party service like RevenueCat, you can access the `SKProduct` type on their own types. For example, on RevenueCat's `Package` type, you would call `.storeProduct.skProduct`.
 {% endnoteinfo %}
 
 
