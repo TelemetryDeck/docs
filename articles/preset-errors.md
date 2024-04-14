@@ -74,14 +74,14 @@ Now you can pass `error.id` for the `TelemetryDeck.Error.id` parameter whenever 
 
 Reporting exceptions that you didn't expect to happen isn't enough to cover all "unexpected behaviors" that you will encounter in your app. We found that unexpected behavior generally falls into one of the following 3 categories:
 
-1. Unexpected **Exceptions** (e.g. parsing errors, I/O errors, permission errors)
+1. Unexpected **Thrown Exceptions** (e.g. parsing errors, I/O errors, permission errors)
 2. Unexpected **User Input** (e.g. invalid text format, invalid number format, invalid date range)
 3. Unexpected **App State** (e.g. inconsistent navigation request, invalid combination of form options)
 
-Each of these has a dedicated chart in the "Errors" tab, you just need to report one of `exception`, `user-input`, or `app-state` to the parameter `TelemetryDeck.Error.category`.
+Each of these has a dedicated chart in the "Errors" tab, you just need to report one of `thrown-exception`, `user-input`, or `app-state` to the parameter `TelemetryDeck.Error.category`.
 
 Here's some guidance on when to use which category in Swift:
-* A clear sign to report an `exception` error is a `do-catch` clause or uses of `try?` in Swift where you can send the error signal when it returns `nil`.
+* A clear sign to report a `thrown-exception` error is a `do-catch` clause or uses of `try?` in Swift where you can send the error signal when it returns `nil`.
 * Whenever you you make use of the nil-coalescing operator `??` or unwrap an Optional with `if-let` or `guard-let`, potentially some kind of conversion of user input into another type might happen with a fallback behavior – this is a typical `user-input` error.
 * Search for any uses of [`assert`](https://developer.apple.com/documentation/swift/assert(_:_:file:line:)) or [`assertionFailure`](https://developer.apple.com/documentation/swift/assertionfailure(_:file:line:)) in your code and additionally report these detected unexpected states of your app during runtime as `app-state` errors. If you weren't aware, the `assert`/`assertionFailure` functions are similar to `fatalError`/`precondition`/`preconditionFailure` with the difference that they only stop program execution during DEBUG builds, not in production builds.
 
