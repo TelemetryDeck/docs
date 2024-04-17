@@ -24,12 +24,12 @@ Officially, we only allow API access for users in our Tier 2 Pricing tier and ab
 
 To retrieve a bearer token, send a POST request to the following URL:
 
-`https://api.telemetrydeck.com/api/v1/users/login`
+`https://api.telemetrydeck.com/api/v3/users/login`
 
 The POST request needs to have its `Authorization` header set to `Basic <base64 encoded username:password>`. A body is not necessary.
 
 ```text
-POST /api/v1/users/login HTTP/1.1
+POST /api/v3/users/login HTTP/1.1
 Authorization: Basic <base64 encoded username:password>
 Content-Length: 0
 Host: api.telemetrydeck.com
@@ -55,7 +55,7 @@ Store the `value` as your bearer token and use it as the `Authorization` header 
 As an example, lets retrieve your user information using the API:
 
 ```text
-GET /api/v1/users/me HTTP/1.1
+GET /api/v3/users/info HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Host: api.telemetrydeck.com
 ```
@@ -84,7 +84,7 @@ The response for this should look like this:
 As an example, lets retrieve your user information using the API:
 
 ```text
-GET /api/v1/users/me HTTP/1.1
+GET /api/v3/users/info HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Host: api.telemetrydeck.com
 ```
