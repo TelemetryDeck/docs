@@ -31,25 +31,27 @@ What many of our customers do (and we ourselves internally as well) is using a d
 
 Here are some examples:
 
-- `InsightEditor.MetaEditor.SaveInsight`
-- `Main.AppLaunched`
-- `Preferences.ErrorModal.Shown`
+- `InsightEditor.MetaEditor.saveInsight`
+- `Main.appLaunched`
+- `Preferences.ErrorModal.shown`
 
 We recommend you don’t make the paths too specific or deeper than, say, 3 levels. Otherwise, you’ll run into annoying mismatches when you move a feature around but can’t really rename the insight type to match.
 
+Note that we like to use UpperCamelCase for the prefix components but lowerCamelCase for the last component because that matches how calls are made in most programming languages, inluding Swift and Kotlin. The convention there is that types names are uppercased but functions and parameters are lowercased. We feel this style looks more natural alongside other code, but you can of course find your own style!
+
 ## Distinguishing between views, actions and events
 
-If you want to distinguish between views, actions and events, or just views and actions, you can add that to the type, such as `InsightEditor.MetaEditor.actions.SaveInsight`. However, I personally don’t get much value from that. Instead, I usually annotate types implicitly using grammar:
+If you want to distinguish between views, actions and events, or just views and actions, you can add that to the type, such as `InsightEditor.MetaEditor.Actions.saveInsight`. However, I personally don’t get much value from that. Instead, I usually annotate types implicitly using grammar:
 
 1. Present tense compound verbs are actions:
 
-- `InsightEditor.MetaEditor.SaveInsight`
-- `Preferences.SyncNow`
+- `InsightEditor.MetaEditor.saveInsight`
+- `Preferences.syncNow`
 
 2. Anything in past tense is a view or an event:
 
-- `InsightEditor.Appeared`
-- `Main.AppLaunched`
-- `Preferences.ErrorModal.Shown`
+- `InsightEditor.appeared`
+- `Main.appLaunched`
+- `Preferences.ErrorModal.shown`
 
 Don’t be afraid to play around a bit and find out what works best for you!
