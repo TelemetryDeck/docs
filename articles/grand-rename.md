@@ -47,7 +47,6 @@ While doing the rename, we also noticed some missing variants of parameters that
 - `TelemetryDeck.AppContext.language`: The language the app is currently used in (one of the supported languages).
 - `TelemetryDeck.AppInfo.versionAndBuildNumber`: Combines the app version and build into one String, such as `1.7.1 (build 22)`.
 - `TelemetryDeck.Device.preferredLanguage`: The language most preferred by the user on this device (might not be supported by app).
-- `TelemetryDeck.Device.type`: One of `Phone`, `Tablet`, `Desktop`, `Watch`, `TV`, or `Headset`
 - `TelemetryDeck.Device.screenResolutionWidth`: The resolution width of the screen in pixel/points (whatever is most common on platform).
 - `TelemetryDeck.Device.screenResolutionHeight`: The resolution height of the screen in pixel/points (whatever is most common on platform).
 - `TelemetryDeck.Device.orientation`: One of `Portrait`, `Landscape`, or `Fixed`.
