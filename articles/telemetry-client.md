@@ -66,9 +66,9 @@ TelemetryManager.send("userLoggedIn", for: email)
 <h4 class="alert-heading">Note on User Identifiers on Mac</h4>
 <p><small>If you are writing a Mac App, TelemetryDeck Manager can not create a unique user identifier, and will instead default to a concatenation of your OS Version and App Build number, which is not exactly unique, so user counting will be less accurate.</small></p>
 
-<p><small>I therefore strongly recommend to either use a unique identifier for your users, such as an email address, or to generate and store a `UUID().uuidString`, for example in `UserDefaults`, and always pass that to TelemetryDeck Manager as User ID.</small></p>
+<p><small>We therefore strongly recommend to either use a unique identifier for your users, such as an email address, or to generate and store a `UUID().uuidString`, for example in `UserDefaults`, and always pass that to TelemetryDeck Manager as User ID.</small></p>
 
-<p><small>The reason why TelemetryDeck Manager can't do that itself is that it feels like crossing a line if this simple tool would generate IDs itself and write those to a directory on disk. I feel that this is not expected behaviour for a privacy-first analytics package.</small></p>
+<p><small>The reason why TelemetryDeck Manager can't do that itself is that it feels like crossing a line if this simple tool would generate IDs itself and write those to a directory on disk. We feel that this is not expected behaviour for a privacy-first analytics package.</small></p>
 
 </div>
 

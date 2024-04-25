@@ -54,16 +54,15 @@ Here are some directions you could go if you decide to [part ways with analytics
 
 ### No Analytics
 
-A drastic measure would be to just go without and hope your users are messaging you every now and then and telling you how they use your app. This is entirely possible, especially for smaller apps or developers who have impeccable taste – but I wouldn't recommend it.
+A drastic measure would be to just go without and hope your users are messaging you every now and then and telling you how they use your app. This is entirely possible, especially for smaller apps or developers who have impeccable taste – but we wouldn't recommend it.
 
 ### Apple's App Store Analytics
 
-Apple's own analytics are enabled by default, are good for user privacy, and definitely won't trigger the ATT
-dialog. The only problem is, I wouldn't really call them analytics: The information you get is important, like how many downloads and app launches you got last week, but it is neither immediate nor deep. You won't get live data and there is practically no information on _how_ users use your app. It's a good start, but for many, it won't be enough.
+Apple's own analytics are enabled by default, are good for user privacy, and definitely won't trigger the ATT dialog. The only problem is, we wouldn't really call them analytics: The information you get is important, like how many downloads and app launches you got last week, but it is neither immediate nor deep. You won't get live data and there is practically no information on _how_ users use your app. It's a good start, but for many, it won't be enough.
 
 ### TelemetryDeck
 
-I might be biased (spoiler: I am biased in this regard), but I think TelemetryDeck is an amazing alternative here:
+We are biased in this regard, but we think TelemetryDeck is an amazing alternative here:
 TelemetryDeck gives you completely anonymized usage data of how users use your app. This means you'll get a deep dive into usage patterns, flows, and configuration, without compromising your users' privacy.
 
 Your users will have the comfort of knowing their data is not being shared with other third parties, and they won't have to think about App Tracking Transparency dialogues. Meanwhile, you will be able to get all the information you need to improve, enhance and boost your app!
