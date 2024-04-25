@@ -31,7 +31,7 @@ For our signals & parameters, we decided the prefix them with `TelemetryDeck` to
 - `AppInfo`: Information about the specific app build, such as version, build number, or SDKs compiled with.
 - `Device`: All about the device running the application, such as operating system, model name, or architecture.
 - `Metric`: Information about app and device performance, such as memory (RAM), battery, or charging status.
-- `SDK`: Information about the TelemetryDeck SDK, such as the version number or supported features.
+- `SDK`: Information about the TelemetryDeck SDK, such as its name or version number.
 
 {% noteinfo "No action needed" %}
 To make sure these changes don't affect existing customers with existing insights anytime soon, we decided to keep sending the old names for a transition period of at least 1 year while also sending the new ones. We have also auto-migrated any insights that were using the old names in their filters to work with the new system. This was safely achieved by replacing filters like "platform == iOS" with something like "platform == iOS OR TelemetryDeck.SystemInfo.platform == iOS" accepting both styles, ensuring you will continue to see historic data from before the transition, during the transition, and after the transition.
@@ -52,7 +52,8 @@ While doing the rename, we also noticed some missing variants of parameters that
 - `TelemetryDeck.Device.screenResolutionHeight`: The resolution height of the screen in pixel/points (whatever is most common on platform).
 - `TelemetryDeck.Device.orientation`: One of `Portrait`, `Landscape`, or `Fixed`.
 - `TelemetryDeck.Device.timeZone`: The timezone expressed by the UTC offset, such as `UTC+0` (London), `UTC+9` (Tokyo), or `UTC-8` (San Francisco).
-- `TelemetryDeck.SDK.supportsPrefixes`: Indicates if the TelemetryDeck SDK version is already migrated to the new prefixed naming system.
+- `TelemetryDeck.SDK.name`: Just the TelemetryDeck SDK's name that was used to send the signal, such as `SwiftSDK`, `KotlinSDK`, or `FlutterSDK`.
+- `TelemetryDeck.SDK.version`: Just TelemetryDeck SDK's version that was used to send the signal, such as `1.5.1`.
 
 These could be useful to create even more accurate charts to make better informed data-driven decisions.
 
@@ -92,7 +93,7 @@ Here's a full overview of all the changes we have done:
 | majorSystemVersion         | TelemetryDeck.Device.systemMajorVersion                 |
 | majorMinorSystemVersion    | TelemetryDeck.Device.systemMajorMinorVersion            |
 | systemVersion              | TelemetryDeck.Device.systemVersion                      |
-| telemetryClientVersion     | TelemetryDeck.SDK.version                               |
+| telemetryClientVersion     | TelemetryDeck.SDK.nameAndVersion                        |
 
 We hope you like these changes as much as we do!
 While we did our best to not affect any data, we might have missed something, so please contact us if you run into any issues.
