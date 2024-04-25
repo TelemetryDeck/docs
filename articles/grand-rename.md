@@ -30,6 +30,7 @@ For our signals & parameters, we decided the prefix them with `TelemetryDeck` to
 - `AppContext`: The context the app runs in, such as the locale, the debug mode, or the target environment.
 - `AppInfo`: Information about the specific app build, such as version, build number, or SDKs compiled with.
 - `Device`: All about the device running the application, such as operating system, model name, or architecture.
+- `Metric`: Information about app and device performance, such as memory (RAM), battery, or charging status.
 - `SDK`: Information about the TelemetryDeck SDK, such as the version number or supported features.
 
 {% noteinfo "No action needed" %}
