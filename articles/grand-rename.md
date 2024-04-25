@@ -33,11 +33,9 @@ For our signals & parameters, we decided the prefix them with `TelemetryDeck` to
 - `Metric`: Information about app and device performance, such as memory (RAM), battery, or charging status.
 - `SDK`: Information about the TelemetryDeck SDK, such as its name or version number.
 
-{% noteinfo "No action needed" %}
-To make sure these changes don't affect existing customers with existing insights anytime soon, we decided to keep sending the old names for a transition period of at least 1 year while also sending the new ones. We have also auto-migrated any insights that were using the old names in their filters to work with the new system. This was safely achieved by replacing filters like "platform == iOS" with something like "platform == iOS OR TelemetryDeck.SystemInfo.platform == iOS" accepting both styles, ensuring you will continue to see historic data from before the transition, during the transition, and after the transition.
+{% noteinfo "No immediate action needed" %}
+To make sure these changes don't affect existing customers with existing insights anytime soon, we decided to keep sending the old names for a transition period of at least 1 year while also sending the new ones. We recommend using the new ones for any new insights you create and will elaborate ways to support our users in transitioning any existing insights before we fully migrate.
 {% endnoteinfo %}
-
-<!-- Discussion: What about Top-N insights that use a parameter like "appVersion" which got renamed to "TelemetryDeck.SystemInfo.appVersion"? -->
 
 ## Filling the Gaps
 
