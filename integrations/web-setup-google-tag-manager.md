@@ -18,7 +18,7 @@ order: 250
 <script>
   var script = document.createElement('script');
   script.defer = true;
-  script.dataset.appId = "YOUR_APP_ID“;
+  script.dataset.appId = "YOUR_APP_ID";
   script.src = "https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js";
   document.getElementsByTagName('head')[0].appendChild(script);
 </script>
