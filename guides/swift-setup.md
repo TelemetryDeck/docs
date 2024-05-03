@@ -9,7 +9,7 @@ tags:
 featured: true
 testedOn: Xcode 14.1 & Swift 5.5
 description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS and tvOS
-lead: Let's include the TelemetryClient Swift Package in your application and send signals!
+lead: Let's include the TelemetryDeck Swift Package in your application and send signals!
 order: 100
 ---
 
@@ -23,8 +23,8 @@ The TelemetryDeck Swift package uses Swift Package Manager.
 
 1. Open Xcode and navigate to the project you want to add TelemetryDeck to.
 1. In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view.
-1. Paste `https://github.com/TelemetryDeck/SwiftClient` into the search field.
-1. Select the `SwiftClient` package that appears in the list
+1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field.
+1. Select the `SwiftSDK` package that appears in the list
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>.
 1. Click <kbd>Add Package</kbd>.
 
@@ -34,16 +34,16 @@ This will include the TelemetryDeck Swift Client into your app by downloading th
 
 ## Including the package in your target
 
-Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftClient</kbd>. Select the `TelemetryClient` library and click <kbd>Add Package</kbd>.
+Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftSDK</kbd>. Select the `TelemetryDeck` library and click <kbd>Add Package</kbd>.
 
 {% noteinfo "Link Library with more than one Target" %}
 
-In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryClient` library.
+In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryDeck` library.
 {% endnoteinfo %}
 
 ## Initializing the TelemetryDeck Swift Package
 
-The `TelemetryClient` package will provide you with a class `TelemetryManager` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. We strongly recommend doing so as soon as possible, as you won't be able to send Signals before the `TelemetryManager` is initialized.
+The `TelemetryDeck` package will provide you with a class `TelemetryDeck` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. We strongly recommend doing so as soon as possible, as you won't be able to send Signals before the `TelemetryDeck` is initialized.
 
 This is slightly different depending on whether you use SwiftUI or UIKit's `AppDelegate` to manage your app's lifecycle, so let's look at these individually.
 
@@ -74,13 +74,13 @@ struct Example_AppApp: App {
 
 This is the entry point to your app. Now let's add the initialization here.
 
-Import the TelemetryClient Package by adding `import TelemetryClient`. Then add an `init()` method to your App struct that creates a `TelemetryManagerConfiguration` instance and hands it to the `TelemetryManager`, using the **Unique Identifier of your app** that you copied into your clipboard earlier. If you don't have that anymore, you can get it at any time from the TelemetryDeck Dashboard.
+Import the TelemetryDeck Package by adding `import TelemetryDeck`. Then add an `init()` method to your App struct that creates a `TelemetryDeck.Config` instance and hands it to the `TelemetryDeck`, using the **Unique Identifier of your app** that you copied into your clipboard earlier. If you don't have that anymore, you can get it at any time from the TelemetryDeck Dashboard.
 
 Your code should now look like this:
 
 ```swift
 import SwiftUI
-import TelemetryClient
+import TelemetryDeck
 
 @main
 struct Example_AppApp: App {
@@ -91,9 +91,8 @@ struct Example_AppApp: App {
     }
 
     init() {
-        let configuration = TelemetryManagerConfiguration(
-            appID: "YOUR-APP-UNIQUE-IDENTIFIER")
-        TelemetryManager.initialize(with: configuration)
+        let config = TelemetryDeck.Config(appID: "YOUR-APP-UNIQUE-IDENTIFIER")
+        TelemetryDeck.initialize(config: config)
     }
 }
 ```
@@ -122,19 +121,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 By default, Xcode even adds a comment here to tell you where to add stuff that should happen right after launch.
 
-Now, import the `TelemetryClient` package and configure the `TelemetryManager` using the **Unique Identifier of your app** that you copied into your clipboard earlier. If you don't have that anymore you can get it at any time from the TelemetryDeck Dashboard.
+Now, import the `TelemetryDeck` package and configure the `TelemetryDeck` using the **Unique Identifier of your app** that you copied into your clipboard earlier. If you don't have that anymore you can get it at any time from the TelemetryDeck Dashboard.
 
 ```swift
 import UIKit
-import TelemetryClient
+import TelemetryDeck
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let configuration = TelemetryManagerConfiguration(
-            appID: "YOUR-APP-UNIQUE-IDENTIFIER")
-        TelemetryManager.initialize(with: configuration)
+        let config = TelemetryDeck.Config(appID: "YOUR-APP-UNIQUE-IDENTIFIER")
+        TelemetryDeck.initialize(config: config)
 
         return true
     }
@@ -166,25 +164,26 @@ See the [Signals Reference](/docs/api/signals-reference/) for more information a
 If your app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Testing Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when it is set to **Test Mode**.
 {% endnotewarning %}
 
-See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/SwiftClient/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to the place where you just added the initialization, and directly below add this line:
+See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to the place where you just added the initialization, and directly below add this line:
 
 ```swift
-let configuration = TelemetryManagerConfiguration(appID: "YOUR-APP-UNIQUE-IDENTIFIER")
-TelemetryManager.initialize(with: configuration)
+let config = TelemetryDeck.Config(appID: "YOUR-APP-UNIQUE-IDENTIFIER")
+TelemetryDeck.initialize(config: config)
 
-TelemetryManager.send("applicationDidFinishLaunching")
+TelemetryDeck.signal("App.didFinishLaunching")
 ```
 
-And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add a custom user identifer or metadata payload, add them to the function call like this:
+And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the `send` function on the class directly. If you want to add a custom user identifer or metadata payload, add them to the function call like this:
 
 ```swift
-TelemetryManager.send(
-    "applicationDidFinishLaunching",
-    for: "my very cool user",
-    with: [
+TelemetryDeck.signal(
+    "App.didFinishLaunching",
+    parameters: [
         "numberOfTimesPizzaModeHasActivated": "\(dataStore.pizzaMode.count)",
         "pizzaCheeseMode": "\(dataStore.pizzaCheeseMode)"
-    ])
+    ],
+    customUserID: "my very cool user"
+)
 ```
 
 And you're done! You are now sending signals to the TelemetryDeck server.

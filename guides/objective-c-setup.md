@@ -22,8 +22,8 @@ The TelemetryDeck Swift package uses Swift Package Manager.
 
 1. Open Xcode and navigate to the project you want to add TelemetryDeck to.
 1. In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view.
-1. Paste `https://github.com/TelemetryDeck/SwiftClient` into the search field.
-1. Select the `SwiftClient` package that appears in the list
+1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field.
+1. Select the `SwiftSDK` package that appears in the list
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>.
 1. Click <kbd>Add Package</kbd>.
 
@@ -33,7 +33,7 @@ This will include the TelemetryDeck Swift Client into your app by downloading th
 
 ## Including the package in your target
 
-Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftClient</kbd>. Select the `TelemetryClient` library and click <kbd>Add Package</kbd>.
+Xcode will ask you to link the package with your target in the next screen, titles <kbd>Choose Package Products for SwiftSDK</kbd>. Select the `TelemetryClient` library and click <kbd>Add Package</kbd>.
 
 {% noteinfo "Link Library with more than one Target" %}
 
@@ -88,7 +88,7 @@ Signals represent an **event** or a **view** that happened in your app, which is
 See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
 {% endnoteinfo %}
 
-See the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftClient/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
+See the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
 
 ```objc
 [TelemetryManager send:@"applicationDidFinishLaunching"];

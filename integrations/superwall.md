@@ -44,16 +44,16 @@ class SuperwallService: SuperwallDelegate {
             stringifiedParams[param.key] = String(describing: param.value)
         }
 
-        TelemetryManager.send(eventInfo.event.description, with: stringifiedParams)
+        TelemetryDeck.signal(eventInfo.event.description, parameters: stringifiedParams)
     }
 }
 ```
 
-Because TelemetryDeck only accepts strings as event metadata, this method accepts all data from Superwall, stringifies it, and hands it off to TelemetryDeck. The TelemetryManager takes care of queuing and sending the events to TelemetryDeck.
+Because TelemetryDeck only accepts strings as event metadata, this method accepts all data from Superwall, stringifies it, and hands it off to TelemetryDeck. The TelemetryDeck takes care of queuing and sending the events to TelemetryDeck.
 
 ## Registering the Superwall delegate
 
-Now that we have a delegate, we have to register it with Superwall. We can do this in the function that you initialize TelemetryDeck and Superwall in. This is usually in your `App` struct or `AppDelegate`. When in doubt, search for `TelemetryManager.initialize` in your project.
+Now that we have a delegate, we have to register it with Superwall. We can do this in the function that you initialize TelemetryDeck and Superwall in. This is usually in your `App` struct or `AppDelegate`. When in doubt, search for `TelemetryDeck.initialize` in your project.
 
 Add the following line to the function, making sure it is below the initialization code for both TelemetryDeck and Superwall:
 
