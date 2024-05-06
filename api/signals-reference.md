@@ -55,7 +55,6 @@ recommended to use short, camel-cased half-sentences like these:
 - `settingsOpened`
 
 When you're setting up your [Insights](/docs/api/insights-reference/) later, you'll be able to **filter** by Signal Type.
-This is
 
 ## Client User
 
