@@ -43,7 +43,7 @@ The Swift SDK ships with a convenience method for so you don't have to remember 
 TelemetryDeck.errorOccurred(id: error.localizedDescription)
 ```
 
-The `errorOccurred` function also accepts the same arguments as the `signal` function (namely `parameters`, `floatValue`, `customUserID`) like the `signal` function in case you want to provide additional context info.
+The `errorOccurred` function also accepts the same arguments as the `signal` function (namely `parameters`, `floatValue`, `customUserID`) in case you want to provide additional context info.
 
 ## Separation of ID & Message
 
