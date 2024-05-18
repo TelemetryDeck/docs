@@ -59,8 +59,8 @@ TelemetryDeck.signal(
   "TelemetryDeck.Purchase.completed",
   parameters: [
     "TelemetryDeck.Purchase.type": transaction.subscriptionGroupID != nil ? "subscription" : "one-time-purchase",
-    "TelemetryDeck.Purchase.countryCode": transaction.storefront.countryCode,
-    "TelemetryDeck.Purchase.currencyCode": transaction.currency?.identifier ?? "???"
+    "TelemetryDeck.Purchase.countryCode": transaction.storefrontCountryCode,
+    "TelemetryDeck.Purchase.currencyCode": transaction.currencyCode ?? "???"
   ],
   floatValue: NSDecimalNumber(decimal: transaction.price ?? Decimal()).doubleValue
 )
