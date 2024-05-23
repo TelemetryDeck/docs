@@ -21,14 +21,18 @@ This guide assumes you have already created a TelemetryDeck account. If you have
 
 The TelemetryDeck Swift package uses Swift Package Manager.
 
-1. Open Xcode and navigate to the project you want to add TelemetryDeck to.
-1. In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view.
+1. Open Xcode and navigate to the project you want to add TelemetryDeck to
+1. In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view
 1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field.
 1. Select the `SwiftSDK` package that appears in the list
-1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>.
-1. Click <kbd>Add Package</kbd>.
+1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>
+1. Press <kbd>Add Package</kbd> to open the target chooser dialog
+1. Set the <kbd>Add to target</kbd> column to your app target for <kbd>TelemetryDeck</kbd> ("TelemetryClient" is deprecated)
+1. Click <kbd>Add Package</kbd> to complete the integration
 
-![A screenshot of Xcode adding the TelemetryDeck Package](/docs/images/xcode-swift-package.png)
+![A screenshot of Xcode adding the TelemetryDeck Package](/docs/images/xcode-swift-package1.png)
+
+![A screenshot of Xcode setting the target for the TelemetryDeck library](/docs/images/xcode-swift-package2.png)
 
 This will include the TelemetryDeck Swift Client into your app by downloading the source code. Feel free to browse the client's source code, it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
