@@ -26,19 +26,17 @@ The TelemetryDeck Swift package uses Swift Package Manager.
 1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field.
 1. Select the `SwiftSDK` package that appears in the list
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>
-1. Press <kbd>Add Package</kbd> to open the target chooser dialog
-1. Set the <kbd>Add to target</kbd> column to your app target for <kbd>TelemetryDeck</kbd> ("TelemetryClient" is deprecated)
-1. Click <kbd>Add Package</kbd> to complete the integration
+1. Press <kbd>Add Package</kbd> to continue
 
 ![A screenshot of Xcode adding the TelemetryDeck Package](/docs/images/xcode-swift-package1.png)
 
-![A screenshot of Xcode setting the target for the TelemetryDeck library](/docs/images/xcode-swift-package2.png)
-
-This will include the TelemetryDeck Swift Client into your app by downloading the source code. Feel free to browse the client's source code, it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
+This will include the TelemetryDeck Swift SDK into your app by downloading the source code. Feel free to browse the client's source code, it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
 ## Including the package in your target
 
-Xcode will ask you to link the package with your target in the next screen, titled <kbd>Choose Package Products for SwiftSDK</kbd>. Select the `TelemetryDeck` library and click <kbd>Add Package</kbd>.
+Xcode will ask you to link the package with your target in the next screen, titled <kbd>Choose Package Products for SwiftSDK</kbd>. Set the <kbd>Add to target</kbd> column to your app target for <kbd>TelemetryDeck</kbd> (not "TelemetryClient", which is deprecated) and click <kbd>Add Package</kbd> to complete the integration.
+
+![A screenshot of Xcode setting the target for the TelemetryDeck library](/docs/images/xcode-swift-package2.png)
 
 {% noteinfo "Link Library with more than one Target" %}
 
