@@ -10,9 +10,9 @@ lead: A Signal is the representation of one event happening in one instance of y
 
 Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
 
-- **Signal Type** – A string that indicates which kind of event happened.<br>In this case we'll use `applicationDidFinishLaunching`, but it can be `databaseUpdated` or `settingsScreenOpened` or `pizzaModeActivated` (I totally love that last one!)
-- **User Identifer** – A string that identifies your user.<br>This can be an email address or a username, or a random ID that you generate once and store somewhere. It should always be the same for all the signals you send from a certain instance of the app. If you don't supply a user identifier, `TelemetryManager` will generate one for you.
-- **A Metadata Payload** – Metadata is a dictionary `[String: String]` of additional data about your app that might be interesting to analyze.<br>`TelemetryManager` will always add the user's OS Version, Platform, Build Number and App Version to the metadata, but you can specify additional info like, `numberOfEntriesInDatabase` (an int cast to string) or `pizzaModeAnchoviesEnabled` (a Boolean cast to string).
+- **Signal Name** – A string that indicates which kind of event happened.<br>In this case we'll use `applicationDidFinishLaunching`, but it can be `databaseUpdated` or `settingsScreenOpened` or `pizzaModeActivated` (I totally love that last one!)
+- **User Identifer** – A string that identifies your user.<br>This can be an email address or a username, or a random ID that you generate once and store somewhere. It should always be the same for all the signals you send from a certain instance of the app. If you don't supply a user identifier, `TelemetryDeck` will generate one for you.
+- **A Metadata Payload** – Metadata is a dictionary `[String: String]` of additional data about your app that might be interesting to analyze.<br>`TelemetryDeck` will always add the user's OS Version, Platform, Build Number and App Version to the metadata, but you can specify additional info like, `numberOfEntriesInDatabase` (an int cast to string) or `pizzaModeAnchoviesEnabled` (a Boolean cast to string).
 
 As TelemetryDeck is an analytics software, it analyzes events that occur in your apps' life cycles. In TelemetryDeck,
 these events are called _Signals_. You can think about them like this: An **event** occurs, prompting your app to
@@ -50,9 +50,9 @@ Here is an example signal:
 Signals always have a type. This is a short string that describes the event that caused the signal to be sent. It is
 recommended to use short, camel-cased half-sentences like these:
 
-- `appLaunchedRegularly`
-- `appEnteredBackground`
-- `settingsOpened`
+- `App.launchedRegularly`
+- `App.enteredBackground`
+- `Settings.opened`
 
 When you're setting up your [Insights](/docs/api/insights-reference/) later, you'll be able to **filter** by Signal Type.
 
@@ -77,17 +77,35 @@ there. This is highly useful for filtering and aggregation insights.
 
 The default client library will automatically send a base payload with these keys:
 
-- `platform`
-- `systemVersion`
-- `appVersion`
-- `buildNumber`
-- `isSimulator`
-- `isTestFlight`
-- `isAppStore`
-- `modelName`
-- `architecture`
-- `operatingSystem`
-- `targetEnvironment`
+- `TelemetryDeck.AppInfo.buildNumber`
+- `TelemetryDeck.AppInfo.dartVersion`
+- `TelemetryDeck.AppInfo.version`
+- `TelemetryDeck.AppInfo.versionAndBuildNumber`
+- `TelemetryDeck.Device.architecture`
+- `TelemetryDeck.Device.brand`
+- `TelemetryDeck.Device.modelName`
+- `TelemetryDeck.Device.operatingSystem`
+- `TelemetryDeck.Device.orientation`
+- `TelemetryDeck.Device.platform`
+- `TelemetryDeck.Device.screenResolutionWidth`
+- `TelemetryDeck.Device.screenResolutionHeight`
+- `TelemetryDeck.Device.systemMajorVersion`
+- `TelemetryDeck.Device.systemMajorMinorVersion`
+- `TelemetryDeck.Device.systemVersion`
+- `TelemetryDeck.Device.timeZone`
+- `TelemetryDeck.RunContext.extensionIdentifier`
+- `TelemetryDeck.RunContext.isAppStore`
+- `TelemetryDeck.RunContext.isDebug`
+- `TelemetryDeck.RunContext.isSimulator`
+- `TelemetryDeck.RunContext.isTestFlight`
+- `TelemetryDeck.RunContext.language`
+- `TelemetryDeck.RunContext.locale`
+- `TelemetryDeck.RunContext.targetEnvironment`
+- `TelemetryDeck.SDK.name`
+- `TelemetryDeck.SDK.nameAndVersion`
+- `TelemetryDeck.SDK.version`
+- `TelemetryDeck.UserPreference.region`
+- `TelemetryDeck.UserPreference.language`
 
 You can add any additional keys and values, or overwrite existing ones. For example, it might be a good idea to send
 your application's settings with each call. This way, you'll get a good overview of which percentage of your users
@@ -99,7 +117,7 @@ Signals have a "created at" property that is set to the time (in UTC) when the s
 allows you to group them by time.
 
 <div class="alert alert-info" role="alert">
-Note: In a future version of TelemetryDeck, you'll be able to <a href="https://github.com/TelemetryDeck/SwiftClient/issues/19">store signals locally in the app before sending them</a>.
+Note: In a future version of TelemetryDeck, you'll be able to <a href="https://github.com/TelemetryDeck/SwiftSDK/issues/19">store signals locally in the app before sending them</a>.
 If you are using that technique, the server will no longer set the time the signal was created, but it will instead be
 set on the client.
 </div>
