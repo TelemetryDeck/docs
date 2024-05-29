@@ -12,7 +12,7 @@ order: 400
 
 ## Prerequisites
 
-- You'll need a TelemetryDeck account. [Sign up for free](https://dashboard.telemetrydeck.com/registration/organization?source=websdk) if you don't have one yet.
+- You'll need a TelemetryDeck account. [Sign up for free](https://dashboard.telemetrydeck.com/register?source=websdk) if you don't have one yet.
 - You'll need a TelemetryDeck App ID. [Create a new app](https://dashboard.telemetrydeck.com/apps/create) if you don't have one yet.
 - Follow the installing instructions on [pub.dev](https://pub.dev/packages/telemetrydecksdk/install).
 

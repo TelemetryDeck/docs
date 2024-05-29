@@ -69,4 +69,4 @@ Your users will have the comfort of knowing their data is not being shared with 
 
 —
 
-Why not [try it out now](https://dashboard.telemetrydeck.com/registration/organization)? It's quick, helpful, free, and your users' privacy will thank you! 😊
+Why not [try it out now](https://dashboard.telemetrydeck.com/register)? It's quick, helpful, free, and your users' privacy will thank you! 😊

@@ -15,7 +15,7 @@ order: 100
 
 ## Prerequisites
 
-This guide assumes you have already created a TelemetryDeck account. If you haven't yet, please [sign up now](https://dashboard.telemetrydeck.com/registration/organization)!
+This guide assumes you have already created a TelemetryDeck account. If you haven't yet, please [sign up now](https://dashboard.telemetrydeck.com/register)!
 
 ## Installing the Swift Package
 

@@ -13,7 +13,7 @@ searchEngineDescription: Register an account now and create an organization in t
 
 ## Step one: Register an account
 
-To register, you need to navigate to the [TelemetryDeck dashboard](https://dashboard.telemetrydeck.com/registration/organization). Enter your details, including an organization name. In TelemetryDeck, users always belong to an **organization**. This way, if you want to collaborate with multiple accounts later, you can add them to your organization and share your data. You can choose any name for your organization.
+To register, you need to navigate to the [TelemetryDeck dashboard](https://dashboard.telemetrydeck.com/register). Enter your details, including an organization name. In TelemetryDeck, users always belong to an **organization**. This way, if you want to collaborate with multiple accounts later, you can add them to your organization and share your data. You can choose any name for your organization.
 
 Tap the _Create your Account_ button and if you didn't see an error message, you can now log into your newly created account with the supplied email address and password!
 

@@ -47,4 +47,4 @@ Analytics is important and privacy is important. The app privacy report lets you
 
 ---
 
-Why not [try TelemetryDeck now](https://dashboard.telemetrydeck.com/registration/organization?source=doc_att)? It's quick, helpful, free, and your users' privacy will thank you! 😊
+Why not [try TelemetryDeck now](https://dashboard.telemetrydeck.com/register?source=doc_att)? It's quick, helpful, free, and your users' privacy will thank you! 😊
