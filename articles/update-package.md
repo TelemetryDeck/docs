@@ -33,13 +33,23 @@ Updating packages in Xcode can be done using one of two ways. If you want to jus
 2. Right-click the package you want to update.
 3. Choose **Update Package**.
 
-And that's it.
+This will download the newest version of the package that is compatible with your version requirements, and update the reference in the `Package.resolved` file. If you want to update to the next **major** version of a package, see the next section.
 
-You can also update every single Swift Package in your project at once. To do this, open the **Files** menu, navigate to **Packages** and then click **Update to Latest Package Versions**. Afterwards, make sure to test your project to see if everything still works, especially in projects with a lot of package dependencies. See further down for more troubleshooting tips.
+Instead, you can also update every single Swift Package in your project at once. To do this, open the **Files** menu, navigate to **Packages** and then click **Update to Latest Package Versions**. Afterwards, make sure to test your project to see if everything still works, especially in projects with a lot of package dependencies. See further down for more troubleshooting tips.
 
-{% callToAction "Let's make your app awesome!" "Get swifty privacy-first analytics for your app" %}
+{% callToAction "TelemetryDeck: Privacy-first analytics for Swift apps" "Make your app even more awesome" %}
 
-## Troubleshooting
+## Updating to the next major version of a Swift Package
+
+By default, Xcode and Swift Package Manager will not update the Major version of a package automatically. (The major version is the first number in the version string, e.g. `1.2.3` has a major version of `1`.)
+
+If you want to update to the next major version of a package, you can do this by manually changing the version requirement in the Xcode project. To do that, navigate to the project, select "Package Dependencies" and manually update the minimum version requirement to the next major version.
+
+![Screenshot of the left sidebar in Xcode 14, with the TelemetryDeck Swift Package highlighted](/docs/images/update_next_major_version.png)
+
+For example, if you have a package that is currently at version `1.2.3`, and you want to update to version `2.0.0`, you can change the version requirement in the Xcode project to `2.0.0`. This will tell the Swift Package Manager to download the newest version of the package that is greater than `2.0.0`, but less than `3.0.0`. When a `2.0.1` comes out, you can update to that version by following the steps above.
+
+## Troubleshooting Issues with Xcode and Swift Packages
 
 Sometimes Xcode's package cache gets confused. This will usually result in weird build errors that can't really be explained. Here are two things that might help:
 
