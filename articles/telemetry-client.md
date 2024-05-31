@@ -77,7 +77,7 @@ TelemetryDeck.signal"userLoggedIn", customUserID: email)
 You can also send additional parameters with each signal:
 
 ```swift
-TelemetryDeck.signal"databaseUpdated", parameters: ["numberOfDatabaseEntries": "3831"])
+TelemetryDeck.signal("databaseUpdated", parameters: ["numberOfDatabaseEntries": "3831"])
 ```
 
 TelemetryDeck will automatically send base parameters with these keys:
