@@ -15,7 +15,7 @@ You can use the TQL Query Builder to construct your query, or you can write it b
 
 If you've ever worked with [Apache Druid](https://druid.apache.org), you'll notice a lot of similarities between TQL and Druid's native query language. This is because TQL is a superset of Druid's native query language, and TQL queries are compiled down into Druid queries before they're executed.
 
-Druid queries can do various things that TQL queries can't do for security and privacy reasons, and Druid queries are also more verbose. To get into the fine details of Druid's query language, please check the [Apache Druid Documentation](https://druid.apache.org/docs/latest/querying/querying.html).
+Druid queries can do various things that TQL queries can't do for security and privacy reasons, and Druid queries are also more verbose. To get into the fine details of Druid's query language, please check the [Apache Druid Documentation](https://druid.apache.org/docs/latest/querying/).
 
 {% endnoteinfo %}
 
