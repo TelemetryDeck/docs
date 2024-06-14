@@ -33,6 +33,7 @@ For our signals & parameters, we decided to prefix them with `TelemetryDeck` to 
 - `RunContext`: The context the app runs in, such as simulator, debug mode, or target environment.
 - `SDK`: Information about the TelemetryDeck SDK, such as its name or version number.
 - `UserPreference`: Any choices the user made to express personal preferences, such as language & region.
+- `Route`: Information about how a user is navigating through the app, such as URL paths or view controllers.
 
 {% noteinfo "No immediate action needed" %}
 To make sure these changes don't affect existing customers with existing insights anytime soon, we decided to keep sending the old names for a transition period of at least 1 year while also sending the new ones. We recommend using the new ones for any new insights you create and will elaborate ways to support our users in transitioning any existing insights before we fully migrate.
