@@ -87,6 +87,12 @@ If can't specify a user identifer at initialization, you can set it later by set
 
 Please note that `td.signal` is an async function that returns a promise.
 
+{% notewarning „Special treatment for frameworks“ %}
+Some frameworks, like Svelte, don‘t need `crypto` and node.js. Here are some tipps on how to implement TelemetryDeck when using some of these special frameworks:
+* The initialization should happen once, and the TD object should be passed around in a service or singleton.
+* The `td.send` function should be used to send signals, either automatically in a router-like object or on a per-feature basis.
+{% endnotewarning %}
+
 ### Advanced Initalization Options
 
 See the [source code](https://github.com/TelemetryDeck/JavaScriptSDK/blob/main/src/telemetrydeck.js#L6-L17) for a full list of availble options acepted by the `TelemetryDeck` constructor.
