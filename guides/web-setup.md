@@ -39,7 +39,19 @@ If you like, you can switch your [TelemetryDeck Dashboard](https://dashboard.tel
 
 ## Test Mode
 
-By default, all signals sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatcially marked as Test signals. This is to prevent test signals from polluting your data. To see test signals, you can enable **Test Mode** in the Dashboard.
+By default, all signals sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatcially marked as test signals. This is to prevent test signals from polluting your data.
+
+It is also possible to mark all signals as test signals by setting the dataset attribute `data-is-test-mode` to `true`.
+
+```html
+<script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="<YOUR APP ID>"
+  data-is-test-mode="true"
+></script>
+```
+
+To see test signals, you can enable **Test Mode** in the Dashboard.
 
 ## Privacy Policy and Opt-Out
 
