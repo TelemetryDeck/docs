@@ -18,18 +18,18 @@ If you're using TelemetryDeck's Web SDK to track your website, you don't need to
 
 ## Format
 
-A route signal is a regular TelemetryDeck signal of type `TelemetryDeck.Route.Transition.navigation`. It has a payload with a version number, a source and destination, and a route identifier, which is the source and destination concatenated with `->`. Using this identifier, we can track how users navigate through your app.
+A route signal is a regular TelemetryDeck signal of type `TelemetryDeck.Route.Transition.navigation`. It has parameters for version number, source and destination paths, and a route identifier, which is the source path and destination path concatenated with `->`. Using this identifier, we can track how users navigate through your app.
 
 ```json
 {
   "appID": "<AAAA-BBBBBBBB-CCCC-DDDD>",
   "clientUser": "<myClientUserHash>",
-  "type": "TelemetryDeck.Route.Transition.navigation",
+  "type": "TelemetryDeck.Navigation.pathChanged",
   "payload": {
-    "TelemetryDeck.Route.Transition.schemaVersion": "1",
-    "TelemetryDeck.Route.Transition.identifier": "<source> -> <destination>",
-    "TelemetryDeck.Route.Transition.source": "<source>",
-    "TelemetryDeck.Route.Transition.destination": "<destination>"
+    "TelemetryDeck.Navigation.schemaVersion": "1",
+    "TelemetryDeck.Navigation.identifier": "<source> -> <destination>",
+    "TelemetryDeck.Navigation.sourcePath": "<source>",
+    "TelemetryDeck.Navigation.destinationPath": "<destination>"
   }
 }
 ```
@@ -38,14 +38,14 @@ Values in angle brackets (`< >`) are placeholders and should be replaced with ac
 
 The signal type should always be `TelemetryDeck.Route.Transition.navigation` for route signals.
 
-Here's what each payload key should contain:
+Here's what each parameter should contain:
 
-| Key                                            | Description                                                                                                             |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `TelemetryDeck.Route.Transition.schemaVersion` | The version of the schema. Should always be `"1"`. We'll use this to account for if we ever need to update this schema. |
-| `TelemetryDeck.Route.Transition.identifier`    | The source navigation path, followed by `->`, followed by the destination navigation path.                              |
-| `TelemetryDeck.Route.Transition.source`        | A navigation path that describes the source of the navigation.                                                          |
-| `TelemetryDeck.Route.Transition.destination`   | A navigation that describes the destination of the navigation.                                                          |
+| Key                                        | Description                                                                                                                                                                                   |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TelemetryDeck.Navigation.schemaVersion`   | The version of the schema. Should always be `"1"`. We'll use this to account for if we ever need to update this schema.                                                                       |
+| `TelemetryDeck.Navigation.identifier`      | The source navigation path, followed by `->`, followed by the destination navigation path. This is the most important part of the navigation schema, we'll use this to build directed graphs. |
+| `TelemetryDeck.Navigation.sourcePath`      | A navigation path that describes the source of the navigation.                                                                                                                                |
+| `TelemetryDeck.Navigation.destinationPath` | A navigation that describes the destination of the navigation.                                                                                                                                |
 
 ## Navigation Paths
 
@@ -57,7 +57,7 @@ Examples:
 
 - `index`
 - `settings.user.changePassword`
-- `/blog/ios-market-share`.
+- `/blog/ios-market-share`
 
 ## Automatic Navigation Tracking
 
