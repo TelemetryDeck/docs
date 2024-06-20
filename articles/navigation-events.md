@@ -1,24 +1,24 @@
 ---
-title: Navigation Route Signals
+title: Navigation Signals
 tags: setup
-description: TelemetryDeck can track how users navigate through your app when you send route signals. Here's how these need to look like.
-lead: TelemetryDeck can track how users navigate through your app when you send route signals. Here's how these need to look like.
+description: TelemetryDeck can track how users navigate through your app when you send navigation signals. Here's how these need to look like.
+lead: TelemetryDeck can track how users navigate through your app when you send navigation signals. Here's how these need to look like.
 testedOn: SwiftSDK 2.2.0, WebSDK 1.0.0
 ---
 
 {% notewarning "Upcoming Feature" %}
 
-This feature is still in development and will take a while to be available in all SDKs and the Dashboard UI. We encourage you to start sending Route signals now so you'll have data to play around with once we launch the feature fully.
+This feature is still in development and will take a while to be available in all SDKs and the Dashboard UI. We encourage you to start sending navigation signals now so you'll have data to play around with once we launch the feature fully.
 {% endnotewarning %}
 
 {% noteinfo "Web Analytics already tracks navigation" %}
 
-If you're using TelemetryDeck's Web SDK to track your website, you don't need to send route signals. The Web SDK already tracks navigation automatically.
+If you're using TelemetryDeck's Web SDK to track your website, you don't need to send navigation signals. The Web SDK already tracks navigation automatically.
 {% endnoteinfo %}
 
 ## Format
 
-A route signal is a regular TelemetryDeck signal of type `TelemetryDeck.Route.Transition.navigation`. It has parameters for version number, source and destination paths, and a route identifier, which is the source path and destination path concatenated with `->`. Using this identifier, we can track how users navigate through your app.
+A navigation signal is a regular TelemetryDeck signal of type `TelemetryDeck.Navigation.pathChanged`. It has parameters for version number, source and destination paths, and an identifier, which is the source path and destination path concatenated with `->`. Using this identifier, we can track how users navigate through your app.
 
 ```json
 {
@@ -36,7 +36,7 @@ A route signal is a regular TelemetryDeck signal of type `TelemetryDeck.Route.Tr
 
 Values in angle brackets (`< >`) are placeholders and should be replaced with actual values.
 
-The signal type should always be `TelemetryDeck.Route.Transition.navigation` for route signals.
+The signal type should always be `TelemetryDeck.Navigation.pathChanged` for navigation signals.
 
 Here's what each parameter should contain:
 
