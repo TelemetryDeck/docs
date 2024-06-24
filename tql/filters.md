@@ -53,6 +53,61 @@ The `columnComparison` filter is similar to the selector filter, but instead com
 "filter": { "type": "columnComparison", "dimensions": [<dimension_a>, <dimension_b>] }
 ```
 
+### Range
+
+The `range` filter can be used for comparison filtering like greater than, less than, greater than or equal to, less than or equal to, and "between".
+
+Its `matchValueType` property specifies the type of bounds to match. It determines how TelemetryDeck interprets the matchValue to assist in converting to the type of the matched column and also defines the type of comparison used when matching values. Valid values are `STRING` and `DOUBLE`.
+
+#### Example: equivalent to `WHERE 21 < age < 31`
+
+```json
+{
+  "type": "range",
+  "column": "age",
+  "matchValueType": "DOUBLE",
+  "lower": "21",
+  "lowerOpen": true,
+  "upper": "31",
+  "upperOpen": true
+}
+```
+
+#### Example: equivalent to `WHERE age < 31`
+
+```json
+{
+  "type": "range",
+  "column": "age",
+  "matchValueType": "DOUBLE",
+  "upper": "31",
+  "upperOpen": true
+}
+```
+
+#### Example: equivalent to `WHERE age >= 18`
+
+```json
+{
+  "type": "range",
+  "column": "age",
+  "matchValueType": "DOUBLE",
+  "lower": 18
+}
+```
+
+#### Example: equivalent to `WHERE 'foo' <= name <= 'hoo'`, using STRING comparison
+
+```json
+{
+  "type": "range",
+  "column": "name",
+  "matchValueType": "STRING",
+  "lower": "foo",
+  "upper": "hoo"
+}
+```
+
 ### Regular Expression
 
 The `regex` filter is similar to the selector filter, but using regular expressions. It matches the specified dimension with the given pattern.
