@@ -59,7 +59,7 @@ The `range` filter can be used for comparison filtering like greater than, less 
 
 Its `matchValueType` property specifies the type of bounds to match. It determines how TelemetryDeck interprets the matchValue to assist in converting to the type of the matched column and also defines the type of comparison used when matching values. Valid values are `STRING` and `DOUBLE`.
 
-#### Example: equivalent to `WHERE 21 < age < 31`
+#### Example: equivalent to `WHERE 21 &lt; age < 31`
 
 ```json
 {
@@ -73,7 +73,7 @@ Its `matchValueType` property specifies the type of bounds to match. It determin
 }
 ```
 
-#### Example: equivalent to `WHERE age < 31`
+#### Example: equivalent to `WHERE age &lt; 31`
 
 ```json
 {
@@ -85,7 +85,7 @@ Its `matchValueType` property specifies the type of bounds to match. It determin
 }
 ```
 
-#### Example: equivalent to `WHERE age >= 18`
+#### Example: equivalent to `WHERE age &gte; 18`
 
 ```json
 {
@@ -96,7 +96,7 @@ Its `matchValueType` property specifies the type of bounds to match. It determin
 }
 ```
 
-#### Example: equivalent to `WHERE 'foo' <= name <= 'hoo'`, using STRING comparison
+#### Example: equivalent to `WHERE 'foo' &lte; name &lte; 'hoo'`, using STRING comparison
 
 ```json
 {
