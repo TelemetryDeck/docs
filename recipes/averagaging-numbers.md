@@ -15,20 +15,12 @@ When you're sending numerical values to TelemetryDeck's `floatValue` signal prop
   "granularity": "day",
   "queryType": "timeseries",
   "filter": {
-    "type": "and",
-    "fields": [
-      {
-        "dimension": "appID",
-        "type": "selector",
-        "value": "YOUR_APP_ID"
-      },
-      {
-        "dimension": "type",
-        "type": "selector",
-        "value": "YOUR_SIGNAL_TYPE"
-      }
-    ]
+    "dimension": "type",
+    "type": "selector",
+    "value": "YOUR_SIGNAL_TYPE"
   },
+  "baseFilters": "thisApp",
+  "appID": "YOUR_APP_ID",
   "aggregations": [
     {
       "fieldName": "floatValue",
@@ -47,7 +39,7 @@ Replace `YOUR_APP_ID` with your app id and `YOUR_SIGNAL_TYPE` with your signal t
 
 ### Granularity
 
-The granularity is set to `day` in this example. This means that the data will be aggregated by day. You can also use `hour` or `month` as a granularity to get averages for months or hours.
+The granularity is set to `day` in this example. This means that the data will be aggregated by day. You can also use `hour` or `month` as a granularity to get averages for months or hours. Use granularity `all` to produce one single number for the whole displayed time range. (The displayed time range is usually set in the UI).
 
 ### Filter
 
