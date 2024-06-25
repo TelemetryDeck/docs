@@ -57,12 +57,19 @@ The `columnComparison` filter is similar to the selector filter, but instead com
 
 The `range` filter can be used for comparison filtering like greater than, less than, greater than or equal to, less than or equal to, and "between".
 
-Its `matchValueType` property specifies the type of bounds to match. It determines how TelemetryDeck interprets the matchValue to assist in converting to the type of the matched column and also defines the type of comparison used when matching values. Valid values are `STRING` and `DOUBLE`.
+| Property         | Description                                                                                                                                                                                                                                                                      |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `column`         | Input column or virtual column name to filter on. (Required)                                                                                                                                                                                                                     |
+| `matchValueType` | Specifies the type of bounds to match. It determines how TelemetryDeck interprets the matchValue to assist in converting to the type of the matched column and also defines the type of comparison used when matching values. Valid values are `STRING` and `DOUBLE`. (Required) |
+| `lower`          | Lower bound of the range. (Optional, but at least one of lower or upper must not be null)                                                                                                                                                                                        |
+| `lowerOpen`      | If true, the lower bound is exclusive. (Optional)                                                                                                                                                                                                                                |
+| `upper`          | Upper bound of the range. (Optional, but at least one of lower or upper must not be null)                                                                                                                                                                                        |
+| `upperOpen`      | If true, the upper bound is exclusive. (Optional)                                                                                                                                                                                                                                |
 
-#### Example: equivalent to `WHERE 21 &lt; age &lt; 31`
+#### Example: equivalent to `WHERE 21 ﹤ age ﹤ 31`
 
 ```json
-{
+"filter": {
   "type": "range",
   "column": "age",
   "matchValueType": "DOUBLE",
@@ -73,10 +80,10 @@ Its `matchValueType` property specifies the type of bounds to match. It determin
 }
 ```
 
-#### Example: equivalent to `WHERE age &lt; 31`
+#### Example: equivalent to `WHERE age ﹤ 31`
 
 ```json
-{
+"filter": {
   "type": "range",
   "column": "age",
   "matchValueType": "DOUBLE",
@@ -85,10 +92,10 @@ Its `matchValueType` property specifies the type of bounds to match. It determin
 }
 ```
 
-#### Example: equivalent to `WHERE age &gte; 18`
+#### Example: equivalent to `WHERE age ﹥﹦ 18`
 
 ```json
-{
+"filter": {
   "type": "range",
   "column": "age",
   "matchValueType": "DOUBLE",
@@ -96,10 +103,10 @@ Its `matchValueType` property specifies the type of bounds to match. It determin
 }
 ```
 
-#### Example: equivalent to `WHERE 'foo' &lte; name &lte; 'hoo'`, using STRING comparison
+#### Example: equivalent to `WHERE 'foo' ﹤﹦ name ﹤﹦ 'hoo'`, using STRING comparison
 
 ```json
-{
+"filter": {
   "type": "range",
   "column": "name",
   "matchValueType": "STRING",
