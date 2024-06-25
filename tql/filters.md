@@ -99,7 +99,7 @@ The `range` filter can be used for comparison filtering like greater than, less 
   "type": "range",
   "column": "age",
   "matchValueType": "DOUBLE",
-  "lower": 18
+  "lower": "18"
 }
 ```
 
