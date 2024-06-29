@@ -43,6 +43,9 @@ TelemetryDeck.purchaseCompleted(transaction: transaction)
 The `purchaseCompleted` convenience function in the Swift SDK also automates the extraction of the values explained in the next section. Optionally, it accepts the same arguments as the `signal` function (namely `parameters` and `customUserID`) in case you want to provide additional context info. The function is only available on iOS 15 or higher.
 {% endnoteinfo %}
 
+{% noteinfo "RevenueCat" %}
+If you use RevenueCat and followed their [setup guide](https://www.revenuecat.com/docs/getting-started/making-purchases), you will have a `Purchases.shared.purchase(package:)` call somewhere in your code. The closure of this function gets a RevenueCat-specific `transaction` [wrapper](https://github.com/RevenueCat/purchases-ios/blob/11f3962192271cdbbb70096ff5a693b8a0e48f49/Sources/Purchasing/StoreKitAbstractions/StoreTransaction.swift) as its first parameter. You can either access fields directly from that or get the native `StoreKit.Transaction` type by calling `transaction.sk2Transaction`. If you use RevenueCats built-in paywalls, they currently don't provide access to `transaction`, which we reported in [this issue](https://github.com/RevenueCat/purchases-ios/issues/4007).
+{% endnoteinfo %}
 
 ## Attaching the Payload
 
