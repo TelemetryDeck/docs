@@ -63,11 +63,11 @@ Examples:
 
 Since TelemetryDeck navigation signals are slightly cumbersome to create manually, we're aiming to provide convenience methods for our SDKs that will automatically track navigation signals for you. These methods will be in one of two flavors, either a method that you call with a source and destination, or a method that you call with just a destination.
 
-### `TelemetryDeck.navigate(from: <source>, to <destination>)`
+### `TelemetryDeck.navigationPathChanged(from: <source>, to <destination>)`
 
 Calling this method will automatically create a navigation signal with the given source and destination.
 
-### `TelemetryDeck.navigate(to: <destination>)`
+### `TelemetryDeck.navigationPathChanged(to: <destination>)`
 
 Calling this method with just a destination will use the previously last used source as the source for the navigation signal.
 
