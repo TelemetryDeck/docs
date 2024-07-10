@@ -78,17 +78,15 @@ Here is an example TQL query that uses the inline lookup extraction function to 
   "dimension": {
     "dimension": "modelName",
     "extractionFn": {
-      "type": "inlineLookup"
-      "lookup": {
-        "map": {
-          "AppleTV2,1": "Apple TV 2",
-          "AppleTV3,1": "Apple TV 3",
-          "AppleTV3,2": "Apple TV 3",
+          "type":"lookup",
+          "lookup":{
+            "type":"map",
+            "map":{"foo":"bar", "baz":"bat"}
+          },
+          "retainMissingValue":false,
+          "injective":false,
+          "replaceMissingValueWith":"MISSING"
         },
-        "type": "map"
-      },
-      "retainMissingValue": true
-    },
     "outputName": "modelName",
     "type": "extraction"
   },
