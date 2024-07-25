@@ -166,6 +166,29 @@ This makes it possible to compute the results of a filtered and an unfiltered ag
 
 Note: If only the filtered results are required, consider putting the filter on the query itself, which will be much faster since it doesn't require scanning all the data.
 
+Filtered aggregators also support [relative time intervals](/docs/tql/time-intervals/).
+
+```json
+{
+  "type": "interval",
+  "dimension": "__time",
+  "relativeIntervals": [
+    {
+      "beginningDate": {
+        "component": "day",
+        "offset": -30,
+        "position": "beginning"
+      },
+      "endDate": {
+        "component": "day",
+        "offset": 0,
+        "position": "end"
+      }
+    }
+  ]
+}
+```
+
 ```json
 {
   "type": "filtered",
