@@ -170,27 +170,6 @@ Filtered aggregators also support [relative time intervals](/docs/tql/time-inter
 
 ```json
 {
-  "type": "interval",
-  "dimension": "__time",
-  "relativeIntervals": [
-    {
-      "beginningDate": {
-        "component": "day",
-        "offset": -30,
-        "position": "beginning"
-      },
-      "endDate": {
-        "component": "day",
-        "offset": 0,
-        "position": "end"
-      }
-    }
-  ]
-}
-```
-
-```json
-{
   "type": "filtered",
   "filter": {
     "type": "and",

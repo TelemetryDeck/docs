@@ -127,6 +127,30 @@ The `regex` filter is similar to the selector filter, but using regular expressi
 
 The **interval** filter enables range filtering on columns that contain long millisecond values, with the boundaries specified as ISO 8601 time intervals. This is mainly used for Theta Sketch operations.
 
+Intervals can be relative or absolute. Absolute intervals are specified as a string in the format `start/end`, where `start` and `end` are ISO 8601 timestamps. Relative intervals are specified as an array of [relative time interval](/docs/tql/time-intervals/) objects.
+
+````json
+```json
+{
+  "type": "interval",
+  "dimension": "__time",
+  "relativeIntervals": [
+    {
+      "beginningDate": {
+        "component": "day",
+        "offset": -30,
+        "position": "beginning"
+      },
+      "endDate": {
+        "component": "day",
+        "offset": 0,
+        "position": "end"
+      }
+    }
+  ]
+}
+````
+
 ```json
 {
   "type": "interval",
