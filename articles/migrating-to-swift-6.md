@@ -11,7 +11,7 @@ searchEngineDescription: What we've learned while migrating our code to the new 
 
 Many experienced developers are hesitant to add many outside dependencies to their apps – and for good reason. Successful projects are here to stay for a long time, and the amount of maintenance required is a key consideration when deciding if one should add a new dependency or not. We at TelemetryDeck try to make this decision as simple as possible for our customers, by making sure to follow Apple's latest guidelines and best practices in a timely manner.
 
-And this summer at WWDC 2024 the longest session of them all was [Migrating your app to Swift 6](https://wwdcnotes.com/documentation/wwdcnotes/wwdc24-10169-migrate-your-app-to-swift-6) for a reason. This major new update to the language brings a new level of safety – namely [data-race safety](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/dataracesafety/) – which is awesome news for more correct code, but also comes with a lot of new requirements we all need to adapt to.
+And this summer at WWDC 2024 the longest session of them all was [Migrating your app to Swift 6](https://wwdcnotes.com/documentation/wwdcnotes/wwdc24-10169-migrate-your-app-to-swift-6) for a reason. This major new update to the language brings a new level of safety – namely [data-race safety](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/dataracesafety/) – which is awesome news for more correct code, but it also comes with a lot of new requirements we all need to adapt to.
 
 While the Swift team did a great job at making sure you can turn on these new safety checks at your own pace, we wanted to make sure our SDK is ready ahead of time and documented the entire migration process in this article for others to learn from. This is our contribution to help the community migrate.
 
@@ -43,14 +43,14 @@ let package = Package(
 )
 ```
 
-Note that you need to set `swift-tools-version` to at least `5.8` in order to set this flag.
+Note that you need to set `swift-tools-version` to at least `5.8` in order to use this flag.
 
 > Tip: Make sure to use Xcode 16 (beta) when building and preparing for Swift 6 compatibility. It contains the Swift 6 compiler which has improved checking logic and might find issues you might miss in Xcode 15. And it also contains the latest system SDKs where more types were checked and marked for data-race safety by Apple, which can prevent some unnecessary code adjustments.
 
-With these steps out of the way, we can finally build the project to see all the issues the project has when it comes to data-race safety in Swift 6. The following 3 sections explain how we fixed the 21 issues we've run into in our code base grouped by the solution we applied and an explanation why we opted for that solution with a code sample.
+With these steps out of the way, we can finally build the project to see all the issues the project has when it comes to data-race safety in Swift 6. The following 3 sections explain how we fixed the ~30 issues we've run into in our code grouped by the solution we applied and an explanation why we opted for that solution with a code sample.
 
 
-## @MainActor
+## @MainActor and MainActor.run
 
 While most of our SDK code is designed to run perfectly fine in background threads, there is one exception:
 
@@ -63,7 +63,7 @@ class NavigationStatus {
 }
 ```
 
-And we do get a warning for the `shared` property stating this:
+And we were told by a vigilant customer, we did get a warning for the `shared` property stating this:
 
 ```
 Static property 'shared' is not concurrency-safe because non-'Sendable' type 'NavigationStatus' may have shared mutable state; this is an error in the Swift 6 language mode
@@ -101,8 +101,29 @@ public static func navigationPathChanged(to destination: String) {
 }
 ```
 
-Note that when in a SwiftUI view, you already are in the `@MainActor` context implicitly and can call these functions normally. So this change of requirement shouldn't affect existing usage of this function by our customers.
+Note that when in a SwiftUI or UIKit view, you already are in the `@MainActor` context implicitly and can call these functions normally. So this change of requirement shouldn't affect existing usage of this function by our customers.
 
+In another place, we ran into the following warning:
+
+```
+Main actor-isolated class property 'willEnterForegroundNotification' can not be referenced from a non-isolated context; this is an error in Swift 6
+```
+
+The code causing this looks like this:
+
+```swift
+NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+```
+
+As we are observing UI changes, we should run this code from the main actor. The easiest way to do this when outside a view is to call `MainActor.run` within a `Task`. But because our SDK is compatible back to iOS 12 and `Task` is only available from iOS 13 onwards, we opted for `DispatchQueue.main.async` instead which has the same effect:
+
+```
+DispatchQueue.main.async {
+    NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+}
+```
+
+This resolved the warning.
 
 ## Computed Properties vs. Stored Properties
 
