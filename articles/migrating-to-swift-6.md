@@ -82,7 +82,7 @@ class NavigationStatus {
 
 ```
 
-This tells the compiler to restrict access to the main thread (or "actor", or "queue"). Calls from other contexts will require an async context with an `await` call. This is probably gonna be a very common solution in app projects that consists mostly of UI code.
+This tells the compiler to restrict access to the main thread (or "actor", or "queue"). Calls from other contexts will require an async context with an `await` call. This is probably gonna be a very common solution in app projects that consist mostly of UI code.
 
 Marking the entire type as `@MainActor` immediately created errors for all functions where `NavigationStatus.shared` was being accessed, such as:
 
@@ -167,11 +167,7 @@ What makes this concurrency-safe is the fact that we don't have a setter. In our
 Another common warning we ran into was this:
 
 ```
-Capture of 'configuration' with non-sendable conforming `TelemetryManagerConfiguration` to `Sendable`, we ran into a couple of new issues stating:
-
-```
-
-```error in the Swift 6 language mode
+Capture of 'configuration' with non-sendable conforming `TelemetryManagerConfiguration` to `Sendable`; this is an error in the Swift 6 language mode
 ```
 
 The related Swift code for the warning:
@@ -284,7 +280,7 @@ And while the compiler doesn't emit it immediately, surely when commenting out `
 
 A deeper look at these two parameters and their usage can either uncover a data race in our code that always existed and we are now made aware of. Or it might reveal that we actually can't have a data-race due to our existing logic and just need to tell the compiler to assume our type is `Sendable`.
 
-Digging deeper, I found that `sendTimer` is only set upon `init` no app start and when returning the app from the background. Those are not things that can happen concurrently, so there's no potential for a race condition.
+Digging deeper, I found that `sendTimer` is only set upon `init` on app start and when returning the app from the background. Those are not things that can happen concurrently, so there's no potential for a race condition.
 
 As for the `signalCache`, a look into the type's implementation reveals that it uses a `DispatchQueue` internally and runs any changes using the `sync` method on it, which blocks concurrent access and therefore also avoids race conditions:
 
