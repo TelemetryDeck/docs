@@ -44,7 +44,11 @@ The `purchaseCompleted` convenience function in the Swift SDK also automates the
 {% endnoteinfo %}
 
 {% noteinfo "RevenueCat" %}
-If you use RevenueCat and followed their [setup guide](https://www.revenuecat.com/docs/getting-started/making-purchases), you will have a `Purchases.shared.purchase(package:)` call somewhere in your code. The closure of this function gets a RevenueCat-specific `transaction` [wrapper](https://github.com/RevenueCat/purchases-ios/blob/11f3962192271cdbbb70096ff5a693b8a0e48f49/Sources/Purchasing/StoreKitAbstractions/StoreTransaction.swift) as its first parameter. You can either access fields directly from that or get the native `StoreKit.Transaction` type by calling `transaction.sk2Transaction`. If you use RevenueCats built-in paywalls, they currently don't provide access to `transaction`, which we reported in [this issue](https://github.com/RevenueCat/purchases-ios/issues/4007).
+If you use [RevenueCat](https://revenuecat.com) and followed their [setup guide](https://www.revenuecat.com/docs/getting-started/making-purchases), you will have a `Purchases.shared.purchase(package:)` call somewhere in your code. The closure of this function gets a RevenueCat-specific `transaction` [wrapper](https://github.com/RevenueCat/purchases-ios/blob/11f3962192271cdbbb70096ff5a693b8a0e48f49/Sources/Purchasing/StoreKitAbstractions/StoreTransaction.swift) as its first parameter. You can either access fields directly from that or get the native `StoreKit.Transaction` type by calling `transaction.sk2Transaction`. If you use RevenueCats built-in paywalls, they currently don't provide access to `transaction`, which we reported in [this issue](https://github.com/RevenueCat/purchases-ios/issues/4007).
+{% endnoteinfo %}
+
+{% noteinfo "FreemiumKit" %}
+If you use [FreemiumKit](https://freemiumkit.app), just add their SDKs `.onPurchaseCompleted` view modifier to your main view. It passes the `transaction` parameter to the closure, which is exactly what we need so you can just copy & paste the above code as-is. Read the related section in their [setup guide](https://freemiumkit.app/documentation/freemiumkit/setupguide#Direct-Access-to-StoreKit-Transactions) to learn more.
 {% endnoteinfo %}
 
 ## Attaching the Payload
