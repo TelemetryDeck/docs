@@ -168,7 +168,14 @@ See the [Signals Reference](/docs/api/signals-reference/) for more information a
 If your app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle in the sidebar is turned on.
 {% endnotewarning %}
 
-See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to the place where you just added the initialization, and directly below add another line:
+The default way to set a user identifier is `TelemetryDeck.updateDefaultUserID`. This way you only have to set it once, or when it changes, such as user login.
+See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md) for more information on how to send signals.
+
+{% noteinfo "Best practice:" %}
+You can also set a user identifier per send call as shown below, but this is not usually necessary.
+{% endnoteinfo %}
+
+Let's just send one signal that tells us the app has launched. Go to the place where you just added the initialization, and directly below add another line:
 
 ```swift
 let config = TelemetryDeck.Config(appID: "YOUR-APP-ID")
