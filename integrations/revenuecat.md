@@ -78,12 +78,6 @@ Here's what's going on in the above example
 2. We then manually set a default user for TelemetryDeck. This allows us to later retrieve a hashed version of the user identifier.
 3. Finally, we configure RevenueCat and set up the necessary user attributes.
 
-{% noteinfo "TelemetryManager.shared.hashedDefaultUser" %}
-
-The `TelemetryManager.shared.hashedDefaultUser` is currently only available in a pre-release version of the TelemetryDeck iOS SDK. Set your Swift Package Manager `branch` to `main` to get that version.
-
-{% endnoteinfo %}
-
 {% notewarning "You need to keep user identifiers in sync" %}
 
 Whenever you update your TelemetryDeck user identifier, you'll also need to update the user identifier in RevenueCat's `telemetrydeck_user_id` user attribute.
