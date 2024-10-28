@@ -56,6 +56,14 @@ Information about the context the app runs in, such as whether it's running in a
 - `TelemetryDeck.RunContext.targetEnvironment`: The target environment of the app.
 - `TelemetryDeck.RunContext.extensionIdentifier`: The identifier of the extension the app is running in. This provides a value such as `com.apple.widgetkit-extension` when TelemetryDeck is run from a widget.
 
+
+## User Preference
+
+Information about the user's preferences, such as language and region.
+
+- `TelemetryDeck.UserPreference.language`: The language of the user.
+- `TelemetryDeck.UserPreference.region`: The region of the user.
+
 ## SDK
 
 Information about the TelemetryDeck SDK, such as its name or version number.
@@ -64,12 +72,11 @@ Information about the TelemetryDeck SDK, such as its name or version number.
 - `TelemetryDeck.SDK.nameAndVersion`: The name and version of the SDK, separated by a space.
 - `TelemetryDeck.SDK.version`: The version of the SDK.
 
-## User Preference
+## API
 
-Information about the user's preferences, such as language and region.
+Information about which TelemetryDeck API this signal was sent to .
 
-- `TelemetryDeck.UserPreference.language`: The language of the user.
-- `TelemetryDeck.UserPreference.region`: The region of the user.
+- `TelemetryDeck.API.Ingest.version`: The Ingest API Version this signal was sent to. This will get overwritten by the ingest API server.
 
 ## Deprecated Parameters
 
@@ -94,6 +101,7 @@ These parameters are deprecated because they are not yet namespaced, and will be
 - `appLanguage`: The language of the app.
 - `preferredLanguage`: The preferred language of the user.
 - `telemetryClientVersion`: The version of the TelemetryDeck SDK.
+- `telemetryAPIVersion`: The API Version this signal was sent to
 
 ## RevenueCat Parameters
 
