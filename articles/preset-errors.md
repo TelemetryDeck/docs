@@ -47,16 +47,26 @@ The `errorOccurred` function also accepts the same arguments as the `signal` fun
 
 ## Separation of ID & Message
 
-While the above code is a good starting point, the localized nature of the `localizedDescription` message attached to all thrown exceptions in Swift isn't optimal. The same issue will be reported with different messages simply because the text will differ based on the users language settings. And you might have even created your own error types that provide dynamic content such as the file path in the error message, which makes things even worse. To see which errors affect most users, it's best to give the same kind of errror the same ID.
+While the above code is a good starting point, the localized nature of the `localizedDescription` message attached to all thrown exceptions in Swift isn't optimal. The same issue will be reported with different messages simply because the text will differ based on the users language settings. And you might have even created your own error types that provide dynamic content such as the file path in the error message, which makes things even worse. To see which errors affect most users, it's best to give the same kind of error the same ID.
 
-So, whenever possible, it's recommended that you instead pass a made-up value to the `TelemetryDeck.Error.id` parameter that rather represents the context of the error. The full message can be provided with the optional parameter `TelemetryDeck.Error.message` like so:
+So, whenever possible, it's recommended that you pass a made-up value to the `TelemetryDeck.Error.id` parameter that rather represents the context of the error. The full message can be provided with the optional parameter `TelemetryDeck.Error.message`. The Swift SDK provides several convenient ways to do this:
 
 ```swift
 do {
   let object = try JSONDecoder().decode(Object.self, from: data)
 } catch {
-  // your error handling code
+  // Option 1: Using error.with(id:)
+  TelemetryDeck.errorOccurred(
+    identifiableError: error.with(id: "ImportObject.jsonDecode")
+  )
 
+  // Option 2: Using explicit parameters
+  TelemetryDeck.errorOccurred(
+    id: "ImportObject.jsonDecode",
+    message: error.localizedDescription
+  )
+
+  // Option 3: Using the full signal syntax
   TelemetryDeck.signal(
     "TelemetryDeck.Error.occurred",
     parameters: [
@@ -65,12 +75,6 @@ do {
     ]
   )
 }
-```
-
-Again, the Swift SDK makes this call shorter:
-
-```swift
-TelemetryDeck.errorOccurred(id: "ImportObject.jsonDecode", message: error.localizedDescription)
 ```
 
 For your own `Error` types, you could introduce an `IdentifiableError` protocol and conform to that to make this process easier (the Swift SDK has this protocol built-in):
@@ -88,16 +92,20 @@ enum MyError: String, IdentifiableError {
 }
 ```
 
-Now you can pass `error.id` for the `TelemetryDeck.Error.id` parameter whenever you encounter an error that can be casted to `IdentifiableError`. For system errors, you could fall back to something like `String(describing: type(of: error))`. Ths Swift SDK can handle types conforming to `IdentifiableError` directly:
+Now you can pass custom errors directly to the SDK:
 
 ```swift
 do {
   let object = try JSONDecoder().decode(Object.self, from: data)
 } catch {
-  // your error handling code
-
+  // For custom errors that conform to IdentifiableError
   if let myError = error as? MyError {
     TelemetryDeck.errorOccurred(identifiableError: myError)
+  } else {
+    // For system errors or other errors, use with(id:)
+    TelemetryDeck.errorOccurred(
+      identifiableError: error.with(id: "ImportObject.jsonDecode")
+    )
   }
 }
 ```
