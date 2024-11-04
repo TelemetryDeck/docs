@@ -157,7 +157,7 @@ Let's send a signal to show the app has launched correctly.
 Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
 
 - **Signal Name** – A string that indicates which kind of event happened
-- **User Identifer** – A string that identifies your user (we auto-generate one for you)
+- **User Identifier** – A string that identifies your user (we auto-generate one for you)
 - **Optional Parameters** – A dictionary of additional data about your app or the event triggering the signal
 
 See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
@@ -184,7 +184,7 @@ TelemetryDeck.initialize(config: config)
 TelemetryDeck.signal("App.launched")
 ```
 
-And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add a custom user identifer or metadata payload, add them to the function call like this:
+And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add a custom user identifier or metadata payload, add them to the function call like this:
 
 ```swift
 TelemetryDeck.signal(

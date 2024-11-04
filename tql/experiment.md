@@ -63,7 +63,7 @@ The `filter` property is used to select signals of all users that are part of th
 : The second sample to compare, i.e. the test group in the experiment. It must have a `name` and a `filter` property.
 The `filter` property is used to select signals of all users that are part of the sample.
 
-**successCriterion** (required)
+**`successCriterion`** (required)
 : The success criterion to use for the experiment. It must have a `name` and a `filter` property.
 The `filter` property is used to select signals of all users that are part of the sample.
 
@@ -108,8 +108,8 @@ The output of an experiment query is a list of objects with the following proper
 **cohort_2_success**
 : The number of users in the second sample that reached the success criterion.
 
-**zscore**
+**`zscore`**
 : The [z-score](https://en.wikipedia.org/wiki/Standard_score) of the experiment.
 
-**pvalue**
+**`pvalue`**
 : The [p-value](https://en.wikipedia.org/wiki/P-value) of the experiment.

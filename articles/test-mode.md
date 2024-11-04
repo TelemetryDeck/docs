@@ -34,7 +34,7 @@ The SDKs try to infer the isTestMode parameter as best as they can. For example,
 You can also override the isTestMode parameter just as you would add any other payload parameter to a signal
 Note: since signal payloads only support strings, the parameter needs to be either "true" or "false"
 
-### Manually det Test Mode in Swift SDK
+### Manually set Test Mode in Swift SDK
 
 ```swift
 // An example variable to manually set test mode.
