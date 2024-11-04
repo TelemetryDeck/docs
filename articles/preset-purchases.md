@@ -10,14 +10,13 @@ lead: TelemetryDeck ships with a set of insights that can be useful to track you
 
 ## Why Track Purchases?
 
-If you are offering In-App Purchases in your app, you might have noticed some delay in officially reported purchase stats. For example, App Store Connect charts do not offer any purchase data for the last 3 hours. Such a delay can be very annoying sometimes such as at the day of your app launch or a specific live event related to your app. On top of that, App Store Connect in particular signs you out of your account very regularly, making it annoying to quickly look up purchase statistics.
+If you are offering In-App Purchases in your app, you might have noticed some delay in officially reported purchase stats. For example, App Store Connect charts do not offer any purchase data for the last 3 hours. Such a delay can be annoying sometimes such as at the day of your app launch or a specific live event related to your app. On top of that, App Store Connect in particular signs you out of your account regularly, making it annoying to quickly look up purchase statistics.
 
 That's why you might want to set up a signal in your application to track purchases in your app through TelemetryDeck with just a couple of seconds delay, providing you with the live data you want.
 
 {% notewarning "Live Data vs. Correct Data" %}
 We do not offer any intelligence to correct once reported purchases, such as when users make refunds, or to detect subscription renewals. Therefore, our insights focus on more recent data. For longer-term or 100% correct data, refer to official sources.
 {% endnotewarning %}
-
 
 ## Sending the Signal
 
@@ -30,7 +29,7 @@ TelemetryDeck.signal("TelemetryDeck.Purchase.completed", floatValue: priceValue)
 ```
 
 {% notewarning "Converting Currencies" %}
-Make sure to convert any currencies to USD before sending them as signals. You can use [an API like this](https://www.exchangerate-api.com/docs/standard-requests) which offers 1,500 requests per month for free to get current exchange rates if needed. You could also fetch & hard-code them to your app for a rough estimate if you expect more than 1,500 purchases per month.
+Make sure to convert any currencies to USD before sending them as signals. You can use [an API like this](https://www.exchangerate-api.com/docs/standard-requests) which offers 1,500 requests per month free of charge to get current exchange rates if needed. You could also fetch & hard-code them to your app for a rough estimate if you expect more than 1,500 purchases per month.
 {% endnotewarning %}
 
 The Swift SDK ships with a more convenient API that handles reading the price from the StoreKit transaction and converting to USD (with hard-coded non-live currency conversion) for you like so:
@@ -55,9 +54,9 @@ If you use [FreemiumKit](https://freemiumkit.app), just add their SDKs `.onPurch
 
 Optionally (but recommended), there are two additional payload keys that will give you additional insights:
 
-* `TelemetryDeck.Purchase.type`: Pass either `subscription` or `one-time-purchase` to see the type distribution.
-* `TelemetryDeck.Purchase.countryCode`: Pass the country code of the storefront to see the country distribution.
-* `TelemetryDeck.Purchase.currencyCode`: Pass the currency code of the storefront to see currency distribution.
+- `TelemetryDeck.Purchase.type`: Pass either `subscription` or `one-time-purchase` to see the type distribution.
+- `TelemetryDeck.Purchase.countryCode`: Pass the country code of the storefront to see the country distribution.
+- `TelemetryDeck.Purchase.currencyCode`: Pass the currency code of the storefront to see currency distribution.
 
 In Swift getting all values and sending them looks like this:
 
@@ -72,7 +71,6 @@ TelemetryDeck.signal(
   floatValue: NSDecimalNumber(decimal: transaction.price ?? Decimal()).doubleValue
 )
 ```
-
 
 ## Effect on Privacy & App Tracking Transparency
 

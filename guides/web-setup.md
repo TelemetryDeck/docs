@@ -12,9 +12,13 @@ order: 250
 
 ## Prerequisites
 
+<!-- vale proselint.Cliches = NO -->
+
 - You'll need access to your website's code to install this package. If you're using a CMS like WordPress, you'll need to be able to edit the theme files.
 - You'll need a TelemetryDeck account. [Sign up for free](https://dashboard.telemetrydeck.com/register?source=websdk) if you don't have one yet.
 - You'll need a TelemetryDeck App ID. [Create a new app](https://dashboard.telemetrydeck.com/apps/create) if you don't have one yet.
+
+<!-- vale proselint.Cliches = YES -->
 
 ## Installation
 
@@ -35,11 +39,11 @@ You don't need to write any code to use TelemetryDeck. Once you've installed the
 
 ## Updating the Dashboard
 
-If you like, you can switch your [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com/) to Website mode. To do that, navigate to the relevant app in the Dashboard, click **App Setttings** in the sidebar, and change the **Overview Layout** to **Show Data for a blog or static website**.
+If you like, you can switch your [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com/) to Website mode. To do that, navigate to the relevant app in the Dashboard, click **App Settings** in the sidebar, and change the **Overview Layout** to **Show Data for a blog or static website**.
 
 ## Test Mode
 
-By default, all signals sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatcially marked as test signals. This is to prevent test signals from polluting your data.
+By default, all signals sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatically marked as test signals. This is to prevent test signals from polluting your data.
 
 It is also possible to mark all signals as test signals by setting the dataset attribute `data-is-test-mode` to `true`.
 

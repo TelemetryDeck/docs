@@ -45,7 +45,7 @@ This is the correct setup procedure for JavaScript code that runs in a browser a
 - Ember
 - Probably your favorite framework
 
-Initialize the TelemetryDeck SDK with your app ID and your user's user identifer.
+Initialize the TelemetryDeck SDK with your app ID and your user's user identifier.
 
 ```javascript
 import TelemetryDeck from '@telemetrydeck/sdk';
@@ -60,13 +60,13 @@ Please replace `<YOUR_APP_ID>` with the app ID in TelemetryDeck ([Dashboard](htt
 
 You also need to identify your logged in user. Instead of `<YOUR_USER_IDENTIFIER>`, pass in any string that uniquely identifies your user, such as an email address. It will be cryptographically anonymized with a hash function.
 
-If can't specify a user identifer at initialization, you can set it later by setting `td.clientUser`.
+If can't specify a user identifier at initialization, you can set it later by setting `td.clientUser`.
 
 Please note that `td.signal` is an async function that returns a promise.
 
 ### Set up in Node.js Applications
 
-Initialize the TelemetryDeck SDK with your app ID and your user's user identifer. Since `globalThis.crypto.subtle` does not exist in Node.js, you need to pass in an alternative implementation provided by Node.js.
+Initialize the TelemetryDeck SDK with your app ID and your user's user identifier. Since `globalThis.crypto.subtle` does not exist in Node.js, you need to pass in an alternative implementation provided by Node.js.
 
 ```javascript
 import TelemetryDeck from '@telemetrydeck/sdk';
@@ -83,22 +83,22 @@ Please replace `<YOUR_APP_ID>` with the app ID in TelemetryDeck ([Dashboard](htt
 
 You also need to identify your logged in user. Instead of `<YOUR_USER_IDENTIFIER>`, pass in any string that uniquely identifies your user, such as an email address. It will be cryptographically anonymized with a hash function.
 
-If can't specify a user identifer at initialization, you can set it later by setting `td.clientUser`.
+If can't specify a user identifier at initialization, you can set it later by setting `td.clientUser`.
 
 Please note that `td.signal` is an async function that returns a promise.
 
 {% notewarning "Special treatment for frameworks" %}
 
-Some frameworks, like Svelte, don't need `crypto` and node.js. Here are some tipps on how to implement TelemetryDeck when using some of these special frameworks:
+Some frameworks, like Svelte, don't need `crypto` and node.js. Here are some tips on how to implement TelemetryDeck when using some of these special frameworks:
+
 - The initialization should happen once, and the TD object should be passed around in a service or singleton.
 - The `td.send` function should be used to send signals, either automatically in a router-like object or on a per-feature basis.
 
 {% endnotewarning %}
 
+### Advanced Initialization Options
 
-### Advanced Initalization Options
-
-See the [source code](https://github.com/TelemetryDeck/JavaScriptSDK/blob/main/src/telemetrydeck.js#L6-L17) for a full list of availble options acepted by the `TelemetryDeck` constructor.
+See the [source code](https://github.com/TelemetryDeck/JavaScriptSDK/blob/main/src/telemetrydeck.js#L6-L17) for a full list of available options accepted by the `TelemetryDeck` constructor.
 
 ## Sending Signals
 
@@ -123,7 +123,7 @@ You don't need to update your privacy policy, [but we recommend you do it anyway
 
 ## Advanced: Queueing Signals
 
-The `TelemetryDeck` class comes with a built-in queuing mechanism for storing signals until they are flushed in a single request. Queued signals are sent with `receivedAt` prefilled with the time they were queued.
+The `TelemetryDeck` class comes with a built-in queuing mechanism for storing signals until they are flushed in a single request. Queued signals are sent with `receivedAt` pre-filled with the time they were queued.
 
 Queueing signals can be helpful in situations where you're battery- or network-constrained and want to be mindful of the user's available resources. For example, a mobile app might want to queue signals while the user is offline and flush them when the user is back online.
 
@@ -158,5 +158,7 @@ export class Store {
 The default implementation can be found in `src/utils/store.js`.
 
 ---
+
+<!-- vale proselint.Cliches = NO -->
 
 [TelemetryDeck](https://telemetrydeck.com?source=github) helps you build better products with live usage data. Try it out for free.

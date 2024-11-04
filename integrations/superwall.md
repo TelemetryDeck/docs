@@ -49,7 +49,7 @@ class SuperwallService: SuperwallDelegate {
 }
 ```
 
-Because TelemetryDeck only accepts strings as event metadata, this method accepts all data from Superwall, stringifies it, and hands it off to TelemetryDeck. The TelemetryDeck takes care of queuing and sending the events to TelemetryDeck.
+Because TelemetryDeck only accepts strings as event metadata, this method accepts all data from Superwall, converts it into strings, and hands it off to TelemetryDeck. The TelemetryDeck takes care of queuing and sending the events to TelemetryDeck.
 
 ## Registering the Superwall delegate
 

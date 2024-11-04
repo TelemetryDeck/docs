@@ -37,11 +37,11 @@ The TelemetryDeck servers have various **lookup tables** that can be used to tra
 The following lookup tables are available:
 
 - `appleModelNames` - Translates Apple device model names into human readable names.
-- `deviceType` - Translates device device model names into a type such as "Desktop", "Phone", "Tablet", etc.
-- `processorFamily` - Translates a device model name into a processor family such as "A12 Bionic" (the bionic part is very important!)
+- `deviceType` - Translates device model names into a type such as "Desktop", "Phone", "Tablet", etc.
+- `processorFamily` - Translates a device model name into a processor family such as "A12 Bionic" (the bionic part is `very` important!)
 - `processorType` - Translates a device model name into a processor type such as "Apple Silicon" or "Intel"
 
-(See our public [appleModelNames](https://github.com/TelemetryDeck/AppleModelNames) repo for a list of values in these.
+(See our public [appleModelNames](https://github.com/TelemetryDeck/AppleModelNames) repository for a list of values in these.
 
 Here's an example TQL query that uses the registered lookup extraction function to translate a dimension value into a human readable name:
 
@@ -56,7 +56,7 @@ Here's an example TQL query that uses the registered lookup extraction function 
     },
     "outputName": "modelName",
     "type": "extraction"
-  },
+  }
   // Other TQL query properties...
 }
 ```
@@ -78,18 +78,18 @@ Here is an example TQL query that uses the inline lookup extraction function to 
   "dimension": {
     "dimension": "modelName",
     "extractionFn": {
-          "type":"lookup",
-          "lookup":{
-            "type":"map",
-            "map":{"foo":"bar", "baz":"bat"}
-          },
-          "retainMissingValue":false,
-          "injective":false,
-          "replaceMissingValueWith":"MISSING"
-        },
+      "type": "lookup",
+      "lookup": {
+        "type": "map",
+        "map": { "foo": "bar", "baz": "bat" }
+      },
+      "retainMissingValue": false,
+      "injective": false,
+      "replaceMissingValueWith": "MISSING"
+    },
     "outputName": "modelName",
     "type": "extraction"
-  },
+  }
   // Other TQL query properties...
 }
 ```

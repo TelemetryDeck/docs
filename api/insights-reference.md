@@ -102,7 +102,7 @@ If you enter a breakdown key for an Insight, calculation will switch from time s
 
 **Hints:**
 
-1. Breakdowns pair well with the Donut Chart as a Chart Type.
+1. Breakdowns pair well with the donut chart as a Chart Type.
 2. If you're interested in the number of **users** per e.g. system version instead of the number of signals, enabled the _unique by user_ option in _Signal Type_.
 
 ---
