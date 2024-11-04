@@ -11,7 +11,7 @@ lead: A Signal is the representation of one event happening in one instance of y
 Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
 
 - **Signal Name** – A string that indicates which kind of event happened.<br>In this case we'll use `applicationDidFinishLaunching`, but it can be `databaseUpdated` or `settingsScreenOpened` or `pizzaModeActivated` (I totally love that last one!)
-- **User Identifer** – A string that identifies your user.<br>This can be an email address or a username, or a random ID that you generate once and store somewhere. It should always be the same for all the signals you send from a certain instance of the app. If you don't supply a user identifier, `TelemetryDeck` will generate one for you.
+- **User Identifier** – A string that identifies your user.<br>This can be an email address or a username, or a random ID that you generate once and store somewhere. It should always be the same for all the signals you send from a certain instance of the app. If you don't supply a user identifier, `TelemetryDeck` will generate one for you.
 - **A Metadata Payload** – Metadata is a dictionary `[String: String]` of additional data about your app that might be interesting to analyze.<br>`TelemetryDeck` will always add the user's OS Version, Platform, Build Number and App Version to the metadata, but you can specify additional info like, `numberOfEntriesInDatabase` (an int cast to string) or `pizzaModeAnchoviesEnabled` (a Boolean cast to string).
 
 As TelemetryDeck is an analytics software, it analyzes events that occur in your apps' life cycles. In TelemetryDeck,

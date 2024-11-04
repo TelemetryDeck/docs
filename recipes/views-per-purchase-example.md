@@ -14,11 +14,11 @@ Imagine we're sending two types of signals.
 1. `upgradeDetailViewDidLoad` - when a user opens the upgrade detail screen
 2. `purchaseSuccessful` - when a user completes a purchase
 
-We want to know how many times a user opens the upgrade detail screen before completing a purchase. This is a really good candiate for a `groupBy` query!
+We want to know how many times a user opens the upgrade detail screen before completing a purchase. This is a really good candidate for a `groupBy` query!
 
 ## Our objective
 
-At a very high level, we want to do these three things:
+At a high level, we want to do these three things:
 
 1. **Only consider signals of type `upgradeDetailViewDidLoad` and `purchaseSuccessful` in our query.** We can achieve that with an `and` filter.
 2. Count the number of occurrences of each signal. We'll use [filtered aggregators](/docs/tql/aggregators/#filtered) for that.
@@ -130,7 +130,7 @@ We now have the number of views and the number of purchases. To get the average 
 
 ## Optional: Grouping
 
-If we want to group the results by a dimension, we can specify a [dimension](/docs/tql/dimensionSpec/) in our query. This can help us track improvements in the numbers made over time, or compare the numbers between differentv versions of our app.
+If we want to group the results by a dimension, we can specify a [dimension](/docs/tql/dimensionSpec/) in our query. This can help us track improvements in the numbers made over time, or compare the numbers between different versions of our app.
 
 For example, if we want to group the results by `appVersion`, we can add the following to our query:
 
@@ -145,7 +145,7 @@ For example, if we want to group the results by `appVersion`, we can add the fol
 ]
 ```
 
-This will give us the average number of views per purchase, seperately for each version of our app.
+This will give us the average number of views per purchase, separate for each version of our app.
 
 {% noteinfo "Grouping by time" %}
 If we instead want to group by date, we don't even need to specify a dimension. We set the granularity to `day`, `week`, `month`, or `year` and we'll get the results grouped by that time period.

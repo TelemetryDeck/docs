@@ -71,7 +71,7 @@ Calling this method will automatically create a navigation signal with the given
 
 Calling this method with just a destination will use the previously last used source as the source for the navigation signal.
 
-This is very convenient, but might produce incorrect graphs if you don't call it from every screen in your app.
+This is convenient, but might produce incorrect graphs if you don't call it from every screen in your app.
 Suppose you have 3 tabs "Home", "User" and "Settings", but only set up navigation in "Home" and "Settings". If
 a user taps "Home", "User" and "Settings" in that order, that'll produce an incorrect navigation signal with
 source "Home" and destination "Settings", a path that the user did not take.

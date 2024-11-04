@@ -92,7 +92,7 @@ Now we need to tell RevenueCat to send copies of all events over to TelemetryDec
 - In the left sidebar, click **Integrations**
 - Select **Webhooks**
 - Select **Add new Configuration**
-- Give the new Webook a name like **Send to TelemetryDeck**
+- Give the new WebHook a name like **Send to TelemetryDeck**
 - Set the Webhook URL to `https://nom.telemetrydeck.com/v2/webhooks/revenuecat/`
 - Leave all other settings as the default and click **Save**
 

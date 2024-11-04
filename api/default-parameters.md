@@ -56,7 +56,6 @@ Information about the context the app runs in, such as whether it's running in a
 - `TelemetryDeck.RunContext.targetEnvironment`: The target environment of the app.
 - `TelemetryDeck.RunContext.extensionIdentifier`: The identifier of the extension the app is running in. This provides a value such as `com.apple.widgetkit-extension` when TelemetryDeck is run from a widget.
 
-
 ## User Preference
 
 Information about the user's preferences, such as language and region.
@@ -80,7 +79,7 @@ Information about which TelemetryDeck API this signal was sent to .
 
 ## Deprecated Parameters
 
-These parameters are deprecated because they are not yet namespaced, and will be removed in a future release. All of them have replacements in some namespaces. See the [grand rename](/articles/grand-rename/) article for a mapping of the old names to the new ones.
+These parameters are deprecated because they are not yet namespaced, and will be removed in a future release. All of them have replacements in some name spaces. See the [grand rename](/articles/grand-rename/) article for a mapping of the old names to the new ones.
 
 - `platform`: The platform of the device.
 - `systemVersion`: The version of the operating system.

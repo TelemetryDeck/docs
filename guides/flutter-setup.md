@@ -12,11 +12,14 @@ order: 400
 
 ## Prerequisites
 
+<!-- vale proselint.Cliches = NO -->
+
 - You'll need a TelemetryDeck account. [Sign up for free](https://dashboard.telemetrydeck.com/register?source=websdk) if you don't have one yet.
 - You'll need a TelemetryDeck App ID. [Create a new app](https://dashboard.telemetrydeck.com/apps/create) if you don't have one yet.
 - Follow the installing instructions on [pub.dev](https://pub.dev/packages/telemetrydecksdk/install).
+<!-- vale proselint.Cliches = YES -->
 
-## Initializion
+## Initialization
 
 Initialize the TelemetryClient like so:
 
@@ -57,7 +60,7 @@ Telemetrydecksdk.send("signal_type",
 }
 ```
 
-The Flutter SDK uses the native SDKs for Android and iOS which offer a number of built-in attributes which are submitted with every signal. You can overwrite these attributes by providing a custom value with the same key. For more information on how each value is calcualted, check the corresponding platform library:
+The Flutter SDK uses the native SDKs for Android and iOS which offer a number of built-in attributes which are submitted with every signal. You can overwrite these attributes by providing a custom value with the same key. For more information on how each value is calculated, check the corresponding platform library:
 
 - `majorMinorSystemVersion`
 - `telemetryClientVersion`
@@ -102,7 +105,7 @@ Telemetrydecksdk.start(TelemetryManagerConfiguration(
 
 ## Custom Server
 
-A very small subset of our customers will want to use a custom signal ingestion server or a custom proxy server. To do so, you can pass the URL of the custom server to the `TelemetryManagerConfiguration`:
+A tiny subset of our customers will want to use a custom signal ingestion server or a custom proxy server. To do so, you can pass the URL of the custom server to the `TelemetryManagerConfiguration`:
 
 ```swift
 Telemetrydecksdk.start(TelemetryManagerConfiguration(

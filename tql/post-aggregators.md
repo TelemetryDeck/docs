@@ -70,7 +70,7 @@ The expression post-aggregator is defined using a Druid expression.
 
 ## HyperUnique Cardinality post-aggregator
 
-The hyperUniqueCardinality post aggregator is used to wrap a hyperUnique object such that it can be used in post aggregations.
+The `hyperUniqueCardinality` post aggregator is used to wrap a `hyperUnique` object such that it can be used in post aggregations.
 
 ```json
 {
