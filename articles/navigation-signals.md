@@ -63,7 +63,7 @@ Examples:
 
 Since TelemetryDeck navigation signals are slightly cumbersome to create manually, we're aiming to provide convenience methods for our SDKs that will automatically track navigation signals for you. These methods will be in one of two flavors, either a method that you call with a source and destination, or a method that you call with just a destination.
 
-### `TelemetryDeck.navigationPathChanged(from: <source>, to <destination>)`
+### `TelemetryDeck.navigationPathChanged(from: <source>, to: <destination>)`
 
 Calling this method will automatically create a navigation signal with the given source and destination.
 
@@ -75,3 +75,23 @@ This is convenient, but might produce incorrect graphs if you don't call it from
 Suppose you have 3 tabs "Home", "User" and "Settings", but only set up navigation in "Home" and "Settings". If
 a user taps "Home", "User" and "Settings" in that order, that'll produce an incorrect navigation signal with
 source "Home" and destination "Settings", a path that the user did not take.
+
+#### SwiftUI Convenience
+
+If you're using SwiftUI, you can use the `.trackNavigation(path:)` view modifier as a convenient wrapper around `navigationPathChanged(to:)`. It will automatically send the navigation signal when the view appears:
+
+```swift
+struct SettingsView: View {
+    var body: some View {
+        Form {
+            NavigationLink("Account") {
+                AccountSettingsView()
+                    .trackNavigation(path: "settings.account")
+            }
+        }
+        .trackNavigation(path: "settings")
+    }
+}
+```
+
+The same considerations about consistent application apply - make sure to use the modifier on all navigation destinations to avoid incorrect navigation paths.
