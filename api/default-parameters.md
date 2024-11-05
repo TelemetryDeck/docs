@@ -42,6 +42,8 @@ Information about the device running the application, such as operating system, 
 - `TelemetryDeck.Device.systemMajorVersion`: The major version of the operating system.
 - `TelemetryDeck.Device.systemVersion`: The version of the operating system.
 - `TelemetryDeck.Device.timeZone`: The time zone of the device.
+- `TelemetryDeck.Device.screenDensity`: The screen density of the device.
+- `TelemetryDeck.Device.brand`: The brand of the device.
 
 ## Run Context
 
@@ -55,6 +57,8 @@ Information about the context the app runs in, such as whether it's running in a
 - `TelemetryDeck.RunContext.locale`: The locale of the app.
 - `TelemetryDeck.RunContext.targetEnvironment`: The target environment of the app.
 - `TelemetryDeck.RunContext.extensionIdentifier`: The identifier of the extension the app is running in. This provides a value such as `com.apple.widgetkit-extension` when TelemetryDeck is run from a widget.
+- `TelemetryDeck.RunContext.isSideLoaded`: Whether the app is running as a side loaded app.
+- `TelemetryDeck.RunContext.sourceMarketplace`: The source marketplace of the app.
 
 ## User Preference
 
@@ -70,6 +74,7 @@ Information about the TelemetryDeck SDK, such as its name or version number.
 - `TelemetryDeck.SDK.name`: The name of the SDK.
 - `TelemetryDeck.SDK.nameAndVersion`: The name and version of the SDK, separated by a space.
 - `TelemetryDeck.SDK.version`: The version of the SDK.
+- `TelemetryDeck.SDK.buildType`: The build type of the SDK.
 
 ## API
 
