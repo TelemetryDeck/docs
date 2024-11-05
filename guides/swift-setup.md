@@ -205,6 +205,29 @@ And you're done! You are now sending signals to the TelemetryDeck server. 🎉
 
 Run your app and confirm that your first signal arrived in the "Recent Signals" tab on TelemetryDeck. Don't forget to turn on "Test Mode" to see signals sent in debug builds!
 
+## Configuring Default Signal Properties (Optional)
+
+When initializing TelemetryDeck, you can configure some defaults to help keep your signals organized and consistent:
+
+```swift
+let config = TelemetryDeck.Config(appID: "YOUR-APP-ID")
+
+// Add a prefix to all signal names
+config.defaultSignalPrefix = "App."
+// With this set, calling signal("launched") will actually send "App.launched"
+
+// Add a prefix to all parameter names
+config.defaultParameterPrefix = "MyApp."
+// This prefixes all keys in your parameters dictionary
+
+// Set parameters that will be included with every signal
+config.defaultParameters = {[
+    "theme": UserDefaults.standard.string(forKey: "theme") ?? "default",
+    "isPayingUser": FreemiumKit.shared.hasPurchased ? "true" : "false",
+]}
+// These parameters will be merged with any additional parameters you specify in signal() calls
+```
+
 ## Fill out Apple's app privacy details
 
 Something you need to do before you can upload your app to the App Store is going through Apple's privacy details on App Store Connect. This informs your users about what data is collected, and how it is collected.
