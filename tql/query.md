@@ -65,21 +65,21 @@ This example groupBy query groups signals by the `majorSystemVersion` dimension 
 
 The following properties are common to all query types. See pages for each query type for additional properties only for those query types.
 
-| Property                                                  | Description                                                                                                                                              |
-| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnel/). |
-| [granularity](/docs/tql/granularity/)                     | The granularity of the query.                                                                                                                            |
-| [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                                     |
-| [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                       |
-| [baseFilters](/docs/tql/baseFilters/) (optional)          | A list of filters that are applied to all queries.                                                                                                       |
-| [filter](/docs/tql/filters/) (optional)                   | A filter that's applied to the query.                                                                                                                    |
-| [dataSource](/docs/tql/datasource/) (optional)            | The data source to query. Must be `"telemetry-signals"`. Defaults to "telemetry-signals".                                                                |
-| **testMode** (optional, Bool)                             | Wether to show test data (`True`) or live data (`False`). Defaults to `False`. [More on Test Mode](/docs/articles/test-mode/)                            |
-| **appID** (optional)                                      | If [baseFilters](/docs/tql/basefilters/) is set to `thisApp`, the id for the app in question.                                                            |
-| **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                           |
-| **sampleFactor** (optional)                               | Include only every n-th signal in query. Possible values are `1`, `10`, `100` or `1000`. Defaults to `1`                                                 |
-| **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                   |
-| **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                         |
+| Property                                                  | Description                                                                                                                                                                       |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnel/), [scan](/docs/tql/scan/). |
+| [granularity](/docs/tql/granularity/)                     | The granularity of the query.                                                                                                                                                     |
+| [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                                                              |
+| [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                                                |
+| [baseFilters](/docs/tql/baseFilters/) (optional)          | A list of filters that are applied to all queries.                                                                                                                                |
+| [filter](/docs/tql/filters/) (optional)                   | A filter that's applied to the query.                                                                                                                                             |
+| [dataSource](/docs/tql/datasource/) (optional)            | The data source to query. Must be `"telemetry-signals"`. Defaults to "telemetry-signals".                                                                                         |
+| **testMode** (optional, Bool)                             | Wether to show test data (`True`) or live data (`False`). Defaults to `False`. [More on Test Mode](/docs/articles/test-mode/)                                                     |
+| **appID** (optional)                                      | If [baseFilters](/docs/tql/basefilters/) is set to `thisApp`, the id for the app in question.                                                                                     |
+| **limit** (optional)                                      | The maximum number of results to return. Defaults to unlimited                                                                                                                    |
+| **sampleFactor** (optional)                               | Include only every n-th signal in query. Possible values are `1`, `10`, `100` or `1000`. Defaults to `1`                                                                          |
+| **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                                            |
+| **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                                                  |
 
 ## Additional Properties for [Timeseries](/docs/tql/timeseries/) Queries
 

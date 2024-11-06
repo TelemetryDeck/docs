@@ -21,3 +21,6 @@ The following query types are supported:
 
 [experiment](/docs/tql/experiment/)
 : Evaluates an A/B testing experiment.
+
+[scan](/docs/tql/scan/)
+: Lists raw data rows or events.
