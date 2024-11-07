@@ -15,7 +15,7 @@ headerImage: /docs/images/anonymization-display-image.jpg
 
 Anonymizing data involves transforming it to prevent direct linkage to a person. However, if the original data can be recreated with additional information, the transformation only qualifies as pseudonymization. **GDPR considers data truly anonymized** only if the original data can’t be recreated, even with additional information.
 
-At TelemetryDeck, we even go a step further: the “identification date” is no longer available; “re-identification” is thus ruled out and cannot be performed. Therefore, anonymized data is not personal data anymore. [You can check out our code](https://github.com/TelemetryDeck/SwiftSDK/blob/main/Sources/TelemetryClient/SignalManager.swift#L84) to confirm the statement for yourself!
+At TelemetryDeck, we even go a step further: the “identification date” is no longer available; “re-identification” is thus ruled out and cannot be performed. Therefore, anonymized data is not personal data anymore. [You can check out our code](https://github.com/TelemetryDeck/SwiftSDK/blob/main/Sources/TelemetryDeck/Signals/SignalManager.swift#L135) to confirm the statement for yourself!
 
 ## User identifiers
 
