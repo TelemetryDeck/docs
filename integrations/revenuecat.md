@@ -17,7 +17,7 @@ With this integration, you can import your RevenueCat events into TelemetryDeck,
 
 {% noteinfo "Read the announcement" %}
 
-Our announcement blog post shows you what to expect, how to use the new revenue dashboard, and gives examples on what to do with your revenue data.
+Our [announcement blog post](https://telemetrydeck.com/blog/revenuecat-integration/) shows you what to expect, how to use the new revenue dashboard, and gives examples on what to do with your revenue data.
 
 {% endnoteinfo %}
 
