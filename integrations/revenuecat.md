@@ -15,6 +15,12 @@ RevenueCat pairs excellently with TelemetryDeck – use TelemetryDeck to improv
 
 With this integration, you can import your RevenueCat events into TelemetryDeck, and see everything on one dashboard. We'll be using RevenueCat's _Webhooks_ feature to pass on their data to TelemetryDeck.
 
+{% noteinfo "Read the announcement" %}
+
+Our announcement blog post shows you what to expect, how to use the new revenue dashboard, and gives examples on what to do with your revenue data.
+
+{% endnoteinfo %}
+
 ## Installing RevenueCat and TelemetryDeck
 
 First, we have to integrate both TelemetryDeck and RevenueCat into your app. You can find guides for both here:
