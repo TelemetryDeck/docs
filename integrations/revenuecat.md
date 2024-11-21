@@ -32,8 +32,8 @@ First, we have to integrate both TelemetryDeck and RevenueCat into your app. You
 
 RevenueCat has a concept of **user attributes**. Our goal is to set two new user attributes for our RevenueCat users that will make TelemetryDeck recognize them as the same users it is already managing.
 
-- `telemetrydeck_app_id`: This attribute should be set to your TelemetryDeck App ID, the same one you pass into the TelemetryDeck SDK for initialization.
-- `telemetrydeck_user_id`: This attribute needs to be the **already-hashed user identifier** that TelemetryDeck is using.
+- `$telemetryDeckAppId`: This attribute should be set to your TelemetryDeck App ID, the same one you pass into the TelemetryDeck SDK for initialization.
+- `$telemetryDeckUserId`: This attribute needs to be the **already-hashed user identifier** that TelemetryDeck is using.
 
 {% noteinfo "RevenueCat gets the hashed version of the TelemetryDeck User Identifier" %}
 
@@ -71,10 +71,10 @@ TelemetryDeck.updateDefaultUserID(to: myUserID)
 // and the pre-hashed TelemetryDeck User ID
 Purchases.configure(withAPIKey: "my_revenuecat_api_key")
 Purchases.shared.attribution.setAttributes([
-    "telemetrydeck_user_id": TelemetryManager.shared
+    "$telemetryDeckUserId": TelemetryManager.shared
         .hashedDefaultUser
         ?? "no-user",
-    "telemetrydeck_app_id": telemetrydeckAppID
+    "$telemetryDeckAppId": telemetrydeckAppID
 ])
 ```
 
