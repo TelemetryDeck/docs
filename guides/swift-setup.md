@@ -7,7 +7,7 @@ tags:
   - watchOS
   - tvOS
 featured: true
-testedOn: Xcode 14.1 & Swift 5.5
+testedOn: Xcode 16 & Swift 5.9
 description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS and tvOS
 lead: Let's include the TelemetryDeck Swift Package in your application and send signals!
 order: 100
@@ -150,7 +150,7 @@ You are now ready to send signals!
 
 ## Sending signals
 
-Let's send a signal to show the app has launched correctly.
+Let's send a signal to show that something has happened in your app.
 
 {% noteinfo "What is a signal?" %}
 
@@ -175,25 +175,21 @@ See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/
 You can also set a user identifier per send call as shown below, but this is not usually necessary.
 {% endnoteinfo %}
 
-Let's just send one signal that tells us the app has launched. Go to the place where you just added the initialization, and directly below add another line:
+Let's imaging your app is a pizza oven monitor and we want to send a signal that tells us the user has tapped the "Start Baking" button. Go to the place in your code where the user taps the button and add the following code:
 
 ```swift
-let config = TelemetryDeck.Config(appID: "YOUR-APP-ID")
-TelemetryDeck.initialize(config: config)
-
-TelemetryDeck.signal("App.launched")
+TelemetryDeck.signal("Oven.Bake.startBaking")
 ```
 
-And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add a custom user identifier or metadata payload, add them to the function call like this:
+And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add a custom parameters, add them to the function call like this:
 
 ```swift
 TelemetryDeck.signal(
-    "App.launched",
+    "Oven.Bake.startBaking",
     parameters: [
         "numberOfTimesPizzaModeHasActivated": "\(dataStore.pizzaMode.count)",
         "pizzaCheeseMode": "\(dataStore.pizzaCheeseMode)"
-    ],
-    customUserID: "my.very.cool@user.com"
+    ]
 )
 ```
 
