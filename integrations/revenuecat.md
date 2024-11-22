@@ -86,7 +86,7 @@ Here's what's going on in the above example
 
 {% notewarning "You need to keep user identifiers in sync" %}
 
-Whenever you update your TelemetryDeck user identifier, you'll also need to update the user identifier in RevenueCat's `telemetrydeck_user_id` user attribute.
+Whenever you update your TelemetryDeck user identifier, you'll also need to update the user identifier in RevenueCat's `$telemetryDeckUserId` user attribute.
 
 {% endnotewarning %}
 
