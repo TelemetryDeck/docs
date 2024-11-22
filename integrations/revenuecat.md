@@ -90,18 +90,16 @@ Whenever you update your TelemetryDeck user identifier, you'll also need to upda
 
 {% endnotewarning %}
 
-## Setting up the Webhook
+## Setting up RevenueCat's TelemetryDeck Integration
 
-Now we need to tell RevenueCat to send copies of all events over to TelemetryDeck. We're using a **Webhook Integration** to do this.
+Now we need to tell RevenueCat to send copies of all events over to TelemetryDeck. We're using a RevenueCat's **TelemetryDeckIntegration** to do this.
 
 - Navigate to your RevenueCat Project
 - In the left sidebar, click **Integrations**
-- Select **Webhooks**
-- Select **Add new Configuration**
-- Give the new WebHook a name like **Send to TelemetryDeck**
-- Set the Webhook URL to `https://nom.telemetrydeck.com/v2/webhooks/revenuecat/`
-- Leave all other settings as the default and click **Save**
+- Select **TelemetryDeck**
+- Click **Add Integration** to confirm
 
-![Screenshot of the filled-out form with Webhook name and URL](/docs/images/revenuecat_webhook_config.png)
+![A screenshot of RevenueCat's TelemetryDeck Integration](/docs/images/rc-td-1.png)
+![A screenshot of RevenueCat's TelemetryDeck Integration](/docs/images/rc-td-2.png)
 
-And you're done. RevenueCat events should now arrive and be mixed in with your TelemetryDeck signals. Note that we're automatically marking RevenueCat Sandbox events as "Test Mode".
+And you're done. RevenueCat events should now arrive and be mixed in with your TelemetryDeck signals 🥳
