@@ -1,5 +1,6 @@
 ---
 title: Quick set-up for your MAU insights
+tags:
   - beginner
   - how-to
   - quickstart
