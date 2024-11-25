@@ -1,6 +1,5 @@
 ---
-title: Quick set-up of insight for the number of monthly users in your app
-tags:
+title: Quick set-up for your MAU insights
   - beginner
   - how-to
   - quickstart
