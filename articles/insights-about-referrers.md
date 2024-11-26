@@ -21,7 +21,10 @@ To begin with, add a new insight in the dashboard of your choice and select **Ad
 1. In the first section of the Visual Editor, **Metadata**, choose a `topN query` - we propose granularity `all` so that you can display the information in a donut chart in the end.
     ![Metadata](/docs/images/Referrers_2.png)
 
-2. In the next step you can choose which **Data to Include**. To get started, add `thisApp` as well as the respective App ID. Additionally, it is recommended to add a filter to **avoid that parts of your own website are returned by the query**. To acchieve that add a `regex` filter with dimension `referrer` and domain as well as top-level-domain of your website separated by a `\`: `referrer~yourDomain\.com`.
+2. In the next step you can choose which **Data to Include**. To get started, add `thisApp` as well as the respective App ID. Additionally, it is recommended to add a filter to **avoid that parts of your own website are returned by the query**.
+
+To acchieve that add a `regex` filter with dimension `referrer` and domain as well as top-level-domain of your website separated by a `\`: `referrer~yourDomain\.com`.
+
 Please be aware that this is a rather basic regex filter as the purpose here is to show the creation of the query. More elements can be added to the filter of course.
 Once you have entered the information for the filter click on the field again and select `Negate (Wrap in "not" condition)`
 ![Data to Include_1](/docs/images/Referrers_3a.png)
