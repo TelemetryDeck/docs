@@ -1,5 +1,5 @@
 ---
-title: topN Query for the referrers of your website
+title: Finding out the traffic sources for your Webpage
 tags:
   - intermediate
   - how-to
@@ -30,7 +30,7 @@ To begin with, add a new insight in the dashboard of your choice and select **Ad
   ![Data to Include_1](/docs/images/Referrers_3a.png)
   When you are finished, the filter in **Data to Include** section should look as follows:
   ![Data to Include_2](/docs/images/Referrers_3b.png)
-  Additionally, feel free to add further `regex` filters in case you want to exclude search engines as referrers for example. To use multiple (regex) filters use an `and` filter where you have just selected `Negate (Wrap in "not" condition)`.
+  Additionally, feel free to add further information in the regex filter in case you want to exclude search engines besides your own website as referrers for example. This could be used in the `regex` filter of the Visual Editor to expand the filter: `(yourDomain\.com|google\.|bing\.|search\.brave|yandex\.|kagi\.|duckduckgo\.)`.
  
 4. The following section are **topN Options**. In the first part regarding the dimension, select type `default` and type in `referrer` two times. Furthermore, choose a `numeric` metric and add `count`. To wrap this section up choose the number of topN results to be returned, i.e. the threshold.
   ![topN Options](/docs/images/Referrers_4.png)
