@@ -36,8 +36,9 @@ Information about the device running the application, such as operating system, 
 - `TelemetryDeck.Device.operatingSystem`: The operating system of the device.
 - `TelemetryDeck.Device.orientation`: The orientation of the device.
 - `TelemetryDeck.Device.platform`: The platform of the device.
-- `TelemetryDeck.Device.screenResolutionHeight`: The height of the screen in pixels.
-- `TelemetryDeck.Device.screenResolutionWidth`: The width of the screen in pixels.
+- `TelemetryDeck.Device.screenResolutionHeight`: The height of the screen in points.
+- `TelemetryDeck.Device.screenResolutionWidth`: The width of the screen in points.
+- `TelemetryDeck.Device.screenScaleFactor`: The scale factor to calculate pixels from points (e.g. `2.0` for Retina).
 - `TelemetryDeck.Device.systemMajorMinorVersion`: The major and minor version of the operating system.
 - `TelemetryDeck.Device.systemMajorVersion`: The major version of the operating system.
 - `TelemetryDeck.Device.systemVersion`: The version of the operating system.
@@ -64,7 +65,9 @@ Information about the context the app runs in, such as whether it's running in a
 
 Information about the user's preferences, such as language and region.
 
+- `TelemetryDeck.UserPreference.colorScheme`: `Dark` or `Light`, depending on the user preference.
 - `TelemetryDeck.UserPreference.language`: The language of the user.
+- `TelemetryDeck.UserPreference.layoutDirection`: `leftToRight` or `rightToLeft`, based on user preference.
 - `TelemetryDeck.UserPreference.region`: The region of the user.
 
 ## SDK
@@ -75,6 +78,20 @@ Information about the TelemetryDeck SDK, such as its name or version number.
 - `TelemetryDeck.SDK.nameAndVersion`: The name and version of the SDK, separated by a space.
 - `TelemetryDeck.SDK.version`: The version of the SDK.
 - `TelemetryDeck.SDK.buildType`: The build type of the SDK.
+
+## Accessibility
+
+Information about the user's accessibility device settings to help make apps more inclusive.
+
+- `TelemetryDeck.Accessibility.isVoiceOverEnabled`: Whether VoiceOver is running.
+- `TelemetryDeck.Accessibility.isReduceMotionEnabled`: Whether Reduce Motion is enabled.
+- `TelemetryDeck.Accessibility.isBoldTextEnabled`: Whether Bold Text is enabled.
+- `TelemetryDeck.Accessibility.isInvertColorsEnabled`: Whether Invert Colors is enabled.
+- `TelemetryDeck.Accessibility.isDarkerSystemColorsEnabled`: Whether Darker System Colors are enabled.
+- `TelemetryDeck.Accessibility.isReduceTransparencyEnabled`: Whether Reduce Transparency is enabled.
+- `TelemetryDeck.Accessibility.shouldDifferentiateWithoutColor`: Whether UI should differentiate without color.
+- `TelemetryDeck.Accessibility.preferredContentSizeCategory`: User's preferred text size category (e.g. `L`, `XXL`).
+- `TelemetryDeck.Accessibility.isSwitchControlEnabled`: Whether Switch Control is running.
 
 ## API
 
