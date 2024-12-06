@@ -50,7 +50,7 @@ Here's what each parameter should contain:
 ## Navigation Paths
 
 Navigation Paths are strings that describe a location or view in your application or website. They must be
-delineated by either `.` or `/` characters. Delineation characters at the beginning and end of the string are
+delineated by `.` characters in apps and `/` in websites. Delineation characters at the beginning and end of the string are
 ignored. Use the empty string `""` for navigation from outside the app.
 
 Examples:
