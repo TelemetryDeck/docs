@@ -83,7 +83,6 @@ Information about the TelemetryDeck SDK, such as its name or version number.
 
 Information about the user's accessibility device settings to help make apps more inclusive.
 
-- `TelemetryDeck.Accessibility.isVoiceOverEnabled`: Whether VoiceOver is running.
 - `TelemetryDeck.Accessibility.isReduceMotionEnabled`: Whether Reduce Motion is enabled.
 - `TelemetryDeck.Accessibility.isBoldTextEnabled`: Whether Bold Text is enabled.
 - `TelemetryDeck.Accessibility.isInvertColorsEnabled`: Whether Invert Colors is enabled.
@@ -91,7 +90,6 @@ Information about the user's accessibility device settings to help make apps mor
 - `TelemetryDeck.Accessibility.isReduceTransparencyEnabled`: Whether Reduce Transparency is enabled.
 - `TelemetryDeck.Accessibility.shouldDifferentiateWithoutColor`: Whether UI should differentiate without color.
 - `TelemetryDeck.Accessibility.preferredContentSizeCategory`: User's preferred text size category (e.g. `L`, `XXL`).
-- `TelemetryDeck.Accessibility.isSwitchControlEnabled`: Whether Switch Control is running.
 
 ## API
 
