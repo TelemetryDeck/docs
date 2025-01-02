@@ -80,6 +80,8 @@ The following properties are common to all query types. See pages for each query
 | **sampleFactor** (optional)                               | Include only every n-th signal in query. Possible values are `1`, `10`, `100` or `1000`. Defaults to `1`                                                                          |
 | **aggregations** (optional)                               | A list of [Aggregators](/docs/tql/aggregators/) to apply to the query.                                                                                                            |
 | **postAggregations** (optional)                           | A list of [Post-Aggregators](/docs/tql/post-aggregators/) to apply to the query.                                                                                                  |
+| [valueFormatter](/docs/tql/valueFormatter/) (optional)    | A [ValueFormatter](/docs/tql/valueFormatter/) object that specifies how query values are displayed.                                                                               |
+| [context](/docs/tql/queryContext/) (optional)             | A [QueryContext](/docs/tql/queryContext/) object that specifies how the query is calculated and cached.                                                                           |
 
 ## Additional Properties for [Timeseries](/docs/tql/timeseries/) Queries
 
