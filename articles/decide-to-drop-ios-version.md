@@ -26,19 +26,24 @@ Instead of using these absolute rules, consider using a data-based heuristic app
 The TelemetryDeck SDK by default tries to collect data about the user's operating system version. You can then use this data to decide when to drop the OS version. Our recommendation is: drop a version when less than **10% of your users** are using it.
 
 To find out which percentage of your users are using a certain OS version, use a **Breakdown Insight** (also known as a **Top N Insight**). Then you'll have multiple options for the breakdown key.
+TelemetryDeck provides pre-built dashboards, among others the Top N Insight just described:
+![Screenshot SystemVersion](/docs/images/Screenshot_SystemVersion.png)
+You can switch between `majorMinorVersion` and `majorVersion` in the chart. Below we come back to the difference with recommendations what to use for this purpose.
+
+As an orientation beyond your app we also want to point out our monthly updated [surveys](https://telemetrydeck.com/survey/). Through these we provide information about [majorMinorVersions](https://telemetrydeck.com/survey/apple/iOS/minorSystemVersions/) and [majorVersions](https://telemetrydeck.com/survey/apple/iOS/majorSystemVersions/) currently used according to our data set as well as device related information regarding [iPhone models](https://telemetrydeck.com/survey/apple/iPhone/models/) for example.
 
 ### Top N `systemVersion`
 
-The most detailed breakdown key is the `systemVersion`. It's a string that represents the complete version of the OS, major, minor, and patch. For example, `iOS 15.1.1`. This is helpful if you want an idea whether a certain patch has been applied, a certain bug has been fixed in the OS, that kind of thing. However, it's not useful if you want to know how many users are using a certain _major_ version of the OS.
+The most detailed breakdown key is the `systemVersion`. It's a string that represents the complete version of the OS, major, minor, and patch. For example, `iOS 18.1.1`. This is helpful if you want an idea whether a certain patch has been applied, a certain bug has been fixed in the OS, that kind of thing. However, it's not useful if you want to know how many users are using a certain _major_ version of the OS.
 
 ### Top N `majorMinorVersion`
 
-The `majorMinorVersion` breakdown key is a string that represents the major and minor version of the OS. For example, `iOS 15.1`. This is more helpful, since most operating system vendors release these minor versions every few months. Using this data, you can decide when to maybe require iOS 15.1 instead of 15.0 for example.
+The `majorMinorVersion` breakdown key is a string that represents the major and minor version of the OS. For example, `iOS 18.1`. This is more helpful, since most operating system vendors release these minor versions every few months. Using this data, you can decide when to maybe require iOS 18.1 instead of 18.0 for example.
 
 ### Top N `majorVersion`
 
-The `majorVersion` breakdown key is a string that represents the major version of the OS. For example, `iOS 15`. This is what most of your decisions in this space should be based on, since most of the time you'll want to drop a _major_ version of the operating system. Most operating system vendors release these major versions every few years. Using this data, you can decide when to maybe require iOS 15 instead of 14 for example.
+The `majorVersion` breakdown key is a string that represents the major version of the OS. For example, `iOS 18`. This is what most of your decisions in this space should be based on, since most of the time you'll want to drop a _major_ version of the operating system. Most operating system vendors release these major versions every few years. Using this data, you can decide when to maybe require iOS 18 instead of 17 for example.
 
 ## That's it!
 
-We hope this article gave you a little overview on what you can do to decide when to drop a previous version of the OS. If you have any questions, feel free to ask on [Twitter @Telemetry_Deck](https://twitter.com/telemetry_deck) and we'll be happy to talk.
+We hope this article gave you a little overview on what you can do to decide when to drop a previous version of the OS. If you have any questions, feel free to contact us and we'll be happy to talk.
