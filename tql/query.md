@@ -3,7 +3,7 @@ title: TQL Query Reference
 tags: overview
 description: TelemetryDeck Query Language is the advanced query language for TelemetryDeck. This page describes the query object.
 lead: TelemetryDeck Query Language is the advanced query language for TelemetryDeck. You don't need to write all your queries by hand, but if you do, here's how.
-order: 0
+order: 5
 headerImage: /img/tql-header.png
 ---
 
