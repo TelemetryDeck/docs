@@ -105,6 +105,8 @@ These parameters are currently not namespaced. Expect this to change in the futu
 - `host` (String): The host portion of the URL, e.g. `example.com`.
 - `path` (String): The path portion of the URL, e.g. `/about` or `/blog/my-post`.
 - `scheme` (String): The scheme portion of the URL, e.g. `https`.
+- `referer` (String): The referrer of the page, e.g. `https://example.com`.
+- `TelemetryDeck.Navigation.identifier` (String): String that uniquely identifies the navigation in the format `referrer -> url`.
 
 #### URL Parameters
 
