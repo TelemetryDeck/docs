@@ -91,6 +91,68 @@ Information about the user's accessibility device settings to help make apps mor
 - `TelemetryDeck.Accessibility.shouldDifferentiateWithoutColor` (Bool): Whether UI should differentiate without color.
 - `TelemetryDeck.Accessibility.preferredContentSizeCategory` (String): User's preferred text size category (e.g. `L`, `XXL`).
 
+## Web Analytics
+
+Web analytics have their own sets of parameters that are usually determined by the web ingest api when you send events from the Web SDK. However, you can send these with any SDK and they will show up in the web analytics dashboard.
+
+By default the web SDK will send signals of type `pageView` with the following parameters:
+
+These parameters are currently not namespaced. Expect this to change in the future.
+
+#### URL Data
+
+- `url` (String): The URL of the page, e.g. `https://example.com/about`.
+- `host` (String): The host portion of the URL, e.g. `example.com`.
+- `path` (String): The path portion of the URL, e.g. `/about` or `/blog/my-post`.
+- `scheme` (String): The scheme portion of the URL, e.g. `https`.
+
+#### URL Parameters
+
+TelemetryDeck will extract URL these URL parameters from the url and offer them as parameters attached to the signal:
+
+- `combinedSource` (String): The value of either `ref`, `source`, `utm_source` or `src` in that order of preference.
+- `ref`
+- `source`
+- `src`
+- `utm_source`
+- `utm_medium`
+- `utm_campaign`
+- `utm_term`
+- `utm_content`
+- `MSCLKID`
+- `GCLID`
+
+#### Country and Region Data
+
+- `country.isoCode` (String): The [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the country, extracted from the origin IP address.
+- `country.isInEuropeanUnion` (Bool): Whether the country is in the European Union, extracted from the origin IP address.
+- `continent.code` (String): The code of the continent, extracted from the origin IP address. E.g. `EU`, `NA`, `SA`, `AS`, `AF`, `AN`.
+
+#### User Agent Data
+
+- `systemVersion` (String): The version of the operating system, extracted from the user agent string.
+- `majorSystemVersion` (String): The major version of the operating system, extracted from the user agent string.
+- `majorMinorSystemVersion` (String): The major and minor version of the operating system, extracted from the user agent string.
+- `platform` (String): The platform of the device (macOS, iOS, Windows, etc.), extracted from the user agent string.
+- `modelName` (String): The model name of the device, extracted from the user agent string.
+- `browserName` (String): The browser family, extracted from the user agent string.
+- `browserVersion` (String): The browser version, extracted from the user agent string.
+- `device` (String): The type of device, extracted from the user agent string.
+- `isMobile` (Bool): Whether the device is a mobile device, extracted from the user agent string.
+- `isTablet` (Bool): Whether the device is a tablet, extracted from the user agent string.
+- `isTouchCapable` (Bool): Whether the device is touch capable, extracted from the user agent string.
+- `isDesktop` (Bool): Whether the device is a desktop, extracted from the user agent string.
+- `isBot` (Bool): Whether the device is a bot, extracted from the user agent string and additional heuristics.
+
+## Navigation Analytics
+
+Navigation analytics signals have these parameters, which can be included in any signal type.
+
+- `TelemetryDeck.Navigation.schemaVersion` (String): The schema version of the navigation. Must be `1`.
+- `TelemetryDeck.Navigation.sourcePath` (String): The source path of the navigation, e.g. `/host/info/about` or `app.settings.privacy`.
+- `TelemetryDeck.Navigation.destinationPath` (String): The destination path of the navigation, e.g. `/host/info/about` or `app.settings.privacy`.
+- `TelemetryDeck.Navigation.identifier` (String): String that uniquely identifies the navigation in the format `sourcePath -> destinationPath`.
+
 ## API
 
 Information about which TelemetryDeck API this signal was sent to.
