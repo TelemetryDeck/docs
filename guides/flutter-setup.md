@@ -7,7 +7,7 @@ tags:
 featured: true
 description: How to include the TelemetryDeck SDK in Your Flutter and Dart app
 lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your Flutter application
-order: 400
+order: 225
 ---
 
 ## Prerequisites
