@@ -64,7 +64,7 @@ If only one line of data is returned, that line will be displayed in large type.
 
 ### Bar Chart
 
-Will display the query result as a vertical bar chart, one bar per line of data. This works for both time series data and other types, such as breakdowns. However, the display currently does not display the
+Will display the query result as a vertical bar chart, one bar per line of data. This works for both time series data and other types, such as breakdowns.
 
 ### Line Chart
 
