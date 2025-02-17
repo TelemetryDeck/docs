@@ -160,6 +160,7 @@ Navigation analytics signals have these parameters, which can be included in any
 Information about which TelemetryDeck API this signal was sent to.
 
 - `TelemetryDeck.API.Ingest.version` (String): The Ingest API Version this signal was sent to. This will get overwritten by the ingest API server.
+- `TelemetryDeck.API.namespace` (String): The namespace in which to store your data. This usually gets set by the ingest API server when you call it via the `/v2/namespace/<namespace>/` endpoint.
 
 ## RevenueCat Parameters
 
