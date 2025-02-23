@@ -25,6 +25,19 @@ You can use aggregations at query time to summarize result data. The following a
 { "type" : "userCount", "name" : <output_name, defaults to "Users"> }
 ```
 
+### histogram
+
+`histogram` computes the histogram of a metric. By default, it computes the histogram of the `floatValue` metric, because that's the only metric that is guaranteed to be a numerical value in TelemetryDeck events.
+
+```json
+{
+  "type" : "histogram",
+  "name" : <output_name, defaults to "Histogram">,
+  "fieldName" : <metric_name, defaults to floatValue>,
+  "numBuckets" : <number_of_buckets, defaults to 10>
+}
+```
+
 ## Numerical Aggregators
 
 ### Count
