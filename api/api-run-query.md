@@ -10,7 +10,7 @@ lead: Using the TelemetryDeck API, you can run a query and retrieve its results
 
 We're still working a lot on the API, so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
 
-Please note that we might restrict API access to paying tiers in the future. 
+Please note that we might restrict API access to paying tiers in the future.
 
 {% endnotewarning %}
 
@@ -41,9 +41,7 @@ Host: api.telemetrydeck.com
 {
   "aggregations": [
     {
-      "fieldName": "count",
-      "name": "count",
-      "type": "longSum"
+      "type": "eventCount"
     }
   ],
   "dataSource": "telemetry-signals",

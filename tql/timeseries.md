@@ -19,9 +19,7 @@ No time interval is given, so it will use the default time interval supplied by 
 {
   "aggregations": [
     {
-      "fieldName": "count",
-      "name": "count",
-      "type": "longSum"
+      "type": "eventCount"
     }
   ],
   "dataSource": "telemetry-signals",
@@ -36,12 +34,10 @@ This query returns the number of users per week:
 {
   "aggregations": [
     {
-      "fieldName": "clientUser",
       "name": "count",
-      "type": "thetaSketch"
+      "type": "userCount"
     }
   ],
-  "dataSource": "telemetry-signals",
   "granularity": "week",
   "queryType": "timeseries"
 }

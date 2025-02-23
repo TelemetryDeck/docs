@@ -7,6 +7,24 @@ order: 160
 
 You can use aggregations at query time to summarize result data. The following aggregators are available:
 
+## Analytics Aggregators
+
+### eventCount
+
+`eventCount` computes the number of TelemetryDeck events in the query.
+
+```json
+{ "type" : "eventCount", "name" : <output_name, defaults to "Events"> }
+```
+
+### userCount
+
+`userCount` computes the number of unique users in the query.
+
+```json
+{ "type" : "userCount", "name" : <output_name, defaults to "Users"> }
+```
+
 ## Numerical Aggregators
 
 ### Count
@@ -61,6 +79,8 @@ Warning: this aggregator is mean 😡😡
 ## Unique Aggregators
 
 ### ThetaSketch
+
+A theta sketch gives you the number of unique values that a dimension has in your query.
 
 Theta sketches are a probabilistic data structure used for the [count-distinct problem](https://en.wikipedia.org/wiki/Count-distinct_problem). They allow us to quickly count elements in sets, such as the set of users in the aggregation buckets
 

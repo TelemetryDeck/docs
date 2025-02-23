@@ -79,12 +79,9 @@ This will generate and return a complete query for the insight you specified:
 {
   "aggregations": [
     {
-      "fieldName": "count",
-      "name": "count",
-      "type": "longSum"
+      "type": "eventCount"
     }
   ],
-  "dataSource": "telemetry-signals",
   "dimension": {
     "dimension": "modelName",
     "outputName": "modelName",

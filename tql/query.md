@@ -24,13 +24,11 @@ This example timeseries query returns the number of users per week:
 ```json
 {
   "queryType": "timeseries",
-  "dataSource": "telemetry-signals",
   "granularity": "week",
   "aggregations": [
     {
-      "fieldName": "clientUser",
       "name": "count",
-      "type": "thetaSketch"
+      "type": "userCount"
     }
   ]
 }
@@ -41,7 +39,6 @@ This example groupBy query groups signals by the `majorSystemVersion` dimension 
 ```json
 {
   "queryType": "groupBy",
-  "dataSource": "telemetry-signals",
   "granularity": "all",
   "dimensions": [
     {
@@ -53,9 +50,8 @@ This example groupBy query groups signals by the `majorSystemVersion` dimension 
   ],
   "aggregations": [
     {
-      "fieldName": "count",
       "name": "Number of Signals",
-      "type": "longSum"
+      "type": "eventCount"
     }
   ]
 }

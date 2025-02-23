@@ -13,9 +13,8 @@ A group by query can group arbitrary values using aggregations and post-aggregat
 {
   "aggregations": [
     {
-      "fieldName": "count",
       "name": "Number of Signals",
-      "type": "longSum"
+      "type": "eventCount"
     }
   ],
   "dataSource": "telemetry-signals",
