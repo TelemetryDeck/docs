@@ -82,43 +82,51 @@ Duration data is sent as a numerical value in the `TelemetryDeck.Signal.duration
 
 The histogram aggregation type is perfect for visualizing the distribution of duration data:
 
-1. Navigate to the Insights Builder or JSON Query Editor
-2. Copy & paste this histogram aggregation query and adjust `<YOUR_SIGNAL_NAME>` to your needs:
+1. Create a new insight of type "Advanced Query", then open the "JSON Editor":
 
-```json
-{
-  "aggregations": [
+    ![A screenshot of the Query Creator dialog](/docs/images/duration-signal-01.png)
+
+2. Copy & paste the following histogram aggregation query and adjust `<YOUR_SIGNAL_NAME>` to your needs:
+
+    ![A screenshot of the JSON Editor text field](/docs/images/duration-signal-02.png)
+
+    ```json
     {
-      "fieldName": "TelemetryDeck.Signal.durationInSeconds",
-      "name": "durationSketch",
-      "splitPoints": [0, 0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 7.5, 10, 15, 20, 30, 45, 60, 90, 120],
-      "type": "histogram"
-    }
-  ],
-  "filter": {
-    "type": "and",
-    "fields": [
-      {
-        "type": "range",
-        "column": "TelemetryDeck.Signal.durationInSeconds",
-        "matchValueType": "DOUBLE",
-        "lower": "0",
-        "upper": "120",
-        "upperOpen": true
+      "aggregations": [
+        {
+          "fieldName": "TelemetryDeck.Signal.durationInSeconds",
+          "name": "durationSketch",
+          "splitPoints": [0, 0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 7.5, 10, 15, 20, 30, 45, 60, 90, 120],
+          "type": "histogram"
+        }
+      ],
+      "filter": {
+        "type": "and",
+        "fields": [
+          {
+            "type": "range",
+            "column": "TelemetryDeck.Signal.durationInSeconds",
+            "matchValueType": "DOUBLE",
+            "lower": "0",
+            "upper": "120",
+            "upperOpen": true
+          },
+          {
+            "dimension": "type",
+            "type": "selector",
+            "value": "<YOUR_SIGNAL_NAME>"
+          }
+        ]
       },
-      {
-        "dimension": "type",
-        "type": "selector",
-        "value": "<YOUR_SIGNAL_NAME>"
-      }
-    ]
-  },
-  "granularity": "all",
-  "queryType": "timeseries"
-}
-```
+      "granularity": "all",
+      "queryType": "timeseries"
+    }
+    ```
 
-3. Set the chart type to be a bar chart in the UI via the insight's top right segmented control
+3. Set the chart type to be a bar chart in the UI via the insight's top right segmented control:
+
+    ![A screenshot of the insight set to be a bar chart](/docs/images/duration-signal-03.png)
+
 4. You might also want to adjust the `splitPoints` array based on the expected duration of your activity, for example:
     - **Short interactions** (button clicks): `[0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.5, 1, 2, 5]`
     - **Medium interactions** (form fills): `[0, 1, 2, 3, 4, 5, 7.5, 10, 15, 20, 30]`
