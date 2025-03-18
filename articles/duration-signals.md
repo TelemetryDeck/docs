@@ -83,7 +83,7 @@ Duration data is sent as a numerical value in the `TelemetryDeck.Signal.duration
 The histogram aggregation type is perfect for visualizing the distribution of duration data:
 
 1. Navigate to the Insights Builder or JSON Query Editor
-2. Copy & paste this histogram aggregation query and adjust `<YOUR_SIGNAL_NAME>` and `<YOUR_APP_ID>` to your needs:
+2. Copy & paste this histogram aggregation query and adjust `<YOUR_SIGNAL_NAME>` to your needs:
 
 ```json
 {
@@ -118,7 +118,7 @@ The histogram aggregation type is perfect for visualizing the distribution of du
 }
 ```
 
-3. Set the chart type to be a bar chart in the insight's top right segmented control
+3. Set the chart type to be a bar chart in the UI via the insight's top right segmented control
 4. You might also want to adjust the `splitPoints` array based on the expected duration of your activity, for example:
     - **Short interactions** (button clicks): `[0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.5, 1, 2, 5]`
     - **Medium interactions** (form fills): `[0, 1, 2, 3, 4, 5, 7.5, 10, 15, 20, 30]`
