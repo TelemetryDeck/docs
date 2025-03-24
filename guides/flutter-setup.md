@@ -14,7 +14,7 @@ order: 225
 
 <!-- vale proselint.Cliches = NO -->
 
-- You'll need a TelemetryDeck account. [Sign up for free](https://dashboard.telemetrydeck.com/register?source=websdk) if you don't have one yet.
+- You'll need a TelemetryDeck account. [Sign up for free](https://dashboard.telemetrydeck.com/register?source=fluttersdk) if you don't have one yet.
 - You'll need a TelemetryDeck App ID. [Create a new app](https://dashboard.telemetrydeck.com/apps/create) if you don't have one yet.
 - Follow the installing instructions on [pub.dev](https://pub.dev/packages/telemetrydecksdk/install).
 <!-- vale proselint.Cliches = YES -->
@@ -27,20 +27,33 @@ Initialize the TelemetryClient like so:
 void main() {
   // ensure the platform channels are available
   WidgetsFlutterBinding.ensureInitialized();
-  // configure and start the TelemetryClient
-  Telemetrydecksdk.start(TelemetryManagerConfiguration(
-      appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"));
+  // configure and start the client
+  Telemetrydecksdk.start(
+    const TelemetryManagerConfiguration(
+      appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+    ),
+  );
+
   runApp(const MyApp());
 }
 ```
 
 ## Permission for internet access
 
-Sending signals requires access to the internet so the following permission should be added to the app's `AndroidManifest.xml`:
+Sending signals requires access to the internet so the following permissions should be granted. You can also take this from [Flutter's Cross-platform HTTP networking guide](https://docs.flutter.dev/data-and-backend/networking).
+
+### Android
+
+Change the app's `AndroidManifest.xml` to include:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
+
+### macOS
+
+Set the `com.apple.security.network.client` entitlement to `true` in the `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements` files. You can also do this in Xcode by selecting the `macos` target, then the `Signing & Capabilities` tab, and checking `Outgoing connections (Client)` for both the Release and Debug targets of your app.
+
 
 ## Sending signals
 
@@ -59,27 +72,6 @@ Telemetrydecksdk.send("signal_type",
   additionalPayload: {"attributeName": "value"});
 }
 ```
-
-The Flutter SDK uses the native SDKs for Android and iOS which offer a number of built-in attributes which are submitted with every signal. You can overwrite these attributes by providing a custom value with the same key. For more information on how each value is calculated, check the corresponding platform library:
-
-- `majorMinorSystemVersion`
-- `telemetryClientVersion`
-- `isTestFlight` (iOS only)
-- `isDebug`
-- `architecture`
-- `modelName`
-- `isAppStore`
-- `appVersion`
-- `operatingSystem`
-- `systemVersion`
-- `majorSystemVersion`
-- `targetEnvironment`
-- `isSimulator` (iOS only)
-- `platform` (iOS only)
-- `buildNumber` (iOS only)
-- `locale`
-- `dartVersion`
-- `brand` (Android only)
 
 ## Stop sending signals
 
@@ -115,7 +107,7 @@ Telemetrydecksdk.start(TelemetryManagerConfiguration(
 
 ## Logging output
 
-By default, some logs helpful for monitoring TelemetryDeck are printed out to the console. You can enable additional logs by setting the `debug` field to `true`:
+By default, some logs helpful for monitoring TelemetryDeck are printed out to the native console of each platform. You can enable additional logs by setting the `debug` field to `true`:
 
 ```dart
 void main() {
@@ -124,3 +116,5 @@ void main() {
       debug: true));
 }
 ```
+
+For more advanced configuration options, programatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/FlutterSDK?tab=readme-ov-file#sending-signals).
