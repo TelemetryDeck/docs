@@ -117,4 +117,4 @@ void main() {
 }
 ```
 
-For more advanced configuration options, programatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/FlutterSDK?tab=readme-ov-file#sending-signals).
+For more advanced configuration options, programmatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/FlutterSDK?tab=readme-ov-file#sending-signals).

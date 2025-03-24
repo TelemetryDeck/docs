@@ -48,7 +48,7 @@ A quick way to start is by adding your App ID to the `application` section of th
 
 And that's it! Your app is now ready to use TelemetryDeck. Hit the build button to check if everything is working – if not, check out the troubleshooting section below.
 
-For more advanced configuration options, programatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/KotlinSDK?tab=readme-ov-file#programmatic-usage).
+For more advanced configuration options, programmatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/KotlinSDK?tab=readme-ov-file#programmatic-usage).
 
 Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/TelemetryDeck/KotlinSDK) as well. It's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
