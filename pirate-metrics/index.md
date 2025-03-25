@@ -1,5 +1,5 @@
 ---
-title: Pirate Metrics with TelemetryDeck
+title: Pirate Metrics Overview
 tags:
   - setup
   - analytics
@@ -48,7 +48,7 @@ This framework helps you focus on the metrics that truly matter for app growth:
 
 ## TelemetryDeck's Pirate Metrics Implementation
 
-TelemetryDeck now automatically captures data for the AARRR framework, with no additional code required beyond updating to our latest SDK (SwiftSDK 2.8.0+ or KotlinSDK 6.0.0+).
+TelemetryDeck now automatically captures data for the AARRR framework, with no additional code required beyond updating to our latest SDK (SwiftSDK 2.8.0+, KotlinSDK 6.0.0+, FlutterSDK 2.3.0+).
 
 In your TelemetryDeck dashboard, you'll find these metrics organized within the **Customers** tab in the sidebar. Each component of the AARRR framework has its own section, providing you with a complete view of your app's performance throughout the user journey.
 
@@ -56,36 +56,36 @@ In your TelemetryDeck dashboard, you'll find these metrics organized within the 
 
 Learn how to interpret and act on each set of metrics with our detailed guides:
 
-### [Understanding Acquisition](/docs/pirate-metrics/acquisition.md)
+### [Understanding Acquisition](/docs/pirate-metrics/acquisition)
 Learn how to analyze where your users come from, when they find your app, what devices they use, and which regions show the strongest growth.
 
-[Master your acquisition metrics →](/docs/pirate-metrics/acquisition.md)
+[Master your acquisition metrics →](/docs/pirate-metrics/acquisition)
 
-### [Understanding Activation](/docs/pirate-metrics/activation.md)
+### Understanding Activation (Coming Soon)
 Discover how to interpret user engagement patterns, session duration, and feature discovery to improve your onboarding experience.
 
-[Master your activation metrics →](/docs/pirate-metrics/activation.md)
+Master your activation metrics → (Coming Soon)
 
-### [Understanding Retention](/docs/pirate-metrics/retention.md)
+### Understanding Retention (Coming Soon)
 Learn how to identify your power users, track return rates, and understand which features keep users coming back.
 
-[Master your retention metrics →](/docs/pirate-metrics/retention.md)
+Master your retention metrics → (Coming Soon)
 
-### [Understanding Referral](/docs/pirate-metrics/referral.md)
+### Understanding Referral (Coming Soon)
 Discover how to measure word-of-mouth growth and which referral channels drive the most quality installations.
 
-[Master your referral metrics →](/docs/pirate-metrics/referral.md)
+Master your referral metrics → (Coming Soon)
 
-### [Understanding Revenue](/docs/pirate-metrics/revenue.md)
+### Understanding Revenue (Coming Soon)
 Learn how to analyze conversion rates, purchase patterns, and optimize your monetization strategy.
 
-[Master your revenue metrics →](/docs/pirate-metrics/revenue.md)
+Master your revenue metrics → (Coming Soon)
 
 ## Getting Started
 
 To access these powerful insights:
 
-1. **Update your SDK** to the latest version (SwiftSDK 2.8.0+ or KotlinSDK 6.0.0+)
+1. **Update your SDK** to the latest version (SwiftSDK 2.8.0+, KotlinSDK 6.0.0+, FlutterSDK 2.3.0+)
 2. **Navigate to the Customers tab** in your TelemetryDeck dashboard
 3. **Explore each section** of the Pirate Metrics framework to understand your app's complete user journey
 

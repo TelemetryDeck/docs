@@ -1,5 +1,5 @@
 ---
-title: Understanding User Acquisition with TelemetryDeck
+title: Understanding User Acquisition
 tags:
   - setup
   - analytics
