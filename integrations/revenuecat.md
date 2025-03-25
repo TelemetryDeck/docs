@@ -72,8 +72,7 @@ TelemetryDeck.updateDefaultUserID(to: myUserID)
 Purchases.configure(withAPIKey: "my_revenuecat_api_key")
 Purchases.shared.attribution.setAttributes([
     "$telemetryDeckUserId": TelemetryManager.shared
-        .hashedDefaultUser
-        ?? "no-user",
+        .hashedDefaultUser,
     "$telemetryDeckAppId": telemetrydeckAppID
 ])
 ```
