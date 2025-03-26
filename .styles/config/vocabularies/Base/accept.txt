@@ -65,3 +65,7 @@ destructure
 crypto
 typedigital
 enum
+Onboarding
+Anonymization
+SDKs
+Walkthrough
