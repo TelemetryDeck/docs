@@ -21,12 +21,12 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 ## User Growth Trends
 
-![Daily, Weekly, and Monthly New Users](/docs/images/acquisition-new-users.png)
-
 **Questions you can answer:**
 - Is my user base growing over time?
 - Are there patterns in my acquisition rate?
 - How effective are my marketing campaigns?
+
+![Daily, Weekly, and Monthly New Users](/docs/images/acquisition-new-users.png)
 
 **How to interpret the charts:**
 - **Consistent upward trend**: Your app is steadily gaining users – investigate what's working and double down
@@ -38,12 +38,12 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 ## New vs. Active Users Ratio
 
-![Active vs New Users Ratio](/docs/images/acquisition-active-vs-new.png)
-
 **Questions you can answer:**
 - What proportion of my users are new versus returning?
 - Is my app primarily attracting new users or maintaining existing ones?
 - How does acquisition compare to retention?
+
+![Active vs New Users Ratio](/docs/images/acquisition-active-vs-new.png)
 
 **How to interpret the chart:**
 - **High ratio (>0.5)**: Many new users compared to your active base - suggesting strong acquisition but possibly weak retention
@@ -54,12 +54,12 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 ## Temporal Usage Patterns
 
-![Acquisition Time Patterns](/docs/images/acquisition-by-time.png)
-
 **Questions you can answer:**
 - When during the day do users typically discover my app?
 - Which days of the week see the most new installations?
 - Do weekdays significantly outperform weekends for user acquisition?
+
+![Acquisition Time Patterns](/docs/images/acquisition-by-time.png)
 
 **How to interpret the charts:**
 - **Hour of day peaks**: Show prime discovery times (user-local)
@@ -70,12 +70,12 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 ## Recent Temporal Patterns
 
-![Recent Acquisition Time Patterns](/docs/images/acquisition-by-time-last-weeks.png)
-
 **Questions you can answer:**
 - Are recent user acquisition patterns consistent with long-term trends?
 - Have specific events or campaigns created temporary spikes?
 - How can I differentiate between one-off events and genuine trends?
+
+![Recent Acquisition Time Patterns](/docs/images/acquisition-by-time-last-weeks.png)
 
 **How to interpret the charts:**
 - **Four-week hourly view**: Identifies specific days with unusual activity
@@ -86,12 +86,12 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 ## Device & Platform Distribution
 
-![New Users by Device Type](/docs/images/acquisition-device-distribution.png)
-
 **Questions you can answer:**
 - What devices are my users using to access my app?
 - Should I prioritize specific hardware or screen sizes?
 - When can I safely drop support for older devices?
+
+![New Users by Device Type](/docs/images/acquisition-device-distribution.png)
 
 **How to interpret the chart:**
 - **Top device models**: Prioritize testing and optimization for these devices
@@ -102,12 +102,12 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 ## Geographic & Language Distribution
 
-![New Users by Country and Language](/docs/images/acquisition-geographic-distribution.png)
-
 **Questions you can answer:**
 - Where are my users located geographically?
 - What languages do my users speak?
 - Which markets should I prioritize for expansion?
+
+![New Users by Country and Language](/docs/images/acquisition-geographic-distribution.png)
 
 **How to interpret the charts:**
 - **Dominant regions**: Countries with the largest segments indicate your strongest markets

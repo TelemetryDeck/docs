@@ -132,9 +132,9 @@ For guidance on completing these requirements, see our [Apple App Privacy guide]
 
 For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## Your Next Essential Step
+## What to Do Next
 
-Now that you've integrated TelemetryDeck, the most important thing to do is learn how to use the dashboard to gain valuable insights about your users:
+Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 
 <div class="not-prose ">
   <div class="my-10 grid grid-cols-1 gap-6">
@@ -143,9 +143,9 @@ Now that you've integrated TelemetryDeck, the most important thing to do is lear
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-lg text-mars-500">
           <a href="/docs/basics/index">
-            <span class="absolute -inset-px rounded-xl"></span>📊 Complete Dashboard Guide</a>
+            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
         </h2>
-        <p class="mt-2 text-sm text-slate-700">This essential guide walks you through the TelemetryDeck dashboard, showing you how to interpret your automatic insights, create custom analytics, track important user behavior, and make data-driven decisions to improve your app.</p>
+        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
         <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
           <span>Start here to get real value from your analytics</span>
           <span>→</span>

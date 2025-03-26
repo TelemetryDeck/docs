@@ -1,5 +1,5 @@
 ---
-title: Dashboard Overview
+title: Analytics Overview
 tags:
   - setup
   - basics
@@ -90,56 +90,17 @@ TelemetryDeck also provides built-in presets for tracking purchases and revenue 
 
 ## Metrics (Technical Analytics)
 
-The Metrics section provides detailed technical insights about your app across different devices and platforms:
+The Metrics section provides essential technical insights about your app across different devices and platforms:
 
-![Metrics Dashboard - Devices](/docs/images/dashboard-devices.png)
+![Metrics Dashboard - Devices](/docs/images/metrics-devices.png)
 
-**Devices** shows which hardware your users are using, including models, screen resolutions, and platform distributions. This helps you prioritize which devices to test on and which screen sizes to optimize for.
+**Key metrics include:**
 
-![Metrics Dashboard - Versions](/docs/images/dashboard-versions.png)
-
-**Versions** tracks app versions and SDK versions in use, helping you understand how quickly users update and when you can safely drop support for older versions.
-
-![Metrics Dashboard - Errors](/docs/images/dashboard-errors.png)
-
-**Errors** monitors issues that occur in your app, sorted by frequency and type. This helps identify problems affecting your users that need immediate attention.
-
-![Metrics Dashboard - Localization](/docs/images/dashboard-localization.png)
-
-**Localization** provides insights into the language and regional settings of your users to guide localization efforts and regional market focus.
-
-![Metrics Dashboard - Localization](/docs/images/dashboard-accessibility.png)
-
-**Accessibility** shows how many of your users are using accessibility features, helping you ensure your app works well for all users.
-
----
-
-<div class="not-prose">
-  <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/decide-to-drop-ios-version">
-            <span class="absolute -inset-px rounded-xl"></span>Decide When to Drop OS Support</a>
-        </h2>
-        <p class="mt-1 text-sm text-slate-700">Use analytics data to make informed decisions about which OS versions to support in your app.</p>
-      </div>
-    </div>
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/check-if-users-upgrade-to-latest-app-version">
-            <span class="absolute -inset-px rounded-xl"></span>Track App Version Adoption</a>
-        </h2>
-        <p class="mt-1 text-sm text-slate-700">Learn how to monitor which app versions your users are running and analyze update patterns.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-TelemetryDeck includes built-in dashboards for error tracking that can be set up with minimal configuration:
+- **Devices**: Hardware models, screen resolutions, and platform distributions
+- **Versions**: App and SDK version adoption rates
+- **Errors**: Issue monitoring by frequency and type
+- **Localization**: Language and regional settings insights
+- **Accessibility**: Usage of accessibility features
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6">
@@ -147,10 +108,10 @@ TelemetryDeck includes built-in dashboards for error tracking that can be set up
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/preset-errors">
-            <span class="absolute -inset-px rounded-xl"></span>Error Tracking with Built-in Presets</a>
+          <a href="/docs/basics/metrics">
+            <span class="absolute -inset-px rounded-xl"></span>Complete Metrics Analytics Guide</a>
         </h2>
-        <p class="mt-1 text-sm text-slate-700">Learn how to track app errors with TelemetryDeck's built-in error reporting system and dashboards.</p>
+        <p class="mt-1 text-sm text-slate-700">Explore our comprehensive guide to technical analytics, including detailed information on device types, app versions, error tracking, localization insights, and accessibility usage.</p>
       </div>
     </div>
   </div>
@@ -245,12 +206,10 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
 
 At the top of most dashboard pages, you'll find time filters that let you focus on specific periods:
 
-- **Last 30 Days** (default) – Shows data from the past month
-- **Test Mode** – Toggle to see data from development builds (when your app is run directly from your IDE)
-
 ![Filtering Data](/docs/images/dashboard-filtering-data.png)
 
----
+- **Last 30 Days** (default) – Shows data from the past month
+- **Test Mode** – Toggle to see data from development builds (when your app is run directly from your IDE)
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6">
@@ -270,11 +229,13 @@ At the top of most dashboard pages, you'll find time filters that let you focus 
 ### Exploring Details
 
 Many visualizations have interactive elements:
+
+![Exploring Details](/docs/images/dashboard-exploring-details.png)
+
 - Hover over chart elements to see detailed values
 - Click on segments in pie/donut charts to filter by that value
 - Use the "..." menu in the top right of cards for additional options
 
-![Exploring Details](/docs/images/dashboard-exploring-details.png)
 
 ## Collaboration
 
