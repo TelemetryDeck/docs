@@ -20,13 +20,7 @@
 
 <p>Once your updated app is in users' hands, TelemetryDeck will begin collecting data. It may take some time before you see meaningful insights, depending on your app's usage.</p>
 
-<div class="not-prose ">
-  <div class="my-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-    {% for item in collections.allDocs | featured %}
-      {% include 'docs/blocklink.njk' %}
-    {% endfor %}
-  </div>
-</div>
+{% include "docs/featured.njk" %}
 
 <h3>What's Next After Setup?</h3>
 
