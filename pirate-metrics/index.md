@@ -2,8 +2,9 @@
 title: Pirate Metrics Overview
 tags:
   - setup
-  - analytics
+  - basics
   - pirate-metrics
+basics: true
 description: Learn how TelemetryDeck's Pirate Metrics help you track and optimize each stage of your app's user journey.
 lead: The AARRR framework (Acquisition, Activation, Retention, Referral, Revenue) provides a powerful lens for understanding your app's growth. TelemetryDeck now automatically captures these metrics to give you actionable insights without additional code.
 searchEngineTitle: Pirate Metrics (AARRR) Framework for Mobile App Analytics

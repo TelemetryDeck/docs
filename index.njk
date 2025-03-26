@@ -1,15 +1,46 @@
 ---json
 {
-"title": "Getting started",
-"lead": "Learn how to get TelemetryDeck set up in your project in under ten minutes",
+"title": "Quick Start Guide",
+"lead": "Set up TelemetryDeck in minutes and start gaining insights into your app's performance",
 "tags": "intro",
 "categoryOrder": -9000
 }
 ---
 
-Start here. This selection of articles will guide you into the world of TelemetryDeck and its lore.
+<h2>Welcome to TelemetryDeck</h2>
 
-{% include "docs/featured.njk" %}
+<p>TelemetryDeck helps you understand how users interact with your application through privacy-focused analytics. With just an SDK integration, you'll get valuable insights automatically – no complex configuration required.</p>
+
+<h3>Getting Started in 2 Simple Steps</h3>
+
+<ol>
+  <li><strong>Choose and install the SDK</strong> for your platform from the guides below</li>
+  <li><strong>Deploy your app</strong> to start collecting data</li>
+</ol>
+
+<p>Once your updated app is in users' hands, TelemetryDeck will begin collecting data. It may take some time before you see meaningful insights, depending on your app's usage.</p>
+
+<div class="not-prose ">
+  <div class="my-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+    {% for item in collections.allDocs | featured %}
+      {% include 'docs/blocklink.njk' %}
+    {% endfor %}
+  </div>
+</div>
+
+<h3>What's Next After Setup?</h3>
+
+<p>After setting up the SDK and deploying your app, explore these resources to get the most out of TelemetryDeck:</p>
+
+<div class="not-prose">
+  <div class="my-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+    {% for item in collections.allDocs | basics %}
+      {% include 'docs/blocklink.njk' %}
+    {% endfor %}
+  </div>
+</div>
+
+<h3>Documentation Feedback</h3>
 
 <p>If you find an error or feel like the documentation could be improved somewhat, we'd love 
 to hear from you! Either directly submit a change request with the buttons on each page, 

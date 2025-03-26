@@ -2,9 +2,10 @@
 title: Understanding User Acquisition
 tags:
   - setup
-  - analytics
+  - basics
   - pirate-metrics
   - acquisition
+basics: true
 description: Learn how to interpret and act on TelemetryDeck's acquisition metrics to optimize how users discover your app.
 lead: Acquisition is the first stage of the Pirate Metrics framework, focusing on how users find and install your app. TelemetryDeck automatically tracks these patterns to help you make data-driven decisions about marketing, platform support, and regional strategy.
 searchEngineTitle: App User Acquisition Analytics & Metrics | TelemetryDeck

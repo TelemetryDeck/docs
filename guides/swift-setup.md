@@ -146,42 +146,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-You are now ready to send signals!
+## Verify Your Setup
 
-## Sending signals
+Run your app to verify that TelemetryDeck is properly integrated. The SDK automatically sends a `TelemetryDeck.Session.started` signal when your app launches.
 
-Let's send a signal to show that something has happened in your app.
+{% notewarning "When running from Xcode, you're sending test signals" %}
+
+If your app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+{% endnotewarning %}
+
+Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see the automatic session signal appear after launching your app.
+
+---
+
+{% noteinfo "Ready for Basic Insights" %}
+Congratulations! With just the SDK initialization, TelemetryDeck will automatically track user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code.
+
+You can now build and ship your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
+{% endnoteinfo %}
+
+## Enhancing Your Analytics (Optional)
+
+While basic session tracking provides valuable information, sending custom signals lets you answer questions specific to how users engage with *your* app.
+
+### Common Questions You Can Answer With Custom Signals
+
+- Which features do users engage with most frequently?
+- Where in the onboarding flow do users drop off?
+- How are users navigating between different screens?
+- Which settings or configurations are most popular?
+
+### Sending Custom Signals
 
 {% noteinfo "What is a signal?" %}
-
 Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
 
-- **Signal Name** – A string that indicates which kind of event happened
-- **User Identifier** – A string that identifies your user (we auto-generate one for you)
+- **Signal Name** – A string that indicates which kind of event happened
+- **User Identifier** – A string that identifies your user (we auto-generate one for you)
 - **Optional Parameters** – A dictionary of additional data about your app or the event triggering the signal
 
 See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
 {% endnoteinfo %}
 
-{% notewarning "When running from Xcode, you're sending test signals" %}
-
-If your app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle in the sidebar is turned on.
-{% endnotewarning %}
-
-The default way to set a user identifier is `TelemetryDeck.updateDefaultUserID`. This way you only have to set it once, or when it changes, such as user login.
-See the [TelemetryDeck SDK's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md) for more information on how to send signals.
-
-{% noteinfo "Best practice:" %}
-You can also set a user identifier per send call as shown below, but this is not usually necessary.
-{% endnoteinfo %}
-
-Let's imaging your app is a pizza oven monitor and we want to send a signal that tells us the user has tapped the "Start Baking" button. Go to the place in your code where the user taps the button and add the following code:
+Let's imagine your app is a pizza oven monitor and we want to send a signal that tells us the user has tapped the "Start Baking" button. Go to the place in your code where the user taps the button and add the following code:
 
 ```swift
 TelemetryDeck.signal("Oven.Bake.startBaking")
 ```
 
-And done. This is all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add a custom parameters, add them to the function call like this:
+That's all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add custom parameters, add them to the function call like this:
 
 ```swift
 TelemetryDeck.signal(
@@ -196,10 +209,6 @@ TelemetryDeck.signal(
 {% noteinfo "Privacy Note" %}
 The value you pass to `customUserID` will be automatically hashed before being sent to our servers to protect the users privacy. This does not happen for the values in `parameters` though, so hash yourself where needed.
 {% endnoteinfo %}
-
-And you're done! You are now sending signals to the TelemetryDeck server. 🎉
-
-Run your app and confirm that your first signal arrived in the "Recent Signals" tab on TelemetryDeck. Don't forget to turn on "Test Mode" to see signals sent in debug builds!
 
 ## Configuring Default Signal Properties (Optional)
 
@@ -224,20 +233,39 @@ config.defaultParameters = {[
 // These parameters will be merged with any additional parameters you specify in signal() calls
 ```
 
-## Fill out Apple's app privacy details
+## App Store Requirements
 
-Something you need to do before you can upload your app to the App Store is going through Apple's privacy details on App Store Connect. This informs your users about what data is collected, and how it is collected.
+Before uploading your app to the App Store, you'll need to complete Apple's privacy details on App Store Connect. Although TelemetryDeck is privacy-focused, you still need to disclose analytics usage.
 
-Although TelemetryDeck is privacy friendly, as we only handle not personally identifiable information, you still need to click through the privacy details.
+For guidance on completing these requirements, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/).
 
-We have a [handy guide](/docs/articles/apple-app-privacy/) where we go over each step that is required.
+For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## Privacy Policy and Opt-Out
+### Next Steps
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+Once your app is collecting data, learn how to get useful insights:
 
-## You're all set!
-
-You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `App.launched`. This will already give you number of users, number of launches, system versions, retention, and more!
-
-After a while, you can add a signal for each screen in your app, so you can see which screens your users use most. It's also recommended to add all your custom settings to your metadata each time. This way you can see which settings most of your users use.
+<div class="not-prose ">
+  <div class="my-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-sm text-mars-500">
+          <a href="/docs/pirate-metrics/understanding-app-analytics/">
+            <span class="absolute -inset-px rounded-xl"></span>Explore Built-in Insights</a>
+        </h2>
+        <p class="mt-1 text-sm text-slate-700">Discover the automatically generated insights and how to interpret them.</p>
+      </div>
+    </div>
+    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-sm text-mars-500">
+          <a href="/docs/articles/what-are-insights/">
+            <span class="absolute -inset-px rounded-xl"></span>Create Custom Insights</a>
+        </h2>
+        <p class="mt-1 text-sm text-slate-700">Learn how to build your own custom insights to track specific metrics.</p>
+      </div>
+    </div>
+  </div>
+</div>

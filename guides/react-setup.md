@@ -1,5 +1,5 @@
 ---
-title: React and React Native Setup Guide
+title: React (Native) Setup Guide
 tags:
   - Setup
   - JavaScript
