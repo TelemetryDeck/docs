@@ -132,30 +132,24 @@ For guidance on completing these requirements, see our [Apple App Privacy guide]
 
 For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-### Next Steps
+## Your Next Essential Step
 
-Once your app is collecting data, learn how to get useful insights:
+Now that you've integrated TelemetryDeck, the most important thing to do is learn how to use the dashboard to gain valuable insights about your users:
 
 <div class="not-prose ">
-  <div class="my-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
+  <div class="my-10 grid grid-cols-1 gap-6">
+    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-sm text-mars-500">
-          <a href="/docs/pirate-metrics/understanding-app-analytics/">
-            <span class="absolute -inset-px rounded-xl"></span>Explore Built-in Insights</a>
+        <h2 class="font-semibold text-lg text-mars-500">
+          <a href="/docs/basics/index">
+            <span class="absolute -inset-px rounded-xl"></span>📊 Complete Dashboard Guide</a>
         </h2>
-        <p class="mt-1 text-sm text-slate-700">Discover the automatically generated insights and how to interpret them.</p>
-      </div>
-    </div>
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-sm text-mars-500">
-          <a href="/docs/articles/what-are-insights/">
-            <span class="absolute -inset-px rounded-xl"></span>Create Custom Insights</a>
-        </h2>
-        <p class="mt-1 text-sm text-slate-700">Learn how to build your own custom insights to track specific metrics.</p>
+        <p class="mt-2 text-sm text-slate-700">This essential guide walks you through the TelemetryDeck dashboard, showing you how to interpret your automatic insights, create custom analytics, track important user behavior, and make data-driven decisions to improve your app.</p>
+        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
+          <span>Start here to get real value from your analytics</span>
+          <span>→</span>
+        </p>
       </div>
     </div>
   </div>
