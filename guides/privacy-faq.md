@@ -38,7 +38,7 @@ Here's an example of how you could mention TelemetryDeck in your privacy policy:
 
 ## Do I need to fill out Apple's app privacy details?
 
-By default, the privacy manifest metadata included in the TelemetryDeck Swift SDK should already fill out Apple App Privacy Details information for you. See our [App Privacy Guide](/docs/articles/apple-app-privacy/) for more information.
+Yes, every app needs to fill out this form, even those that do not track any data. But our Swift SDK includes a privacy manifest which should list all the right things in your [generated privacy report](https://developer.apple.com/documentation/bundleresources/describing-data-use-in-privacy-manifests#Create-your-apps-privacy-report). Alternatively, see our [App Privacy Guide](/docs/articles/apple-app-privacy/) for detailed instructions.
 
 ## Do I need to offer an opt-out from TelemetryDeck?
 
@@ -56,7 +56,7 @@ See our article [How TelemetryDeck anonymizes user identifiers](/docs/articles/a
 
 ## What data does TelemetryDeck collect from my app users?
 
-By default, TelemetryDeck collects the following metadata from app users:
+By default, TelemetryDeck collects some metadata such as the following from app users:
 
 - clientUser: The anonymized user identifier that you can use to identify a user
 - type: The type of the signal, e.g. "event" or "error"
@@ -64,6 +64,8 @@ By default, TelemetryDeck collects the following metadata from app users:
 - App Information: appVersion, buildNumber, App Store vs TestFlight and appID
 - Device Information: architecture, locale, operating system version, device model, platform
 - The SDK Version
+
+For a full list, refer to [this document](/docs/ingest/default-parameters/).
 
 Developers can optionally send additional metadata with each signal.
 
