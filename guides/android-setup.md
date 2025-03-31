@@ -53,8 +53,8 @@ Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/Tel
 
 Build and run your app to verify that TelemetryDeck is properly integrated. The SDK automatically tracks user activity when the app starts or returns from the background.
 
-{% notewarning "Test Mode for Development Signals" %}
-If you're running the app from your IDE or development environment, events will be tagged as **Test Signals**. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+{% notewarning "When running from Android Studio, you're sending test signals" %}
+If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
 {% endnotewarning %}
 
 Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see automatic signals appear after launching your app.
@@ -67,7 +67,7 @@ Congratulations! With just the SDK integration you've completed, TelemetryDeck w
 You can now build and release your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
 {% endnoteinfo %}
 
-## Privacy Policy and Opt-Out
+## Privacy Policy
 
 You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
@@ -88,8 +88,6 @@ Then, in an appropriate function, you can send your first custom event:
 ```kotlin
 TelemetryDeck.signal("pizzaOrderConfirmed")
 ```
-
-By default, you're not sending events immediately; you're _enqueing_ them. This batches them up to be sent every now and then, and is the recommended way to send events, as it will conserve a lot of battery life for your users.
 
 You can also add a user identifier and parameters to your events:
 

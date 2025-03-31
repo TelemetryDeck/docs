@@ -58,8 +58,8 @@ Set the `com.apple.security.network.client` entitlement to `true` in the `macos/
 
 Build and run your app to verify that TelemetryDeck is properly integrated. The SDK automatically begins collecting data when initialized.
 
-{% notewarning "Test Mode for Development Signals" %}
-If your app's build configuration is set to "Debug", all signals sent will be marked as testing signals. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on. Remember to disable Test Mode in the dashboard to see your production data once your app is live.
+{% notewarning "When running from your IDE, you're sending test signals" %}
+If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
 {% endnotewarning %}
 
 Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see automatic signals appear after launching your app.
@@ -107,9 +107,12 @@ In order to restart sending events, you will need to call the `start` method aga
 If you want to manually control whether test mode is active, you can set the `testMode` field:
 
 ```dart
-Telemetrydecksdk.start(TelemetryManagerConfiguration(
-  appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-  testMode: true));
+Telemetrydecksdk.start(
+  const TelemetryManagerConfiguration(
+    appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+    testMode: true
+  ),
+);
 ```
 
 #### Logging output
@@ -118,9 +121,12 @@ Enable additional logs by setting the `debug` field to `true`:
 
 ```dart
 void main() {
-  Telemetrydecksdk.start(TelemetryManagerConfiguration(
+  Telemetrydecksdk.start(
+    const TelemetryManagerConfiguration(
       appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-      debug: true));
+      debug: true
+    ),
+  );
 }
 ```
 
@@ -129,9 +135,12 @@ void main() {
 A tiny subset of our customers will want to use a custom signal ingestion server or a custom proxy server. To do so, you can pass the URL of the custom server to the `TelemetryManagerConfiguration`:
 
 ```dart
-Telemetrydecksdk.start(TelemetryManagerConfiguration(
-  appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-  apiBaseURL: "https://nom.telemetrydeck.com"));
+Telemetrydecksdk.start(
+  const TelemetryManagerConfiguration(
+    appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+    apiBaseURL: "https://nom.telemetrydeck.com",
+  ),
+);
 ```
 
 For more advanced configuration options, programmatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/FlutterSDK?tab=readme-ov-file#sending-signals).
