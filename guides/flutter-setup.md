@@ -54,18 +54,37 @@ Change the app's `AndroidManifest.xml` to include:
 
 Set the `com.apple.security.network.client` entitlement to `true` in the `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements` files. You can also do this in Xcode by selecting the `macos` target, then the `Signing & Capabilities` tab, and checking `Outgoing connections (Client)` for both the Release and Debug targets of your app.
 
+## Verify your setup
 
-## Sending signals
+Build and run your app to verify that TelemetryDeck is properly integrated. The SDK automatically begins collecting data when initialized.
 
-Send a signal using the following method:
+{% notewarning "When running from your IDE, you're sending test signals" %}
+If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+{% endnotewarning %}
+
+Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see automatic signals appear after launching your app.
+
+---
+
+{% noteinfo "Ready for Basic Insights" %}
+Congratulations! With just the SDK integration you've completed, TelemetryDeck will automatically track user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code.
+
+You can now build and release your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
+{% endnoteinfo %}
+
+## Enhancing your analytics (optional)
+
+While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
+
+### Sending custom events
+
+Send a simple event using the following method:
 
 ```dart
 Telemetrydecksdk.send("signal_type")
 ```
 
-## Signals with additional attributes
-
-Append any number of custom attributes to a signal:
+You can append any number of custom attributes to a signal:
 
 ```dart
 Telemetrydecksdk.send("signal_type",
@@ -73,9 +92,7 @@ Telemetrydecksdk.send("signal_type",
 }
 ```
 
-## Stop sending signals
-
-Prevent signals from being sent using the stop method:
+To temporarily stop sending signals (for example, if a user opts out):
 
 ```dart
 Telemetrydecksdk.stop()
@@ -83,38 +100,79 @@ Telemetrydecksdk.stop()
 
 In order to restart sending events, you will need to call the `start` method again.
 
-## Test mode
+### Additional configuration options
 
-If your app's build configuration is set to "Debug", all signals sent will be marked as testing signals. In the Telemetry Viewer app, activate **Test Mode** to see those.
+#### Manual Test Mode control
 
 If you want to manually control whether test mode is active, you can set the `testMode` field:
 
-```swift
-Telemetrydecksdk.start(TelemetryManagerConfiguration(
-  appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-  testMode: true));
+```dart
+Telemetrydecksdk.start(
+  const TelemetryManagerConfiguration(
+    appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+    testMode: true
+  ),
+);
 ```
 
-## Custom Server
+#### Logging output
 
-A tiny subset of our customers will want to use a custom signal ingestion server or a custom proxy server. To do so, you can pass the URL of the custom server to the `TelemetryManagerConfiguration`:
-
-```swift
-Telemetrydecksdk.start(TelemetryManagerConfiguration(
-  appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-  apiBaseURL: "https://nom.telemetrydeck.com"));
-```
-
-## Logging output
-
-By default, some logs helpful for monitoring TelemetryDeck are printed out to the native console of each platform. You can enable additional logs by setting the `debug` field to `true`:
+Enable additional logs by setting the `debug` field to `true`:
 
 ```dart
 void main() {
-  Telemetrydecksdk.start(TelemetryManagerConfiguration(
+  Telemetrydecksdk.start(
+    const TelemetryManagerConfiguration(
       appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-      debug: true));
+      debug: true
+    ),
+  );
 }
 ```
 
+#### Custom server
+
+A tiny subset of our customers will want to use a custom signal ingestion server or a custom proxy server. To do so, you can pass the URL of the custom server to the `TelemetryManagerConfiguration`:
+
+```dart
+Telemetrydecksdk.start(
+  const TelemetryManagerConfiguration(
+    appID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+    apiBaseURL: "https://nom.telemetrydeck.com",
+  ),
+);
+```
+
 For more advanced configuration options, programmatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/FlutterSDK?tab=readme-ov-file#sending-signals).
+
+## App Store requirements
+
+When publishing your Flutter app, you'll need to address privacy requirements:
+
+- **iOS Apps**: Disclose analytics usage in Apple's App Store Connect privacy details. TelemetryDeck is privacy-focused, but disclosure is still required.
+- **All Platforms**: Consider updating your privacy policy to mention analytics collection.
+
+For guidance, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/) and [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+
+## What to do next
+
+Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
+
+<div class="not-prose ">
+  <div class="my-10 grid grid-cols-1 gap-6">
+    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-lg text-mars-500">
+          <a href="/docs/basics/index">
+            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
+        </h2>
+        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
+        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
+          <span>Start here to get real value from your analytics</span>
+          <span>→</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@ description: Should you give your signal types a simple name, or use a more comp
 lead: Should you give your signal types a simple name, or use a more complex naming scheme? We'll help you decide.
 ---
 
-When you send a signal, you'll always have to tell TelemetryDeck what **type** of signal you want to send. Type is just a
+When you send an event, you'll always have to tell TelemetryDeck what **type** of signal you want to send. Type is just a
 String, so in theory you could add anything in there. Your type could be `asfdgllahsavhaligha`, or `This sentence no verb` or even `🤖`.
 
 We recommend a different style to keep things clear and easy to find.

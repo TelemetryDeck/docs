@@ -43,7 +43,7 @@ If you like, you can switch your [TelemetryDeck Dashboard](https://dashboard.tel
 
 ## Test Mode
 
-By default, all signals sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatically marked as test signals. This is to prevent test signals from polluting your data.
+By default, all events sent from `localhost` or an IP address in the [private IP address ranges](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces) are automatically marked as test events. This is to prevent test signals from polluting your data.
 
 It is also possible to mark all signals as test signals by setting the dataset attribute `data-is-test-mode` to `true`.
 
@@ -117,3 +117,26 @@ There are different tutorials you should read depending on your use case.
 - If you are building a **website or blog**, and want to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read this guide.
 
 {% endnoteinfo %}
+
+## What to do next
+
+Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
+
+<div class="not-prose ">
+  <div class="my-10 grid grid-cols-1 gap-6">
+    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-lg text-mars-500">
+          <a href="/docs/basics/index">
+            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
+        </h2>
+        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
+        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
+          <span>Start here to get real value from your analytics</span>
+          <span>→</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

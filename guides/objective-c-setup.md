@@ -10,7 +10,7 @@ tags:
 featured: false
 testedOn: Xcode 14.1 & Swift 5.5
 description: Configure the TelemetryDeck SDK in Your Objective-C Application for iOS and macOS
-lead: Let's include the TelemetryClient Swift Package in your Objective-C application and send signals!
+lead: Let's include the TelemetryClient Swift Package in your Objective-C application and send events!
 order: 1000
 ---
 
@@ -65,7 +65,6 @@ The `TelemetryClient` package will provide you with a class `TelemetryManager` t
 
     return YES;
 }
-
 ```
 
 {% noteinfo "You need your app's Unique Identifier" %}
@@ -74,12 +73,35 @@ TelemetryDeck assigns a unique identifier to your app, and you need to hand that
 Use the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) to create a new app and copy its unique identifier into your computer's clipboard.
 {% endnoteinfo %}
 
-## Sending signals
+## Verify your setup
 
-Let's send a signal to show the app has launched correctly.
+Run your app to verify that TelemetryDeck is properly integrated. Let's send an event to show the app has launched correctly:
+
+```objc
+[TelemetryManager send:@"applicationDidFinishLaunching"];
+```
+
+{% notewarning "When running from Xcode, you're sending test signals" %}
+If your app is built in `DEBUG` configuration (i.e. running from Xcode), your events will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+{% endnotewarning %}
+
+Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see your signal appear after launching your app.
+
+---
+
+{% noteinfo "Ready for Basic Insights" %}
+Congratulations! With just the SDK initialization, TelemetryDeck will automatically track user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code.
+
+You can now build and ship your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
+{% endnoteinfo %}
+
+## Enhancing your analytics (optional)
+
+While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
+
+### Sending custom events
 
 {% noteinfo "What's a signal?" %}
-
 Signals represent an **event** or a **view** that happened in your app, which is used by a **user**. Signals consist of these parts:
 
 - **Signal Type**: A string that indicates which kind of event happened
@@ -88,17 +110,9 @@ Signals represent an **event** or a **view** that happened in your app, which is
 See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
 {% endnoteinfo %}
 
-See the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md) for more information on how to send signals. For now, let's just send one signal that tells us the app has launched. Go to your app delegate and below the initialization add this line:
+You don't need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add custom metadata payload, add it to the function call as a dictionary:
 
 ```objc
-[TelemetryManager send:@"applicationDidFinishLaunching"];
-```
-
-We're done. This is all you need to send a signal. You don't need to keep an instance of TelemetryManager and hand it around, just call the `send` function on the class directly. If you want to add custom metadata payload, add it to the function call like as a dictionary.
-
-This is helpful for additional parameters for filtering or grouping signals. We'll auto add some metadata for you, like the app version, device model, etc.
-
-```swift
 [
     TelemetryManager
     send:@"applicationDidFinishLaunching"
@@ -106,19 +120,37 @@ This is helpful for additional parameters for filtering or grouping signals. We'
 ];
 ```
 
-And you're done! You are now sending signals to the TelemetryDeck server (the signals are marked as **Testing Signals** in the dashboard, switch on **Testing Mode** to see them).
+The metadata is helpful for additional parameters for filtering or grouping signals. We'll automatically add some metadata for you, like the app version, device model, and more.
 
-{% notewarning "When running from Xcode, you're sending testing signals" %}
+For more information on how to send events, see the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md).
 
-If you app is built in `DEBUG` configuration (that means running from Xcode), your signals will be tagged as **Testing Signals**, meaning that you can filter them out later. You'll see them show up in the TelemetryDeck Dashboard when it's set to **Test Mode**.
-{% endnotewarning %}
+## App Store requirements
 
-## You're all set!
+Before uploading your app to the App Store, you'll need to complete Apple's privacy details on App Store Connect. Although TelemetryDeck is privacy-focused, you still need to disclose analytics usage.
 
-You can now send signals! Don't overdo it in the beginning. It's okay if you only send **one** signal, named `applicationDidFinishLaunching` in the beginning. This will already give you number of users, number of launches, retention… a lot!
+For guidance on completing these requirements, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/).
 
-After a while, you can add a send call for each screen in your app, so you can see which screens are used most. We also recommend adding all your custom settings to your metadata each time (except the ones that might identify an individual user please). This way you can see which settings most of your users use.
+For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## Privacy Policy and Opt-Out
+## What to do next
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
+
+<div class="not-prose ">
+  <div class="my-10 grid grid-cols-1 gap-6">
+    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-lg text-mars-500">
+          <a href="/docs/basics/index">
+            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
+        </h2>
+        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
+        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
+          <span>Start here to get real value from your analytics</span>
+          <span>→</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
