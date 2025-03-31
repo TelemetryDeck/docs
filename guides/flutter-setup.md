@@ -54,7 +54,7 @@ Change the app's `AndroidManifest.xml` to include:
 
 Set the `com.apple.security.network.client` entitlement to `true` in the `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements` files. You can also do this in Xcode by selecting the `macos` target, then the `Signing & Capabilities` tab, and checking `Outgoing connections (Client)` for both the Release and Debug targets of your app.
 
-## Verify Your Setup
+## Verify your setup
 
 Build and run your app to verify that TelemetryDeck is properly integrated. The SDK automatically begins collecting data when initialized.
 
@@ -72,13 +72,13 @@ Congratulations! With just the SDK integration you've completed, TelemetryDeck w
 You can now build and release your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
 {% endnoteinfo %}
 
-## Enhancing Your Analytics (Optional)
+## Enhancing your analytics (optional)
 
-While basic session tracking provides valuable information, sending custom signals lets you answer questions specific to how users engage with *your* app.
+While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
 
-### Sending Custom Signals
+### Sending custom events
 
-Send a simple signal using the following method:
+Send a simple event using the following method:
 
 ```dart
 Telemetrydecksdk.send("signal_type")
@@ -100,9 +100,9 @@ Telemetrydecksdk.stop()
 
 In order to restart sending events, you will need to call the `start` method again.
 
-### Additional Configuration Options
+### Additional configuration options
 
-#### Manual Test Mode Control
+#### Manual Test Mode control
 
 If you want to manually control whether test mode is active, you can set the `testMode` field:
 
@@ -112,7 +112,7 @@ Telemetrydecksdk.start(TelemetryManagerConfiguration(
   testMode: true));
 ```
 
-#### Logging Output
+#### Logging output
 
 Enable additional logs by setting the `debug` field to `true`:
 
@@ -124,7 +124,7 @@ void main() {
 }
 ```
 
-#### Custom Server
+#### Custom server
 
 A tiny subset of our customers will want to use a custom signal ingestion server or a custom proxy server. To do so, you can pass the URL of the custom server to the `TelemetryManagerConfiguration`:
 
@@ -136,7 +136,7 @@ Telemetrydecksdk.start(TelemetryManagerConfiguration(
 
 For more advanced configuration options, programmatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/FlutterSDK?tab=readme-ov-file#sending-signals).
 
-## App Store Requirements
+## App Store requirements
 
 When publishing your Flutter app, you'll need to address privacy requirements:
 
@@ -145,7 +145,7 @@ When publishing your Flutter app, you'll need to address privacy requirements:
 
 For guidance, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/) and [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 

@@ -26,7 +26,7 @@ There are different tutorials you should read depending on your use case.
 
 {% endnoteinfo %}
 
-## Set Up
+## Set up
 
 When setting up, you need to check wether the platform you're working on has the SubtleCrytpo API available.
 
@@ -34,7 +34,7 @@ Anytime you're in a browser context, your code will have access to the default S
 
 The next two sections explain these two cases in detail. Either way, please install the package using npm or the package manager of your choice, such as NPM.
 
-### Set up in Browser Based Applications
+### Set up in browser-based applications
 
 This is the correct setup procedure for JavaScript code that runs in a browser and can install an NPM package. For example:
 
@@ -64,7 +64,7 @@ If can't specify a user identifier at initialization, you can set it later by se
 
 Please note that `td.signal` is an async function that returns a promise.
 
-### Set up in Node.js Applications
+### Set up in Node.js applications
 
 Initialize the TelemetryDeck SDK with your app ID and your user's user identifier. Since `globalThis.crypto.subtle` does not exist in Node.js, you need to pass in an alternative implementation provided by Node.js.
 
@@ -96,13 +96,13 @@ Some frameworks, like Svelte, don't need `crypto` and node.js. Here are some tip
 
 {% endnotewarning %}
 
-### Advanced Initialization Options
+### Advanced initialization options
 
 See the [source code](https://github.com/TelemetryDeck/JavaScriptSDK/blob/main/src/telemetrydeck.js#L6-L17) for a full list of available options accepted by the `TelemetryDeck` constructor.
 
-## Sending Signals
+## Sending Events
 
-Send a basic signal by calling `td.signal()` with a signal type:
+Send a basic event by calling `td.signal()` with a signal type:
 
 ```javascript
 td.signal("<SIGNAL_TYPE>");
@@ -157,7 +157,7 @@ export class Store {
 
 The default implementation can be found in `src/utils/store.js`.
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 

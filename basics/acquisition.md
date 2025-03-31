@@ -19,7 +19,7 @@ User acquisition represents the entry point of your app's growth funnel – how 
 
 With TelemetryDeck's Acquisition dashboard, these insights are automatically collected and visualized with no additional code required beyond updating to the latest SDK version.
 
-## User Growth Trends
+## User growth trends
 
 **Questions you can answer:**
 - Is my user base growing over time?
@@ -36,7 +36,7 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 **Action example:** If you see that your user acquisition consistently spikes after releasing new features (as might be visible in the Weekly New Users chart), you could plan your marketing and development cycles to maximize this pattern.
 
-## New vs. Active Users Ratio
+## New vs. active users ratio
 
 **Questions you can answer:**
 - What proportion of my users are new versus returning?
@@ -52,7 +52,7 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 **Action example:** In the Daily Active vs New Users chart, you can see the ratio fluctuating between approximately 0.1 and 0.5. When it drops to 0.1 (as seen around March 13th), it suggests that only about 7.69% of your active users that day were new installations - the rest were returning users, which indicates good retention but might signal a need to boost acquisition efforts.
 
-## Temporal Usage Patterns
+## Temporal usage patterns
 
 **Questions you can answer:**
 - When during the day do users typically discover my app?
@@ -68,7 +68,7 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 **Action example:** The Hour of Day chart shows peak installations occur around 12pm–2pm with the highest activity at 1pm, followed by another strong period at 5pm–6pm. This suggests users are discovering your app during lunch breaks and after work hours. The Day of Week chart reveals significantly higher acquisition on Monday through Wednesday, with Thursday showing the lowest activity. Most notably, the Weekend vs Weekday chart shows only 17.48% of new users come on weekends (compared to the statistical norm of 29%), while 82.52% come on weekdays (above the norm of 71%). This strong weekday bias suggests your app may be more work-related or discovered primarily during business hours. Consider scheduling your marketing campaigns and social media posts for Monday through Wednesday mornings to capitalize on these patterns.
 
-## Recent Temporal Patterns
+## Recent temporal patterns
 
 **Questions you can answer:**
 - Are recent user acquisition patterns consistent with long-term trends?
@@ -84,7 +84,7 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 **Action example:** Looking at the past 4 weeks data, we can see more granular patterns emerge. The Hour of Day chart shows a significant spike around noon on one particular day, which might represent a specific marketing event or feature launch rather than a consistent pattern. The Day of Week chart across 4 weeks shows variability, with some weeks showing strong Monday performance while others peak on Wednesday or Friday. However, the Weekend/Weekdays chart consistently shows weekdays outperforming weekends across all 4 weeks, confirming this is a reliable long-term trend rather than coincidental. When planning your marketing strategy, use the long-term data for general scheduling, but analyze these recent patterns to identify successful one-time events that could be replicated.
 
-## Device & Platform Distribution
+## Device & platform distribution
 
 **Questions you can answer:**
 - What devices are my users using to access my app?
@@ -100,7 +100,7 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 **Action example:** The chart shows iOS devices account for 70% of your user base, with various iPhone models representing the majority of new users. iPhone 11, 11 Pro, 15, and 16 Pro each account for approximately 10% of acquisitions. This suggests you should prioritize testing on these devices and ensure your UI works well across both newer and slightly older hardware. The presence of older devices like iPhone 12 (5%) indicates you should maintain compatibility with devices from previous generations. With macOS representing 30% of users, cross-platform support remains important but iOS should be your primary focus.
 
-## Geographic & Language Distribution
+## Geographic & language distribution
 
 **Questions you can answer:**
 - Where are my users located geographically?
@@ -116,7 +116,7 @@ With TelemetryDeck's Acquisition dashboard, these insights are automatically col
 
 **Action example:** Looking at the New Users by Country chart, you can see that the United States (40%) represents your largest market, followed by Germany (25%) and Poland (10%). The United Kingdom, France, Australia, India, and Italy each account for approximately 5% of your user base. This suggests you should prioritize these markets in your marketing efforts. The language distribution confirms that English (65%) should remain your primary focus, with German (15%) as a strong secondary language. The presence of French, Italian, Polish, and Russian (each at approximately 5%) suggests these could be considered for future localization efforts to expand your reach.
 
-## Making Data-Driven Decisions
+## Making data-driven decisions
 
 As you analyze your acquisition metrics, consider these key questions:
 

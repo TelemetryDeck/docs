@@ -45,7 +45,7 @@ app.use(TelemetryDeckPlugin, {
 app.mount("#app");
 ```
 
-## Basic Usage
+## Basic usage
 
 ```ts
 <script setup lang="ts">
@@ -128,7 +128,7 @@ const buttonQueueClickWithOptions = () => {
 </template>
 ```
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 

@@ -12,7 +12,7 @@ searchEngineDescription: Learn how to navigate the TelemetryDeck dashboard to ge
 order: 10
 ---
 
-## Dashboard Navigation
+## Dashboard navigation
 
 After integrating the TelemetryDeck SDK into your app, your data will start appearing in the TelemetryDeck dashboard. The main navigation tabs help you find different types of insights:
 
@@ -119,11 +119,11 @@ The Metrics section provides essential technical insights about your app across 
 
 ## Explore (Signal Analytics)
 
-The Explore section gives you direct access to your raw signal data through multiple views:
+The Explore section gives you direct access to your raw event data through multiple views:
 
 ![Explore Dashboard - Signal Types](/docs/images/dashboard-signal-types.png)
 
-Here you can examine all signal types your app has sent, explore parameters attached to your signals, view recent signals chronologically, and use the query playground to experiment with data analysis. This section is particularly useful for debugging, understanding user behavior sequences, and diving deeper into specific user actions.
+Here you can examine all signal types your app has sent, explore parameters attached to your events, view recent events chronologically, and use the query playground to experiment with data analysis. This section is particularly useful for debugging, understanding user behavior sequences, and diving deeper into specific user actions.
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6">
@@ -132,7 +132,7 @@ Here you can examine all signal types your app has sent, explore parameters atta
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
           <a href="/docs/articles/signal-type-naming">
-            <span class="absolute -inset-px rounded-xl"></span>Signal Naming Best Practices</a>
+            <span class="absolute -inset-px rounded-xl"></span>Event Naming Best Practices</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to name your signal types effectively for better organization and analysis.</p>
       </div>
@@ -200,9 +200,9 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
   </div>
 </div>
 
-## Common Dashboard Tasks
+## Common Dashboard tasks
 
-### Filtering Data
+### Filtering data
 
 At the top of most dashboard pages, you'll find time filters that let you focus on specific periods:
 
@@ -220,13 +220,13 @@ At the top of most dashboard pages, you'll find time filters that let you focus 
           <a href="/docs/articles/test-mode">
             <span class="absolute -inset-px rounded-xl"></span>Using Test Mode</a>
         </h2>
-        <p class="mt-1 text-sm text-slate-700">Understand how to use Test Mode to separate development signals from production data.</p>
+        <p class="mt-1 text-sm text-slate-700">Understand how to use Test Mode to separate development events from production data.</p>
       </div>
     </div>
   </div>
 </div>
 
-### Exploring Details
+### Exploring details
 
 Many visualizations have interactive elements:
 
@@ -254,7 +254,7 @@ Many visualizations have interactive elements:
   </div>
 </div>
 
-## Advanced Features
+## Advanced features
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">

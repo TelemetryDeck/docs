@@ -25,7 +25,7 @@ dependencies {
 
 ## Permission for internet access
 
-Sending signals requires access to the internet so the following permission should be added to the app's `AndroidManifest.xml`
+Sending events requires access to the internet so the following permission should be added to the app's `AndroidManifest.xml`
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -49,12 +49,12 @@ And that's it! Your app is now ready to use TelemetryDeck. Hit the build button 
 
 Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/TelemetryDeck/KotlinSDK) as well. It's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
-## Verify Your Setup
+## Verify your setup
 
 Build and run your app to verify that TelemetryDeck is properly integrated. The SDK automatically tracks user activity when the app starts or returns from the background.
 
 {% notewarning "Test Mode for Development Signals" %}
-If you're running the app from your IDE or development environment, signals will be tagged as **Test Signals**. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+If you're running the app from your IDE or development environment, events will be tagged as **Test Signals**. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
 {% endnotewarning %}
 
 Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see automatic signals appear after launching your app.
@@ -73,9 +73,9 @@ You don't need to update your privacy policy, [but we recommend you do it anyway
 
 ## Enhancing Your Analytics (Optional)
 
-While basic session tracking provides valuable information, sending custom signals lets you answer questions specific to how users engage with *your* app.
+While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
 
-### Sending Custom Signals
+### Sending custom events
 
 Navigate to a Kotlin file and add the following code at the top:
 
@@ -83,15 +83,15 @@ Navigate to a Kotlin file and add the following code at the top:
 import com.telemetrydeck.sdk.TelemetryDeck
 ```
 
-Then, in an appropriate function, you can send your first custom signal:
+Then, in an appropriate function, you can send your first custom event:
 
 ```kotlin
 TelemetryDeck.signal("pizzaOrderConfirmed")
 ```
 
-By default, you're not sending signals immediately; you're _enqueing_ them. This batches them up to be sent every now and then, and is the recommended way to send signals, as it will conserve a lot of battery life for your users.
+By default, you're not sending events immediately; you're _enqueing_ them. This batches them up to be sent every now and then, and is the recommended way to send events, as it will conserve a lot of battery life for your users.
 
-You can also add a user identifier and parameters to your signals:
+You can also add a user identifier and parameters to your events:
 
 ```kotlin
 TelemetryDeck.signal("pizzaOrderConfirmed", myUser.emailAddress, mapOf("pizzaType" to "hawaii"))
@@ -109,11 +109,11 @@ For more advanced configuration options, programmatic usage and information abou
 
 - `Could not find method implementation() for arguments on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler.` – Make sure you're adding the entries to `android/app/build.gradle`, not `android/build.gradle`. [More Info](https://stackoverflow.com/questions/45615474/gradle-error-could-not-find-method-implementation-for-arguments-com-android)
 
-## SDK Requirements
+## SDK requirements
 
 The TelemetryDeck SDK requires Android SDK 21 or later. For a complete list of requirements, see the [Requirements section](https://github.com/TelemetryDeck/KotlinSDK?tab=readme-ov-file#requirements) of the README.
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 

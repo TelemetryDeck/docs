@@ -19,7 +19,7 @@ Technical metrics represent the operational aspects of your app – how it perfo
 
 With TelemetryDeck's Metrics dashboard, these insights are automatically collected and visualized with no additional code required beyond the basic SDK integration.
 
-## Device & Platform Distribution
+## Device & platform distribution
 
 **Questions you can answer:**
 - What devices are my users using to access my app?
@@ -36,7 +36,7 @@ With TelemetryDeck's Metrics dashboard, these insights are automatically collect
 
 **Action example:** Looking at the Models chart, we can see MacBook Air (M1 and M2) models account for 17% of devices, while new Apple Vision Pro (RealityDevice) users represent 7%. iPhone models collectively account for a significant portion of usage. With iOS accounting for 62.05% of platform usage and macOS at 34.55%, you should prioritize iOS testing while maintaining solid macOS support. The emergence of visionOS at 3.40% shows early adoption of this platform that may warrant attention for future development.
 
-## Version Analytics
+## Version analytics
 
 **Questions you can answer:**
 - How quickly are users adopting my latest app version?
@@ -53,7 +53,7 @@ With TelemetryDeck's Metrics dashboard, these insights are automatically collect
 
 **Action example:** The App Versions chart shows a clear transition starting in early March, with users moving from the previous version (green) to the latest release (blue). This transition happened relatively quickly, suggesting users are responsive to updates. The Build Numbers chart shows a similar pattern, with a diverse range of builds in use before March consolidating to newer versions. The SDK Versions chart reveals an interesting transition from version 2.2.3 (yellow) to 2.2.4 (light green) and SwiftClient 1.5.1 (green) in March, suggesting your SDK updates are being adopted alongside app updates. This data indicates that you can likely count on most users updating within 2-3 weeks of a release.
 
-## Error Monitoring
+## Error monitoring
 
 **Questions you can answer:**
 - What are the most common errors occurring in my app?
@@ -90,7 +90,7 @@ TelemetryDeck offers built-in presets for error tracking that require some confi
   </div>
 </div>
 
-## Localization Insights
+## Localization insights
 
 **Questions you can answer:**
 - What languages do my users speak?
@@ -108,7 +108,7 @@ TelemetryDeck offers built-in presets for error tracking that require some confi
 
 **Action example:** The data shows a diverse user base with English (45.52% preferred/51.87% app) and German (30.94% preferred/31.12% app) leading language usage. Germany (25.49%), US (20.60%), and UK (13.29%) are your top markets. The strong German presence in both language and regional data suggests significant opportunity for enhanced German-language support and targeted marketing in German-speaking countries.
 
-## Accessibility Usage
+## Accessibility usage
 
 **Questions you can answer:**
 - How many of my users utilize accessibility features?
@@ -128,7 +128,7 @@ TelemetryDeck offers built-in presets for error tracking that require some confi
 
 I'll revise and shorten the ending to be more concise and ensure links provide value without repetition:
 
-## Making Data-Driven Decisions with Metrics
+## Making data-driven decisions with Metrics
 
 Your technical metrics provide critical insights for development decisions. Consider these key questions as you analyze the data:
 
@@ -149,7 +149,7 @@ Your technical metrics provide critical insights for development decisions. Cons
 
 Remember that technical metrics complement your user behavior analytics. By combining device insights with acquisition and engagement data, you'll build a complete picture of how technical decisions impact real-world user experience.
 
-## Related Guides
+## Related guides
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">

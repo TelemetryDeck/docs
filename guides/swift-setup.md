@@ -9,7 +9,7 @@ tags:
 featured: true
 testedOn: Xcode 16 & Swift 5.9
 description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS and tvOS
-lead: Let's include the TelemetryDeck Swift Package in your application and send signals!
+lead: Let's include the TelemetryDeck Swift Package in your application and send events!
 order: 100
 ---
 
@@ -43,9 +43,9 @@ Xcode will ask you to link the package with your target in the next screen, titl
 In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryDeck` library.
 {% endnoteinfo %}
 
-## Initializing the TelemetryDeck Swift Package
+## Initializing the TelemetryDeck Swift package
 
-The `TelemetryDeck` package will provide you with a class `TelemetryDeck` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. We strongly recommend doing so as soon as possible, as you won't be able to send Signals before the `TelemetryDeck` is initialized.
+The `TelemetryDeck` package will provide you with a class `TelemetryDeck` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. We strongly recommend doing so as soon as possible, as you won't be able to send events before the `TelemetryDeck` is initialized.
 
 This is slightly different depending on whether you use SwiftUI or UIKit's `AppDelegate` to manage your app's lifecycle, so let's look at these individually.
 
@@ -146,13 +146,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-## Verify Your Setup
+## Verify your setup
 
 Run your app to verify that TelemetryDeck is properly integrated. The SDK automatically sends a `TelemetryDeck.Session.started` signal when your app launches.
 
-{% notewarning "When running from Xcode, you're sending test signals" %}
+{% notewarning "When running from Xcode, you're sending test events" %}
 
-If your app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+If your app is built in `DEBUG` configuration (i.e. running from Xcode), your events will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
 {% endnotewarning %}
 
 Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see the automatic session signal appear after launching your app.
@@ -165,18 +165,18 @@ Congratulations! With just the SDK initialization, TelemetryDeck will automatica
 You can now build and ship your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
 {% endnoteinfo %}
 
-## Enhancing Your Analytics (Optional)
+## Enhancing your analytics (optional)
 
-While basic session tracking provides valuable information, sending custom signals lets you answer questions specific to how users engage with *your* app.
+While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
 
-### Common Questions You Can Answer With Custom Signals
+### Common questions you can answer with custom events
 
 - Which features do users engage with most frequently?
 - Where in the onboarding flow do users drop off?
 - How are users navigating between different screens?
 - Which settings or configurations are most popular?
 
-### Sending Custom Signals
+### Sending custom events
 
 {% noteinfo "What is a signal?" %}
 Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
@@ -210,7 +210,7 @@ TelemetryDeck.signal(
 The value you pass to `customUserID` will be automatically hashed before being sent to our servers to protect the users privacy. This does not happen for the values in `parameters` though, so hash yourself where needed.
 {% endnoteinfo %}
 
-## Configuring Default Signal Properties (Optional)
+## Configuring default signal properties (optional)
 
 When initializing TelemetryDeck, you can configure some defaults to help keep your signals organized and consistent:
 
@@ -233,13 +233,13 @@ config.defaultParameters = {[
 // These parameters will be merged with any additional parameters you specify in signal() calls
 ```
 
-## App Store Requirements
+## App Store requirements
 
 Before uploading your app to the App Store, you'll need to complete Apple's privacy details on App Store Connect. Although TelemetryDeck is privacy-focused, you still need to disclose analytics usage.
 
 For guidance on completing these requirements, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/). For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 

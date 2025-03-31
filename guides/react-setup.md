@@ -57,7 +57,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 ## Basic usage
 
-To send signals, use the `useTelemetryDeck` hook and destructure the various methods that can be used to modify the instance or send signals to TelemetryDeck.
+To send events, use the `useTelemetryDeck` hook and destructure the various methods that can be used to modify the instance or send events to TelemetryDeck.
 For more information, see the [JS documentation](/docs/guides/javascript-setup/).
 
 ```tsx
@@ -94,7 +94,7 @@ function Dashboard() {
 export { Dashboard };
 ```
 
-## React Native & Expo Support
+## React Native & Expo support
 
 `telemetrydeck-react` also supports React Native or Expo.
 If no global implementation is available because you are not on the web, TelemetryDeck needs a subtle implementation which can be either injected by extending `globalThis` or added to the TelemetryDeck instance.
@@ -136,7 +136,7 @@ import App from "./App";
 registerRootComponent(App);
 ```
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 

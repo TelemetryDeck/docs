@@ -10,7 +10,7 @@ tags:
 featured: false
 testedOn: Xcode 14.1 & Swift 5.5
 description: Configure the TelemetryDeck SDK in Your Objective-C Application for iOS and macOS
-lead: Let's include the TelemetryClient Swift Package in your Objective-C application and send signals!
+lead: Let's include the TelemetryClient Swift Package in your Objective-C application and send events!
 order: 1000
 ---
 
@@ -73,16 +73,16 @@ TelemetryDeck assigns a unique identifier to your app, and you need to hand that
 Use the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) to create a new app and copy its unique identifier into your computer's clipboard.
 {% endnoteinfo %}
 
-## Verify Your Setup
+## Verify your setup
 
-Run your app to verify that TelemetryDeck is properly integrated. Let's send a signal to show the app has launched correctly:
+Run your app to verify that TelemetryDeck is properly integrated. Let's send an event to show the app has launched correctly:
 
 ```objc
 [TelemetryManager send:@"applicationDidFinishLaunching"];
 ```
 
 {% notewarning "When running from Xcode, you're sending test signals" %}
-If your app is built in `DEBUG` configuration (i.e. running from Xcode), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
+If your app is built in `DEBUG` configuration (i.e. running from Xcode), your events will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
 {% endnotewarning %}
 
 Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see your signal appear after launching your app.
@@ -95,11 +95,11 @@ Congratulations! With just the SDK initialization, TelemetryDeck will automatica
 You can now build and ship your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
 {% endnoteinfo %}
 
-## Enhancing Your Analytics (Optional)
+## Enhancing your analytics (optional)
 
-While basic session tracking provides valuable information, sending custom signals lets you answer questions specific to how users engage with *your* app.
+While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
 
-### Sending Custom Signals
+### Sending custom events
 
 {% noteinfo "What's a signal?" %}
 Signals represent an **event** or a **view** that happened in your app, which is used by a **user**. Signals consist of these parts:
@@ -122,9 +122,9 @@ You don't need to keep an instance of TelemetryManager and hand it around, just 
 
 The metadata is helpful for additional parameters for filtering or grouping signals. We'll automatically add some metadata for you, like the app version, device model, and more.
 
-For more information on how to send signals, see the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md).
+For more information on how to send events, see the [TelemetryDeck package's `README.md` file](https://github.com/TelemetryDeck/SwiftSDK/blob/main/README.md).
 
-## App Store Requirements
+## App Store requirements
 
 Before uploading your app to the App Store, you'll need to complete Apple's privacy details on App Store Connect. Although TelemetryDeck is privacy-focused, you still need to disclose analytics usage.
 
@@ -132,7 +132,7 @@ For guidance on completing these requirements, see our [Apple App Privacy guide]
 
 For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## What to Do Next
+## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 
