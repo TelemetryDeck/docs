@@ -61,7 +61,7 @@ Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and mak
 
 ---
 
-{% noteinfo "Ready for Basic Insights" %}
+{% noteinfo "Ready for basic insights" %}
 Congratulations! With just the SDK integration you've completed, TelemetryDeck will automatically track user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code.
 
 You can now build and release your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
@@ -71,7 +71,7 @@ You can now build and release your app. Once users start using it, your Telemetr
 
 You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-## Enhancing Your Analytics (Optional)
+## Enhancing your analytics (optional)
 
 While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
 
