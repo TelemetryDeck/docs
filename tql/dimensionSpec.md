@@ -9,6 +9,12 @@ The default DimensionSpec returns dimension values as is and optionally renames 
 
 If an extraction function is set, it returns dimension values transformed using the given extraction function.
 
+{% notewarning "What is a dimension?" %}
+
+TelemetryDecks Query Language is based on Apache Druid. In Druid, a dimension is a named field in your data used for filtering, grouping, or joining - typically string or categorical values.
+
+{% endnotewarning %}
+
 ## Default DimensionSpec
 
 Returns dimension values as is and optionally renames the dimension.
