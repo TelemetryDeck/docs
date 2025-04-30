@@ -155,6 +155,19 @@ Navigation analytics signals have these parameters, which can be included in any
 - `TelemetryDeck.Navigation.destinationPath` (String): The destination path of the navigation, e.g. `/host/info/about` or `app.settings.privacy`.
 - `TelemetryDeck.Navigation.identifier` (String): String that uniquely identifies the navigation in the format `sourcePath -> destinationPath`.
 
+## Acquisition Analytics
+
+
+- `TelemetryDeck.Calendar.dayOfMonth`: The day-of-month (1..31) component of the date.
+- `TelemetryDeck.Calendar.dayOfWeek`: The ISO 8601 number of the given day of the week. Monday is 1, Sunday is 7.
+- `TelemetryDeck.Calendar.dayOfYear`: The 1-based day-of-year component of the date.
+- `TelemetryDeck.Calendar.weekOfYear`: The week number within the current year as defined by `getFirstDayOfWeek()` and `getMinimalDaysInFirstWeek()`.
+- `TelemetryDeck.Calendar.isWeekend`: `true` if the day of the week is Saturday or Sunday, `false` otherwise.
+- `TelemetryDeck.Calendar.monthOfYear`: The number-of-the-month (1..12) component of the date.
+- `TelemetryDeck.Calendar.quarterOfYear`: The the quarter-of-year (1..4). For API 26 and earlier, it's the number of the month divided by 3.
+- `TelemetryDeck.Calendar.hourOfDay`: The hour-of-day (0..23) time component of this time value.
+
+
 ## API
 
 Information about which TelemetryDeck API this signal was sent to.
