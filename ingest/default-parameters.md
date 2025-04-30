@@ -164,7 +164,7 @@ Navigation analytics signals have these parameters, which can be included in any
 - `TelemetryDeck.Calendar.weekOfYear`: The week number within the current year as defined by `getFirstDayOfWeek()` and `getMinimalDaysInFirstWeek()`.
 - `TelemetryDeck.Calendar.isWeekend`: `true` if the day of the week is Saturday or Sunday, `false` otherwise.
 - `TelemetryDeck.Calendar.monthOfYear`: The number-of-the-month (1..12) component of the date.
-- `TelemetryDeck.Calendar.quarterOfYear`: The the quarter-of-year (1..4). For API 26 and earlier, it's the number of the month divided by 3.
+- `TelemetryDeck.Calendar.quarterOfYear`: The quarter-of-year (1..4). For API 26 and earlier, it's the number of the month divided by 3.
 - `TelemetryDeck.Calendar.hourOfDay`: The hour-of-day (0..23) time component of this time value.
 - `TelemetryDeck.Acquisition.firstSessionDate`: The date of the first session e.g. 2025-02-22
 - `TelemetryDeck.Retention.averageSessionSeconds`: The average session duration in seconds.
