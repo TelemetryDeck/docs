@@ -22,7 +22,7 @@ This guide assumes you have already created a TelemetryDeck account. If you have
 The TelemetryDeck Swift package uses Swift Package Manager.
 
 1. Open Xcode and navigate to the project you want to add TelemetryDeck to
-1. In the menu, select <kbd>File</kbd> -> <kbd>Add Packages...</kbd>. This will open the Swift Package Manager view
+1. In the menu, select <kbd>File</kbd> -> <kbd>Add Package Dependencies...</kbd>. This will open the Swift Package Manager view
 1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field.
 1. Select the `SwiftSDK` package that appears in the list
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>
