@@ -232,8 +232,7 @@ Many visualizations have interactive elements:
 
 ![Exploring Details](/docs/images/dashboard-exploring-details.png)
 
-- Hover over chart elements to see detailed values
-- Click on segments in pie/donut charts to filter by that value
+- Hover over chart elements to see detailed values and source info
 - Use the "..." menu in the top right of cards for additional options
 
 
