@@ -75,7 +75,7 @@ For images, upload them to a service like Imgur or imgbb and use standard markdo
 
 ## Putting It All Together: A Real-World Example
 
-Now that we've covered the basics, let's see how notebooks work in practice. We'll walk through an example of analyzing an app's onboarding flow, showing how notebooks help maintain context long-term.
+Now that we've covered the basics, let's see how notebooks work in practice. We'll walk through an example of analyzing an app's Onboarding flow, showing how notebooks help maintain context long-term.
 
 ### Setting Up the Analysis
 
