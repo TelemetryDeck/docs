@@ -200,6 +200,33 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
   </div>
 </div>
 
+## Notebooks (Analysis Documentation)
+
+The Notebooks tab lets you combine live charts and markdown text in a single place, so you can document your questions, structure your investigations, and share insights with your team. Perfect for keeping context during long-running analyses, preparing presentations, or leaving notes for your future self.
+
+For example, here's an excerpt of a notebook:
+![Sample Notebook investigating Onboarding issues with Explanations](/docs/images/dashboard-notebooks.png)
+
+You can use Notebooks to:
+- Document your hypotheses and findings alongside live data
+- Track what data you're waiting for and plan next steps
+- Share structured analyses with your team or stakeholders
+
+<div class="not-prose">
+  <div class="my-6 grid grid-cols-1 gap-6">
+    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-base text-mars-500">
+          <a href="/docs/articles/notebooks">
+            <span class="absolute -inset-px rounded-xl"></span>A Practical Guide to Notebooks</a>
+        </h2>
+        <p class="mt-1 text-sm text-slate-700">Learn how to effectively use Notebooks to combine live charts and markdown text for better analytics insights and documentation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Common Dashboard tasks
 
 ### Filtering data
