@@ -11,11 +11,11 @@ searchEngineTitle: How to Use TelemetryDeck Notebooks - A Practical Guide
 searchEngineDescription: Learn how to effectively use TelemetryDeck Notebooks to combine live charts and markdown text for better analytics insights and documentation.
 ---
 
-## Getting Started with Notebooks
+## Getting started with Notebooks
 
 Notebooks are your analytics lab notebook – a place where you can document your findings, share insights with your team, and maintain context throughout your investigations. Let's explore how to use them effectively.
 
-### Creating Your First Notebook
+### Creating your first notebook
 
 1. Open the Notebooks tab in your TelemetryDeck dashboard
 2. Click "Create New"
@@ -28,7 +28,7 @@ Starting with a clear question or hypothesis helps focus your analysis and makes
 
 ![A screenshot of the Notebooks overview tab, showing a list of notebooks](/docs/images/Notebooks-Overview.png)
 
-### Adding Charts to Your Notebook
+### Adding charts to your notebook
 
 The easiest way to add charts is using the "Copy TQL" button:
 
@@ -58,7 +58,7 @@ You can customize how your data is displayed using the `displayMode` value in yo
 
 ![A screenshot showing the markdown editor with TQL code, and the live chart preview in a notebook](/docs/images/Notebooks-TQL-Live-Preview.png)
 
-### Using Markdown Effectively
+### Using Markdown effectively
 
 Notebooks support all standard markdown features:
 
@@ -73,15 +73,15 @@ Notebooks support all standard markdown features:
 For images, upload them to a service like Imgur or imgbb and use standard markdown image syntax. This is great for adding screenshots, diagrams, or any visual aids to your analysis.
 {% endnoteinfo %}
 
-## Putting It All Together: A Real-World Example
+## Putting it all together: a real-world example
 
 Now that we've covered the basics, let's see how notebooks work in practice. We'll walk through an example of analyzing an app's Onboarding flow, showing how notebooks help maintain context long-term.
 
-### Setting Up the Analysis
+### Setting up the analysis
 
 1. **Define the Question**
    ```markdown
-   # Onboarding Flow Analysis
+   # Onboarding flow analysis
    Question: How well does our app convert installations into paying customers?
    Hypothesis: The welcome window might be causing issues due to its similarity to Xcode's welcome screen.
    ```
@@ -92,7 +92,7 @@ Now that we've covered the basics, let's see how notebooks work in practice. We'
    - Add it to your notebook with context:
 
    ```markdown
-   ## User Journey Analysis
+   ## User journey analysis
    Let's track the complete user journey from installation to first successful value delivery:
    
    <paste TQL here>
@@ -100,7 +100,7 @@ Now that we've covered the basics, let's see how notebooks work in practice. We'
 
 3. **Document Findings**
    ```markdown
-   ## Initial Results
+   ## Initial results
    - 80% of users proceed past welcome screen
    - 55% complete setup step ⚠️
    - 80% convert after setup
@@ -110,7 +110,7 @@ Now that we've covered the basics, let's see how notebooks work in practice. We'
 
 4. **Plan Next Steps**
    ```markdown
-   ## Next Investigation
+   ## Next investigation
    To understand why users drop off during setup, we need to track:
    - [ ] `Onboarding.SetupStep.started` - When users begin the setup process
    - [ ] `Onboarding.SetupStep.completed` - When users finish setup
@@ -122,7 +122,7 @@ Now that we've covered the basics, let's see how notebooks work in practice. We'
 You can already create insights using these parameters and copy their TQL into your notebook. When the tracking is implemented and data starts flowing, your charts will automatically update, letting you dive deeper immediately.
 {% endnoteinfo %}
 
-### Maintaining Context Over Time
+### Maintaining context over time
 
 The real power of notebooks becomes apparent during long-running investigations. As you wait for new data, your notebook serves as a living document that:
 
@@ -133,7 +133,7 @@ The real power of notebooks becomes apparent during long-running investigations.
 
 This approach ensures you can pick up right where you left off when new data arrives, rather than starting from scratch.
 
-## Common Use Cases
+## Common use cases
 
 Notebooks excel in several scenarios:
 
@@ -151,7 +151,7 @@ Perhaps most importantly, notebooks help you maintain momentum during investigat
 
 Ready to level up your analytics workflow? Open the Notebooks tab and start exploring your data in a more structured, insightful way now!
 
-## Related Resources
+## Related resources
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
