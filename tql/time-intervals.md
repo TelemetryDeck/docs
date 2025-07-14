@@ -12,6 +12,11 @@ It is possible to specify multiple disjunct intervals for a query, for example t
 
 A TelemetryDeck query can either have the `relativeIntervals` property set to an array of Relative Time Interval objects or have the `intervals` property set to an array of Absolute Time Interval strings.
 
+{% noteinfo "How TelemetryDeck handles time zones" %}
+Event times are always in **UTC** (Coordinated Universal Time) time zone, also often reffered to as GMT (Greenwich Mean Time).
+The TelemetryDeck dashboard will show timezones of your users in their browser settings‘ time zone. For example: an event that happened at 2 PM UTC will show as 4 PM in Germany (summer time) and 10 AM New York.
+{% endnoteinfo %}
+
 ## Relative Time Intervals
 
 In the following example, we're going to use relative time intervals. Here's an example relative interval for the last 30 days.
