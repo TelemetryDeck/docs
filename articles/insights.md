@@ -105,7 +105,7 @@ There is no going back from here. If you later decide that there is no custom qu
 No matter the data you want to get insight into, there is always a chart type that fits best. Deciding which of these different chart types works well with the kind of data you want to process can be tricky. We will explain how the different display types work, making it easy for you to decide which fits your needs!
 
 {% noteinfo "How TelemetryDeck handles time zones" %}
-Event times are always in **UTC** (Coordinated Universal Time) time zone, also often reffered to as GMT (Greenwich Mean Time).
+Event times are always in **UTC** (Coordinated Universal Time) time zone, also often referred to as GMT (Greenwich Mean Time).
 The TelemetryDeck dashboard will show time zones of your users in **their browser settings‘ time zone**. For example: an event that happened at 2 PM UTC will show as 4 PM in Germany (summer time) and 10 AM New York.
 {% endnoteinfo %}
 
