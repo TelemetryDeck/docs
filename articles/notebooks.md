@@ -73,6 +73,44 @@ Notebooks support all standard markdown features:
 For images, upload them to a service like Imgur or imgbb and use standard markdown image syntax. This is great for adding screenshots, diagrams, or any visual aids to your analysis.
 {% endnoteinfo %}
 
+## Sharing your findings: Public Snapshots
+
+Notebooks can be published as public snapshots – shareable reference documents that preserve your findings exactly as they were when you published them.
+
+### How it works
+
+When you publish a notebook, TelemetryDeck creates a **snapshot** that freezes your data at that moment:
+
+1. Click "Publish Snapshot" to make your notebook publicly accessible
+2. All TQL queries are processed and results saved into the snapshot
+3. Data is frozen – charts show exactly what you saw at publish time
+4. You get a unique, private URL that only people with the link can access
+
+{% noteinfo "Private by design" %}
+Published snapshots use UUIDs in their URLs and aren't indexed by search engines. Only people you share the link with can access your notebook.
+{% endnoteinfo %}
+
+### Publishing workflow
+
+- **First publish**: Click "Publish Snapshot" to create your public version
+- **Updates**: Button changes to "Update Snapshot" – creates fresh data and replaces the old snapshot
+- **Managing**: Use the link icon to visit your public page, "Copy Public Link" to share, or "Unpublish" to remove access
+- **Mulitple versions**: Simply "Duplicate" your notebook if to keep the old published analysis and publish the new one when it's ready
+
+### Why snapshots matter
+
+Freezing data ensures your written insights stay meaningful over time. When you reference specific numbers in your analysis, they'll always match the charts – perfect for:
+
+- **Team documentation** that won't become outdated
+- **Task requirements** and project briefs with reliable data context
+- **Client reports** with consistent, reliable data  
+- **Reference materials** for future investigations
+- **Articles or presentations** where data accuracy matters
+
+{% noteinfo "Live vs. Snapshot Data" %}
+Your private notebook editor always shows live, real-time data for ongoing analysis. The public snapshot preserves a point-in-time view for sharing. This gives you both current data for investigation and stable data for communication.
+{% endnoteinfo %}
+
 ## Putting it all together: a real-world example
 
 Now that we've covered the basics, let's see how notebooks work in practice. We'll walk through an example of analyzing an app's Onboarding flow, showing how notebooks help maintain context long-term.
@@ -149,7 +187,7 @@ Compare user behavior across versions or track feature adoption over time. Noteb
 **Long-Running Investigations**:
 Perhaps most importantly, notebooks help you maintain momentum during investigations that span weeks or months. Document what you're waiting for, prepare your analysis structure, and dive back in as soon as new data arrives.
 
-Ready to level up your analytics workflow? Open the Notebooks tab and start exploring your data in a more structured, insightful way now!
+Ready to level up your analytics workflow? Open the Notebooks tab and start exploring your data in a more structured, insightful way – and share your discoveries with confidence!
 
 ## Related resources
 
