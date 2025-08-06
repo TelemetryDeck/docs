@@ -34,4 +34,4 @@ You can use analytics filters to refine your data and obtain precise insights. W
 
 Filters are part of the **TelemetryDeck Query Language** (TQL), which means you don’t have to write them by hand. Instead you can just use them as described above! In case you want to customize your queries even more than the filter feature allows you to do, check out our TQL documentation! There you can further learn how to get the most out of your insights.
 
-<a href=“/docs/tql/query/“ class="btn btn-secondary btn-large">Next Up: Spice up your queries with TQL →</a>
+<a href="/docs/tql/query/" class="btn btn-secondary btn-large">Next Up: Spice up your queries with TQL →</a>
