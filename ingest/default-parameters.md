@@ -157,7 +157,6 @@ Navigation analytics signals have these parameters, which can be included in any
 
 ## Acquisition Analytics
 
-
 - `TelemetryDeck.Calendar.dayOfMonth`: The day-of-month (1..31) component of the date.
 - `TelemetryDeck.Calendar.dayOfWeek`: The ISO 8601 number of the given day of the week. Monday is 1, Sunday is 7.
 - `TelemetryDeck.Calendar.dayOfYear`: The 1-based day-of-year component of the date.
@@ -192,7 +191,7 @@ Parameters related to RevenueCat.
 
 ## Deprecated Parameters
 
-These parameters are deprecated because they are not yet namespaced, and will be removed in a future release. All of them have replacements in some name spaces. See the [grand rename](/articles/grand-rename/) article for a mapping of the old names to the new ones.
+These parameters are deprecated because they are not yet namespaced, and will be removed in a future release. All of them have replacements in some name spaces. See the [grand rename](/docs/articles/grand-rename/) article for a mapping of the old names to the new ones.
 
 - `platform` (String): The platform of the device.
 - `systemVersion` (String): The version of the operating system.

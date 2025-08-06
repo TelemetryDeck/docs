@@ -108,7 +108,7 @@ Send a basic event by calling `td.signal()` with a signal type:
 td.signal("<SIGNAL_TYPE>");
 ```
 
-Send a signal with a custom payload by passing an object as the second argument. The payload's values will be [converted to Strings](./src/tests/store.test.js.js#L278-L310), except for `floatValue`, which can be a Float.
+Send a signal with a custom payload by passing an object as the second argument. The payload's values will be converted to Strings, except for `floatValue`, which can be a Float.
 
 ```javascript
 td.signal("Volume.Set", {
