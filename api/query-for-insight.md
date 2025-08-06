@@ -11,11 +11,11 @@ Officially, we only allow API access for users in our Tier 2 Pricing tier and ab
 
 ## Authorization
 
-You need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](api-token.html) explains how to get a Bearer Token.
+You need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](/docs/api/api-token/) explains how to get a Bearer Token.
 
 ## TelemetryDeck Query Language
 
-TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. To get the data for an insight, we have to get its query first. You can then [execute the query](api-run-query.html) and get the results.
+TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. To get the data for an insight, we have to get its query first. You can then [execute the query](/docs/api/api-run-query/) and get the results.
 
 ## Time intervals and relative time intervals
 
