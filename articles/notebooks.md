@@ -18,7 +18,7 @@ Notebooks are your analytics lab notebook – a place where you can document you
 {% noteinfo "See Notebooks in action" %}
 [![Notebooks Feature Demo - Learn how to combine live charts with markdown text for better analytics insights](/docs/images/notebooks-video-thumbnail.png)](https://www.youtube.com/watch?v=WAa2BRIaVGE)
 
-*Watch the [Notebooks walkthrough](https://www.youtube.com/watch?v=WAa2BRIaVGE) on our YouTube channel*
+*Watch the [Notebooks Walkthrough](https://www.youtube.com/watch?v=WAa2BRIaVGE) on our YouTube channel*
 {% endnoteinfo %}
 
 ### Creating your first notebook

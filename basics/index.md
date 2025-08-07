@@ -262,7 +262,7 @@ Many visualizations have interactive elements:
 ![Exploring Details](/docs/images/dashboard-exploring-details.png)
 
 - Hover over chart elements to see detailed values and source info
-- Use the "..." menu in the top right of cards for additional options
+- Use the "…" menu in the top right of cards for additional options
 
 
 ## Collaboration
