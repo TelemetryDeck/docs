@@ -212,6 +212,8 @@ You can use Notebooks to:
 - Track what data you're waiting for and plan next steps
 - Share structured analyses with your team or stakeholders
 
+See Notebooks in action in our [feature demo video](https://www.youtube.com/watch?v=WAa2BRIaVGE) on our YouTube channel!
+
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6">
     <div class="group relative rounded-xl border bg-white border-slate-200 flex">
@@ -260,7 +262,7 @@ Many visualizations have interactive elements:
 ![Exploring Details](/docs/images/dashboard-exploring-details.png)
 
 - Hover over chart elements to see detailed values and source info
-- Use the "..." menu in the top right of cards for additional options
+- Use the "…" menu in the top right of cards for additional options
 
 
 ## Collaboration
