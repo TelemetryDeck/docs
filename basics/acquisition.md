@@ -19,6 +19,10 @@ User acquisition represents the entry point of your app's growth funnel – how 
 
 With TelemetryDeck's Acquisition dashboard, these insights are automatically collected and visualized with no additional code required beyond updating to the latest SDK version.
 
+{% noteinfo "How TelemetryDeck Detects New Users" %}
+New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` signal that is automatically sent on first app launch.
+{% endnoteinfo %}
+
 ## User growth trends
 
 **Questions you can answer:**

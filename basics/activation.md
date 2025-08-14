@@ -19,6 +19,10 @@ User activation represents the critical moment when users first experience your 
 
 With TelemetryDeck's Activation dashboard, these insights are automatically collected and visualized with no additional code required beyond updating to SwiftSDK 2.8.0 / KotlinSDK 6.0.0 or later.
 
+{% noteinfo "How TelemetryDeck Detects Activated Users" %}
+Activated users are those with at least 5 minutes total usage time while having either less than 15 minutes total usage (to exclude long-term users) or fewer than 5 sessions.
+{% endnoteinfo %}
+
 ## Activated user growth trends
 
 **Questions you can answer:**

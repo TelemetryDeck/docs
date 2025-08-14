@@ -19,6 +19,10 @@ User retention measures how effectively your app keeps users coming back after t
 
 With TelemetryDeck's Retention dashboard, these insights focus on users who can be considered "returning users" (those with more than 5 sessions) and are automatically collected with no additional code required beyond updating to SwiftSDK 2.8.0 / KotlinSDK 6.0.0 or later.
 
+{% noteinfo "How TelemetryDeck Detects Returning Users" %}
+Returning users are those who have used your app for more than 5 sessions.
+{% endnoteinfo %}
+
 ## Returning user growth trends
 
 **Questions you can answer:**
