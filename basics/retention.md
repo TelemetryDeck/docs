@@ -57,7 +57,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - **Day patterns (past 4 weeks)**: Identify specific days with exceptional returning user activity
 - **Weekend vs. weekday balance**: Indicates whether your app fits into work routines or leisure time
 
-**How to read your data:** In this example, the Hour of Day chart shows returning users are most active during midday hours (12-3pm) with peak activity around 2pm, suggesting users engage with the app during lunch breaks and afternoon periods. The Day of Week chart reveals Wednesday shows the strongest retention (~55 users), followed by Tuesday (~53) and Monday (~50), while Thursday shows the lowest (~40). Friday through Sunday maintain consistent moderate levels (~45 each). When you see patterns like this in your data, it would indicate your app fits well into midweek routines. You could then schedule feature updates and important communications for Wednesday when user engagement peaks.
+**How to read your data:** In this example, the Hour of Day chart shows returning users are most active during midday hours (12-3 p.m.) with peak activity around 2 p.m., suggesting users engage with the app during lunch breaks and afternoon periods. The Day of Week chart reveals Wednesday shows the strongest retention (~55 users), followed by Tuesday (~53) and Monday (~50), while Thursday shows the lowest (~40). Friday through Sunday maintain consistent moderate levels (~45 each). When you see patterns like this in your data, it would indicate your app fits well into midweek routines. You could then schedule feature updates and important communications for Wednesday when user engagement peaks.
 
 ## Retention by device & platform
 

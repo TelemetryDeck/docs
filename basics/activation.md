@@ -15,7 +15,7 @@ order: 21
 
 ## What is User Activation?
 
-User activation represents the critical moment when users first experience your app's core value – the "aha moment" that transforms them from curious installers into engaged users. These metrics help you understand how well your onboarding works, identify friction points, and optimize the first-time experience.
+User activation represents the critical moment when users first experience your app's core value – the "aha moment" that transforms them from curious installers into engaged users. These metrics help you understand how well your Onboarding works, identify friction points, and optimize the first-time experience.
 
 With TelemetryDeck's Activation dashboard, these insights are automatically collected and visualized with no additional code required beyond updating to SwiftSDK 2.8.0 / KotlinSDK 6.0.0 or later.
 
@@ -28,18 +28,18 @@ Activated users are those with at least 5 minutes total usage time while having 
 **Questions you can answer:**
 - How many users are experiencing my app's core value?
 - Are my activation rates improving over time?
-- How effective is my onboarding experience?
+- How effective is my Onboarding experience?
 - What are the immediate activation patterns in the last 24 hours?
 
 ![Hourly, Daily, Weekly, and Monthly Activated Users](/docs/images/activation-activated-users.png)
 
 **How to interpret the charts:**
 - **Hourly (last 24h)**: Shows recent activation activity and immediate trends – useful for spotting issues or validating recent changes
-- **Daily patterns**: Consistent upward trend indicates your onboarding is working well; sudden spikes may correlate with improvements or campaigns
+- **Daily patterns**: Consistent upward trend indicates your Onboarding is working well; sudden spikes may correlate with improvements or campaigns
 - **Weekly/Monthly trends**: Reveal longer-term activation health and seasonal patterns
-- **Declining trends**: May indicate onboarding friction, confusing first experiences, or performance issues
+- **Declining trends**: May indicate Onboarding friction, confusing first experiences, or performance issues
 
-**How to read your data:** In this example dashboard, the monthly chart shows activation building from earlier months to peak around March-April (~50+ users), demonstrating successful activation strategies reaching strong performance levels. The weekly data shows more stable patterns (12-15 user range) compared to daily fluctuations (1-8 users with occasional spikes), which suggests normal variation rather than systemic issues. Use the hourly chart to immediately validate onboarding changes – if activation drops after deploying improvements, investigate quickly.
+**How to read your data:** In this example dashboard, the monthly chart shows activation building from earlier months to peak around March-April (~50+ users), demonstrating successful activation strategies reaching strong performance levels. The weekly data shows more stable patterns (12-15 user range) compared to daily fluctuations (1-8 users with occasional spikes), which suggests normal variation rather than systemic issues. Use the hourly chart to immediately validate Onboarding changes – if activation drops after deploying improvements, investigate quickly.
 
 ## Activation time patterns
 
@@ -57,13 +57,13 @@ Activated users are those with at least 5 minutes total usage time while having 
 - **Weekend vs. weekday balance**: Indicates whether activation requires focused time or fits into busy schedules
 - **Recent trends**: Help identify if timing patterns are changing over time
 
-**How to read your data:** In this example, the Hour of Day chart shows peak activations around 12-1pm and 5-6pm, which would suggest users activate during lunch breaks and after work hours when they have focused time to explore the app. The Day of Week chart shows Friday with the strongest activation performance (34 users) and Sunday with the lowest (21 users), indicating a weekday preference for activation. If you see similar patterns in your data, it would suggest users are more likely to experience your app's core value during structured time periods. You could then time your onboarding prompts and feature introductions for weekday lunch periods and early evenings when users are most engaged.
+**How to read your data:** In this example, the Hour of Day chart shows peak activations around 12-1 p.m. and 5-6 p.m., which would suggest users activate during lunch breaks and after work hours when they have focused time to explore the app. The Day of Week chart shows Friday with the strongest activation performance (34 users) and Sunday with the lowest (21 users), indicating a weekday preference for activation. If you see similar patterns in your data, it would suggest users are more likely to experience your app's core value during structured time periods. You could then time your Onboarding prompts and feature introductions for weekday lunch periods and early evenings when users are most engaged.
 
 ## Activation by device & platform
 
 **Questions you can answer:**
 - Which devices provide the best activation experience?
-- Should I optimize my onboarding for specific hardware or screen sizes?
+- Should I optimize my Onboarding for specific hardware or screen sizes?
 - Are there platform-specific activation barriers?
 
 ![Activated Users by Device Type](/docs/images/activation-device-distribution.png)
@@ -73,7 +73,7 @@ Activated users are those with at least 5 minutes total usage time while having 
 - **Low activation devices**: May have UI issues, performance problems, or usability challenges
 - **Platform differences**: iOS vs. Android vs. other platforms may have different activation patterns
 
-**How to read your data:** In this example, iOS users represent 60% of activated users while macOS represents 40%. Among individual devices, iPhone 15 Pro Max leads at 8.57%, with several models each representing around 5.71% of activations. When you see relatively even distribution across device types like this, it suggests the onboarding experience works consistently well across platforms. A strong secondary platform presence (like the 40% macOS here) would indicate successful cross-platform activation. If you see similar patterns, focus your testing efforts on the leading device models while maintaining cross-platform activation quality.
+**How to read your data:** In this example, iOS users represent 60% of activated users while macOS represents 40%. Among individual devices, iPhone 15 Pro Max leads at 8.57%, with several models each representing around 5.71% of activations. When you see relatively even distribution across device types like this, it suggests the Onboarding experience works consistently well across platforms. A strong secondary platform presence (like the 40% macOS here) would indicate successful cross-platform activation. If you see similar patterns, focus your testing efforts on the leading device models while maintaining cross-platform activation quality.
 
 ## Activation by geography & language
 
@@ -89,14 +89,14 @@ Activated users are those with at least 5 minutes total usage time while having 
 - **Emerging markets**: Regions with growing activation that may warrant localization investment
 - **Language correlation**: Languages that correlate with successful activation experiences
 
-**How to read your data:** In this example dashboard, Germany (37.14%) shows as the strongest activation market, followed by Italy (14.29%) and the United States (8.57%). The language distribution shows German (48.57%) and English (28.57%) users with the strongest activation patterns, plus Italian (17.14%) showing significant engagement. When you see patterns like this in your own data, it would suggest your onboarding experience works particularly well for certain language groups. You could then prioritize localization efforts for your top-performing regions to maximize activation in those markets.
+**How to read your data:** In this example dashboard, Germany (37.14%) shows as the strongest activation market, followed by Italy (14.29%) and the United States (8.57%). The language distribution shows German (48.57%) and English (28.57%) users with the strongest activation patterns, plus Italian (17.14%) showing significant engagement. When you see patterns like this in your own data, it would suggest your Onboarding experience works particularly well for certain language groups. You could then prioritize localization efforts for your top-performing regions to maximize activation in those markets.
 
 
 ## Making data-driven activation decisions
 
 As you analyze your activation metrics, consider these key questions:
 
-1. **Onboarding optimization**
+1. **Onboarding Optimization**
    - What time investment does successful activation require, and how can you set proper expectations?
    - Which devices or platforms struggle with activation, and what specific improvements are needed?
    - When do users have the focus and motivation needed for successful activation experiences?
