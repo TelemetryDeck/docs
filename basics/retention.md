@@ -39,7 +39,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - **Weekly/Monthly trends**: Reveal long-term retention health and seasonal engagement patterns
 - **Declining trends**: May indicate user experience issues, feature problems, or competitive pressures
 
-**Action example:** If you see returning users drop significantly after an app update, this suggests the changes may have disrupted established user workflows. The hourly chart helps you detect these issues within hours rather than waiting for weekly reports. Conversely, steady growth in weekly returning users indicates your retention strategies are successfully building user loyalty.
+**How to read your data:** In this example dashboard, the monthly chart shows excellent retention growth from March (~8 users) building steadily through the months to reach a strong July peak (~57 users), indicating highly successful retention strategies building momentum over time. The weekly view shows more gradual growth from ~8 to ~35 users over the past 3 months, while daily retention fluctuates between 3-15 users with occasional spikes. Use the daily fluctuations to validate immediate retention initiatives rather than waiting for weekly trends to develop.
 
 ## Retention time patterns
 
@@ -57,7 +57,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - **Day patterns (past 4 weeks)**: Identify specific days with exceptional returning user activity
 - **Weekend vs. weekday balance**: Indicates whether your app fits into work routines or leisure time
 
-**Action example:** The Hour of Day chart shows returning users are most active during morning commute hours (7-9am) and evening wind-down time (6-8pm), suggesting your app fits into daily routines. The Day of Week chart reveals Tuesday and Wednesday show the strongest retention, while weekends drop off. The Weekend vs Weekday chart shows 75% of returning user activity happens on weekdays, indicating your app serves professional or productivity needs. Schedule feature updates and important communications for Tuesday-Wednesday when user engagement is strongest.
+**How to read your data:** In this example, the Hour of Day chart shows returning users are most active during midday hours (12-3pm) with peak activity around 2pm, suggesting users engage with the app during lunch breaks and afternoon periods. The Day of Week chart reveals Wednesday shows the strongest retention (~55 users), followed by Tuesday (~53) and Monday (~50), while Thursday shows the lowest (~40). Friday through Sunday maintain consistent moderate levels (~45 each). When you see patterns like this in your data, it would indicate your app fits well into midweek routines. You could then schedule feature updates and important communications for Wednesday when user engagement peaks.
 
 ## Retention by device & platform
 
@@ -73,7 +73,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - **Poor retention devices**: May have performance issues, UI problems, or technical barriers
 - **Platform differences**: iOS vs. macOS vs. other platforms may show different retention strengths
 
-**Action example:** The chart shows iPhone users have strong retention across multiple models, with iPhone 14 and 15 users showing particularly high returning rates (each around 15%). However, certain older devices like iPhone 11 show lower retention (8%), suggesting performance optimization could help. With macOS representing 25% of returning users, ensure your cross-platform experience maintains consistent quality that encourages regular use across both mobile and desktop environments.
+**How to read your data:** In this example, iOS represents 60% of returning users while macOS accounts for 40%. Among individual devices, several models each contribute about 10% of returning users (iPhone 12 mini, iPad 9th generation, various MacBook Air and MacBook Pro models). When you see relatively even distribution across device types like this, it suggests your app provides consistent long-term value across different platforms and device generations. The strong macOS presence (40%) would indicate successful cross-platform retention. If you see similar patterns, focus on maintaining this consistency rather than optimizing for specific hardware configurations.
 
 ## Retention by geography & language
 
@@ -89,24 +89,8 @@ Returning users are those who have used your app for more than 5 sessions.
 - **Growing markets**: Regions showing improving retention that warrant additional investment
 - **Language loyalty patterns**: Languages that correlate with strong long-term engagement
 
-**Action example:** Looking at the Returning Users by Country chart, you can see that Germany (35%) and the United States (30%) show the strongest retention rates, followed by the United Kingdom (15%). This is different from your acquisition patterns, suggesting German users find particularly strong long-term value in your app. The language distribution shows German (40%) users have exceptional retention rates compared to English (35%), indicating your German localization is especially effective. Consider studying what works well for German users and applying those insights to improve retention in other markets.
+**How to read your data:** In this example dashboard, Germany dominates at 50% of returning users, with several other countries each representing about 10% (Italy, India, Spain, Canada, Afghanistan). The language distribution shows English (40%) and German (30%) as the primary languages, with Turkish (10%) as a notable third language. When you see such strong geographic concentration in your own data (like Germany's 50% here), it suggests that users in this region find exceptional long-term value in your app. You could then study what works particularly well for your top-retention market and apply those insights to improve retention in other regions.
 
-## Retention matrix
-
-**Questions you can answer:**
-- How does user retention change over time after their first session?
-- What percentage of users return after 1 day, 1 week, 1 month?
-- When do most users drop off, and when do they become truly loyal?
-
-![Retention Matrix](/docs/images/retention-matrix.png)
-
-**How to interpret the matrix:**
-- **Day 1 retention**: Critical early indicator of initial user experience quality
-- **Week 1 retention**: Shows whether users find ongoing value after initial exploration
-- **Month 1+ retention**: Identifies truly loyal users who have integrated your app into their routine
-- **Drop-off patterns**: Reveals critical periods where users decide to stop using your app
-
-**Action example:** The retention matrix shows 60% of users return after Day 1, 35% after Week 1, and 20% maintain active usage after Month 1. The steepest drop-off occurs between Day 3-7, suggesting this is your critical retention window. Focus retention efforts on the first week experience – perhaps with progressive onboarding, helpful tips, or features that become more valuable with repeated use. Users who survive the first month become very loyal (85% still active after 6 months).
 
 ## Making data-driven retention decisions
 
@@ -118,8 +102,8 @@ As you analyze your retention metrics, consider these key questions:
    - Are there device or platform experiences that need improvement to match your best-performing retention rates?
 
 2. **User lifecycle management**
-   - What does your retention matrix reveal about critical drop-off periods that need attention?
-   - How can you extend the honeymoon period where users are most likely to become loyal?
+   - What do your retention time patterns reveal about critical engagement periods?
+   - How can you strengthen the user experience during your peak retention hours and days?
    - What features or experiences correlate with users transitioning from new to returning status?
 
 3. **Market opportunities**
@@ -128,38 +112,3 @@ As you analyze your retention metrics, consider these key questions:
    - How can you replicate your highest-retention markets' success in other regions?
 
 Remember that retention is where sustainable app growth happens. Users who return regularly generate the most value, provide the best feedback, and become your strongest advocates for organic growth.
-
-## What's Next?
-
-Start by analyzing your retention matrix to understand your critical drop-off periods, then examine your time patterns to identify when returning users are most engaged. Focus on strengthening the experiences during both your vulnerable periods (early days) and your peak engagement windows.
-
-## Related resources
-
-<div class="not-prose">
-  <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
-      <div class="p-6">
-        <h3 class="text-lg font-semibold text-slate-900 group-hover:text-blue-600">
-          <a href="/docs/basics/activation" class="stretched-link">
-            Activation Analytics
-          </a>
-        </h3>
-        <p class="mt-2 text-sm text-slate-600">
-          Understanding user activation patterns helps predict which users are most likely to become loyal, returning users.
-        </p>
-      </div>
-    </div>
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
-      <div class="p-6">
-        <h3 class="text-lg font-semibold text-slate-900 group-hover:text-blue-600">
-          <a href="/docs/basics/pirate-metrics" class="stretched-link">
-            Understanding Pirate Metrics
-          </a>
-        </h3>
-        <p class="mt-2 text-sm text-slate-600">
-          Learn how retention fits into the complete AARRR framework for sustainable app growth.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
