@@ -38,13 +38,13 @@ Each tab focuses on a different stage of the user journey:
 
 **Acquisition** tracks how users find and install your app, with metrics for new user counts, device distribution, geographic insights, and typical discovery patterns.
 
-**Activation** (Coming Soon) monitors initial engagement with metrics like active user counts, session length distribution, and usage patterns by time of day and day of week.
+**Activation** monitors when users experience your app's core value for the first time, with metrics for activated user counts, session patterns, and first-time user experience optimization.
 
-**Retention** (Coming Soon) measures how effectively your app keeps users coming back, tracking distinct days used, engaged user metrics, and power user identification.
+**Retention** (🚧 In Progress) measures how effectively your app keeps users coming back, with metrics for distinct days used, session frequency, engaged user identification, and long-term usage patterns.
 
-**Referral** (Coming Soon) helps understand how users share your app with others.
+**Referral** (⏳ Coming Soon) helps understand how users share your app with others.
 
-**Revenue** (Coming Soon) tracks your app's financial performance metrics.
+**Revenue** (⏳ Coming Soon) tracks your app's financial performance metrics.
 
 <div class="not-prose">
   <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -62,8 +62,28 @@ Each tab focuses on a different stage of the user journey:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
+          <a href="/docs/basics/activation">
+            <span class="absolute -inset-px rounded-xl"></span>Activation Analytics</a>
+        </h2>
+        <p class="mt-1 text-sm text-slate-700">Learn how to interpret and act on activation metrics to optimize your app's first-time user experience.</p>
+      </div>
+    </div>
+    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-base text-mars-500">
+          <a href="/docs/basics/retention">
+            <span class="absolute -inset-px rounded-xl"></span>Retention Analytics</a>
+        </h2>
+        <p class="mt-1 text-sm text-slate-700">Learn how to interpret and act on retention metrics to keep users engaged long-term.</p>
+      </div>
+    </div>
+    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
+      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
+      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
+        <h2 class="font-semibold text-base text-mars-500">
           <a href="/docs/basics/pirate-metrics">
-            <span class="absolute -inset-px rounded-xl"></span>Understanding Pirate Metrics Framework</a>
+            <span class="absolute -inset-px rounded-xl"></span>Understanding Pirate Metrics</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn about the AARRR framework that organizes analytics by acquisition, activation, retention, referral, and revenue.</p>
       </div>
