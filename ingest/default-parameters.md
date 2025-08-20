@@ -155,7 +155,7 @@ Navigation analytics signals have these parameters, which can be included in any
 - `TelemetryDeck.Navigation.destinationPath` (String): The destination path of the navigation, e.g. `/host/info/about` or `app.settings.privacy`.
 - `TelemetryDeck.Navigation.identifier` (String): String that uniquely identifies the navigation in the format `sourcePath -> destinationPath`.
 
-## Acquisition Analytics
+## Pirate Metrics Analytics
 
 - `TelemetryDeck.Calendar.dayOfMonth`: The day-of-month (1..31) component of the date.
 - `TelemetryDeck.Calendar.dayOfWeek`: The ISO 8601 number of the given day of the week. Monday is 1, Sunday is 7.
