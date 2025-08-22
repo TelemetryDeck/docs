@@ -24,11 +24,19 @@ This example analyzes monthly retention over a 3-month period:
   "queryType": "retention",
   "dataSource": "telemetry-signals",
   "granularity": "month",
-  "intervals": [
+  relativeIntervals: [
     {
-      "beginningDate": "2024-01-01T00:00:00.000Z",
-      "endDate": "2024-03-31T23:59:59.999Z"
-    }
+      beginningDate: {
+        component: 'month',
+        offset: -3,
+        position: 'beginning',
+      },
+      endDate: {
+        component: 'month',
+        offset: 0,
+        position: 'end',
+      },
+    },
   ]
 }
 ```
@@ -40,11 +48,19 @@ For daily retention analysis over a week:
   "queryType": "retention",
   "dataSource": "telemetry-signals",
   "granularity": "day",
-  "intervals": [
+  relativeIntervals: [
     {
-      "beginningDate": "2024-01-01T00:00:00.000Z",
-      "endDate": "2024-01-07T23:59:59.999Z"
-    }
+      beginningDate: {
+        component: 'day',
+        offset: -7,
+        position: 'beginning',
+      },
+      endDate: {
+        component: 'day',
+        offset: 0,
+        position: 'end',
+      },
+    },
   ]
 }
 ```
