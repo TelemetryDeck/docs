@@ -61,9 +61,9 @@ This example groupBy query groups signals by the `majorSystemVersion` dimension 
 
 The following properties are common to all query types. See pages for each query type for additional properties only for those query types.
 
-| Property                                                  | Description                                                                                                                                                                       |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnel/), [scan](/docs/tql/scan/). |
+| Property                                                  | Description                                                                                                                                                                                               |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [queryType](/docs/tql/queryType/)                         | The type of query, for example [timeseries](/docs/tql/timeseries/), [topN](/docs/tql/topN/), [groupBy](/docs/tql/groupBy/), [funnel](/docs/tql/funnel/), [retention](/docs/tql/retention/), [scan](/docs/tql/scan/). |
 | [granularity](/docs/tql/granularity/)                     | The granularity of the query.                                                                                                                                                     |
 | [relativeIntervals](/docs/tql/time-intervals/) (optional) | The time intervals to query, specified as relative to time of query.                                                                                                              |
 | [intervals](/docs/tql/time-intervals/) (optional)         | The time intervals to query, specified as absolute time intervals.                                                                                                                |
@@ -105,3 +105,10 @@ The following properties are common to all query types. See pages for each query
 | ----------------------------------------- | --------------------------------------------------- |
 | [steps](/docs/tql/funnel/)                | A list of filters that form the steps of the funnel |
 | [stepNames](/docs/tql/funnel/) (optional) | An optional List of names for the funnel steps      |
+
+## Additional Properties for [Retention](/docs/tql/retention/) Queries
+
+| Property                                | Description                                                                                      |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [granularity](/docs/tql/granularity/)  | Defines the retention period granularity (day, week, month, quarter, or year). Defaults to month. |
+| **intervals** or **relativeIntervals** | The time period to analyze for retention (required).                                             |

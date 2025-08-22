@@ -1,7 +1,7 @@
 ---
 title: Query Type
-description: The type of TelemetryDeck query, for example `timeseries`, `topN`, `groupBy`, `funnel`.
-lead: The type of query, for example `timeseries`, `topN`, `groupBy`, `funnel`.
+description: The type of TelemetryDeck query, for example `timeseries`, `topN`, `groupBy`, `funnel`, `retention`.
+lead: The type of query, for example `timeseries`, `topN`, `groupBy`, `funnel`, `retention`.
 order: 10
 ---
 
@@ -18,6 +18,9 @@ The following query types are supported:
 
 [funnel](/docs/tql/funnel/)
 : Groups a set of events by a set of steps and aggregates them by a set of metrics. for example "How many users went through the funnel steps 'Login' -> 'View Product' -> 'Purchase'?"
+
+[retention](/docs/tql/retention/)
+: Analyzes user retention across multiple time periods. for example "How many users from January returned to use the app in February and March?"
 
 [experiment](/docs/tql/experiment/)
 : Evaluates an A/B testing experiment.
