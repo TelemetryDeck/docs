@@ -275,7 +275,7 @@ You can use button links to link to especially important pages or resources. Mak
 
 ### Call to Action
 
-In rare cases, we want to display a call to action to register for TelemetryDeck. This is done using the `callToAction` shortcode. It needs to `string` parameters for the first and second line of text respectively.
+In rare cases, we want to display a call to action to register for TelemetryDeck. This is done using the `callToAction` shortcode. It needs two `string` parameters for the first and second line of text respectively.
 
 ```markdown
 {% raw %}{% callToAction "Let's make your app awesome!" "Get awesome privacy-first analytics for your app" %}{% endraw %}
