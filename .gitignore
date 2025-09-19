@@ -133,3 +133,8 @@ site/
 /.styles/proselint
 /.styles/Microsoft
 /.styles/alex
+
+# Avoid sharing ContextKit or Claude Code artifacts
+.claude/
+Context.md
+Context/
