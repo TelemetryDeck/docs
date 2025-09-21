@@ -63,9 +63,9 @@ TelemetryDeck automatically tracks:
 
 All of these insights help you understand where your users come from and optimize your marketing efforts.
 
-### Activation insights (Coming Soon)
+### Activation insights
 
-Our upcoming activation dashboard will automatically track:
+Our activation dashboard automatically tracks:
 - Daily, weekly, and monthly active user counts
 - Average session length distribution
 - Average sessions per active user
@@ -74,9 +74,9 @@ Our upcoming activation dashboard will automatically track:
 
 These insights help you understand if users are successfully getting started with your app.
 
-### Retention insights (Coming Soon)
+### Retention insights
 
-Our retention dashboard will automatically track:
+Our retention dashboard automatically tracks:
 - Distinct days used distribution (how often users return)
 - Engaged users metrics (session length > 2 minutes, 5+ days used per month)
 - Power users metrics (session length > 5 minutes, 12+ days used per month)
@@ -86,7 +86,7 @@ These insights help you identify if users are finding ongoing value in your app.
 
 ### Referral insights (Coming Soon)
 
-Our referral dashboard will track:
+Our upcoming referral dashboard will track:
 - Referral tracking metrics
 - Channel effectiveness comparison
 - Social sharing activity
@@ -95,7 +95,7 @@ These insights help you understand how effectively your app generates word-of-mo
 
 ### Revenue insights (Coming Soon)
 
-Our revenue dashboard will track:
+Our upcoming revenue dashboard will track:
 - Purchase counts (trials and non-trials)
 - Free trial metrics
 - Trial conversion rates

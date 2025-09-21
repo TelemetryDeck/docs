@@ -40,7 +40,7 @@ Each tab focuses on a different stage of the user journey:
 
 **Activation** monitors when users experience your app's core value for the first time, with metrics for activated user counts, session patterns, and first-time user experience optimization.
 
-**Retention** (🚧 In Progress) measures how effectively your app keeps users coming back, with metrics for distinct days used, session frequency, engaged user identification, and long-term usage patterns.
+**Retention** measures how effectively your app keeps users coming back, with metrics for distinct days used, session frequency, engaged user identification, and long-term usage patterns.
 
 **Referral** (⏳ Coming Soon) helps understand how users share your app with others.
 
