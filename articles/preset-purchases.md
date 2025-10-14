@@ -48,7 +48,7 @@ The `purchaseCompleted` convenience function is only available on iOS 15 or high
 
 ## Using TelemetryDeck with RevenueCat
 
-If you use [RevenueCat](https://revenuecat.com) and followed their [setup guide](https://www.revenuecat.com/docs/getting-started/making-purchases), you will have a `Purchases.shared.purchase(package:)` call somewhere in your code. The closure of this function gets a RevenueCat-specific `transaction` [wrapper](https://github.com/RevenueCat/purchases-ios/blob/11f3962192271cdbbb70096ff5a693b8a0e48f49/Sources/Purchasing/StoreKitAbstractions/StoreTransaction.swift) as its first parameter. You can get the native `StoreKit.Transaction` type by calling `transaction.sk2Transaction` and then pass it to `TelemetryDeck.purchaseCompleted()`. If you use RevenueCats built-in paywalls, they currently don't provide access to `transaction`, which we reported in [this issue](https://github.com/RevenueCat/purchases-ios/issues/4007).
+If you use [RevenueCat](https://revenuecat.com), you can use our [RevenueCat Setup Guide](/docs/integrations/revenuecat/).
 
 ## Using FreemiumKit
 
