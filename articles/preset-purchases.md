@@ -14,53 +14,79 @@ If you are offering In-App Purchases in your app, you might have noticed some de
 
 That's why you might want to set up a signal in your application to track purchases in your app through TelemetryDeck with just a couple of seconds delay, providing you with the live data you want.
 
+You can use these methods to include your purchase data in TelemetryDeck:
+
+- Use the TelemetryDeck Swift SDK directly
+- If you're already using RevenueCat, you can use the RevenueCat Integration
+- If you're using FreemiumKit, you can connect that to TelemetryDeck
+
+See the sections below for a detailed description.
+
 {% notewarning "Live Data vs. Correct Data" %}
 We do not offer any intelligence to correct once reported purchases, such as when users make refunds, or to detect subscription renewals. Therefore, our insights focus on more recent data. For longer-term or 100% correct data, refer to official sources.
 {% endnotewarning %}
 
-## Sending the Signal
+## Using the TelemetryDeck Swift SDK
 
-To report purchases to TelemetryDeck, send the event name `TelemetryDeck.Purchase.completed` with the `floatValue` parameter set to the USD amount the user purchased. For example, using the Swift SDK you can get the price from `StoreKit.Transaction` like so:
-
-```swift
-let priceValue = NSDecimalNumber(decimal: transaction.price ?? Decimal()).doubleValue
-
-TelemetryDeck.signal("TelemetryDeck.Purchase.completed", floatValue: priceValue)
-```
-
-{% notewarning "Converting Currencies" %}
-Make sure to convert any currencies to USD before sending them as signals. You can use [an API like this](https://www.exchangerate-api.com/docs/standard-requests) which offers 1,500 requests per month free of charge to get current exchange rates if needed. You could also fetch & hard-code them to your app for a rough estimate if you expect more than 1,500 purchases per month.
-{% endnotewarning %}
-
-The Swift SDK ships with a more convenient API that handles reading the price from the StoreKit transaction and converting to USD (with hard-coded non-live currency conversion) for you like so:
+If you're using the TelemetryDeck Swift SDK, tracking purchases is incredibly simple. Just call the convenience method when you receive a StoreKit transaction:
 
 ```swift
 TelemetryDeck.purchaseCompleted(transaction: transaction)
 ```
 
-{% noteinfo "Built-In Automatics" %}
-The `purchaseCompleted` convenience function in the Swift SDK also automates the extraction of the values explained in the next section. Optionally, it accepts the same arguments as the `signal` function (namely `parameters` and `customUserID`) in case you want to provide additional context info. The function is only available on iOS 15 or higher.
+That's it! This method automatically:
+
+- Extracts the price from the transaction
+- Converts the currency to USD (using hard-coded exchange rates)
+- Determines if it's a subscription or one-time purchase
+- Includes the storefront country and currency codes
+- Sends the properly formatted signal to TelemetryDeck
+
+{% noteinfo "Requirements" %}
+The `purchaseCompleted` convenience function is only available on iOS 15 or higher. It accepts the same optional arguments as the `signal` function (namely `parameters` and `customUserID`) in case you want to provide additional context info.
 {% endnoteinfo %}
 
-{% noteinfo "RevenueCat" %}
-If you use [RevenueCat](https://revenuecat.com) and followed their [setup guide](https://www.revenuecat.com/docs/getting-started/making-purchases), you will have a `Purchases.shared.purchase(package:)` call somewhere in your code. The closure of this function gets a RevenueCat-specific `transaction` [wrapper](https://github.com/RevenueCat/purchases-ios/blob/11f3962192271cdbbb70096ff5a693b8a0e48f49/Sources/Purchasing/StoreKitAbstractions/StoreTransaction.swift) as its first parameter. You can either access fields directly from that or get the native `StoreKit.Transaction` type by calling `transaction.sk2Transaction`. If you use RevenueCats built-in paywalls, they currently don't provide access to `transaction`, which we reported in [this issue](https://github.com/RevenueCat/purchases-ios/issues/4007).
-{% endnoteinfo %}
+## Using TelemetryDeck with RevenueCat
 
-{% noteinfo "FreemiumKit" %}
-If you use [FreemiumKit](https://freemiumkit.app), just add their SDKs `.onPurchaseCompleted` view modifier to your main view. It passes the `transaction` parameter to the closure, which is exactly what we need so you can just copy & paste the above code as-is. Read the related section in their [setup guide](https://freemiumkit.app/documentation/freemiumkit/setupguide#Direct-Access-to-StoreKit-Transactions) to learn more.
-{% endnoteinfo %}
+If you use [RevenueCat](https://revenuecat.com) and followed their [setup guide](https://www.revenuecat.com/docs/getting-started/making-purchases), you will have a `Purchases.shared.purchase(package:)` call somewhere in your code. The closure of this function gets a RevenueCat-specific `transaction` [wrapper](https://github.com/RevenueCat/purchases-ios/blob/11f3962192271cdbbb70096ff5a693b8a0e48f49/Sources/Purchasing/StoreKitAbstractions/StoreTransaction.swift) as its first parameter. You can get the native `StoreKit.Transaction` type by calling `transaction.sk2Transaction` and then pass it to `TelemetryDeck.purchaseCompleted()`. If you use RevenueCats built-in paywalls, they currently don't provide access to `transaction`, which we reported in [this issue](https://github.com/RevenueCat/purchases-ios/issues/4007).
 
-## Attaching the Payload
+## Using FreemiumKit
 
-Optionally (but recommended), there are two additional payload keys that will give you additional insights:
+If you use [FreemiumKit](https://freemiumkit.app), just add their SDKs `.onPurchaseCompleted` view modifier to your main view. It passes the `transaction` parameter to the closure, which you can directly pass to `TelemetryDeck.purchaseCompleted(transaction: transaction)`. Read the related section in their [setup guide](https://freemiumkit.app/documentation/freemiumkit/setupguide#Direct-Access-to-StoreKit-Transactions) to learn more.
 
-- `TelemetryDeck.Purchase.type`: Pass either `subscription` or `one-time-purchase` to see the type distribution.
-- `TelemetryDeck.Purchase.countryCode`: Pass the country code of the storefront to see the country distribution.
-- `TelemetryDeck.Purchase.currencyCode`: Pass the currency code of the storefront to see currency distribution.
+## Manual Signal Structure for Other Platforms
 
-In Swift getting all values and sending them looks like this:
+{% notewarning "Only Needed for Non-Swift Platforms" %}
+The following section describes the manual signal structure only necessary if you are NOT using the TelemetryDeck Swift SDK. Swift developers should use the `purchaseCompleted` convenience method described above.
+{% endnotewarning %}
+
+If you're reporting purchases from other platforms (Android, Web, etc.), you'll need to manually construct and send the purchase signal with the following structure:
+
+### Required Fields
+
+- **Event name**: Must be `TelemetryDeck.Purchase.completed`
+- **`floatValue`**: The purchase amount in USD
+
+{% notewarning "Manual Currency Conversion Required" %}
+When sending purchase signals manually, you MUST convert the transaction value to USD yourself before sending. You can use [an API like this](https://www.exchangerate-api.com/docs/standard-requests) which offers 1,500 requests per month free of charge to get current exchange rates. Alternatively, you could fetch & hard-code exchange rates in your app for a rough estimate if you expect more than 1,500 purchases per month.
+{% endnotewarning %}
+
+### Optional but Recommended Payload Keys
+
+To get more detailed insights, include these additional parameters:
+
+- `TelemetryDeck.Purchase.type`: Either `subscription` or `one-time-purchase`
+- `TelemetryDeck.Purchase.countryCode`: The country code of the storefront
+- `TelemetryDeck.Purchase.currencyCode`: The currency code of the storefront
+
+### Example Manual Implementation (Swift)
+
+Here's what the manual implementation looks like if you need to customize it or understand what the convenience method does internally:
 
 ```swift
+// Convert price to USD first (you need to handle currency conversion)
+let priceInUSD = convertToUSD(transaction.price, from: transaction.currencyCode)
+
 TelemetryDeck.signal(
   "TelemetryDeck.Purchase.completed",
   parameters: [
@@ -68,7 +94,7 @@ TelemetryDeck.signal(
     "TelemetryDeck.Purchase.countryCode": transaction.storefrontCountryCode,
     "TelemetryDeck.Purchase.currencyCode": transaction.currencyCode ?? "???"
   ],
-  floatValue: NSDecimalNumber(decimal: transaction.price ?? Decimal()).doubleValue
+  floatValue: priceInUSD
 )
 ```
 
