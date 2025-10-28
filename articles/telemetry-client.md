@@ -62,16 +62,6 @@ let email = MyConfiguration.User.Email
 TelemetryDeck.signal"userLoggedIn", customUserID: email)
 ```
 
-<div class="alert alert-secondary" role="alert">
-<h4 class="alert-heading">Note on User Identifiers on Mac</h4>
-<p><small>If you are writing a Mac App, TelemetryDeck can not create a unique user identifier, and will instead default to a concatenation of your OS Version and App Build number, which is not exactly unique, so user counting will be less accurate.</small></p>
-
-<p><small>We therefore strongly recommend to either use a unique identifier for your users, such as an email address, or to generate and store a `UUID().uuidString`, for example in `UserDefaults`, and always pass that to TelemetryDeck as User ID.</small></p>
-
-<p><small>The reason why TelemetryDeck can't do that itself is that it feels like crossing a line if this simple tool would generate IDs itself and write those to a directory on disk. We feel that this is not expected behaviour for a privacy-first analytics package.</small></p>
-
-</div>
-
 ## Payload Data
 
 You can also send additional parameters with each signal:
