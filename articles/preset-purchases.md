@@ -6,6 +6,7 @@ tags:
   - insights
   - presets
 lead: TelemetryDeck ships with a set of insights that can be useful to track your revenue within the last few hours with live purchase data. Here's how to set them up.
+searchEngineDescription: TelemetryDeck ships with a set of insights that can be useful to track your revenue within the last few hours with live purchase data. Learn how to set them up.
 ---
 
 ## Why Track Purchases?
