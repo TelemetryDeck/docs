@@ -5,7 +5,7 @@ lead: Sometimes you don't want to aggregate your data, but instead show a list o
 order: 2
 testedOn: TelemetryDeck API v3
 searchEngineTitle: How to show a list of events in TelemetryDeck
-searchEngineDescription: This is a quick overview on how to show a list of events in TelemetryDeck. This can be useful for showing a list of error messages, or other events that you want to look at individually.
+searchEngineDescription: Learn how to show a list of events in TelemetryDeck. This is useful for building a list of error messages, or other events that you want to look at.
 ---
 
 TelemetryDeck has a `scan` query type that allows you to show a list of events. This is useful for when you don't want to aggregate your data, but instead show a list of events ordered by time. You could compare them to an SQL SELECT statement.
