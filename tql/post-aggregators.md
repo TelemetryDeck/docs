@@ -3,6 +3,7 @@ title: Post Aggregators
 description: Post-aggregations are specifications of processing that should happen on aggregated values as they come out of the timeseries DB in the TelemetryDeck Query Language.
 lead: Post-aggregations are specifications of processing that should happen on aggregated values as they come out of the timeseries DB.
 order: 170
+searchEngineDescription: Post-aggregations are specifications of processing that happen on aggregated values as they come out of the time series DB in TelemetryDeck's Query Language.
 ---
 
 ## Field accessor post-aggregator
