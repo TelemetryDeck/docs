@@ -3,6 +3,7 @@ title: TelemetryDeck's Grand Rename
 tags: setup
 description: To avoid ambiguity and clean up things for the long term, we have decided to rename quite a few things in all the TelemetryDeck SDKs. We have laid out a migration path, here's all you need to know about it.
 lead: To avoid ambiguity and clean up things for the long term, we have decided to rename quite a few things in all the TelemetryDeck SDKs. We have laid out a migration path, here's all you need to know about it.
+searchEngineDescription: To avoid ambiguity and clean up things for the long term, we have renamed quite a few things in all the TelemetryDeck SDKs. This is all you need to know.
 ---
 
 ## Motivation
