@@ -9,7 +9,7 @@ testedOn: Xcode 13.1 & Swift 5.5 & TelemetryDeck SDK 1.1.5
 description: Here's how to use Test Mode to get started with TelemetryDeck
 lead: Test Mode helps you make sure that TelemetryDeck is set up correctly in your app and allows you to set up your insights even during development.
 searchEngineTitle: How to run test signals
-searchEngineDescription: Enable Test Mode now in your TelemetryDeck dashboard to easily send signals through debug mode.
+searchEngineDescription: With test mode, you can review your analytics setup without compromising live data. Enable Test Mode in your dashboard to send signals through debug mode.
 ---
 
 During the development of your TelemetryDeck-enabled app - or even while you test it - your app sends signals. These signals are not from your users but rather from yourself or your development team. You might even send hundreds of signals during tests, which would mess up your insights if mixed with actual analytics data. Not cool!
