@@ -7,6 +7,7 @@ tags:
 description: Learn how to include TelemetryDeck in your website using Google Tag Manager. This is a slightly different process than using the regular JavaScript snippet, so here's how to do it.
 lead: You can use Google Tag Manager to include the TelemetryDeck Analytics tracking code in your website.
 order: 250
+searchEngineDescription: Learn how to include TelemetryDeck in your website using the Google Tag Manager (compared to the regular JavaScript snippet).
 ---
 
 1. Navigate to "Add a new tag" in your Google Tag Manager account
