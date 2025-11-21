@@ -4,7 +4,7 @@ title: How to write this Documentation
 tags: documentation
 lead: The TelemetryDeck documentation lives in a public Github repository. Here's how to contribute.
 description: Here's how to contribute to the public TelemetryDeck documentation.
-searchEngineDescription: Here's how to contribute to the public documentation for TelemetryDeck
+searchEngineDescription: The TelemetryDeck documentation lives in a public GitHub repository and is maintained by the TelemetryDeck team. Feel free to contribute & share your knowledge.
 order: 999999999
 ---
 
@@ -15,7 +15,7 @@ All metadata for a documentation page is specified in the YAML header at the top
 ```yaml
 ---
 title: How to write this Documentation
-lead: The TelemetryDeck documentation lives in a public Github repository. Here's how to contribute.
+lead: The TelemetryDeck documentation lives in a public GitHub repository. Here's how to contribute.
 ---
 ```
 
