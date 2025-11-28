@@ -136,6 +136,35 @@ import App from "./App";
 registerRootComponent(App);
 ```
 
+### Enhanced Expo Environment Data (Optional)
+
+For richer analytics in Expo projects, you can use the community-maintained `telemetrydeck-expo-plugin` that automatically enriches every signal with 40+ environment parameters including device info, app version, accessibility settings, locale, timezone, and more.
+
+```shell
+npm install telemetrydeck-expo-plugin
+```
+
+Add the plugin to your TelemetryDeck instance:
+
+```tsx
+import { createTelemetryDeck } from "@typedigital/telemetrydeck-react";
+import { expoPlugin } from "telemetrydeck-expo-plugin";
+
+const td = createTelemetryDeck({
+  app: process.env.APP_ID,
+  user: "anonymous",
+  plugins: [expoPlugin], // Automatically adds device, app, and user context
+});
+```
+
+This plugin automatically adds parameters like:
+- **Device**: model, OS version, architecture, screen resolution, orientation
+- **App**: version, build number, SDK info
+- **User preferences**: locale, timezone, color scheme, accessibility settings
+- **Context**: marketplace source, debug/release build type, and more
+
+[View the complete list of parameters and documentation](https://github.com/kbatalin/telemetrydeck-expo-plugin)
+
 ## What to do next
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
