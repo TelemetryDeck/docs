@@ -3,7 +3,7 @@ title: Glossary of Terms
 tags:
   - Glossary
   - intro
-description: A list of common terms used in the TelemetryDeck ecosystem and what they mean
+description: This is a list of common terms used in the TelemetryDeck ecosystem. You'll learn what they mean and how they are being used.
 lead: A list of common terms used in the TelemetryDeck ecosystem and what they mean.
 ---
 
