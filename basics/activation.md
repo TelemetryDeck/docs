@@ -9,7 +9,7 @@ basics: true
 description: Learn how to understand TelemetryDeck’s activation metrics. Use them to improve your app’s first-time user experience.
 lead: Activation is the second stage of the Pirate Metrics framework. It shows the moment users feel your app’s core value for the first time. TelemetryDeck tracks these patterns automatically. This helps you improve the first sessions that turn new users into engaged users.
 searchEngineTitle: 14 Questions to Ask to Improve User Activation | TelemetryDeck
-searchEngineDescription: Learn how to interpret user activation data for your mobile app with TelemetryDeck's automatic activation analytics.
+searchEngineDescription: Discover how TelemetryDeck's automatic acquisition analytics visualize user discovery and growth metrics effortlessly, enhancing mobile app marketing strategies in 2026.
 order: 21
 ---
 
