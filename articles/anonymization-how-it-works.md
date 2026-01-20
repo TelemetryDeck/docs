@@ -17,6 +17,10 @@ Anonymizing data involves transforming it to prevent direct linkage to a person.
 
 At TelemetryDeck, we even go a step further: the “identification date” is no longer available; “re-identification” is thus ruled out and cannot be performed. Therefore, anonymized data is not personal data anymore. [You can check out our code](https://github.com/TelemetryDeck/SwiftSDK/blob/main/Sources/TelemetryDeck/Signals/SignalManager.swift#L135) to confirm the statement for yourself!
 
+**Check out why [App Store Connect is not enough](https://www.youtube.com/watch?v=4_WqJGPzgmY) to protect user data!**
+
+[![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
+
 ## User identifiers
 
 Our SDKs accept a **custom user identifier**, such as an email address or an internal identifier, to help you identify your users. If you don’t supply an identifier, we generate a random one for you. On some platforms, we may ask the operating system for one, such as the iOS `identifierForVendor`.
@@ -29,9 +33,9 @@ We salt and hash the identifier **on the user’s device**. If you have a custom
 
 If you use the same (custom) salt and provide the same original identifier, you can recognize the same user across different platforms. For example, if a user logs in to your website using their email address on one device and then switches to your app another device where they are logged in with the same email address, they can still be recognized if the same salt and original identifier are used.
 
-**Check out our [YouTube Channel](https://www.youtube.com/watch?v=4_WqJGPzgmY) for a deeper dive into our anonymization process!**
+**Check out our [YouTube Channel](https://www.youtube.com/watch?v=4sQcZoi21nU) for a deeper dive into our anonymization process!**
 
-[![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
+[![The Benefits of TelemetryDeck For Privacy Focused App Analytics](/docs/images/yt-app-analytics.png)](https://www.youtube.com/watch?v=4sQcZoi21nU)
 
 ## Conclusion
 
