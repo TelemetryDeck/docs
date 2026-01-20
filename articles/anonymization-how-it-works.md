@@ -32,3 +32,5 @@ If you use the same (custom) salt and provide the same original identifier, you 
 ## Conclusion
 
 We hope that this information provides you with a better understanding of how TelemetryDeck anonymizes user data and that we are committed to protecting user privacy! With the above techniques, TelemetryDeck makes sure that user data cannot be traced back to an individual. If you still have any questions or concerns about how TelemetryDeck anonymizes user data, please feel free to contact us!
+
+[![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
