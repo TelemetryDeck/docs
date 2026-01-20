@@ -34,7 +34,7 @@ This will include the TelemetryDeck Swift SDK into your app by downloading the s
 
 **Watch our [Quick Start video](https://www.youtube.com/watch?v=FA71bSnK_B8) to setup TelemetryDeck in 4 Minutes!**
 
-[![TelemetryDeck Setup in 4 Minutes – Swift SDK Integration ](/docs/images/yt-4-minute-setup.png)(https://www.youtube.com/watch?v=FA71bSnK_B8)
+[![TelemetryDeck Setup in 4 Minutes – Swift SDK Integration](/docs/images/yt-4-minute-setup.png)](https://www.youtube.com/watch?v=FA71bSnK_B8)
 
 ## Including the package in your target
 
