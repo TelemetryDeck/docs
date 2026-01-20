@@ -29,8 +29,10 @@ We salt and hash the identifier **on the user’s device**. If you have a custom
 
 If you use the same (custom) salt and provide the same original identifier, you can recognize the same user across different platforms. For example, if a user logs in to your website using their email address on one device and then switches to your app another device where they are logged in with the same email address, they can still be recognized if the same salt and original identifier are used.
 
+**Check out our YouTube Channel for a deeper dive into our anonymization process!**
+
+[![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
+
 ## Conclusion
 
 We hope that this information provides you with a better understanding of how TelemetryDeck anonymizes user data and that we are committed to protecting user privacy! With the above techniques, TelemetryDeck makes sure that user data cannot be traced back to an individual. If you still have any questions or concerns about how TelemetryDeck anonymizes user data, please feel free to contact us!
-
-[![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
