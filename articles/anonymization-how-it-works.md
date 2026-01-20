@@ -29,7 +29,7 @@ We salt and hash the identifier **on the user’s device**. If you have a custom
 
 If you use the same (custom) salt and provide the same original identifier, you can recognize the same user across different platforms. For example, if a user logs in to your website using their email address on one device and then switches to your app another device where they are logged in with the same email address, they can still be recognized if the same salt and original identifier are used.
 
-**Check out our YouTube Channel for a deeper dive into our anonymization process!**
+**Check out our [YouTube Channel](https://www.youtube.com/watch?v=4_WqJGPzgmY) for a deeper dive into our anonymization process!**
 
 [![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
 
