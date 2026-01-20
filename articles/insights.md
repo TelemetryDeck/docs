@@ -21,7 +21,7 @@ The query is used to retrieve data from the TelemetryDeck API, and the display m
 
 **Check out our [YouTube Channel](https://www.youtube.com/watch?v=x0eZoQDnAPA) to learn how our built-in charts work!**
 
-[![Understanding TelemetryDeck's built-in charts](/docs/images/yt-built-in-charts)](https://www.youtube.com/watch?v=x0eZoQDnAPA)
+[![Understanding TelemetryDeck's built-in charts](/docs/images/yt-built-in-charts.png)](https://www.youtube.com/watch?v=x0eZoQDnAPA)
 
 ### Versatile and adjustable
 
