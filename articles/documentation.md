@@ -142,7 +142,7 @@ For date formats we use either:
 
 For times we use either:
 - 24-Hour: `HH:mm:ss` (e.g., 14:30:05)
-- 12-Hour: `hh:mm:ss` tt (e.g., 02:30:05 PM). `AM/PM` is capitalized.
+- 12-Hour: `hh:mm:ss tt` (e.g., 02:30:05 PM). `AM/PM` is capitalized.
 
 ## Tables
 
