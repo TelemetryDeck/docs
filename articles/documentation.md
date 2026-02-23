@@ -23,7 +23,7 @@ Here are examples for all possible metadata values:
 
 ```yaml
 ---
-title: Setting Up Your Application in SwiftUI
+title: Setting up your application in SwiftUI
 tags:
   - Setup
   - Quickstart
@@ -138,7 +138,7 @@ We capitalize our Headings in **Sentence Case** (e.g., "This is a heading of our
 ### Date and Time Format
 For date formats we use either:
 - International/European date format: `DD/MM/YYYY` (e.g., 01.04.2026)
-- ISO 8601: YYYY-MM-DD (e.g., 2026-04-01)
+- ISO 8601: `YYYY-MM-DD` (e.g., 2026-04-01)
 
 For times we use either:
 - 24-Hour: `HH:mm:ss` (e.g., 14:30:05)
