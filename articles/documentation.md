@@ -133,8 +133,7 @@ This will fail if the email is not found in the GitHub API, or if the email is n
 ## Best practices
 
 ### Capitalization
-We capitalize our Headings in **Sentence Case**.
-Example: "This is a heading of our docs"
+We capitalize our Headings in **Sentence Case** (e.g., "This is a heading of our docs").
 
 ### Date and Time Format
 For date formats we use either:
