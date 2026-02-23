@@ -130,6 +130,19 @@ The right sidebar will also display a list of contributors who have written an g
 
 This will fail if the email is not found in the GitHub API, or if the email is not set as "public email" in the contributor's GitHub profile.
 
+## Best practices
+
+### Capitalization
+We capitalize our Headings in **Sentence Case**. Example: This is a heading of our docs
+
+### Date and Time Format
+For date formats we use either:
+- International/European date format: `DD/MM/YYYY` (e.g., 01.04.2026)
+- ISO 8601: YYYY-MM-DD (e.g., 2026-04-01)
+For times we use eithe:
+- 24-Hour: `HH:mm:ss` (e.g., 14:30:05)
+- 12-Hour: `hh:mm:ss` tt (e.g., 02:30:05 PM). `AM/PM` is capitalized.
+
 ## Tables
 
 Tables are supported in markdown. Here is an example:
