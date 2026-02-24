@@ -13,7 +13,6 @@ This page is intended to be short and easy to digest. Please follow the links at
 
 - `query type`
 - `granularity`
-- `data source` (defaults to `telemetry-signals`)
 - Everything else is either mandatory for a certain query or serves a specific purpose as indicated [here](https://telemetrydeck.com/docs/tql/query/).
 
 ## Query Type
