@@ -1,7 +1,7 @@
 ---
 title: Time intervals and relative time intervals
 tags: intervals
-description: How to to define absolute or relative time intervals for your queries
+description: Learn how to define absolute time intervals and relative time intervals for your queries with TelemetryDeck's TQL.
 lead: A TelemetryDeck query always affects a certain time interval, which you can specify either in absolute terms, or relative to the query execution time.
 order: 120
 ---
