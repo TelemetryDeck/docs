@@ -21,8 +21,10 @@ To login into the TelemetryDeck dashboard you can use any of these options:
 
 ## Frequently Asked Questions
 **Does TemeletryDeck support 2FA?**
+
 Yes, we support 2FA with Okta, GitHub login, and Google login.
 
 
 **Will TelemetryDeck add other identity providers in the future?**
+
 We can add another identity provider if you need, just let us know!
