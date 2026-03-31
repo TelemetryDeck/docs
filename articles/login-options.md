@@ -7,6 +7,7 @@ tags:
   - how-to
 description: Learn about the ways you can login to the TelemetryDeck dashboard
 lead: TelemetryDeck offers multiple ways to login to the dashboard. Just pick the one that suits your needs the most!
+order: 5
 ---
 
 ## Login options
@@ -28,3 +29,5 @@ Yes, we support 2FA with Okta, GitHub login, and Google login.
 **Will TelemetryDeck add other identity providers in the future?**
 
 We can add another identity provider if you need, just let us know!
+
+{% callToAction "Create your free TelemetryDeck account now" "Get awesome privacy-first analytics for your app" %}
