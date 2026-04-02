@@ -60,7 +60,7 @@ You can customize how your data is displayed using the `displayMode` value in yo
 - `barChart` - Great for categorical comparisons
 - `pieChart` - Best for proportional data
 - `table` - Ideal for detailed breakdowns
-- `funnel` - Essential for conversion analysis
+- `funnelChart` - Essential for conversion analysis
 
 ![A screenshot showing the markdown editor with TQL code, and the live chart preview in a notebook](/docs/images/Notebooks-TQL-Live-Preview.png)
 
