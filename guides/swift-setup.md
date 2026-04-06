@@ -47,6 +47,45 @@ Xcode will ask you to link the package with your target in the next screen, titl
 In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryDeck` library.
 {% endnoteinfo %}
 
+## Installation with Package.swift
+
+If you're developing a Swift Package, or if you prefer to manage your dependencies in a `Package.swift` file directly, you can add TelemetryDeck by editing your file.
+
+First, add `.package(url: "https://github.com/TelemetryDeck/SwiftSDK.git", from: "2.9.4"),` to the `dependencies` array in your `Package.swift` file.
+
+Then, add `.product(name: "TelemetryDeck", package: "swiftsdk"),` to the dependencies of your target. Your `Package.swift` file could look like this:
+
+```swift
+// swift-tools-version: 5.9
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
+import PackageDescription
+
+let package = Package(
+    name: "MyAwesomePackage",
+    products: [
+        .library(
+            name: "MyAwesomePackage",
+            targets: ["MyAwesomePackage"]),
+    ],
+    dependencies: [
+        // 👇 Add this line
+        .package(url: "https://github.com/TelemetryDeck/SwiftSDK.git", from: "2.9.4"),
+    ],
+    targets: [
+        .target(
+            name: "MyAwesomePackage",
+            dependencies: [
+                // 👇 And this line
+                .product(name: "TelemetryDeck", package: "swiftsdk"),
+            ]),
+        .testTarget(
+            name: "MyAwesomePackageTests",
+            dependencies: ["MyAwesomePackage"]),
+    ]
+)
+```
+
 ## Initializing the TelemetryDeck Swift package
 
 The `TelemetryDeck` package will provide you with a class `TelemetryDeck` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. We strongly recommend doing so as soon as possible, as you won't be able to send events before the `TelemetryDeck` is initialized.
