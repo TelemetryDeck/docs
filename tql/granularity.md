@@ -1,6 +1,6 @@
 ---
 title: Granularity
-description: TelemetryDeck TQL granularity explained: choose the right time resolution (second to year) to structure and analyze your time-series data effectively.
+description: Control how detailed your analytics are with TQL granularity. Learn how to group data by time intervals like minutes, days, or months in TelemetryDeck.
 lead: The granularity of the query.
 order: 110
 ---
