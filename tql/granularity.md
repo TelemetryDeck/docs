@@ -1,6 +1,6 @@
 ---
 title: Granularity
-description: The granularity of the TelemetryDeck Query Language query.
+description: TelemetryDeck TQL granularity explained: choose the right time resolution (second to year) to structure and analyze your time-series data effectively.
 lead: The granularity of the query.
 order: 110
 ---
