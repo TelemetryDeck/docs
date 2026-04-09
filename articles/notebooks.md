@@ -59,7 +59,7 @@ You can customize how your data is displayed using the `displayMode` value in yo
 - `lineChart` - Perfect for trends over time
 - `barChart` - Great for categorical comparisons
 - `pieChart` - Best for proportional data
-- `table` - Ideal for detailed breakdowns
+- `raw` - Ideal for detailed breakdowns
 - `funnelChart` - Essential for conversion analysis
 
 ![A screenshot showing the markdown editor with TQL code, and the live chart preview in a notebook](/docs/images/Notebooks-TQL-Live-Preview.png)
