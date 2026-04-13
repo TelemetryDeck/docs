@@ -14,7 +14,7 @@ Here's how to round values to the nearest integer:
 ```json
 "valueFormatter": {
   "options": {
-    "maximumFractionDigits": 0,
+    "maximumFractionDigits": 0
   }
 }
 ```
@@ -28,7 +28,7 @@ Here's how to format values as dollars, with two decimal places:
   "options": {
     "style": "currency",
     "currency": "USD",
-    "minimumFractionDigits": 2,
+    "minimumFractionDigits": 2
   },
   "locale": "en-US"
 }
@@ -42,7 +42,7 @@ Here's how to format values as percentages, with one decimal place:
 "valueFormatter": {
   "options": {
     "style": "percent",
-    "minimumFractionDigits": 1,
+    "minimumFractionDigits": 1
   }
 }
 ```
@@ -56,7 +56,7 @@ Here's how to format values with a unit, e.g. "100,000 users":
   "options": {
     "style": "unit",
     "unit": "user",
-    "unitDisplay": "long",
+    "unitDisplay": "long"
   }
 }
 ```
