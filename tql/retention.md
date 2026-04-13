@@ -22,7 +22,6 @@ This example analyzes monthly retention over a 3-month period:
 ```json
 {
   "queryType": "retention",
-  "dataSource": "telemetry-signals",
   "granularity": "month",
   relativeIntervals: [
     {
@@ -34,7 +33,7 @@ This example analyzes monthly retention over a 3-month period:
       endDate: {
         component: 'month',
         offset: 0,
-        position: 'end',
+        position: 'end'
       },
     },
   ]
@@ -58,7 +57,7 @@ For daily retention analysis over a week:
       endDate: {
         component: 'day',
         offset: 0,
-        position: 'end',
+        position: 'end'
       },
     },
   ]
