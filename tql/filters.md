@@ -129,7 +129,7 @@ The **interval** filter enables range filtering on columns that contain long mil
 
 Intervals can be relative or absolute. Absolute intervals are specified as a string in the format `start/end`, where `start` and `end` are ISO 8601 timestamps. Relative intervals are specified as an array of [relative time interval](/docs/tql/time-intervals/) objects.
 
-````json
+
 ```json
 {
   "type": "interval",
