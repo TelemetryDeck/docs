@@ -38,7 +38,7 @@ You can create a bunch of insights inside your dashboards and thus, combine them
 
 To **delete** insights from a dashboard, click on the insights' name. Go to `Actions` in the top right corner, just delete the current insight by clicking on "Delete Insight".
 
-![Location of the "Delete Insight" Button](/docs/images/location-edit-insight.PNG)
+![Location of the "Delete Insight" Button](/docs/images/location-edit-insight.png)
 
 ### Rename your dashboard
 
