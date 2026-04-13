@@ -22,7 +22,6 @@ No time interval is given, so it will use the default time interval supplied by 
       "type": "eventCount"
     }
   ],
-  "dataSource": "telemetry-signals",
   "granularity": "day",
   "queryType": "timeseries"
 }
