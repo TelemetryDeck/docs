@@ -12,7 +12,6 @@ A Top N query allows you to list the top N values of a dimension, ordered by a m
 ```json
 {
   "aggregations": [{ "name": "count", "type": "count" }],
-  "dataSource": "telemetry-signals",
   "dimension": {
     "dimension": "appVersion",
     "outputName": "appVersion",
