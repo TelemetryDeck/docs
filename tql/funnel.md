@@ -21,7 +21,6 @@ This query returns the number of users that went through the funnel steps `Login
 
 ```json
 {
-  "dataSource": "telemetry-signals",
   "queryType": "funnel",
   "granularity": "all",
   "steps": [
@@ -29,7 +28,7 @@ This query returns the number of users that went through the funnel steps `Login
       "name": "Login",
       "filter": {
         "type": "selector",
-        "dimension": "event",
+        "dimension": "type",
         "value": "Login"
       }
     },
@@ -37,7 +36,7 @@ This query returns the number of users that went through the funnel steps `Login
       "name": "View Product",
       "filter": {
         "type": "selector",
-        "dimension": "event",
+        "dimension": "type",
         "value": "View Product"
       }
     },
@@ -45,7 +44,7 @@ This query returns the number of users that went through the funnel steps `Login
       "name": "Purchase",
       "filter": {
         "type": "selector",
-        "dimension": "event",
+        "dimension": "type",
         "value": "Purchase"
       }
     }
