@@ -12,7 +12,6 @@ A scan query will return events as they are received, similar to `SELECT * FROM 
 ```json
 {
   "queryType": "scan",
-  "dataSource": "telemetry-signals",
   "columns": ["__time", "appID", "type"],
   "intervals": ["2024-01-01/2024-01-02"],
   "limit": 3,
