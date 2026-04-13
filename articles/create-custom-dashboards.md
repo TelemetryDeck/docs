@@ -48,4 +48,4 @@ Not happy with the name given to your dashboard? No problem - you can change it 
 
 ### Delete your dashboard
 
-If you don't need a dashboard anymore, you can delete it. Deleting your dashboard will also **delete all created insights** within it. Navigate to your dashboard's `Actions` button. You will see a "_Delete dashboard" button. After clicking the button, you are asked to confirm your choice since deleting a dashboard isn't reversible. Click _Ok_, and your dashboard is gone!
+If you don't need a dashboard anymore, you can delete it. Deleting your dashboard will also **delete all created insights** within it. Navigate to your dashboard's `Actions` button. You will see a "_Delete dashboard_" button. After clicking the button, you are asked to confirm your choice since deleting a dashboard isn't reversible. Click _Ok_, and your dashboard is gone!
