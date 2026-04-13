@@ -21,7 +21,6 @@ This example compares **Payscreen A** and **Payscreen B** and will return metric
 
 ```json
 {
-  "dataSource": "telemetry-signals",
   "granularity": "all",
   "queryType": "experiment",
   "sample1": {
