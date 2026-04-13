@@ -17,7 +17,6 @@ A group by query can group arbitrary values using aggregations and post-aggregat
       "type": "eventCount"
     }
   ],
-  "dataSource": "telemetry-signals",
   "dimensions": [
     {
       "dimension": "majorSystemVersion",
