@@ -36,7 +36,7 @@ Request:
 POST /api/v3/query/calculate-async/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Content-Type: application/json
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 
 {
   "aggregations": [
@@ -110,7 +110,7 @@ This API endpoint will tell you if your query is finished or still running. It w
 ```text
 GET /api/v3/task/<task-id>/status/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 ```
 
 Response:
@@ -128,7 +128,7 @@ Once your query task status is `successful`, you can retrieve the results.
 ```text
 GET /api/v3/task/55b3487da8018369/value/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 
 ```
 

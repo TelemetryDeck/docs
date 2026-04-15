@@ -55,7 +55,7 @@ Here's an example query:
 POST /api/v3/insights/<insight-id>/query/ HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
 Content-Type: application/json
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 
 {
   "relativeInterval": {

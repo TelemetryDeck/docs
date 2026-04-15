@@ -17,14 +17,14 @@ Officially, we only allow API access for users in our Tier 2 Pricing tier and ab
 
 {% notewarning "This is a beta feature" %}
 
-[We're still working a lot on the API](https://api.telemetrydeck.com), so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
+[We're still working a lot on the API](https://api.telemetrydeckapi.com), so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
 {% endnotewarning %}
 
 ## Generating a Bearer Token with the API
 
 To retrieve a bearer token, send a POST request to the following URL:
 
-`https://api.telemetrydeck.com/api/v3/users/login`
+`https://api.telemetrydeckapi.com/api/v3/users/login`
 
 The POST request needs to have its `Authorization` header set to `Basic <base64 encoded username:password>`. A body is not necessary.
 
@@ -32,7 +32,7 @@ The POST request needs to have its `Authorization` header set to `Basic <base64 
 POST /api/v3/users/login HTTP/1.1
 Authorization: Basic <base64 encoded username:password>
 Content-Length: 0
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 ```
 
 You will receive a response with a bearer token.
@@ -57,7 +57,7 @@ As an example, lets retrieve your user information using the API:
 ```text
 GET /api/v3/users/info HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 ```
 
 The response for this should look like this:
@@ -86,7 +86,7 @@ As an example, lets retrieve your user information using the API:
 ```text
 GET /api/v3/users/info HTTP/1.1
 Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
-Host: api.telemetrydeck.com
+Host: api.telemetrydeckapi.com
 ```
 
 The response for this should look like this:
