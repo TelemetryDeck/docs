@@ -11,7 +11,7 @@ order: 1
 
 In the future, we'll make it easier for you to generate API tokens via the Dashboard, but for now, you'll have to generate a token manually using HTTP POST requests.
 
-Officially, we only allow API access for users in our Tier 2 Pricing tier and above. However, this is currently not enforced by the API, and there will be a grace period before it is. Feel free to try things out and let us know what you think! <3
+Officially, we only allow API access for users in our paid plans. However, this is currently not enforced by the API, and there will be a grace period before it is. Feel free to try things out and let us know what you think! <3
 
 {% endnoteinfo %}
 
