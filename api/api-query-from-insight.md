@@ -6,15 +6,15 @@ description: Using the TelemetryDeck API, you can retrieve the query that is use
 lead: Using the TelemetryDeck API, you can retrieve the query that is used in an insight
 ---
 
-## Heads up!
+{% notewarning "Paid plans only" %}
 
-We're still working a lot on the API, so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
+API access — including retrieving an insight's query — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and use the API.
 
-Officially, we only allow API access for users in our paid plans. However, this is currently not enforced by the API, and there will be a grace period before it is. Feel free to try things out and let us know what you think! <3
+{% endnotewarning %}
 
 ## Authorization
 
-You need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](/docs/api/api-token/) explains how to get a Bearer Token.
+You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](/docs/api/api-token/) explains how to generate one from your dashboard.
 
 ## TelemetryDeck Query Language
 
@@ -53,7 +53,7 @@ Here's an example query:
 
 ```text
 POST /api/v3/insights/<insight-id>/query/ HTTP/1.1
-Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
+Authorization: Bearer tdpat_…
 Content-Type: application/json
 Host: api.telemetrydeckapi.com
 

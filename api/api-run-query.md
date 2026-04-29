@@ -6,35 +6,29 @@ description: Using the TelemetryDeck API, you can run a query and retrieve its r
 lead: Using the TelemetryDeck API, you can run a query and retrieve its results
 ---
 
-{% notewarning "Heads up!" %}
+{% notewarning "Paid plans only" %}
 
-We're still working a lot on the API, so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
-
-Please note that we might restrict API access to paying tiers in the future.
+API access — including running queries — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and run queries.
 
 {% endnotewarning %}
 
 ## Authorization
 
-You need a Bearer Token to authenticate against the TelemetryDeck API. Our article [Getting an API Token](/docs/api/api-token/) explains how to get a Bearer Token.
+You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](/docs/api/api-token/) explains how to generate one from your dashboard.
 
 ## TelemetryDeck Query Language
 
 TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. You can either write a query by hand, or [generate a query from an insight](/docs/api/api-query-from-insight/).
 
-## It's all asynchronous!
+## Running the query
 
-The query API is asynchronous. When you post a query to the API, it returns a task ID. You can then use the task ID to check the status of the query, and once it is succeeded, retrieve the last successful results.
-
-## Step 1: Run the query
-
-To submit your query to the API, POST it to the `/api/v3/query/calculate-async/` endpoint. As a return, you'll receive a task ID. Hold on to that.
+POST your query to the `/api/v4/query/tql` endpoint. The endpoint runs the query and returns the results in the same response — there is nothing to poll.
 
 Request:
 
 ```text
-POST /api/v3/query/calculate-async/ HTTP/1.1
-Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
+POST /api/v4/query/tql HTTP/1.1
+Authorization: Bearer tdpat_…
 Content-Type: application/json
 Host: api.telemetrydeckapi.com
 
@@ -44,7 +38,7 @@ Host: api.telemetrydeckapi.com
       "type": "eventCount"
     }
   ],
-  "dataSource": "telemetry-signals",
+  "dataSource": "com.yourorganization",
   "dimension": {
     "dimension": "modelName",
     "outputName": "modelName",
@@ -89,49 +83,6 @@ Host: api.telemetrydeckapi.com
 }
 ```
 
-Result:
-
-```json
-{
-  "queryTaskID": "55b3487da8018369"
-}
-```
-
-<small>Psst! There is a synchronous API for this too, but it's not recommended. To try it, leave out the "-async" part of the URL. Note that longer-running queries will be terminated by this API, and we're not yet sure if we're going to support this API at all in the future.</small>
-
-## Step 2: Check the status of the query
-
-This API endpoint will tell you if your query is finished or still running. It will return a JSON object with a "status" field, which will be one of these values:
-
-- `running` - The query is still executing. Check again in a second or so.
-- `successful` - The query has finished successfully. You can now retrieve the results.
-- `failed` - The query has failed. There will be a second key, `error` which will contain a description of the error.
-
-```text
-GET /api/v3/task/<task-id>/status/ HTTP/1.1
-Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
-Host: api.telemetrydeckapi.com
-```
-
-Response:
-
-```json
-{
-  "status": "successful"
-}
-```
-
-## Step 3: Retrieve the results
-
-Once your query task status is `successful`, you can retrieve the results.
-
-```text
-GET /api/v3/task/55b3487da8018369/value/ HTTP/1.1
-Authorization: Bearer 🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻🐻
-Host: api.telemetrydeckapi.com
-
-```
-
 Response:
 
 ```json
@@ -161,3 +112,5 @@ Response:
   }
 }
 ```
+
+That's it — the `result` field contains the data, and `calculationDuration` tells you how long the query took on our side.
