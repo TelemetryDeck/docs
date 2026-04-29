@@ -1,7 +1,7 @@
 ---
 title: Run Query
 tags: Advanced
-testedOn: API v3 (beta)
+testedOn: Query API v4
 description: Using the TelemetryDeck API, you can run a query and retrieve its results
 lead: Using the TelemetryDeck API, you can run a query and retrieve its results
 order: 2
