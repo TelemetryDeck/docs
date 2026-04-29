@@ -4,6 +4,7 @@ tags: Advanced
 testedOn: API v3 (beta)
 description: Using the TelemetryDeck API, you can run a query and retrieve its results
 lead: Using the TelemetryDeck API, you can run a query and retrieve its results
+order: 2
 ---
 
 {% notewarning "Paid plans only" %}
@@ -22,11 +23,11 @@ TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-se
 
 ## Running the query
 
-POST your query to the `/api/v4/query/tql` endpoint. The endpoint runs the query and returns the results in the same response — there is nothing to poll.
+POST your query to the `/api/v4/query/tql` endpoint. The endpoint runs the query and returns the results in the same response. Please allow up to 2 minutes query execution time for very complicated requests.
 
 Request:
 
-```text
+```json
 POST /api/v4/query/tql HTTP/1.1
 Authorization: Bearer tdpat_…
 Content-Type: application/json

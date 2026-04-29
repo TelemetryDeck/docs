@@ -13,12 +13,6 @@ Personal access tokens are available on TelemetryDeck's paid plans. If your orga
 
 {% endnotewarning %}
 
-{% notewarning "This is a beta feature" %}
-
-[We're still working a lot on the API](https://api.telemetrydeckapi.com), so we'll be adding new features and improvements as we go. This also means that sometimes things might break, although we're doing our best to prevent that. Let us know if you see any issues.
-
-{% endnotewarning %}
-
 ## Generating a Personal Access Token
 
 You generate personal access tokens directly from the TelemetryDeck dashboard. No API call is required.
