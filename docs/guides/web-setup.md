@@ -109,14 +109,12 @@ This means that the Web SDK will recognize recurring users on the same day on th
 
 ## If you're a developer
 
-{% noteinfo "There are multiple ways of adding TelemetryDeck to a web site" %}
+!!! warning "There are multiple ways of adding TelemetryDeck to a web site"
 
-There are different tutorials you should read depending on your use case.
+    There are different tutorials you should read depending on your use case.
 
-- If you are building a **JavaScript application or PWA using node package manager**, you should read the [Node Package Setup Guide](/docs/guides/javascript-setup).
-- If you are building a **website or blog**, and want to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read this guide.
-
-{% endnoteinfo %}
+    - If you are building a **JavaScript application or PWA using node package manager**, you should read the [Node Package Setup Guide](/docs/guides/javascript-setup).
+    - If you are building a **website or blog**, and want to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read this guide.
 
 ## What to do next
 

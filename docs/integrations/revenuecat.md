@@ -15,11 +15,9 @@ RevenueCat pairs excellently with TelemetryDeck – use TelemetryDeck to improv
 
 With this integration, you can import your RevenueCat events into TelemetryDeck, and see everything on one dashboard. We'll be using RevenueCat's _Webhooks_ feature to pass on their data to TelemetryDeck.
 
-{% noteinfo "Read the announcement" %}
+!!! warning "Read the announcement"
 
-Our [announcement blog post](https://telemetrydeck.com/blog/revenuecat-integration/) shows you what to expect, how to use the new revenue dashboard, and gives examples on what to do with your revenue data.
-
-{% endnoteinfo %}
+    Our [announcement blog post](https://telemetrydeck.com/blog/revenuecat-integration/) shows you what to expect, how to use the new revenue dashboard, and gives examples on what to do with your revenue data.
 
 ## Installing RevenueCat and TelemetryDeck
 
@@ -35,13 +33,11 @@ RevenueCat has a concept of **user attributes**. Our goal is to set two new user
 - `$telemetryDeckAppId`: This attribute should be set to your TelemetryDeck App ID, the same one you pass into the TelemetryDeck SDK for initialization.
 - `$telemetryDeckUserId`: This attribute needs to be the **already-hashed user identifier** that TelemetryDeck is using.
 
-{% noteinfo "RevenueCat gets the hashed version of the TelemetryDeck User Identifier" %}
+!!! warning "RevenueCat gets the hashed version of the TelemetryDeck User Identifier"
 
-While the TelemetryDeck SDK usually takes care of hashing for you, you'll need to extract the identifier after it's been hashed and pass that on to RevenueCat. Only then will the final identifiers in your TelemetryDeck dashboard match up.
+    While the TelemetryDeck SDK usually takes care of hashing for you, you'll need to extract the identifier after it's been hashed and pass that on to RevenueCat. Only then will the final identifiers in your TelemetryDeck dashboard match up.
 
-If your version of the TelemetryDeck SDK does not expose a function to vend the hashed user identifier, you can hash it yourself using something like `SHA256(user_id + salt)`.
-
-{% endnoteinfo %}
+    If your version of the TelemetryDeck SDK does not expose a function to vend the hashed user identifier, you can hash it yourself using something like `SHA256(user_id + salt)`.
 
 ### iOS
 

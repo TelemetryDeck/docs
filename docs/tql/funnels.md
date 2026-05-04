@@ -112,11 +112,9 @@ For our filters, we want to grab all signals that might be relevant for the funn
 
 We're going to use aggregations to split up (or aggregate) the signals into different buckets, and count them by `clientUser` which is the field for TelemetryDeck's user identifier. We're using Theta Sketches to count the number of different users for the funnel stage.
 
-{% noteinfo "What's a theta sketch?" %}
+!!! warning "What's a theta sketch?"
 
-A theta sketch is a probabilistic data structure used for the [count-distinct problem](https://en.wikipedia.org/wiki/Count-distinct_problem). It allows us to quickly count elements in sets, such as the set of users in the aggregation buckets.
-
-{% endnoteinfo %}
+    A theta sketch is a probabilistic data structure used for the [count-distinct problem](https://en.wikipedia.org/wiki/Count-distinct_problem). It allows us to quickly count elements in sets, such as the set of users in the aggregation buckets.
 
 ```json
 [
