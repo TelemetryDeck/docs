@@ -19,6 +19,11 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Replace TelemetryDeck App ID
+        env:
+          TELEMETRYDECK_APP_ID: ${{ secrets.TELEMETRYDECK_APP_ID }}
+        run: |
+          sed -i "s|#TELEMETRYDECK_APP_ID#|${TELEMETRYDECK_APP_ID}|g" overrides/partials/integrations/analytics/telemetrydeck.html
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
