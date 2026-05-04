@@ -19,6 +19,11 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      - run: pip install zensical
+      - run: zensical build --clean
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -28,9 +33,11 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          app_location: "site"
+          api_location: ""
+          skip_app_build: true
+          skip_api_build: true
+          output_location: ""
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
