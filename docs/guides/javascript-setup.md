@@ -14,17 +14,15 @@ order: 300
 
 The TelemetryDeck SDK has no dependencies and supports **modern evergreen browsers** and **modern versions of Node.js** with support for [cryptography](https://caniuse.com/cryptography).
 
-{% noteinfo "There are multiple ways of adding TelemetryDeck to a web site" %}
+!!! warning "There are multiple ways of adding TelemetryDeck to a web site"
 
-There are different tutorials you should read depending on your use case.
+    There are different tutorials you should read depending on your use case.
 
-- The [TelemetryDeck Web SDK](/docs/guides/web-setup) is a quick and easy way to include web analytics into your website. This is fantastic for blogs, landing pages, static websites, and content-driven websites.
-
-- If you are building a JavaScript application – a Progressive Web App written in React, Vue, Angular, Svelte, Ember, or mobile or desktop apps written with React Native, Electron, Ionic, and so on, you should read this guide.
-
-[Our blog post](/blog/js-sdk-2-0/) explains the differences between the two SDKs in more detail.
-
-{% endnoteinfo %}
+    - The [TelemetryDeck Web SDK](/docs/guides/web-setup) is a quick and easy way to include web analytics into your website. This is fantastic for blogs, landing pages, static websites, and content-driven websites.
+    
+    - If you are building a JavaScript application – a Progressive Web App written in React, Vue, Angular, Svelte, Ember, or mobile or desktop apps written with React Native, Electron, Ionic, and so on, you should read this guide.
+    
+    [Our blog post](/blog/js-sdk-2-0/) explains the differences between the two SDKs in more detail.
 
 ## Set up
 
@@ -87,14 +85,11 @@ If can't specify a user identifier at initialization, you can set it later by se
 
 Please note that `td.signal` is an async function that returns a promise.
 
-{% notewarning "Special treatment for frameworks" %}
+!!! warning "Special treatment for frameworks"
 
-Some frameworks, like Svelte, don't need `crypto` and node.js. Here are some tips on how to implement TelemetryDeck when using some of these special frameworks:
-
-- The initialization should happen once, and the TD object should be passed around in a service or singleton.
-- The `td.send` function should be used to send signals, either automatically in a router-like object or on a per-feature basis.
-
-{% endnotewarning %}
+    Some frameworks, like Svelte, don't need `crypto` and node.js. Here are some tips on how to implement TelemetryDeck when using some of these special frameworks:
+    - The initialization should happen once, and the TD object should be passed around in a service or singleton.
+    - The `td.send` function should be used to send signals, either automatically in a router-like object or on a per-feature basis.
 
 ### Advanced initialization options
 

@@ -6,11 +6,9 @@ description: Using the TelemetryDeck API, you can retrieve the query that is use
 lead: Using the TelemetryDeck API, you can retrieve the query that is used in an insight
 ---
 
-{% notewarning "Paid plans only" %}
+!!! warning "Paid plans only"
 
-API access — including retrieving an insight's query — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and use the API.
-
-{% endnotewarning %}
+    API access — including retrieving an insight's query — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and use the API.
 
 ## Authorization
 
