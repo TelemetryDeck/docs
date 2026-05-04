@@ -13,11 +13,9 @@ searchEngineDescription: This is a quick overview on how to create funnels, or c
 order: 1000
 ---
 
-{% notewarning "Deprecated" %}
+!!! warning "Deprecated"
 
-The content below is deprecated and will be removed in the future. Please refer to the [new documentation](/docs/tql/funnel/) instead.
-
-{% endnotewarning %}
+    The content below is deprecated and will be removed in the future. Please refer to the [new documentation](/docs/tql/funnel/) instead.
 
 This article explains the thought process on how to create funnel-type queries; scroll to the bottom for a complete example.
 

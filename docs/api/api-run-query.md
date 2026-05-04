@@ -7,11 +7,9 @@ lead: Using the TelemetryDeck API, you can run a query and retrieve its results
 order: 2
 ---
 
-{% notewarning "Paid plans only" %}
+!!! warning "Paid plans only"
 
-API access — including running queries — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and run queries.
-
-{% endnotewarning %}
+    API access — including running queries — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and run queries.
 
 ## Authorization
 

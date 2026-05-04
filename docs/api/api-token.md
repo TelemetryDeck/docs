@@ -7,11 +7,9 @@ lead: To interact with the TelemetryDeck API, you need a personal access token (
 order: 1
 ---
 
-{% notewarning "Paid plans only" %}
+!!! warning "Paid plans only"
 
-Personal access tokens are available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and the feature will become available in the dashboard.
-
-{% endnotewarning %}
+    Personal access tokens are available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and the feature will become available in the dashboard.
 
 ## Generating a Personal Access Token
 

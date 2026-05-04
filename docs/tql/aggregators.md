@@ -117,11 +117,9 @@ Also, you can use post aggregators to do union, intersection or difference on sk
 
 `cardinality` computes the cardinality of a dimension.
 
-{% notewarning "Deprecated" %}
+!!! warning "Deprecated"
 
-This aggregator is deprecated. Use `thetaSketch` instead.
-
-{% endnotewarning %}
+    This aggregator is deprecated. Use `thetaSketch` instead.
 
 ```json
 {
