@@ -97,13 +97,11 @@ A theta sketch gives you the number of unique values that a dimension has in you
 
 Theta sketches are a probabilistic data structure used for the [count-distinct problem](https://en.wikipedia.org/wiki/Count-distinct_problem). They allow us to quickly count elements in sets, such as the set of users in the aggregation buckets
 
-{% noteinfo "More on ThetaSketches" %}
+!!! warning "More on ThetaSketches"
 
-A Theta sketch object can be thought of as a Set data structure. At query time, sketches are read and aggregated (set unioned) together. By default, you receive the estimate of the number of unique entries in the sketch object.
+    A Theta sketch object can be thought of as a Set data structure. At query time, sketches are read and aggregated (set unioned) together. By default, you receive the estimate of the number of unique entries in the sketch object.
 
-Also, you can use post aggregators to do union, intersection or difference on sketch columns in the same row. This means you can create distinct sets of users and compare them against each other. This is necessary for retention and funnel queries.
-
-{% endnoteinfo %}
+    Also, you can use post aggregators to do union, intersection or difference on sketch columns in the same row. This means you can create distinct sets of users and compare them against each other. This is necessary for retention and funnel queries.
 
 ```json
 {

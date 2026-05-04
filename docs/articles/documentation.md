@@ -79,16 +79,14 @@ Organizational tags like `docs` and `guides` are automatically applied. Use the 
 - The experience level of the reader (`beginner`, `intermediate`, `advanced`)
 - The type of query (`filter`, `cohorts`, etc.)
 
-{% noteinfo "You don't need to add 'docs' and 'articles' as tags" %}
+!!! warning "You don't need to add 'docs' and 'articles' as tags"
 
-All markdown files in the `docs` repository automatically get the `docs` tag applied to them (by `docs.11tydata.js`). In addition, the respective directories apply their own tags as well:
+    All markdown files in the `docs` repository automatically get the `docs` tag applied to them (by `docs.11tydata.js`). In addition, the respective directories apply their own tags as well:
 
-- Files in the `intro` directory get the `intro` tag applied.
-- Files in the `guides` directory get the `guides` tag applied.
-- Files in the `articles` directory get the `articles` tag applied.
-- Files in the `api` directory get the `api` tag applied.
-
-{% endnoteinfo %}
+    - Files in the `intro` directory get the `intro` tag applied.
+    - Files in the `guides` directory get the `guides` tag applied.
+    - Files in the `articles` directory get the `articles` tag applied.
+    - Files in the `api` directory get the `api` tag applied.
 
 ### Order
 
