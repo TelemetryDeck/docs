@@ -8,6 +8,38 @@ icon: lucide/rocket
     documentation still lives at https://telemetrydeck.com/docs/ for now.
 
 
+---
+
+## Welcome to TelemetryDeck
+
+TelemetryDeck helps you understand how users interact with your application through privacy-focused analytics. With just an SDK integration, you'll get valuable insights automatically – no complex configuration required.
+
+### Getting Started in 2 simple steps
+
+
+- **Choose and install** the SDK for your platform from the guides below
+- **Deploy your app** to start collecting data
+
+Once your updated app is in users' hands, TelemetryDeck will begin collecting data. It may take some time before you see meaningful insights, depending on your app's usage.
+
+### What's next after setup?
+
+After setting up the SDK and deploying your app, your most important next step is to learn how to use the dashboard to analyze your data:
+
+- [Analytics Walkthrough](/basics) - Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
+
+
+### Documentation Feedback
+
+If you find an error or feel like the documentation could be improved somewhat, we'd love 
+to hear from you! Either directly submit a change request with the buttons on each page, 
+or open an issue in our <a href="https://github.com/TelemetryDeck/docs">Docs GitHub Repository</a>.
+
+The [documentation guide](/articles/documentation) explains all markdown and 
+additional features you can use while writing documentation for TelemetryDeck.
+
+
+
 ----
 
 # Get started
