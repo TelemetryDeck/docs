@@ -11,6 +11,7 @@ lead: This is a quick overview on how to create funnels, or click-stream funnels
 searchEngineTitle: How to extract funnels from your analytics data
 searchEngineDescription: This is a quick overview on how to create funnels, or click-stream funnels, using the TelemetryDeck Query Language.
 order: 1000
+status: deprecated
 ---
 
 !!! warning "Deprecated"
