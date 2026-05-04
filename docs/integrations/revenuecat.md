@@ -84,11 +84,9 @@ Here's what's going on in the above example
 2. We then manually set a default user for TelemetryDeck. This allows us to later retrieve a hashed version of the user identifier.
 3. Finally, we configure RevenueCat and set up the necessary user attributes.
 
-{% notewarning "You need to keep user identifiers in sync" %}
+!!! warning "You need to keep user identifiers in sync"
 
-Whenever you update your TelemetryDeck user identifier, you'll also need to update the user identifier in RevenueCat's `$telemetryDeckUserId` user attribute.
-
-{% endnotewarning %}
+    Whenever you update your TelemetryDeck user identifier, you'll also need to update the user identifier in RevenueCat's `$telemetryDeckUserId` user attribute.
 
 ## Setting up RevenueCat's TelemetryDeck Integration
 
