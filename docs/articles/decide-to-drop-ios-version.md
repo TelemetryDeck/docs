@@ -27,7 +27,7 @@ The TelemetryDeck SDK by default tries to collect data about the user's operatin
 
 To find out which percentage of your users are using a certain OS version, use a **Breakdown Insight** (also known as a **Top N Insight**). Then you'll have multiple options for the breakdown key.
 TelemetryDeck provides pre-built dashboards, among others the Top N Insight just described:
-![Screenshot SystemVersion](/docs/images/Screenshot_SystemVersion.png)
+![Screenshot SystemVersion](/assets/Screenshot_SystemVersion.png)
 You can switch between `majorMinorVersion` and `majorVersion` in the chart. Below we come back to the difference with recommendations what to use for this purpose.
 
 As an orientation beyond your app we also want to point out our monthly updated [surveys](https://telemetrydeck.com/survey/). Through these we provide information about [majorMinorVersions](https://telemetrydeck.com/survey/apple/iOS/minorSystemVersions/) and [majorVersions](https://telemetrydeck.com/survey/apple/iOS/majorSystemVersions/) currently used according to our data set as well as device related information regarding [iPhone models](https://telemetrydeck.com/survey/apple/iPhone/models/) for example.

@@ -16,9 +16,9 @@ Sometimes they go directly to their goal, do not pass Go, and do not collect 200
 
 These goals are often your goals, too. As the app owner, you want them to spend time in your app, find the new feature, and order that new product.
 
-![Screenshot of a funnel called "Log in Journey" with 4 decreasing steps, going from "user login", to "show group view", to "show insight", and finally to "widget setup"](/docs/images/funnels_example.png)
+![Screenshot of a funnel called "Log in Journey" with 4 decreasing steps, going from "user login", to "show group view", to "show insight", and finally to "widget setup"](/assets/funnels_example.png)
 
-![Screenshot of the funnel steps with set filters for "Log in Journey"](/docs/images/funnels_set_filters.jpg)
+![Screenshot of the funnel steps with set filters for "Log in Journey"](/assets/funnels_set_filters.jpg)
 
 Funnels are a great way to show this kind of behavior. What funnels do at heart is display **when** a user **ends the process**. For example, it is possible to showcase each page of an app - from opening the home page to the final checkout page. If you have 100 users going through that process, and all of them finish it, all steps should show 100 users.
 If there happens to be some confusion during the process, and users cancel it before the checkout, you will see that the page causing that issue will leave a drop in users afterward. The checkout page will probably show fewer than 100 users at the end.
@@ -28,7 +28,7 @@ Let's have a look at how to use funnels in TelemetryDeck.
 ## How to use funnels
 Imagine you want to track how many users turn into customers. You can use funnels to track this conversion process. Since a funnel filters your insights by conditions, you must set up filters in your TelemetryDeck dashboard with the **filter editor**. These filters help you track how many users complete each funnel step, leading to a great visualization of your app's conversion. To create a **funnel chart**, just set the chart type to funnel and the query type to **funnel query** - or use our handy template to create an empty funnel!
 
-![Screenshot of the selected funnel query and chart type](/docs/images/funnel_type.PNG)
+![Screenshot of the selected funnel query and chart type](/assets/funnel_type.PNG)
 
 For example, let's say your funnel has three steps:
 

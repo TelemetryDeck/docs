@@ -109,4 +109,4 @@ You can answer all subsequent questions with "No" because we neither link collec
 
 When all is configured your "Purchases" entry in your App Privacy page should end up looking like this:
 
-![Purchases entry with only 'Used for Analytics' in the box](/docs/images/purchases-privacy-box.png)
+![Purchases entry with only 'Used for Analytics' in the box](/assets/purchases-privacy-box.png)

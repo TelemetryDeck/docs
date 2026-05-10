@@ -34,7 +34,7 @@ Click on _+ Create new Insight_ and give it a name. Now you can either build you
 You can directly see how many users are using your app from a specific operating system.
 By default, the versions are grouped by minor versions (displayed as `15.x.x`).
 
-![Donut chart example of system versions](/docs/images/system-versions-example.png)
+![Donut chart example of system versions](/assets/system-versions-example.png)
 
 ## Step four: Configure your insights
 

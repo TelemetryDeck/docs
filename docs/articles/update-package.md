@@ -25,7 +25,7 @@ With that in mind, here's how to manually update a Swift package using Xcode:
 
 ## How to update a Swift Package in Xcode
 
-![Screenshot of the left sidebar in Xcode 14, with the TelemetryDeck Swift Package highlighted](/docs/images/update_package.png)
+![Screenshot of the left sidebar in Xcode 14, with the TelemetryDeck Swift Package highlighted](/assets/update_package.png)
 
 Updating packages in Xcode can be done using one of two ways. If you want to just update a single package individually – which we recommend by the way – do this:
 
@@ -45,7 +45,7 @@ By default, Xcode and Swift Package Manager will not update the Major version of
 
 If you want to update to the next major version of a package, you can do this by manually changing the version requirement in the Xcode project. To do that, navigate to the project, select "Package Dependencies" and manually update the minimum version requirement to the next major version.
 
-![Screenshot of the left sidebar in Xcode 14, with the TelemetryDeck Swift Package highlighted](/docs/images/update_next_major_version.png)
+![Screenshot of the left sidebar in Xcode 14, with the TelemetryDeck Swift Package highlighted](/assets/update_next_major_version.png)
 
 For example, if you have a package that is currently at version `1.2.3`, and you want to update to version `2.0.0`, you can change the version requirement in the Xcode project to `2.0.0`. This will tell the Swift Package Manager to download the newest version of the package that is greater than `2.0.0`, but less than `3.0.0`. When a `2.0.1` comes out, you can update to that version by following the steps above.
 

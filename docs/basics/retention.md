@@ -31,7 +31,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - What are the immediate retention patterns in the last 24 hours?
 - How do retention trends compare across different time periods?
 
-![Hourly, Daily, Weekly, and Monthly Returning Users](/docs/images/retention-returning-users.png)
+![Hourly, Daily, Weekly, and Monthly Returning Users](/assets/retention-returning-users.png)
 
 **How to interpret the charts:**
 - **Hourly (last 24h)**: Shows recent returning user activity – useful for immediate validation of retention initiatives
@@ -49,7 +49,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - Do returning users prefer weekdays or weekends for app usage?
 - Are retention patterns changing over recent weeks?
 
-![Retention Time Patterns](/docs/images/retention-by-time.png)
+![Retention Time Patterns](/assets/retention-by-time.png)
 
 **How to interpret the charts:**
 - **Hour of day patterns**: Show when returning users are most active (user-local timezone)
@@ -66,7 +66,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - Are there platform-specific retention challenges?
 - Should I prioritize retention improvements for specific hardware?
 
-![Returning Users by Device Type](/docs/images/retention-device-distribution.png)
+![Returning Users by Device Type](/assets/retention-device-distribution.png)
 
 **How to interpret the charts:**
 - **Top-retention devices**: These provide the best long-term user experience
@@ -82,7 +82,7 @@ Returning users are those who have used your app for more than 5 sessions.
 - What languages correlate with higher long-term engagement?
 - Are there cultural or regional patterns in user retention?
 
-![Returning Users by Country and Language](/docs/images/retention-geographic-distribution.png)
+![Returning Users by Country and Language](/assets/retention-geographic-distribution.png)
 
 **How to interpret the charts:**
 - **High-retention regions**: Countries where users consistently return to your app

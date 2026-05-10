@@ -186,25 +186,25 @@ and [links](https://www.markdownguide.org/basic-syntax/#link).
 
 ## Images
 
-To display an image in a docs article, add it to the `images` directory. You can then link it using regular markdown image syntax, adding `/docs/images/` before the images' name.
+To display an image in a docs article, add it to the `assets` directory. You can then link it using regular markdown image syntax, adding `/assets/` before the image's name.
 
-Example: You just added the file `privacy-overview.png` to the `images` folder. You can now display that image like so:
+Example: You just added the file `privacy-overview.png` to the `assets` folder. You can now display that image like so:
 
 ```markdown
-![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
+![A screenshot of Apple's Privacy Overview](/assets/privacy-overview.png)
 ```
 
-The first part is the image's alt text. The second part is the path (`/docs/images/`) and the image file name `privacy-overview.png`.
+The first part is the image's alt text. The second part is the path (`/assets/`) and the image file name `privacy-overview.png`.
 
 Here's what it looks like:
 
-![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
+![A screenshot of Apple's Privacy Overview](/assets/privacy-overview.png)
 
 {% notewarning "Image File Locations" %}
 
-Image files need to live in the `images` directory at the root of the `docs` repository. Image files that are elsewhere in the file hierarchy will be ignored.
+Image files need to live in the `assets` directory inside `docs/`. Image files elsewhere in the file hierarchy will be ignored.
 
-You need to prefix `/docs/images/` to the path when linking to the image, since the Docs repository lives inside a `/docs` folder on deployment.
+Prefix `/assets/` to the path when linking to the image — the path is resolved against the docs site root.
 {% endnotewarning %}
 
 ## Code Blocks

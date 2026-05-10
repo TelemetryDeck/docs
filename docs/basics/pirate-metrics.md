@@ -18,7 +18,7 @@ Pirate Metrics, also known as the AARRR framework, was created by venture capita
 
 This framework breaks down the complete user journey into five key stages that form a natural progression:
 
-![AARRR Framework Chart](/docs/images/aarrr-framework.png)
+![AARRR Framework Chart](/assets/aarrr-framework.png)
 
 1. **Acquisition**: How users discover and install your app
 2. **Activation**: How users experience your app for the first time

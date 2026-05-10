@@ -31,7 +31,7 @@ Activated users are those with at least 5 minutes accumulated total usage time w
 - How effective is my onboarding experience?
 - What are the immediate activation patterns in the last 24 hours?
 
-![Hourly, Daily, Weekly, and Monthly Activated Users](/docs/images/activation-activated-users.png)
+![Hourly, Daily, Weekly, and Monthly Activated Users](/assets/activation-activated-users.png)
 
 **How to interpret the charts:**
 - **Hourly (last 24h)**: Shows recent activation activity and immediate trends – useful for spotting issues or validating recent changes
@@ -49,7 +49,7 @@ Activated users are those with at least 5 minutes accumulated total usage time w
 - Do weekdays or weekends provide better conditions for user activation?
 - Are recent activation patterns consistent with long-term trends?
 
-![Activation Time Patterns](/docs/images/activation-by-time.png)
+![Activation Time Patterns](/assets/activation-by-time.png)
 
 **How to interpret the charts:**
 - **Hour of day patterns**: Show when users have time to properly explore your app (user-local timezone)
@@ -66,7 +66,7 @@ Activated users are those with at least 5 minutes accumulated total usage time w
 - Should I optimize my Onboarding for specific hardware or screen sizes?
 - Are there platform-specific activation barriers?
 
-![Activated Users by Device Type](/docs/images/activation-device-distribution.png)
+![Activated Users by Device Type](/assets/activation-device-distribution.png)
 
 **How to interpret the chart:**
 - **Top-performing devices**: These provide the best activation experience – understand why
@@ -83,7 +83,7 @@ Several other models follow at about 5.71% each. This fairly even split suggests
 - What languages correlate with higher activation rates?
 - Which markets provide the strongest foundation for growth?
 
-![Activated Users by Country and Language](/docs/images/activation-geographic-distribution.png)
+![Activated Users by Country and Language](/assets/activation-geographic-distribution.png)
 
 **How to interpret the charts:**
 - **Strong activation regions**: Countries where users consistently experience your app's value

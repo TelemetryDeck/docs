@@ -153,7 +153,7 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
 ## Sponsors
 
-[<img src="/docs/images/Peerigon_Logo_RGB_no_padding.svg" width=300 class="p-3 bg-white" />](https://www.peerigon.com)
+[<img src="/assets/Peerigon_Logo_RGB_no_padding.svg" width=300 class="p-3 bg-white" />](https://www.peerigon.com)
 
 The development of the TelemetryDeck Vue SDK was graciously provided by our friends at Augsburg-based bespoke software development company [Peerigon](https://www.peerigon.com). Thanks a lot, and check them out for your application development needs. 🧡
 

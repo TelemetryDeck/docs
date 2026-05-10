@@ -28,7 +28,7 @@ Each sent signal has a `isTestMode` parameter, which can either be `true` or `fa
 Navigate to your TelemetryDeck [dashboard](https://dashboard.telemetrydeck.com/), where you will find the Test Mode toggle on the top left side, just above the sidebar.
 You can toggle it to show your signals either in `isTestMode == true` or `isTestMode == false`. While toggled to `true`, you will see a banner at the top displaying **Test Data** to remind you that you are currently in Test Mode, and all signals get sent in said mode. All charts will display test data only while in Test Mode.
 
-![Screenshot of the dashboard showing the Test Mode toggle in the upper left corner.](/docs/images/test_mode.png)
+![Screenshot of the dashboard showing the Test Mode toggle in the upper left corner.](/assets/test_mode.png)
 
 ## Sending Signals in Test Mode
 

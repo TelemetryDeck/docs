@@ -16,7 +16,7 @@ searchEngineDescription: Learn how to effectively use TelemetryDeck Notebooks to
 Notebooks are your analytics lab notebook – a place where you can document your findings, share insights with your team, and maintain context throughout your investigations. Let's explore how to use them effectively.
 
 {% noteinfo "See Notebooks in action" %}
-[![Notebooks Feature Demo - Learn how to combine live charts with markdown text for better analytics insights](/docs/images/notebooks-video-thumbnail.png)](https://www.youtube.com/watch?v=WAa2BRIaVGE)
+[![Notebooks Feature Demo - Learn how to combine live charts with markdown text for better analytics insights](/assets/notebooks-video-thumbnail.png)](https://www.youtube.com/watch?v=WAa2BRIaVGE)
 
 *Watch the [Notebooks Walkthrough](https://www.youtube.com/watch?v=WAa2BRIaVGE) on our YouTube channel*
 {% endnoteinfo %}
@@ -32,7 +32,7 @@ Notebooks are your analytics lab notebook – a place where you can document you
 Starting with a clear question or hypothesis helps focus your analysis and makes it easier to structure your notebook. It also makes it easier to share your findings with others later.
 {% endnoteinfo %}
 
-![A screenshot of the Notebooks overview tab, showing a list of notebooks](/docs/images/Notebooks-Overview.png)
+![A screenshot of the Notebooks overview tab, showing a list of notebooks](/assets/Notebooks-Overview.png)
 
 ### Adding charts to your notebook
 
@@ -62,7 +62,7 @@ You can customize how your data is displayed using the `displayMode` value in yo
 - `raw` - Ideal for detailed breakdowns
 - `funnelChart` - Essential for conversion analysis
 
-![A screenshot showing the markdown editor with TQL code, and the live chart preview in a notebook](/docs/images/Notebooks-TQL-Live-Preview.png)
+![A screenshot showing the markdown editor with TQL code, and the live chart preview in a notebook](/assets/Notebooks-TQL-Live-Preview.png)
 
 ### Using Markdown effectively
 

@@ -16,7 +16,7 @@ order: 10
 
 After integrating the TelemetryDeck SDK into your app, your data will start appearing in the TelemetryDeck dashboard. The main navigation tabs help you find different types of insights:
 
-![TelemetryDeck Main Navigation](/docs/images/dashboard-main-nav.png)
+![TelemetryDeck Main Navigation](/assets/dashboard-main-nav.png)
 
 Let's explore what you'll find in each section:
 
@@ -24,7 +24,7 @@ Let's explore what you'll find in each section:
 
 The Overview tab provides a high-level summary of your app's performance, showing key metrics like daily active users, total users, user retention, app version distribution, and system version distribution:
 
-![Overview Dashboard](/docs/images/dashboard-overview.png)
+![Overview Dashboard](/assets/dashboard-overview.png)
 
 This view gives you immediate answers to: "How is my app performing right now?" and "Are my users upgrading to new versions?"
 
@@ -32,7 +32,7 @@ This view gives you immediate answers to: "How is my app performing right now?" 
 
 The Customers section organizes your user data according to the journey users take with your app, from discovery to monetization:
 
-![Acquisition Dashboard](/docs/images/dashboard-acquisition.png)
+![Acquisition Dashboard](/assets/dashboard-acquisition.png)
 
 Each tab focuses on a different stage of the user journey:
 
@@ -110,7 +110,7 @@ TelemetryDeck also provides built-in presets for tracking purchases and revenue 
 
 The Metrics section provides essential technical insights about your app across different devices and platforms:
 
-![Metrics Dashboard - Devices](/docs/images/metrics-devices.png)
+![Metrics Dashboard - Devices](/assets/metrics-devices.png)
 
 **Key metrics include:**
 
@@ -139,7 +139,7 @@ The Metrics section provides essential technical insights about your app across 
 
 The Explore section gives you direct access to your raw event data through multiple views:
 
-![Explore Dashboard - Signal Types](/docs/images/dashboard-signal-types.png)
+![Explore Dashboard - Signal Types](/assets/dashboard-signal-types.png)
 
 Here you can examine all signal types your app has sent, explore parameters attached to your events, view recent events chronologically, and use the query playground to experiment with data analysis. This section is particularly useful for debugging, understanding user behavior sequences, and diving deeper into specific user actions.
 
@@ -162,7 +162,7 @@ Here you can examine all signal types your app has sent, explore parameters atta
 
 The Dashboards section allows you to create and organize custom visualizations:
 
-![Custom Dashboards](/docs/images/dashboard-custom.png)
+![Custom Dashboards](/assets/dashboard-custom.png)
 
 You can build insights using either the visual editor (for simple queries) or TelemetryDeck Query Language (TQL) for more complex analysis. Common dashboard setups include:
 
@@ -223,7 +223,7 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
 The Notebooks tab lets you combine live charts and markdown text in a single place, so you can document your questions, structure your investigations, and share insights with your team. Perfect for keeping context during long-running analyses, preparing presentations, or leaving notes for your future self.
 
 For example, here's an excerpt of a notebook:
-![Sample Notebook investigating Onboarding issues with Explanations](/docs/images/dashboard-notebooks.png)
+![Sample Notebook investigating Onboarding issues with Explanations](/assets/dashboard-notebooks.png)
 
 You can use Notebooks to:
 - Document your hypotheses and findings alongside live data
@@ -253,7 +253,7 @@ See Notebooks in action in our [feature demo video](https://www.youtube.com/watc
 
 At the top of most dashboard pages, you'll find time filters that let you focus on specific periods:
 
-![Filtering Data](/docs/images/dashboard-filtering-data.png)
+![Filtering Data](/assets/dashboard-filtering-data.png)
 
 - **Last 30 Days** (default) – Shows data from the past month
 - **Test Mode** – Toggle to see data from development builds (when your app is run directly from your IDE)
@@ -277,7 +277,7 @@ At the top of most dashboard pages, you'll find time filters that let you focus 
 
 Many visualizations have interactive elements:
 
-![Exploring Details](/docs/images/dashboard-exploring-details.png)
+![Exploring Details](/assets/dashboard-exploring-details.png)
 
 - Hover over chart elements to see detailed values and source info
 - Use the "…" menu in the top right of cards for additional options
