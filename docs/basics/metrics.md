@@ -26,7 +26,7 @@ With TelemetryDeck's Metrics dashboard, these insights are automatically collect
 - Which platforms should I prioritize for development and testing?
 - When can I safely drop support for older devices?
 
-![Device and Platform Distribution](/docs/images/metrics-devices.png)
+![Device and Platform Distribution](/assets/metrics-devices.png)
 
 **How to interpret the charts:**
 - **Models**: Shows specific device models being used, helping prioritize testing
@@ -44,7 +44,7 @@ With TelemetryDeck's Metrics dashboard, these insights are automatically collect
 - Are there patterns in build adoption?
 - Which SDK versions are in use across your user base?
 
-![Version Analytics](/docs/images/metrics-versions.png)
+![Version Analytics](/assets/metrics-versions.png)
 
 **How to interpret the charts:**
 - **App Versions**: Tracks adoption of your app releases over time
@@ -61,7 +61,7 @@ With TelemetryDeck's Metrics dashboard, these insights are automatically collect
 - Which errors should I prioritize fixing?
 - Are errors occurring on specific devices or platforms?
 
-![Error Monitoring](/docs/images/metrics-errors.png)
+![Error Monitoring](/assets/metrics-errors.png)
 
 **How to interpret the charts:**
 - **Most Frequent Errors**: Ranks issues by occurrence count and percentage
@@ -98,7 +98,7 @@ TelemetryDeck offers built-in presets for error tracking that require some confi
 - Should I invest in additional localizations?
 - Are users using my app in the same language as their device?
 
-![Localization Insights](/docs/images/metrics-localization.png)
+![Localization Insights](/assets/metrics-localization.png)
 
 **How to interpret the charts:**
 - **Preferred Language**: Shows user device language settings
@@ -116,7 +116,7 @@ TelemetryDeck offers built-in presets for error tracking that require some confi
 - Does my app need better accessibility support?
 - How would design changes impact users with accessibility needs?
 
-![Accessibility Usage](/docs/images/metrics-accessibility.png)
+![Accessibility Usage](/assets/metrics-accessibility.png)
 
 **How to interpret the charts:**
 - **Preferred Content Size**: Shows text size preferences (88.43% use default size "L")

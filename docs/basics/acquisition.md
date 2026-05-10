@@ -30,7 +30,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 - Are there patterns in my acquisition rate?
 - How effective are my marketing campaigns?
 
-![Daily, Weekly, and Monthly New Users](/docs/images/acquisition-new-users.png)
+![Daily, Weekly, and Monthly New Users](/assets/acquisition-new-users.png)
 
 **How to interpret the charts:**
 - **Consistent upward trend**: Your app is steadily gaining users – investigate what's working and double down
@@ -47,7 +47,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 - Is my app primarily attracting new users or maintaining existing ones?
 - How does acquisition compare to retention?
 
-![Active vs New Users Ratio](/docs/images/acquisition-active-vs-new.png)
+![Active vs New Users Ratio](/assets/acquisition-active-vs-new.png)
 
 **How to interpret the chart:**
 - **High ratio (>0.5)**: Many new users compared to your active base - suggesting strong acquisition but possibly weak retention
@@ -63,7 +63,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 - Which days of the week see the most new installations?
 - Do weekdays significantly outperform weekends for user acquisition?
 
-![Acquisition Time Patterns](/docs/images/acquisition-by-time.png)
+![Acquisition Time Patterns](/assets/acquisition-by-time.png)
 
 **How to interpret the charts:**
 - **Hour of day peaks**: Show prime discovery times (user-local)
@@ -79,7 +79,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 - Have specific events or campaigns created temporary spikes?
 - How can I differentiate between one-off events and genuine trends?
 
-![Recent Acquisition Time Patterns](/docs/images/acquisition-by-time-last-weeks.png)
+![Recent Acquisition Time Patterns](/assets/acquisition-by-time-last-weeks.png)
 
 **How to interpret the charts:**
 - **Four-week hourly view**: Identifies specific days with unusual activity
@@ -95,7 +95,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 - Should I prioritize specific hardware or screen sizes?
 - When can I safely drop support for older devices?
 
-![New Users by Device Type](/docs/images/acquisition-device-distribution.png)
+![New Users by Device Type](/assets/acquisition-device-distribution.png)
 
 **How to interpret the chart:**
 - **Top device models**: Prioritize testing and optimization for these devices
@@ -111,7 +111,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 - What languages do my users speak?
 - Which markets should I prioritize for expansion?
 
-![New Users by Country and Language](/docs/images/acquisition-geographic-distribution.png)
+![New Users by Country and Language](/assets/acquisition-geographic-distribution.png)
 
 **How to interpret the charts:**
 - **Dominant regions**: Countries with the largest segments indicate your strongest markets

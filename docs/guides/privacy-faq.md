@@ -7,7 +7,7 @@ featured: true
 description: Frequently asked questions about TelemetryDeck's Privacy Policy
 lead: This FAQ answers the most common questions about our Privacy Policy and how to answer your users' questions.
 order: 10000
-headerImage: /docs/images/faq.jpg
+headerImage: /assets/faq.jpg
 ---
 
 The TelemetryDeck SDK was developed from the ground up with privacy in mind. An important principle of TelemetryDeck is to store only the minimum amount of data necessary to identify specific user behaviors.

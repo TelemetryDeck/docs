@@ -93,7 +93,7 @@ Now we need to tell RevenueCat to send copies of all events over to TelemetryDec
 - Select **TelemetryDeck**
 - Click **Add Integration** to confirm
 
-![A screenshot of RevenueCat's TelemetryDeck Integration](/docs/images/rc-td-1.png)
-![A screenshot of RevenueCat's TelemetryDeck Integration](/docs/images/rc-td-2.png)
+![A screenshot of RevenueCat's TelemetryDeck Integration](/assets/rc-td-1.png)
+![A screenshot of RevenueCat's TelemetryDeck Integration](/assets/rc-td-2.png)
 
 And you're done. RevenueCat events should now arrive and be mixed in with your TelemetryDeck signals 🥳

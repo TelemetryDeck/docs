@@ -21,7 +21,7 @@ The query is used to retrieve data from the TelemetryDeck API, and the display m
 
 **Check out our [YouTube Channel](https://www.youtube.com/watch?v=x0eZoQDnAPA) to learn how our built-in charts work!**
 
-[![Understanding TelemetryDeck's built-in charts](/docs/images/yt-built-in-charts.png)](https://www.youtube.com/watch?v=x0eZoQDnAPA)
+[![Understanding TelemetryDeck's built-in charts](/assets/yt-built-in-charts.png)](https://www.youtube.com/watch?v=x0eZoQDnAPA)
 
 ### Versatile and adjustable
 
@@ -53,12 +53,12 @@ The title is displayed on top of any insight card. Example: "Daily Active Users"
 **Compact and wide mode**  
 You can choose between "Compact" and "Wide". If "Wide" is active, the insight will be displayed in a larger frame. This allows you to see your most important insight with extra detail.
 
-![buttons for the compact mode](/docs/images/compact_wide_mode.PNG)
+![buttons for the compact mode](/assets/compact_wide_mode.PNG)
 
 **Display Mode**  
 Here, you can choose the most suitable chart type for your insight. Learn more about the chart types in the section [Chart Types](#chart-types).
 
-![icons for the display mode](/docs/images/display_mode.PNG)
+![icons for the display mode](/assets/display_mode.PNG)
 
 **Counting**  
 If "Count Signals" is checked, an insight will count all signals by their type. If "Count Users" is checked, each user will only get counted once. Only the newest is selected if the set of signals counted by the insight contains multiple signals from the same user. This is great for counting users, for example, "How many users are using feature x?"
@@ -106,7 +106,7 @@ There is no going back from here. If you later decide that there is no custom qu
 
 **Check out our [YouTube Channel](https://www.youtube.com/watch?v=PYWO3017_Ho) on how to create custom charts!**
 
-[![Creating Custom Charts in TelemetryDeck – Conversion Tracking Tutorial](/docs/images/yt-custom-charts.png)](https://www.youtube.com/watch?v=PYWO3017_Ho)
+[![Creating Custom Charts in TelemetryDeck – Conversion Tracking Tutorial](/assets/yt-custom-charts.png)](https://www.youtube.com/watch?v=PYWO3017_Ho)
 
 ## Chart Types
 
@@ -119,7 +119,7 @@ The TelemetryDeck dashboard will show time zones of your users in **their browse
 
 ---
 
-![An example of a table chart](/docs/images/table-chart.PNG)
+![An example of a table chart](/assets/table-chart.PNG)
 
 **Table**
 
@@ -129,7 +129,7 @@ If only one line of data is returned, that line will be displayed in large type.
 
 ---
 
-![An example of a bar chart](/docs/images/bar-chart.PNG)
+![An example of a bar chart](/assets/bar-chart.PNG)
 
 **Bar Chart**
 
@@ -137,7 +137,7 @@ It displays the query result as a vertical bar chart, one bar per line of data. 
 
 ---
 
-![An example of a line chart](/docs/images/line-chart.PNG)
+![An example of a line chart](/assets/line-chart.PNG)
 
 **Line Chart**
 
@@ -145,7 +145,7 @@ This chart shows the query result as a line chart, one bar per line of data. Thi
 
 ---
 
-![An example of a donut chart](/docs/images/donut-chart.PNG)
+![An example of a donut chart](/assets/donut-chart.PNG)
 
 **Donut Chart**
 
@@ -153,7 +153,7 @@ A pie/donut type chart that will sort the rows of data by number and visually sh
 
 ---
 
-![An example of a funnel chart](/docs/images/funnels_example.png)
+![An example of a funnel chart](/assets/funnels_example.png)
 
 **Funnel Chart**
 

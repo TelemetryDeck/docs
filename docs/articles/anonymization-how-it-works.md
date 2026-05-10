@@ -8,7 +8,7 @@ description: TelemetryDeck anonymizes user data, by double salting and hashing I
 lead: We take user privacy seriously. To ensure the privacy of our users, we use various techniques to anonymize user data. One of the ways we do this is by using a double hashing technique to anonymize user identifiers.
 searchEngineTitle: How TelemetryDeck anonymizes user data privacy-friendly
 searchEngineDescription: TelemetryDeck anonymizes user data, by double hashing and salting IDs, to ensure anonymity and protect user privacy while still providing valuable insights.
-headerImage: /docs/images/anonymization-display-image.jpg
+headerImage: /assets/anonymization-display-image.jpg
 ---
 
 ## Methodology
@@ -19,7 +19,7 @@ At TelemetryDeck, we even go a step further: the “identification date” is no
 
 **Check out why [App Store Connect is not enough](https://www.youtube.com/watch?v=4_WqJGPzgmY) to protect user data!**
 
-[![Compare TelemetryDeck and App Store Connect for Analytics](/docs/images/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
+[![Compare TelemetryDeck and App Store Connect for Analytics](/assets/yt-app-store-connect.png)](https://www.youtube.com/watch?v=4_WqJGPzgmY)
 
 ## User identifiers
 
@@ -35,7 +35,7 @@ If you use the same (custom) salt and provide the same original identifier, you 
 
 **Check out our [YouTube Channel](https://www.youtube.com/watch?v=4sQcZoi21nU) for a deeper dive into our anonymization process!**
 
-[![The Benefits of TelemetryDeck For Privacy Focused App Analytics](/docs/images/yt-app-analytics.png)](https://www.youtube.com/watch?v=4sQcZoi21nU)
+[![The Benefits of TelemetryDeck For Privacy Focused App Analytics](/assets/yt-app-analytics.png)](https://www.youtube.com/watch?v=4sQcZoi21nU)
 
 ## Conclusion
 

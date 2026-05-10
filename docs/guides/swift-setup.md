@@ -28,19 +28,19 @@ The TelemetryDeck Swift package uses Swift Package Manager.
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>
 1. Press <kbd>Add Package</kbd> to continue
 
-![A screenshot of Xcode adding the TelemetryDeck Package](/docs/images/xcode-swift-package1.png)
+![A screenshot of Xcode adding the TelemetryDeck Package](/assets/xcode-swift-package1.png)
 
 This will include the TelemetryDeck Swift SDK into your app by downloading the source code. Feel free to browse the client's source code, it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
 
 **Watch our [Quick Start video](https://www.youtube.com/watch?v=FA71bSnK_B8) to setup TelemetryDeck in 4 Minutes!**
 
-[![TelemetryDeck Setup in 4 Minutes – Swift SDK Integration](/docs/images/yt-4-minute-setup.png)](https://www.youtube.com/watch?v=FA71bSnK_B8)
+[![TelemetryDeck Setup in 4 Minutes – Swift SDK Integration](/assets/yt-4-minute-setup.png)](https://www.youtube.com/watch?v=FA71bSnK_B8)
 
 ## Including the package in your target
 
 Xcode will ask you to link the package with your target in the next screen, titled <kbd>Choose Package Products for SwiftSDK</kbd>. Set the <kbd>Add to target</kbd> column to your app target for <kbd>TelemetryDeck</kbd> (not "TelemetryClient", which is deprecated) and click <kbd>Add Package</kbd> to complete the integration.
 
-![A screenshot of Xcode setting the target for the TelemetryDeck library](/docs/images/xcode-swift-package2.png)
+![A screenshot of Xcode setting the target for the TelemetryDeck library](/assets/xcode-swift-package2.png)
 
 {% noteinfo "Link Library with more than one Target" %}
 

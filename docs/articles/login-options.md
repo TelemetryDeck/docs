@@ -18,7 +18,7 @@ To login into the TelemetryDeck dashboard you can use any of these options:
 * Okta (for our enterprise customers, on request)
 
 
-![Login mask](/docs/images/login-mask.png)
+![Login mask](/assets/login-mask.png)
 
 ## Frequently Asked Questions
 **Does TemeletryDeck support 2FA?**

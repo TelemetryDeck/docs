@@ -16,7 +16,7 @@ With filters, you can create custom views of your insights and organize the info
 
 Navigate to the [dashboard](https://dashboard.telemetrydeck.com), and select your app. You can find the filter editor in your insight group, while editing an insight. Either create a new insight or edit an existing one to see the editor just below the chart itself.
 
-![Screenshot of the filter location in the dashboard](/docs/images/filter_location.png)
+![Screenshot of the filter location in the dashboard](/assets/filter_location.png)
 
 In your insight group, you can add filters to any insight you want. With advanced filter options available, you can add multiple filters to obtain the desired query results. Nesting filters and combining them with boolean operations can help you refine your query and achieve even more accurate insights.
 
@@ -28,7 +28,7 @@ You can use analytics filters to refine your data and obtain precise insights. W
 - The **Selector** filter lets you compare any _payload key_ (also known as a dimension) to a value. For instance, if you send a `shouldUseHealthKit` parameter as part of your payload in signals, you can filter for `shouldUseHealthKit = “true”`.
 - Additionally, you can use **Regular Expressions** (RegEx) to filter data based on _complex patterns or strings of text_. Sometimes it is not possible to match a value exactly, and in such cases, regular expressions can be incredibly useful to obtain more accurate and specific insights into user behavior. A good example for using RegEx is filtering by device type, locale, or anything else you would like a more precise view on!
 
-![Screenshot of how adding a condition changes the output. Adding that only iOS versions should be shown, and then wrapping the condition inside a NOT so that everything but iOS versions is shown.](/docs/images/filter_example.png)
+![Screenshot of how adding a condition changes the output. Adding that only iOS versions should be shown, and then wrapping the condition inside a NOT so that everything but iOS versions is shown.](/assets/filter_example.png)
 
 ## Query construction
 

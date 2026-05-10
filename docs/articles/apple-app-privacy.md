@@ -16,7 +16,7 @@ Since TelemetryDeck's analytics are private by default, you can include this inf
 
 This means your app will get an excellent privacy rating.
 
-![A screenshot of Apple's Privacy Overview](/docs/images/privacy-overview.png)
+![A screenshot of Apple's Privacy Overview](/assets/privacy-overview.png)
 
 ## How do I start?
 

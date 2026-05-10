@@ -19,7 +19,7 @@ Insights of daily active users are the best way to see how your app is doing. Yo
 
 We will help you set up your insight so you can track your users right away, privacy-friendly and anonymized!
 
-![Bar chart example of daily active users](/docs/images/daily-active-users-example.png)
+![Bar chart example of daily active users](/assets/daily-active-users-example.png)
 
 ## Navigate to your app
 
