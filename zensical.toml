@@ -41,16 +41,128 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
-# If you decide not to define a navigation here then Zensical will simply
-# derive the navigation structure from the directory structure of your
-# "docs_dir". The definition below demonstrates how a navigation structure
-# can be defined using TOML syntax.
+# Pages are grouped thematically below; group titles map to TOML inline tables,
+# and a value can be either a path (single page) or an array (collapsible group).
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  { "Welcome" = "index.md" },
+  { "SDK Setup" = [
+    { "Swift" = "guides/swift-setup.md" },
+    { "Android (Kotlin)" = "guides/android-setup.md" },
+    { "Flutter" = "guides/flutter-setup.md" },
+    { "JavaScript" = "guides/javascript-setup.md" },
+    { "React" = "guides/react-setup.md" },
+    { "Vue" = "guides/vue-setup.md" },
+    { "Web" = "guides/web-setup.md" },
+    { "Objective-C" = "guides/objective-c-setup.md" },
+    { "Privacy FAQ" = "guides/privacy-faq.md" },
+  ] },
+  { "Analytics Basics" = [
+    { "Overview" = "basics/index.md" },
+    { "Acquisition" = "basics/acquisition.md" },
+    { "Activation" = "basics/activation.md" },
+    { "Retention" = "basics/retention.md" },
+    { "Metrics" = "basics/metrics.md" },
+    { "Pirate Metrics (AARRR)" = "basics/pirate-metrics.md" },
+    { "Built-in Presets" = [
+      { "Purchases" = "articles/preset-purchases.md" },
+      { "Errors" = "articles/preset-errors.md" },
+      { "Navigation signals" = "articles/navigation-signals.md" },
+      { "Duration signals" = "articles/duration-signals.md" },
+    ] },
+  ] },
+  { "Insights & Dashboards" = [
+    { "Insights overview" = "articles/insights.md" },
+    { "Daily active users" = "articles/insights-about-daily-users.md" },
+    { "Monthly active users" = "articles/insights-about-monthly-users.md" },
+    { "Referrers" = "articles/insights-about-referrers.md" },
+    { "System version distribution" = "articles/insights-about-system-version.md" },
+    { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
+    { "Funnel insights" = "articles/how-to-funnel-insights.md" },
+    { "Filter setup" = "articles/set-up-filters-insights.md" },
+    { "Custom dashboards" = "articles/create-custom-dashboards.md" },
+    { "Notebooks" = "articles/notebooks.md" },
+  ] },
+  { "Signal Concepts" = [
+    { "Namespaces" = "articles/namespaces.md" },
+    { "Signal type naming" = "articles/signal-type-naming.md" },
+    { "Test mode" = "articles/test-mode.md" },
+    { "Updating the SDK" = "articles/update-package.md" },
+    { "The Grand Rename" = "articles/grand-rename.md" },
+    { "TelemetryClient (legacy)" = "articles/telemetry-client.md" },
+  ] },
+  { "Privacy & Compliance" = [
+    { "How anonymization works" = "articles/anonymization-how-it-works.md" },
+    { "Apple App Privacy" = "articles/apple-app-privacy.md" },
+    { "App Privacy Report" = "articles/app-privacy-report.md" },
+    { "App Tracking Transparency" = "articles/app-tracking-transparency.md" },
+    { "Hosting solutions" = "articles/hosting-solutions.md" },
+  ] },
+  { "Account & Organization" = [
+    { "Make an account" = "articles/making-account.md" },
+    { "Invite members" = "articles/invite-members-to-organization.md" },
+    { "Login options" = "articles/login-options.md" },
+  ] },
+  { "Recipes" = [
+    { "Averaging numbers" = "recipes/averagaging-numbers.md" },
+    { "Listing events" = "recipes/listing-events.md" },
+    { "Views per purchase" = "recipes/views-per-purchase-example.md" },
+  ] },
+  { "Integrations" = [
+    { "RevenueCat" = "integrations/revenuecat.md" },
+    { "Superwall" = "integrations/superwall.md" },
+    { "Google Tag Manager" = "integrations/web-setup-google-tag-manager.md" },
+  ] },
+  { "Server-side Ingest" = [
+    { "Default parameters" = "ingest/default-parameters.md" },
+    { "Ingest API v2" = "ingest/v2.md" },
+    { "Ingest API v1 (legacy)" = "ingest/v1.md" },
+  ] },
+  { "Reference" = [
+    { "Signals API" = [
+      { "Signals reference" = "api/signals-reference.md" },
+      { "Insights reference" = "api/insights-reference.md" },
+      { "Run a query" = "api/api-run-query.md" },
+      { "Query from insight" = "api/api-query-from-insight.md" },
+      { "API tokens" = "api/api-token.md" },
+    ] },
+    { "TQL" = [
+      { "TQL guidelines" = "tql/firstGuideline.md" },
+      { "TQL query reference" = "tql/query.md" },
+      { "Query context" = "tql/queryContext.md" },
+      { "Query type" = "tql/queryType.md" },
+      { "Query types" = [
+        { "Timeseries" = "tql/timeseries.md" },
+        { "Top N" = "tql/topN.md" },
+        { "Group By" = "tql/groupBy.md" },
+        { "Scan" = "tql/scan.md" },
+        { "Funnel" = "tql/funnel.md" },
+        { "Retention" = "tql/retention.md" },
+        { "Experiment" = "tql/experiment.md" },
+        { "Funnels (deprecated)" = "tql/funnels.md" },
+      ] },
+      { "Filters & time" = [
+        { "Filters" = "tql/filters.md" },
+        { "Base filters" = "tql/baseFilters.md" },
+        { "Time intervals" = "tql/time-intervals.md" },
+      ] },
+      { "Aggregators" = [
+        { "Aggregators" = "tql/aggregators.md" },
+        { "Post-aggregators" = "tql/post-aggregators.md" },
+      ] },
+      { "Specs & helpers" = [
+        { "Dimension spec" = "tql/dimensionSpec.md" },
+        { "Extraction function" = "tql/extractionFunction.md" },
+        { "Granularity" = "tql/granularity.md" },
+        { "TopN metric spec" = "tql/topNMetricSpec.md" },
+        { "Value formatter" = "tql/valueFormatter.md" },
+        { "Descending" = "tql/descending.md" },
+      ] },
+    ] },
+  ] },
+  { "Glossary" = "glossary.md" },
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -213,7 +325,7 @@ features = [
     # When sections are enabled, top-level sections are rendered as groups in
     # the sidebar for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-sections
-    "navigation.sections",
+    #"navigation.sections",
 
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
