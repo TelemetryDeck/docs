@@ -29,6 +29,8 @@ jobs:
           python-version: 3.x
       - run: pip install zensical
       - run: zensical build --clean
+      - name: Generate llms.txt and ship raw markdown
+        run: python3 scripts/build_llms.py
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
