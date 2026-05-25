@@ -1,107 +1,30 @@
 ---
-title: TelemetryDeck Swift Client Reference
+title: TelemetryClient (Legacy)
 tags:
   - Swift
   - SDK
-testedOn: Xcode 12.4 & Swift 5.3
-description: Reference documentation for the Swift Client for TelemetryDeck-using apps
-lead: The TelemetryDeck Swift Client is a Swift Package to include in your app
-searchEngineTitle: How to add the TelemetryDeck Swift Client
-searchEngineDescription: Learn how to add the Swift Client for TelemetryDeck-using apps
+  - legacy
+description: Legacy reference for the TelemetryClient/TelemetryManager API. Replaced by the TelemetryDeck API in SwiftSDK 2.x and removed in 3.0.
+lead: This page documents the original TelemetryClient API, which was replaced by the TelemetryDeck static API. If you're still using these APIs, migrate to the current SDK.
 ---
 
-## Include the Swift Client in your Xcode Project
+!!! warning "Outdated"
 
-See the [Swift Guide](/docs/guides/swift-setup/) on how to set up your app to use the TelemetryDeck Swift Client.
+    The APIs on this page (`TelemetryManager`, `TelemetryClient`, `TelemetryManagerConfiguration`) were removed in SwiftSDK 3.0. See the [Swift Setup Guide](/guides/swift-setup/) for current documentation or the [V3 Migration Guide](/guides/swift-migration-v3/) if upgrading.
 
-## Initialization
+## Historical context
 
-Init the TelemetryDeck at app startup, so it knows your App ID (you can retrieve the App ID in the TelemetryDeck Viewer app, under App Settings)
+The original Swift SDK (called "SwiftClient") used a `TelemetryManager` singleton with a `TelemetryManagerConfiguration` class. These were replaced by the `TelemetryDeck` static API in the [Grand Rename](/articles/grand-rename/) and formally removed in SwiftSDK 3.0.
 
-```swift
-let config = TelemetryDeck.Config(appID: "<YOUR-APP-ID>")
-TelemetryDeck.initialize(config: config)
-```
+## Quick migration reference
 
-For example, if you're building a scene based app, in the `init()` function for your `App`:
-
-```swift
-import SwiftUI
-import TelemetryDeck
-
-@main
-struct TelemetryTestApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-
-    init() {
-        // Note: Do not add this code to `WindowGroup.onAppear`, which will be called
-        //       *after* your window has been initialized, and might lead to out initialization
-        //       occurring too late.
-        let config = TelemetryDeck.Config(appID: "<YOUR-APP-ID>")
-        TelemetryDeck.initialize(config: config)
-    }
-}
-```
-
-## Sending Signals
-
-Once you've included the TelemetryDeck Swift Client, send signals like so:
-
-```swift
-TelemetryDeck.signal"appLaunchedRegularly")
-```
-
-TelemetryDeck will create a user identifier for your user that is specific to app installation and device. If you have a better user identifier available, you can use that instead: (the identifier will be hashed before sending it)
-
-```swift
-let email = MyConfiguration.User.Email
-TelemetryDeck.signal"userLoggedIn", customUserID: email)
-```
-
-## Payload Data
-
-You can also send additional parameters with each signal:
-
-```swift
-TelemetryDeck.signal("databaseUpdated", parameters: ["numberOfDatabaseEntries": "3831"])
-```
-
-TelemetryDeck will automatically send base parameters with these keys:
-
-- `TelemetryDeck.AppInfo.buildNumber`
-- `TelemetryDeck.AppInfo.dartVersion`
-- `TelemetryDeck.AppInfo.version`
-- `TelemetryDeck.AppInfo.versionAndBuildNumber`
-- `TelemetryDeck.Device.architecture`
-- `TelemetryDeck.Device.brand`
-- `TelemetryDeck.Device.modelName`
-- `TelemetryDeck.Device.operatingSystem`
-- `TelemetryDeck.Device.orientation`
-- `TelemetryDeck.Device.platform`
-- `TelemetryDeck.Device.screenResolutionWidth`
-- `TelemetryDeck.Device.screenResolutionHeight`
-- `TelemetryDeck.Device.systemMajorVersion`
-- `TelemetryDeck.Device.systemMajorMinorVersion`
-- `TelemetryDeck.Device.systemVersion`
-- `TelemetryDeck.Device.timeZone`
-- `TelemetryDeck.RunContext.extensionIdentifier`
-- `TelemetryDeck.RunContext.isAppStore`
-- `TelemetryDeck.RunContext.isDebug`
-- `TelemetryDeck.RunContext.isSimulator`
-- `TelemetryDeck.RunContext.isTestFlight`
-- `TelemetryDeck.RunContext.language`
-- `TelemetryDeck.RunContext.locale`
-- `TelemetryDeck.RunContext.targetEnvironment`
-- `TelemetryDeck.SDK.name`
-- `TelemetryDeck.SDK.nameAndVersion`
-- `TelemetryDeck.SDK.version`
-- `TelemetryDeck.UserPreference.region`
-- `TelemetryDeck.UserPreference.language`
-
-## Debug Mode
-
-TelemetryDeck will _not_ send any signals if you are in `DEBUG` Mode. You can override this by setting `configuration.telemetryAllowDebugBuilds = true` on your `TelemetryDeck.Configuration` instance.
+| Old API | Current API |
+|---|---|
+| `TelemetryManagerConfiguration(appID:)` | `TelemetryDeck.initialize(appID:namespace:)` |
+| `TelemetryManager.initialize(config:)` | `TelemetryDeck.initialize(appID:namespace:)` |
+| `TelemetryManager.send("event")` | `await TelemetryDeck.event("event")` |
+| `TelemetryManager.send("event", for: user)` | `await TelemetryDeck.event("event", customUserID: user)` |
+| `TelemetryManager.send("event", with: params)` | `await TelemetryDeck.event("event", parameters: params)` |
+| `TelemetryManager.shared.hashedDefaultUser` | Not exposed directly; use `setUserIdentifier(_:)` |
+| `configuration.telemetryAllowDebugBuilds = true` | `testMode: false` parameter in `initialize` |
+| `import TelemetryClient` | `import TelemetryDeck` |

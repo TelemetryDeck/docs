@@ -48,7 +48,13 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 nav = [
   { "Welcome" = "index.md" },
   { "SDK Setup" = [
-    { "Swift" = "guides/swift-setup.md" },
+    { "Swift" = [
+      { "Quick Start" = "guides/swift-setup.md" },
+      { "Processors" = "articles/swift-processors.md" },
+      { "Custom Processors" = "articles/swift-custom-processors.md" },
+      { "User Identification" = "articles/swift-user-identification.md" },
+      { "Migrating from V2" = "guides/swift-migration-v3.md" },
+    ] },
     { "Android (Kotlin)" = "guides/android-setup.md" },
     { "Flutter" = "guides/flutter-setup.md" },
     { "JavaScript" = "guides/javascript-setup.md" },

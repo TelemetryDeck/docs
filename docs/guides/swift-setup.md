@@ -6,93 +6,69 @@ tags:
   - macOS
   - watchOS
   - tvOS
+  - visionOS
 featured: true
-testedOn: Xcode 16 & Swift 5.9
-description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS and tvOS
-lead: Let's include the TelemetryDeck Swift Package in your application and send events!
+testedOn: Xcode 26 & Swift 6.2 & SwiftSDK 3.0.0
+description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS, tvOS, and visionOS
+lead: Get the TelemetryDeck Swift SDK into your application and start sending events.
 order: 100
 ---
 
 ## Prerequisites
 
-This guide assumes you have already created a TelemetryDeck account. If you haven't yet, please [sign up now](https://dashboard.telemetrydeck.com/register)!
+- A TelemetryDeck account. [Sign up here](https://dashboard.telemetrydeck.com/register) if you haven't yet.
+- Your app's **unique identifier** and **namespace** from the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com).
+- Xcode 26 or later, Swift 6.2 or later.
+- Minimum deployment targets: iOS 15, macOS 12, watchOS 8, tvOS 15, or visionOS 1.
 
 ## Installing the Swift Package
 
-The TelemetryDeck Swift package uses Swift Package Manager.
+The TelemetryDeck Swift SDK is distributed via Swift Package Manager.
 
-1. Open Xcode and navigate to the project you want to add TelemetryDeck to
-1. In the menu, select <kbd>File</kbd> -> <kbd>Add Package Dependencies...</kbd>. This will open the Swift Package Manager view
-1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field.
+1. Open your project in Xcode
+1. Select <kbd>File</kbd> → <kbd>Add Package Dependencies...</kbd>
+1. Paste `https://github.com/TelemetryDeck/SwiftSDK` into the search field
 1. Select the `SwiftSDK` package that appears in the list
 1. Set the <kbd>Dependency Rule</kbd> to <kbd>Up to Next Major Version</kbd>
-1. Press <kbd>Add Package</kbd> to continue
+1. Click <kbd>Add Package</kbd>
 
 ![A screenshot of Xcode adding the TelemetryDeck Package](/assets/xcode-swift-package1.png)
 
-This will include the TelemetryDeck Swift SDK into your app by downloading the source code. Feel free to browse the client's source code, it's tiny and you'll see for yourself how TelemetryDeck is hashing user identifiers before they ever reach the server. Privacy, yay!
+## Linking the package
 
-**Watch our [Quick Start video](https://www.youtube.com/watch?v=FA71bSnK_B8) to setup TelemetryDeck in 4 Minutes!**
-
-[![TelemetryDeck Setup in 4 Minutes – Swift SDK Integration](/assets/yt-4-minute-setup.png)](https://www.youtube.com/watch?v=FA71bSnK_B8)
-
-## Including the package in your target
-
-Xcode will ask you to link the package with your target in the next screen, titled <kbd>Choose Package Products for SwiftSDK</kbd>. Set the <kbd>Add to target</kbd> column to your app target for <kbd>TelemetryDeck</kbd> (not "TelemetryClient", which is deprecated) and click <kbd>Add Package</kbd> to complete the integration.
+Xcode will ask you to link the package with your target. In the screen titled <kbd>Choose Package Products for SwiftSDK</kbd>, set the <kbd>Add to target</kbd> column to your app target for <kbd>TelemetryDeck</kbd> and click <kbd>Add Package</kbd>.
 
 ![A screenshot of Xcode setting the target for the TelemetryDeck library](/assets/xcode-swift-package2.png)
 
-{% noteinfo "Link Library with more than one Target" %}
+!!! note "Multiple targets"
 
-In case Xcode forgets to ask you to link the library with your target, you can do so manually by selecting your target in the project navigator and selecting the <kbd>Build Phases</kbd> tab. Click the <kbd>+</kbd> button in the <kbd>Link Binary With Libraries</kbd> section and select the `TelemetryDeck` library.
-{% endnoteinfo %}
+    If Xcode doesn't prompt you, add it manually: select your target → <kbd>Build Phases</kbd> → <kbd>Link Binary With Libraries</kbd> → <kbd>+</kbd> → select `TelemetryDeck`.
 
-## Initializing the TelemetryDeck Swift package
+## Initializing TelemetryDeck
 
-The `TelemetryDeck` package will provide you with a class `TelemetryDeck` that you'll use for all interactions with TelemetryDeck. Before you can use that class, you'll need to initialize it at the start of your app. We strongly recommend doing so as soon as possible, as you won't be able to send events before the `TelemetryDeck` is initialized.
+Initialize TelemetryDeck as early as possible in your app's lifecycle. Events sent before initialization completes are buffered and delivered automatically once it's ready.
 
-This is slightly different depending on whether you use SwiftUI or UIKit's `AppDelegate` to manage your app's lifecycle, so let's look at these individually.
+!!! note "You need your app's unique identifier and namespace"
 
-{% noteinfo "You need your app's Unique Identifier" %}
-TelemetryDeck assigns a unique identifier to your app, and you need to hand that identifier to the TelemetryDeck SDK.
+    Both values are available in the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) under your app's settings.
 
-Use the [TelemetryDeck Dashboard](https://dashboard.telemetrydeck.com) to create a new app and copy its unique identifier into your computer's clipboard.
-{% endnoteinfo %}
+Pick whichever lifecycle approach your app uses — SwiftUI or AppDelegate.
 
-You only need **one** way of initializing the TelemetryDeck SDK, either SwiftUI/SceneKit or AppDelegate. If your app is new, you'll likely want to use SwiftUI/SceneKit.
-
-### Initialization with SwiftUI
-
-For Scene-based SwiftUI applications, we recommend adding the initialization to your `@main` App struct! Open `YourAppNameApp.swift` and look for code that looks like this:
-
-```swift
-import SwiftUI
-
-@main
-struct YourAppNameApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
-```
-
-This is the entry point to your app. Now let's add the initialization here.
-
-Import the TelemetryDeck Package by adding `import TelemetryDeck`. Then add an `init()` method to your App struct that creates a `TelemetryDeck.Config` instance and hands it to `TelemetryDeck.initialize(config:)`, using the **Unique Identifier of your app** that you copied into your clipboard earlier. If you don't have that anymore, you can get it at any time from the TelemetryDeck Dashboard.
-
-Your code should now look like this:
+### SwiftUI
 
 ```swift
 import SwiftUI
 import TelemetryDeck
 
 @main
-struct YourAppNameApp: App {
+struct YourApp: App {
     init() {
-        let config = TelemetryDeck.Config(appID: "YOUR-APP-ID")
-        TelemetryDeck.initialize(config: config)
+        Task {
+            try? await TelemetryDeck.initialize(
+                appID: "YOUR-APP-ID",
+                namespace: "YOUR-NAMESPACE"
+            )
+        }
     }
 
     var body: some Scene {
@@ -103,35 +79,7 @@ struct YourAppNameApp: App {
 }
 ```
 
-If you prefer to have it on a single line, you can also write:
-
-```swift
-TelemetryDeck.initialize(config: .init(appID: "YOUR-APP-ID"))
-```
-
-Your app is now ready to use TelemetryDeck. You can skip the next section which explains setup for UIKit-based apps.
-
-### Initialization in an AppDelegate based app
-
-If you use `AppDelegate` to manage your app's life cycle, open the file `AppDelegate.swift` and look for the method `application(:didFinishLaunchingWithOptions:)`. It will probably look similar to this:
-
-```swift
-import UIKit
-
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
-
-    // ...
-}
-```
-
-By default, Xcode even adds a comment here to tell you where to add stuff that should happen right after launch.
-
-Now, import the `TelemetryDeck` package and configure the `TelemetryDeck` using the **Unique Identifier of your app** that you copied into your clipboard earlier. If you don't have that anymore you can get it at any time from the TelemetryDeck Dashboard.
+### AppDelegate
 
 ```swift
 import UIKit
@@ -139,129 +87,145 @@ import TelemetryDeck
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let config = TelemetryDeck.Config(appID: "YOUR-APP-ID")
-        TelemetryDeck.initialize(config: config)
-
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        Task {
+            try? await TelemetryDeck.initialize(
+                appID: "YOUR-APP-ID",
+                namespace: "YOUR-NAMESPACE"
+            )
+        }
         return true
     }
-    // ...
 }
 ```
+
+!!! warning "Test mode"
+
+    When running from Xcode in `DEBUG` configuration, events are automatically tagged as **test signals**. Enable **Test Mode** in the TelemetryDeck Dashboard to see them.
 
 ## Verify your setup
 
-Run your app to verify that TelemetryDeck is properly integrated. The SDK automatically sends a `TelemetryDeck.Session.started` signal when your app launches.
+Run your app. The SDK sends a `TelemetryDeck.Session.started` event automatically on launch. Open the TelemetryDeck Dashboard → "Explore > Recent Signals" with Test Mode enabled — you should see it appear.
 
-{% notewarning "When running from Xcode, you're sending test events" %}
-
-If your app is built in `DEBUG` configuration (i.e. running from Xcode), your events will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
-{% endnotewarning %}
-
-Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see the automatic session signal appear after launching your app.
+That's it. Your app is sending analytics. You can ship this and start getting insights from real users.
 
 ---
 
-{% noteinfo "Ready for basic insights" %}
-Congratulations! With just the SDK initialization, TelemetryDeck will automatically track user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code.
+## Sending custom events
 
-You can now build and ship your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
-{% endnoteinfo %}
-
-## Enhancing your analytics (optional)
-
-While basic session tracking provides valuable information, sending custom events lets you answer questions specific to how users engage with *your* app.
-
-### Common questions you can answer with custom events
-
-- Which features do users engage with most frequently?
-- Where in the onboarding flow do users drop off?
-- How are users navigating between different screens?
-- Which settings or configurations are most popular?
-
-### Sending custom events
-
-{% noteinfo "What is a signal?" %}
-Signals are an indication that **an event** happened in your app, which is used by a **user**. Signals consist of these parts:
-
-- **Signal Name** – A string that indicates which kind of event happened
-- **User Identifier** – A string that identifies your user (we auto-generate one for you)
-- **Optional Parameters** – A dictionary of additional data about your app or the event triggering the signal
-
-See the [Signals Reference](/docs/api/signals-reference/) for more information about how you can effectively use Signals.
-{% endnoteinfo %}
-
-Let's imagine your app is a pizza oven monitor and we want to send a signal that tells us the user has tapped the "Start Baking" button. Go to the place in your code where the user taps the button and add the following code:
+Built-in session tracking covers the basics. Custom events let you answer app-specific questions: which features are popular, where users drop off, what settings they prefer.
 
 ```swift
-TelemetryDeck.signal("Oven.Bake.startBaking")
+await TelemetryDeck.event("Oven.startBaking")
 ```
 
-That's all you need to send a signal. You do not need to keep an instance of TelemetryDeck and hand it around, just call the static `signal` function on the class directly. If you want to add custom parameters, add them to the function call like this:
+Add parameters for more context:
 
 ```swift
-TelemetryDeck.signal(
-    "Oven.Bake.startBaking",
+await TelemetryDeck.event(
+    "Oven.startBaking",
     parameters: [
-        "numberOfTimesPizzaModeHasActivated": "\(dataStore.pizzaMode.count)",
-        "pizzaCheeseMode": "\(dataStore.pizzaCheeseMode)"
+        "pizzaMode": dataStore.pizzaMode.isActive,
+        "temperature": dataStore.targetTemperature
     ]
 )
 ```
 
-{% noteinfo "Privacy Note" %}
-The value you pass to `customUserID` will be automatically hashed before being sent to our servers to protect the users privacy. This does not happen for the values in `parameters` though, so hash yourself where needed.
-{% endnoteinfo %}
+Parameters accept `String`, `Bool`, `Int`, `Double`, `UUID`, and `Date` values. They're transmitted as native JSON types.
 
-## Configuring default signal properties (optional)
+!!! note "Privacy"
 
-When initializing TelemetryDeck, you can configure some defaults to help keep your signals organized and consistent:
+    The `customUserID` value is SHA256-hashed before transmission. Parameter values are **not** hashed — don't include personally identifiable information in parameters.
+
+## User identification
+
+TelemetryDeck auto-generates an anonymous user identifier per installation. If you have your own user identity (email, account ID), set it after login:
 
 ```swift
-let config = TelemetryDeck.Config(appID: "YOUR-APP-ID")
-
-// Add a prefix to all signal names
-config.defaultSignalPrefix = "App."
-// With this set, calling signal("launched") will actually send "App.launched"
-
-// Add a prefix to all parameter names
-config.defaultParameterPrefix = "MyApp."
-// This prefixes all keys in your parameters dictionary
-
-// Set parameters that will be included with every signal
-config.defaultParameters = {[
-    "theme": UserDefaults.standard.string(forKey: "theme") ?? "default",
-    "isPayingUser": FreemiumKit.shared.hasPurchased ? "true" : "false",
-]}
-// These parameters will be merged with any additional parameters you specify in signal() calls
+await TelemetryDeck.setUserIdentifier("user@example.com")
 ```
+
+The identifier is hashed before it leaves the device. For details on how the default identifier is resolved per platform, cross-device tracking, and server-side usage, see [User Identification](/articles/swift-user-identification/).
+
+## Configuration options
+
+The `initialize` function accepts several optional parameters:
+
+```swift
+try await TelemetryDeck.initialize(
+    appID: "YOUR-APP-ID",
+    namespace: "YOUR-NAMESPACE",
+    salt: "optional-extra-hash-salt",
+    defaultUser: "optional-default-user",
+    testMode: nil,
+    eventPrefix: "MyApp.",
+    parameterPrefix: "MyApp.",
+    defaultParameters: [
+        "theme": UserDefaults.standard.string(forKey: "theme") ?? "default",
+        "tier": isPremium ? "premium" : "free"
+    ]
+)
+```
+
+| Parameter | Description |
+|---|---|
+| `salt` | Extra string mixed into user ID hashing for additional privacy |
+| `defaultUser` | User identifier set at startup |
+| `testMode` | Override automatic test mode detection (`true`/`false`/`nil` for auto) |
+| `eventPrefix` | Automatically prepended to all event names |
+| `parameterPrefix` | Automatically prepended to all custom parameter keys |
+| `sendSessionStartedEvent` | Whether to fire `TelemetryDeck.Session.started` on each new session (default: `true`) |
+| `defaultParameters` | Key-value pairs included with every event |
+
+## Disabling analytics
+
+Let users opt out:
+
+```swift
+await TelemetryDeck.setAnalyticsDisabled(true)
+```
+
+Check the current state:
+
+```swift
+let disabled = await TelemetryDeck.isAnalyticsDisabled
+```
+
+## Shutting down
+
+If you need to cleanly shut down the SDK (for example before an app extension terminates):
+
+```swift
+await TelemetryDeck.terminate()
+```
+
+This flushes pending events, persists the cache, and stops all processors.
 
 ## App Store requirements
 
-Before uploading your app to the App Store, you'll need to complete Apple's privacy details on App Store Connect. Although TelemetryDeck is privacy-focused, you still need to disclose analytics usage.
+Apple requires you to disclose analytics usage in App Store Connect, even for privacy-focused tools like TelemetryDeck. See our [Apple App Privacy guide](/articles/apple-app-privacy/) and [Privacy FAQ](/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
-For guidance on completing these requirements, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/). For privacy policy recommendations, check our [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+## What's next
 
-## What to do next
+<div class="grid cards" markdown>
 
-Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
+-   **[Processors](/articles/swift-processors/)**
 
-<div class="not-prose ">
-  <div class="my-10 grid grid-cols-1 gap-6">
-    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-lg text-mars-500">
-          <a href="/docs/basics/index">
-            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
-        </h2>
-        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
-        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
-          <span>Start here to get real value from your analytics</span>
-          <span>→</span>
-        </p>
-      </div>
-    </div>
-  </div>
+    Learn how events flow through the processor pipeline and what data is automatically collected.
+
+-   **[Custom Processors](/articles/swift-custom-processors/)**
+
+    Build your own processors to add domain-specific metadata to every event.
+
+-   **[Analytics Walkthrough](/basics/index)**
+
+    Navigate TelemetryDeck, interpret insights, and make data-driven decisions.
+
+-   **[Migrating from V2](/guides/swift-migration-v3/)**
+
+    Upgrading from SwiftSDK 2.x? Here's what changed.
+
 </div>
