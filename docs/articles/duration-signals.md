@@ -1,45 +1,32 @@
 ---
-title: Track time-based user engagement with Duration Signals
+title: Duration Events
 tags:
   - setup
   - how-to
   - beginner
   - swift
-description: Duration Signals allow you to measure how long users spend on specific activities in your app with millisecond precision.
-lead: With Duration Signals, you can easily measure how long users spend on different activities in your app, helping you identify engagement patterns, optimize workflows, and improve user experience with precise timing data.
-searchEngineTitle: Track User Engagement with Duration Signals in TelemetryDeck
-searchEngineDescription: Learn how to implement and analyze time-based metrics in your app using TelemetryDeck's Duration Signals.
+description: Duration events let you measure how long users spend on specific activities in your app.
+lead: Measure how long users spend on different activities in your app — onboarding steps, content consumption, checkout flows, or any user journey.
+searchEngineTitle: Track User Engagement with Duration Events in TelemetryDeck
+searchEngineDescription: Learn how to implement and analyze time-based metrics in your app using TelemetryDeck's duration events.
+testedOn: SwiftSDK 3.0.0
 ---
 
-## What are Duration Signals?
+## How it works
 
-Duration Signals are a powerful feature of TelemetryDeck's SDKs that make it easier than ever to understand how users interact with your app over time. Whether you want to track time spent during onboarding, content consumption, checkout flows, or any other user journey, Duration Signals provide accurate, millisecond-precise timing data.
-
-The SDK automatically handles all the complexities of time tracking for you:
-- Precise measurement down to milliseconds (3 decimal places)
-- Automatic exclusion of time spent while the app is in the background
-- Merging parameters from both start and stop calls
-- Thread-safe implementation for accurate timing
-
-## Implementation
-
-Using Duration Signals is as simple as bracketing an activity with two function calls:
+Bracket an activity with two calls — start and stop. The SDK handles timing, background exclusion, and parameter merging automatically.
 
 ```swift
-// Start tracking when the activity begins
-TelemetryDeck.startDurationSignal("activityName")
+await TelemetryDeck.startDurationEvent("activityName")
 
 // ... user performs the activity ...
 
-// Stop tracking and send the signal when the activity ends
-TelemetryDeck.stopAndSendDurationSignal("activityName")
+await TelemetryDeck.stopAndSendDurationEvent("activityName")
 ```
 
-The duration is automatically calculated and included in your signal as `TelemetryDeck.Signal.durationInSeconds`.
+The duration is included as `TelemetryDeck.Signal.durationInSeconds` with millisecond precision (3 decimal places).
 
-### View Lifecycle Integration
-
-Duration Signals integrate seamlessly with your view lifecycles in SwiftUI:
+### SwiftUI view lifecycle
 
 ```swift
 struct TutorialView: View {
@@ -48,45 +35,56 @@ struct TutorialView: View {
             Text("Welcome to the Tutorial!")
         }
         .onAppear {
-            TelemetryDeck.startDurationSignal("tutorial")
+            Task { await TelemetryDeck.startDurationEvent("tutorial") }
         }
         .onDisappear {
-            TelemetryDeck.stopAndSendDurationSignal("tutorial")
+            Task { await TelemetryDeck.stopAndSendDurationEvent("tutorial") }
         }
     }
 }
 ```
 
-Both functions also take an optional `parameters` argument where you can pass additional information just like with the `signal` function.
+Both functions accept optional `parameters` for additional context.
 
-## Technical Details
+## SDK requirements
 
-### SDK Requirements
+- Swift SDK: 3.0.0 or later
+- Kotlin SDK: 4.1.0 or later
+- Flutter SDK: 2.1.0 or later
 
-- Swift SDK: Version 2.7.0 or later
-- Kotlin SDK: Version 4.1.0 or later
-- Flutter SDK: Version 2.1.0 or later
+## Edge cases
 
-### Edge Cases & Limitations
+- **Multiple starts**: Calling `startDurationEvent` with an already-tracked name discards the previous tracking and starts fresh.
+- **Missing stop**: A duration event that's never stopped is never sent.
+- **App restarts**: Duration events survive app restarts via persistent storage.
+- **Background time**: Excluded by default. Pass `includeBackgroundTime: true` to include it:
 
-- **Multiple starts**: If you call `startDurationSignal` with a name that's already being tracked, the previous tracking is discarded and a new one begins.
-- **Missing stop**: If a duration signal is never stopped, it will not be sent.
-- **Signal name conflicts**: Use unique signal names for different activities to avoid conflicts.
-- **App restarts**: Duration signals are not stored to persistent storage, therefore they are not appropriate for tracking long-term user engagement.
+```swift
+await TelemetryDeck.startDurationEvent(
+    "longRunningTask",
+    includeBackgroundTime: true
+)
+```
 
-## Analyzing Duration Data
+### Cancelling a duration event
 
-Duration data is sent as a numerical value in the `TelemetryDeck.Signal.durationInSeconds` parameter, which opens up several analysis possibilities.
+If the activity is abandoned before completion:
 
-### Using the Histogram Aggregation
+```swift
+await TelemetryDeck.cancelDurationEvent("activityName")
+```
 
-The histogram aggregation type is perfect for visualizing the distribution of duration data:
+## Analyzing duration data
+
+Duration data is sent as a numerical value in the `TelemetryDeck.Signal.durationInSeconds` parameter. The histogram aggregation is a natural fit for visualizing distribution.
+
+### Histogram query
 
 1. Create a new insight of type "Advanced Query", then open the "JSON Editor":
 
     ![A screenshot of the Query Creator dialog](/assets/duration-signal-01.png)
 
-2. Copy & paste the following histogram aggregation query and adjust `<YOUR_SIGNAL_NAME>` to your needs:
+2. Paste this histogram aggregation query, replacing `<YOUR_EVENT_NAME>`:
 
     ![A screenshot of the JSON Editor text field](/assets/duration-signal-02.png)
 
@@ -114,7 +112,7 @@ The histogram aggregation type is perfect for visualizing the distribution of du
           {
             "dimension": "type",
             "type": "selector",
-            "value": "<YOUR_SIGNAL_NAME>"
+            "value": "<YOUR_EVENT_NAME>"
           }
         ]
       },
@@ -123,128 +121,69 @@ The histogram aggregation type is perfect for visualizing the distribution of du
     }
     ```
 
-3. Set the chart type to be a bar chart in the UI via the insight's top right segmented control:
+3. Set the chart type to bar chart:
 
     ![A screenshot of the insight set to be a bar chart](/assets/duration-signal-03.png)
 
-4. You might also want to adjust the `splitPoints` array based on the expected duration of your activity, for example:
+4. Adjust `splitPoints` to match your expected durations:
     - **Short interactions** (button clicks): `[0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.5, 1, 2, 5]`
     - **Medium interactions** (form fills): `[0, 1, 2, 3, 4, 5, 7.5, 10, 15, 20, 30]`
     - **Long interactions** (content consumption): `[0, 5, 15, 30, 60, 120, 300, 600, 1200]`
 
-## Common Use Cases
+## Examples
 
-### Onboarding Optimization
-
-Track time spent in each step of your onboarding flow to identify which steps take too long or where users might get stuck:
+### Onboarding steps
 
 ```swift
-// In first onboarding screen
-TelemetryDeck.startDurationSignal("Onboarding.step1")
+await TelemetryDeck.startDurationEvent("Onboarding.step1")
 
-// When moving to second screen
-TelemetryDeck.stopAndSendDurationSignal("Onboarding.step1", parameters: ["pushAccess": "granted"])
-TelemetryDeck.startDurationSignal("Onboarding.step2")
-
-// etc.
+// When moving to step 2
+await TelemetryDeck.stopAndSendDurationEvent("Onboarding.step1", parameters: [
+    "pushAccess": "granted"
+])
+await TelemetryDeck.startDurationEvent("Onboarding.step2")
 ```
 
-Note that Duration Signals are just ordinary signals, so you can totally reuse these for creating [funnel charts](https://telemetrydeck.com/docs/articles/how-to-funnel-insights/) and more.
+Duration events are regular events, so you can reuse them in [funnel charts](/articles/how-to-funnel-insights/).
 
-### Content Engagement
-
-Measure how long users engage with different content types to understand what resonates with your audience:
+### Content engagement
 
 ```swift
-// When user opens an article
-TelemetryDeck.startDurationSignal("Content.viewing", parameters: [
+await TelemetryDeck.startDurationEvent("Content.viewing", parameters: [
     "contentType": "article",
     "contentID": article.id,
     "contentCategory": article.category,
 ])
 
-// When user leaves the article
-TelemetryDeck.stopAndSendDurationSignal("Content.viewing", parameters: [
-    "reachedEnd": userReachedEnd ? "true" : "false",
+// When leaving the article
+await TelemetryDeck.stopAndSendDurationEvent("Content.viewing", parameters: [
+    "reachedEnd": userReachedEnd
 ])
 ```
 
-### Feature Discovery
-
-Track how long users spend exploring new features to assess the effectiveness of your feature introduction:
-
-```swift
-// When user enters new feature area
-TelemetryDeck.startDurationSignal("Feature.exploration", parameters: [
-    "featureName": "videoEditor",
-    "entryPoint": entryPoint,
-])
-
-// When user leaves the feature area
-TelemetryDeck.stopAndSendDurationSignal("Feature.exploration", parameters: [
-    "completedAction": userCreatedVideo ? "true" : "false"
-])
-```
-
-### Performance Monitoring
-
-Track real-world performance metrics by measuring operation durations:
-
-```swift
-// Before starting an intensive operation
-TelemetryDeck.startDurationSignal("Render.operation", parameters: [
-    "complexity": "\(complexity)",
-    "inputSize": "\(inputSizeInMB)",
-])
-
-// After operation completes
-TelemetryDeck.stopAndSendDurationSignal("Render.operation", parameters: [
-    "success": success ? "true" : "false",
-    "outputSize": "\(outputSizeInMB)",
-])
-```
-
-### Network Request Timing
-
-Duration Signals methods are marked with `@MainActor`, which means two things:
-
-1. In UI contexts like SwiftUI views, no `await` is needed (as shown in the above examples)
-2. When calling from background contexts like network operations, you need to use `await`
-
-Here's how to measure network requests that run on background threads:
+### Network request timing
 
 ```swift
 func fetchData() async throws -> Data {
-    // Since we're potentially on a background thread, await is needed
-    await TelemetryDeck.startDurationSignal("Network.fetch", parameters: [
+    await TelemetryDeck.startDurationEvent("Network.fetch", parameters: [
         "endpoint": "users/profile"
     ])
-    
+
     do {
-        // Perform your network request
         let (data, response) = try await URLSession.shared.data(from: url)
         let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
-        
-        // Again, await is needed here
-        await TelemetryDeck.stopAndSendDurationSignal("Network.fetch", parameters: [
-            "status": "\(statusCode)",
-            "success": "true"
+
+        await TelemetryDeck.stopAndSendDurationEvent("Network.fetch", parameters: [
+            "status": statusCode,
+            "success": true
         ])
-        
+
         return data
     } catch {
-        await TelemetryDeck.stopAndSendDurationSignal("Network.fetch", parameters: [
-            "success": "false"
+        await TelemetryDeck.stopAndSendDurationEvent("Network.fetch", parameters: [
+            "success": false
         ])
         throw error
     }
 }
 ```
-
-## What's Next?
-
-Start by identifying a few key user journeys or critical performance areas in your app that would benefit from timing data. Implement Duration Signals for these activities first, then use the histogram aggregation to visualize and analyze the results.
-
-Remember that Duration Signals can be combined with your existing analytics strategy - they provide an additional dimension to your user data without replacing what you already have.
-
-{% callToAction "Explore more analytics possibilities" "Track user engagement and make data-driven decisions" %}
