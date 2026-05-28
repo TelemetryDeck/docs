@@ -8,33 +8,33 @@ tags:
 testedOn: Xcode 13.1 & Swift 5.5 & TelemetryDeck SDK 1.1.5
 description: Here's how to use Test Mode to get started with TelemetryDeck
 lead: Test Mode helps you make sure that TelemetryDeck is set up correctly in your app and allows you to set up your insights even during development.
-searchEngineTitle: How to run test signals
-searchEngineDescription: With test mode, you can review your analytics setup without compromising live data. Enable Test Mode in your dashboard to send signals through debug mode.
+searchEngineTitle: How to run test events
+searchEngineDescription: With test mode, you can review your analytics setup without compromising live data. Enable Test Mode in your dashboard to send events through debug mode.
 ---
 
-During the development of your TelemetryDeck-enabled app - or even while you test it - your app sends signals. These signals are not from your users but rather from yourself or your development team. You might even send hundreds of signals during tests, which would mess up your insights if mixed with actual analytics data. Not cool!
+During the development of your TelemetryDeck-enabled app - or even while you test it - your app sends events. These events are not from your users but rather from yourself or your development team. You might even send hundreds of events during tests, which would mess up your insights if mixed with actual analytics data. Not cool!
 
-We do not recommend not doing any testing. The benefits of sending signals during test phases are enormous! If you have not considered it yet, here are some nifty reasons why you should start now:
+We do not recommend not doing any testing. The benefits of sending events during test phases are enormous! If you have not considered it yet, here are some nifty reasons why you should start now:
 
 - You will be able to find errors in the configuration of the TelemetryDeck SDK
-- Working with test signals means you will know if your app works even before releasing your app
-- As well as being able to make preparations for new signal types or payload types until your app is released
+- Working with test events means you will know if your app works even before releasing your app
+- As well as being able to make preparations for new event types or payload types until your app is released
 
 Test Mode will let you easily and quickly test new features for your app, giving you the power to release the best product possible! Let's dive right in.
 
 ## How it works
 
-Each sent signal has a `isTestMode` parameter, which can either be `true` or `false`.
+Each sent event has a `isTestMode` parameter, which can either be `true` or `false`.
 Navigate to your TelemetryDeck [dashboard](https://dashboard.telemetrydeck.com/), where you will find the Test Mode toggle on the top left side, just above the sidebar.
-You can toggle it to show your signals either in `isTestMode == true` or `isTestMode == false`. While toggled to `true`, you will see a banner at the top displaying **Test Data** to remind you that you are currently in Test Mode, and all signals get sent in said mode. All charts will display test data only while in Test Mode.
+You can toggle it to show your events either in `isTestMode == true` or `isTestMode == false`. While toggled to `true`, you will see a banner at the top displaying **Test Data** to remind you that you are currently in Test Mode, and all events get sent in said mode. All charts will display test data only while in Test Mode.
 
 ![Screenshot of the dashboard showing the Test Mode toggle in the upper left corner.](/docs/images/test_mode.png)
 
-## Sending Signals in Test Mode
+## Sending Events in Test Mode
 
 The SDKs try to infer the isTestMode parameter as best as they can. For example, if a DEBUG parameter is present in your development environment, that is used as the value for isTestMode.
-You can also override the isTestMode parameter just as you would add any other payload parameter to a signal
-Note: since signal payloads only support strings, the parameter needs to be either "true" or "false"
+You can also override the isTestMode parameter just as you would add any other payload parameter to a event
+Note: since event payloads only support strings, the parameter needs to be either "true" or "false"
 
 ### Manually set Test Mode in Swift SDK
 
