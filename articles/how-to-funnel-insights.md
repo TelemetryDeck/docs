@@ -6,7 +6,7 @@ tags:
   - beginner
   - how-to
 description: Funnels are here to help you understand your users. Watch how they navigate and flow through your app and find out how to improve your in-App processes with funnels!
-searchEngineTitle: Get your analytics flowing - the art of funneling your signals
+searchEngineTitle: Get your analytics flowing - the art of funneling your events
 searchEngineDescription: Watch how your users navigate and flow through your app and learn how to improve your in-App processes with funnels!
 ---
 
