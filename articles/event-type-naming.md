@@ -1,18 +1,18 @@
 ---
-title: How to name your signal types
+title: How to name your event types
 tags: best-practices
-description: Should you give your signal types a simple name, or use a more complex naming scheme? We'll help you decide.
-lead: Should you give your signal types a simple name, or use a more complex naming scheme? We'll help you decide.
+description: Should you give your event types a simple name, or use a more complex naming scheme? We'll help you decide.
+lead: Should you give your event types a simple name, or use a more complex naming scheme? We'll help you decide.
 ---
 
-When you send an event, you'll always have to tell TelemetryDeck what **type** of signal you want to send. Type is just a
+When you send an event, you'll always have to tell TelemetryDeck what **type** of event you want to send. Type is just a
 String, so in theory you could add anything in there. Your type could be `asfdgllahsavhaligha`, or `This sentence no verb` or even `🤖`.
 
 We recommend a different style to keep things clear and easy to find.
 
 ## Single word types
 
-If you're just hacking with TelemetryDeck, consider using a single word for your type. It's easy to type, and as long as your app is not too big, it's easy to find the signal type you're looking for.
+If you're just hacking with TelemetryDeck, consider using a single word for your type. It's easy to type, and as long as your app is not too big, it's easy to find the event type you're looking for.
 
 Examples are:
 
