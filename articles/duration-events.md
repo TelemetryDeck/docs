@@ -1,19 +1,17 @@
 ---
-title: Track time-based user engagement with Duration Signals
+title: Track time-based user engagement with Duration Events
 tags:
   - setup
   - how-to
   - beginner
   - swift
-description: Duration Signals allow you to measure how long users spend on specific activities in your app with millisecond precision.
-lead: With Duration Signals, you can easily measure how long users spend on different activities in your app, helping you identify engagement patterns, optimize workflows, and improve user experience with precise timing data.
-searchEngineTitle: Track User Engagement with Duration Signals in TelemetryDeck
-searchEngineDescription: Learn how to implement and analyze time-based metrics in your app using TelemetryDeck's Duration Signals.
+description: Duration Events allow you to measure how long users spend on specific activities in your app with millisecond precision.
+lead: With Duration Events, you can easily measure how long users spend on different activities in your app, helping you identify engagement patterns, optimize workflows, and improve user experience with precise timing data.
 ---
 
-## What are Duration Signals?
+## What are Duration Events?
 
-Duration Signals are a powerful feature of TelemetryDeck's SDKs that make it easier than ever to understand how users interact with your app over time. Whether you want to track time spent during onboarding, content consumption, checkout flows, or any other user journey, Duration Signals provide accurate, millisecond-precise timing data.
+Duration Events are a powerful feature of TelemetryDeck's SDKs that make it easier than ever to understand how users interact with your app over time. Whether you want to track time spent during onboarding, content consumption, checkout flows, or any other user journey, Duration Events provide accurate, millisecond-precise timing data.
 
 The SDK automatically handles all the complexities of time tracking for you:
 - Precise measurement down to milliseconds (3 decimal places)
@@ -23,7 +21,7 @@ The SDK automatically handles all the complexities of time tracking for you:
 
 ## Implementation
 
-Using Duration Signals is as simple as bracketing an activity with two function calls:
+Using Duration Events is as simple as bracketing an activity with two function calls:
 
 ```swift
 // Start tracking when the activity begins
@@ -31,15 +29,15 @@ TelemetryDeck.startDurationSignal("activityName")
 
 // ... user performs the activity ...
 
-// Stop tracking and send the signal when the activity ends
+// Stop tracking and send the event when the activity ends
 TelemetryDeck.stopAndSendDurationSignal("activityName")
 ```
 
-The duration is automatically calculated and included in your signal as `TelemetryDeck.Signal.durationInSeconds`.
+The duration is automatically calculated and included in your event as `TelemetryDeck.Signal.durationInSeconds`.
 
 ### View Lifecycle Integration
 
-Duration Signals integrate seamlessly with your view lifecycles in SwiftUI:
+Duration Events integrate seamlessly with your view lifecycles in SwiftUI:
 
 ```swift
 struct TutorialView: View {
@@ -70,9 +68,9 @@ Both functions also take an optional `parameters` argument where you can pass ad
 ### Edge Cases & Limitations
 
 - **Multiple starts**: If you call `startDurationSignal` with a name that's already being tracked, the previous tracking is discarded and a new one begins.
-- **Missing stop**: If a duration signal is never stopped, it will not be sent.
-- **Signal name conflicts**: Use unique signal names for different activities to avoid conflicts.
-- **App restarts**: Duration signals are not stored to persistent storage, therefore they are not appropriate for tracking long-term user engagement.
+- **Missing stop**: If a duration event is never stopped, it will not be sent.
+- **Event name conflicts**: Use unique event names for different activities to avoid conflicts.
+- **App restarts**: Duration Events are not stored to persistent storage, therefore they are not appropriate for tracking long-term user engagement.
 
 ## Analyzing Duration Data
 
@@ -86,7 +84,7 @@ The histogram aggregation type is perfect for visualizing the distribution of du
 
     ![A screenshot of the Query Creator dialog](/docs/images/duration-signal-01.png)
 
-2. Copy & paste the following histogram aggregation query and adjust `<YOUR_SIGNAL_NAME>` to your needs:
+2. Copy & paste the following histogram aggregation query and adjust `<YOUR_EVENT_NAME>` to your needs:
 
     ![A screenshot of the JSON Editor text field](/docs/images/duration-signal-02.png)
 
@@ -114,7 +112,7 @@ The histogram aggregation type is perfect for visualizing the distribution of du
           {
             "dimension": "type",
             "type": "selector",
-            "value": "<YOUR_SIGNAL_NAME>"
+            "value": "<YOUR_EVENT_NAME>"
           }
         ]
       },
@@ -149,7 +147,7 @@ TelemetryDeck.startDurationSignal("Onboarding.step2")
 // etc.
 ```
 
-Note that Duration Signals are just ordinary signals, so you can totally reuse these for creating [funnel charts](https://telemetrydeck.com/docs/articles/how-to-funnel-insights/) and more.
+Note that Duration Events are just ordinary events, so you can totally reuse these for creating [funnel charts](https://telemetrydeck.com/docs/articles/how-to-funnel-insights/) and more.
 
 ### Content Engagement
 
@@ -206,7 +204,7 @@ TelemetryDeck.stopAndSendDurationSignal("Render.operation", parameters: [
 
 ### Network Request Timing
 
-Duration Signals methods are marked with `@MainActor`, which means two things:
+Duration Events methods are marked with `@MainActor`, which means two things:
 
 1. In UI contexts like SwiftUI views, no `await` is needed (as shown in the above examples)
 2. When calling from background contexts like network operations, you need to use `await`
@@ -243,8 +241,8 @@ func fetchData() async throws -> Data {
 
 ## What's Next?
 
-Start by identifying a few key user journeys or critical performance areas in your app that would benefit from timing data. Implement Duration Signals for these activities first, then use the histogram aggregation to visualize and analyze the results.
+Start by identifying a few key user journeys or critical performance areas in your app that would benefit from timing data. Implement Duration Events for these activities first, then use the histogram aggregation to visualize and analyze the results.
 
-Remember that Duration Signals can be combined with your existing analytics strategy - they provide an additional dimension to your user data without replacing what you already have.
+Remember that Duration Events can be combined with your existing analytics strategy - they provide an additional dimension to your user data without replacing what you already have.
 
 {% callToAction "Explore more analytics possibilities" "Track user engagement and make data-driven decisions" %}
