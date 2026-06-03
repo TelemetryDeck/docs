@@ -48,6 +48,7 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 nav = [
   { "Welcome" = "index.md" },
   { "SDK Setup" = [
+      "guides/sdk-setup/index.md",
     { "Swift" = [
       { "Quick Start" = "guides/swift-setup.md" },
       { "Processors" = "articles/swift-processors.md" },
