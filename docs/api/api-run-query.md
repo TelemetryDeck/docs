@@ -85,31 +85,24 @@ Host: api.telemetrydeckapi.com
 Response:
 
 ```json
-{
-  "calculationDuration": 0.21845901012420654,
-  "calculationFinishedAt": "2022-07-11T14:00:44+0000",
-  "result": {
-    "rows": [
+[
+  {
+    "result": [
       {
-        "result": [
-          {
-            "count": 516,
-            "modelName": "iPhone13,1"
-          },
+        "count": 516,
+        "modelName": "iPhone13,1"
+      },
 
-          // ...
+      // ...
 
-          {
-            "count": 2,
-            "modelName": "iPad8,6"
-          }
-        ],
-        "timestamp": "2022-06-11T00:00:00+0000"
+      {
+        "count": 2,
+        "modelName": "iPad8,6"
       }
     ],
-    "type": "topNResult"
+    "timestamp": "2022-06-11T00:00:00+0000"
   }
-}
+]
 ```
 
-That's it — the `result` field contains the data, and `calculationDuration` tells you how long the query took on our side.
+That's it — the response body is the raw query result. Its exact shape depends on the query type (for example, a `topN` query returns an array of timestamped result buckets as shown above, while a `timeseries` query returns one entry per time bucket).
