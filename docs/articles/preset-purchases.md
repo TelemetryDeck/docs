@@ -1,112 +1,103 @@
 ---
-title: Setting Up the 'Purchases' Preset to Get Live Purchase Data
+title: Tracking Purchases
 tags:
   - setup
   - beginner
   - insights
   - presets
-lead: TelemetryDeck ships with a set of insights that can be useful to track your revenue within the last few hours with live purchase data. Here's how to set them up.
-searchEngineDescription: TelemetryDeck ships with a set of insights that can be useful to track your revenue within the last few hours with live purchase data. Learn how to set them up.
+lead: Track in-app purchases through TelemetryDeck for near-realtime revenue data — no waiting hours for App Store Connect to update.
+searchEngineDescription: Track your app's in-app purchases through TelemetryDeck with just a couple of seconds delay, providing live revenue data.
+testedOn: SwiftSDK 3.0.0
 ---
 
-## Why Track Purchases?
+## Why track purchases?
 
-If you are offering In-App Purchases in your app, you might have noticed some delay in officially reported purchase stats. For example, App Store Connect charts do not offer any purchase data for the last 3 hours. Such a delay can be annoying sometimes such as at the day of your app launch or a specific live event related to your app. On top of that, App Store Connect in particular signs you out of your account regularly, making it annoying to quickly look up purchase statistics.
+App Store Connect purchase data lags by several hours and requires frequent re-authentication. TelemetryDeck gives you purchase data within seconds.
 
-That's why you might want to set up a signal in your application to track purchases in your app through TelemetryDeck with just a couple of seconds delay, providing you with the live data you want.
+You can track purchases through:
 
-You can use these methods to include your purchase data in TelemetryDeck:
+- The TelemetryDeck Swift SDK directly
+- RevenueCat integration
+- FreemiumKit integration
 
-- Use the TelemetryDeck Swift SDK directly
-- If you're already using RevenueCat, you can use the RevenueCat Integration
-- If you're using FreemiumKit, you can connect that to TelemetryDeck
+!!! warning "Live data vs. correct data"
 
-See the sections below for a detailed description.
-
-{% notewarning "Live Data vs. Correct Data" %}
-We do not offer any intelligence to correct once reported purchases, such as when users make refunds, or to detect subscription renewals. Therefore, our insights focus on more recent data. For longer-term or 100% correct data, refer to official sources.
-{% endnotewarning %}
+    TelemetryDeck does not handle refunds or detect subscription renewals. For long-term or 100% correct revenue data, use official sources like App Store Connect.
 
 ## Using the TelemetryDeck Swift SDK
 
-If you're using the TelemetryDeck Swift SDK, tracking purchases is incredibly simple. Just call the convenience method when you receive a StoreKit transaction:
+Pass a StoreKit transaction to the convenience method:
 
 ```swift
-TelemetryDeck.purchaseCompleted(transaction: transaction)
+await TelemetryDeck.purchaseCompleted(transaction: transaction)
 ```
 
-That's it! This method automatically:
+This automatically:
 
 - Extracts the price from the transaction
-- Converts the currency to USD (using hard-coded exchange rates)
+- Converts the currency to USD (using built-in exchange rates)
 - Determines if it's a subscription or one-time purchase
+- Detects free trial starts vs. paid conversions
 - Includes the storefront country and currency codes
-- Sends the properly formatted signal to TelemetryDeck
 
-{% noteinfo "Requirements" %}
-The `purchaseCompleted` convenience function is only available on iOS 15 or higher. It accepts the same optional arguments as the `signal` function (namely `parameters` and `customUserID`) in case you want to provide additional context info.
-{% endnoteinfo %}
+!!! note "Requirements"
+
+    Requires iOS 15+. Accepts optional `parameters` and `customUserID` for additional context.
+
+### Automatic trial conversion detection
+
+The SDK includes a `TrialConversionProcessor` that monitors StoreKit `Transaction.updates` in the background. When a user transitions from a free trial to a paid subscription, it automatically fires `TelemetryDeck.Purchase.convertedFromTrial`. No additional code needed.
 
 ## Using TelemetryDeck with RevenueCat
 
-If you use [RevenueCat](https://revenuecat.com), you can use our [RevenueCat Setup Guide](/docs/integrations/revenuecat/).
+See our [RevenueCat Setup Guide](/integrations/revenuecat/).
 
 ## Using FreemiumKit
 
-If you use [FreemiumKit](https://freemiumkit.app), just add their SDKs `.onPurchaseCompleted` view modifier to your main view. It passes the `transaction` parameter to the closure, which you can directly pass to `TelemetryDeck.purchaseCompleted(transaction: transaction)`. Read the related section in their [setup guide](https://freemiumkit.app/documentation/freemiumkit/setupguide#Direct-Access-to-StoreKit-Transactions) to learn more.
+Add FreemiumKit's `.onPurchaseCompleted` view modifier to your main view — it passes the `transaction` parameter directly to `TelemetryDeck.purchaseCompleted(transaction:)`. See their [setup guide](https://freemiumkit.app/documentation/freemiumkit/setupguide#Direct-Access-to-StoreKit-Transactions).
 
-## Manual Signal Structure for Other Platforms
+## Manual signal construction for other platforms
 
-{% notewarning "Only Needed for Non-Swift Platforms" %}
-The following section describes the manual signal structure only necessary if you are NOT using the TelemetryDeck Swift SDK. Swift developers should use the `purchaseCompleted` convenience method described above.
-{% endnotewarning %}
+!!! warning
 
-If you're reporting purchases from other platforms (Android, Web, etc.), you'll need to manually construct and send the purchase signal with the following structure:
+    Only needed if you are NOT using the TelemetryDeck Swift SDK.
 
-### Required Fields
+### Required fields
 
-- **Event name**: Must be `TelemetryDeck.Purchase.completed`
+- **Event name**: `TelemetryDeck.Purchase.completed`
 - **`floatValue`**: The purchase amount in USD
 
-{% notewarning "Manual Currency Conversion Required" %}
-When sending purchase signals manually, you MUST convert the transaction value to USD yourself before sending. You can use [an API like this](https://www.exchangerate-api.com/docs/standard-requests) which offers 1,500 requests per month free of charge to get current exchange rates. Alternatively, you could fetch & hard-code exchange rates in your app for a rough estimate if you expect more than 1,500 purchases per month.
-{% endnotewarning %}
+!!! warning "Currency conversion"
 
-### Optional but Recommended Payload Keys
+    You must convert the transaction value to USD before sending. Use [an exchange rate API](https://www.exchangerate-api.com/docs/standard-requests) (1,500 free requests/month) or hard-code approximate rates.
 
-To get more detailed insights, include these additional parameters:
+### Optional parameters
 
-- `TelemetryDeck.Purchase.type`: Either `subscription` or `one-time-purchase`
-- `TelemetryDeck.Purchase.countryCode`: The country code of the storefront
-- `TelemetryDeck.Purchase.currencyCode`: The currency code of the storefront
+- `TelemetryDeck.Purchase.type`: `subscription` or `one-time-purchase`
+- `TelemetryDeck.Purchase.countryCode`: Storefront country code
+- `TelemetryDeck.Purchase.currencyCode`: Storefront currency code
 
-### Example Manual Implementation (Swift)
-
-Here's what the manual implementation looks like if you need to customize it or understand what the convenience method does internally:
+### Example
 
 ```swift
-// Convert price to USD first (you need to handle currency conversion)
 let priceInUSD = convertToUSD(transaction.price, from: transaction.currencyCode)
 
-TelemetryDeck.signal(
-  "TelemetryDeck.Purchase.completed",
-  parameters: [
-    "TelemetryDeck.Purchase.type": transaction.subscriptionGroupID != nil ? "subscription" : "one-time-purchase",
-    "TelemetryDeck.Purchase.countryCode": transaction.storefrontCountryCode,
-    "TelemetryDeck.Purchase.currencyCode": transaction.currencyCode ?? "???"
-  ],
-  floatValue: priceInUSD
+await TelemetryDeck.event(
+    "TelemetryDeck.Purchase.completed",
+    parameters: [
+        "TelemetryDeck.Purchase.type": transaction.subscriptionGroupID != nil
+            ? "subscription" : "one-time-purchase",
+        "TelemetryDeck.Purchase.countryCode": transaction.storefrontCountryCode,
+        "TelemetryDeck.Purchase.currencyCode": transaction.currencyCode ?? "???"
+    ],
+    floatValue: priceInUSD
 )
 ```
 
-## Effect on Privacy & App Tracking Transparency
+## Privacy
 
-If you are using a 3rd-party service like RevenueCat, you don't need to change your privacy labels at all because you're sending way less data to TelemetryDeck than you are already to those services. So if you've followed their guides, you should be good.
+If you already use RevenueCat or a similar service, you're already sending more data to them than TelemetryDeck collects. No privacy label changes needed.
 
-If you aren't using a 3rd-party library, you are now sending purchase history data to TelemetryDeck. So make sure to mark the checkbox for "Analytics" in the "Purchase History" entry in your App Privacy page.
-
-You can answer all subsequent questions with "No" because we neither link collected data to the users identity, nor do we use them for tracking purposes.
-
-When all is configured your "Purchases" entry in your App Privacy page should end up looking like this:
+If tracking purchases directly, mark "Analytics" under "Purchase History" in your App Privacy page. Answer all subsequent questions with "No".
 
 ![Purchases entry with only 'Used for Analytics' in the box](/assets/purchases-privacy-box.png)

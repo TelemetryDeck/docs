@@ -1,24 +1,18 @@
 ---
 title: Navigation Signals
 tags: setup
-description: TelemetryDeck can track how users navigate through your app when you send navigation signals. Here's how these need to look like.
-lead: TelemetryDeck can track how users navigate through your app when you send navigation signals. Here's how these need to look like.
-testedOn: SwiftSDK 2.2.0, WebSDK 1.0.0
+description: TelemetryDeck tracks how users navigate through your app when you send navigation signals.
+lead: TelemetryDeck tracks how users navigate through your app when you send navigation signals. Here's the format and convenience methods.
+testedOn: SwiftSDK 3.0.0, WebSDK 1.0.0
 ---
 
-{% notewarning "Upcoming Feature" %}
+!!! note "Web Analytics already tracks navigation"
 
-This feature is still in development and will take a while to be available in all SDKs and the Dashboard UI. We encourage you to start sending navigation signals now so you'll have data to play around with once we launch the feature fully.
-{% endnotewarning %}
-
-{% noteinfo "Web Analytics already tracks navigation" %}
-
-If you're using TelemetryDeck's Web SDK to track your website, you don't need to send navigation signals. The Web SDK already tracks navigation automatically.
-{% endnoteinfo %}
+    If you're using TelemetryDeck's Web SDK, navigation is tracked automatically. This guide is for native app SDKs.
 
 ## Format
 
-A navigation signal is a regular TelemetryDeck signal of type `TelemetryDeck.Navigation.pathChanged`. It has parameters for version number, source and destination paths, and an identifier, which is the source path and destination path concatenated with `->`. Using this identifier, we can track how users navigate through your app.
+A navigation signal has the type `TelemetryDeck.Navigation.pathChanged` with these parameters:
 
 ```json
 {
@@ -34,24 +28,16 @@ A navigation signal is a regular TelemetryDeck signal of type `TelemetryDeck.Nav
 }
 ```
 
-Values in angle brackets (`< >`) are placeholders and should be replaced with actual values.
+| Key | Description |
+|---|---|
+| `TelemetryDeck.Navigation.schemaVersion` | Always `"1"`. |
+| `TelemetryDeck.Navigation.identifier` | `<source> -> <destination>`. Used to build directed navigation graphs. |
+| `TelemetryDeck.Navigation.sourcePath` | Where the user came from. |
+| `TelemetryDeck.Navigation.destinationPath` | Where the user went. |
 
-The signal type should always be `TelemetryDeck.Navigation.pathChanged` for navigation signals.
+## Navigation paths
 
-Here's what each parameter should contain:
-
-| Key                                        | Description                                                                                                                                                                                   |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TelemetryDeck.Navigation.schemaVersion`   | The version of the schema. Should always be `"1"`. We'll use this to account for if we ever need to update this schema.                                                                       |
-| `TelemetryDeck.Navigation.identifier`      | The source navigation path, followed by `->`, followed by the destination navigation path. This is the most important part of the navigation schema, we'll use this to build directed graphs. |
-| `TelemetryDeck.Navigation.sourcePath`      | A navigation path that describes the source of the navigation.                                                                                                                                |
-| `TelemetryDeck.Navigation.destinationPath` | A navigation that describes the destination of the navigation.                                                                                                                                |
-
-## Navigation Paths
-
-Navigation Paths are strings that describe a location or view in your application or website. They must be
-delineated by `.` characters in apps and `/` in websites. Delineation characters at the beginning and end of the string are
-ignored. Use the empty string `""` for navigation from outside the app.
+Navigation paths are `.`-delimited strings in apps and `/`-delimited in websites. Leading and trailing delimiters are ignored. Use the empty string `""` for navigation from outside the app.
 
 Examples:
 
@@ -59,26 +45,23 @@ Examples:
 - `settings.user.changePassword`
 - `/blog/ios-market-share`
 
-## Automatic Navigation Tracking
+## Convenience methods
 
-Since TelemetryDeck navigation signals are slightly cumbersome to create manually, we're aiming to provide convenience methods for our SDKs that will automatically track navigation signals for you. These methods will be in one of two flavors, either a method that you call with a source and destination, or a method that you call with just a destination.
+### With source and destination
 
-### `TelemetryDeck.navigationPathChanged(from: <source>, to: <destination>)`
+```swift
+await TelemetryDeck.navigationPathChanged(from: "home", to: "settings")
+```
 
-Calling this method will automatically create a navigation signal with the given source and destination.
+### Destination only
 
-### `TelemetryDeck.navigationPathChanged(to: <destination>)`
+```swift
+await TelemetryDeck.navigationPathChanged(to: "settings")
+```
 
-Calling this method with just a destination will use the previously last used source as the source for the navigation signal.
+This uses the previous destination as the source. Be careful — if you don't call it from every screen, the navigation graph will show paths the user didn't take.
 
-This is convenient, but might produce incorrect graphs if you don't call it from every screen in your app.
-Suppose you have 3 tabs "Home", "User" and "Settings", but only set up navigation in "Home" and "Settings". If
-a user taps "Home", "User" and "Settings" in that order, that'll produce an incorrect navigation signal with
-source "Home" and destination "Settings", a path that the user did not take.
-
-#### SwiftUI Convenience
-
-If you're using SwiftUI, you can use the `.trackNavigation(path:)` view modifier as a convenient wrapper around `navigationPathChanged(to:)`. It will automatically send the navigation signal when the view appears:
+### SwiftUI view modifier
 
 ```swift
 struct SettingsView: View {
@@ -94,4 +77,4 @@ struct SettingsView: View {
 }
 ```
 
-The same considerations about consistent application apply - make sure to use the modifier on all navigation destinations to avoid incorrect navigation paths.
+The `.trackNavigation(path:)` modifier calls `navigationPathChanged(to:)` when the view appears. Apply it consistently to all navigation destinations to get accurate graphs.
