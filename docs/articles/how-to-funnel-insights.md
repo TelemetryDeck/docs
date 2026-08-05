@@ -8,6 +8,7 @@ tags:
 description: Funnels are here to help you understand your users. Watch how they navigate and flow through your app and find out how to improve your in-App processes with funnels!
 searchEngineTitle: Get your analytics flowing - the art of funneling your signals
 searchEngineDescription: Watch how your users navigate and flow through your app and learn how to improve your in-App processes with funnels!
+status: deprecated
 ---
 
 ## The flow of your app
