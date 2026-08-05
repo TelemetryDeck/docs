@@ -46,96 +46,100 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-  { "Welcome" = "index.md" },
-  { "SDK Setup" = [
-      "guides/sdk-setup/index.md",
-    { "Swift" = [
-      { "Quick Start" = "guides/swift-setup.md" },
-      { "Processors" = "articles/swift-processors.md" },
-      { "Custom Processors" = "articles/swift-custom-processors.md" },
-      { "User Identification" = "articles/swift-user-identification.md" },
-      { "Migrating from V2" = "guides/swift-migration-v3.md" },
-    ] },
-    { "Android (Kotlin)" = "guides/android-setup.md" },
-    { "Flutter" = "guides/flutter-setup.md" },
-    { "JavaScript" = "guides/javascript-setup.md" },
-    { "React" = "guides/react-setup.md" },
-    { "Vue" = "guides/vue-setup.md" },
-    { "Web" = "guides/web-setup.md" },
-    { "Objective-C" = "guides/objective-c-setup.md" },
-    { "Privacy FAQ" = "guides/privacy-faq.md" },
-  ] },
-  { "Analytics Basics" = [
-    { "Overview" = "basics/index.md" },
-    { "Acquisition" = "basics/acquisition.md" },
-    { "Activation" = "basics/activation.md" },
-    { "Retention" = "basics/retention.md" },
-    { "Metrics" = "basics/metrics.md" },
-    { "Pirate Metrics (AARRR)" = "basics/pirate-metrics.md" },
-    { "Built-in Presets" = [
-      { "Purchases" = "articles/preset-purchases.md" },
-      { "Errors" = "articles/preset-errors.md" },
-      { "Navigation signals" = "articles/navigation-signals.md" },
-      { "Duration signals" = "articles/duration-signals.md" },
-    ] },
-  ] },
-  { "Insights & Dashboards" = [
-    { "Insights overview" = "articles/insights.md" },
-    { "Daily active users" = "articles/insights-about-daily-users.md" },
-    { "Monthly active users" = "articles/insights-about-monthly-users.md" },
-    { "Referrers" = "articles/insights-about-referrers.md" },
-    { "System version distribution" = "articles/insights-about-system-version.md" },
-    { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
-    { "Funnel insights" = "articles/how-to-funnel-insights.md" },
-    { "Filter setup" = "articles/set-up-filters-insights.md" },
-    { "Custom dashboards" = "articles/create-custom-dashboards.md" },
-    { "Notebooks" = "articles/notebooks.md" },
-  ] },
-  { "Signal Concepts" = [
+  { "Quick Start Guide" = "index.md" },
+  { "Account & Organization" = [
+    { "Create an account" = "articles/making-account.md" },
     { "Namespaces" = "articles/namespaces.md" },
-    { "Signal type naming" = "articles/signal-type-naming.md" },
-    { "Test mode" = "articles/test-mode.md" },
-    { "Updating the SDK" = "articles/update-package.md" },
-    { "The Grand Rename" = "articles/grand-rename.md" },
-    { "TelemetryClient (legacy)" = "articles/telemetry-client.md" },
+    { "Invite members" = "articles/invite-members-to-organization.md" },
+    { "Authentication" = "articles/login-options.md" }
+  ] },
+  { "SDK" = [
+    "guides/sdk-setup/index.md",
+    { "Official SDKs" = [
+      { "Swift" = [
+        { "Quick Start" = "guides/swift-setup.md" },
+        { "Processors" = "articles/swift-processors.md" },
+        { "Custom Processors" = "articles/swift-custom-processors.md" },
+        { "User Identification" = "articles/swift-user-identification.md" },
+        { "Migrating from V2" = "guides/swift-migration-v3.md" },
+      ] },
+      { "Android (Kotlin)" = "guides/android-setup.md" },
+      { "Flutter" = "guides/flutter-setup.md" },
+      { "JavaScript" = "guides/javascript-setup.md" },
+      { "React" = "guides/react-setup.md" },
+      { "Vue" = "guides/vue-setup.md" },
+      { "Web" = "guides/web-setup.md" },
+      { "Objective-C" = "guides/objective-c-setup.md" },
+    ] },
+    { "Community SDKs" = [
+      { "React" = "guides/react-setup.md" },
+      { "Vue" = "guides/vue-setup.md" },
+    ] },
+    { "Guides" = [
+      { "Swift Client Reference" = "articles/telemetry-client.md" },
+      { "Update a Swift package" = "articles/update-package.md" },
+      { "TelemetryDeck's Grand Rename" = "articles/grand-rename.md" },
+    ] },
   ] },
   { "Privacy & Compliance" = [
-    { "How anonymization works" = "articles/anonymization-how-it-works.md" },
-    { "Apple App Privacy" = "articles/apple-app-privacy.md" },
-    { "App Privacy Report" = "articles/app-privacy-report.md" },
-    { "App Tracking Transparency" = "articles/app-tracking-transparency.md" },
-    { "Hosting solutions" = "articles/hosting-solutions.md" },
-  ] },
-  { "Account & Organization" = [
-    { "Make an account" = "articles/making-account.md" },
-    { "Invite members" = "articles/invite-members-to-organization.md" },
-    { "Login options" = "articles/login-options.md" },
-  ] },
-  { "Recipes" = [
-    { "Averaging numbers" = "recipes/averagaging-numbers.md" },
-    { "Listing events" = "recipes/listing-events.md" },
-    { "Views per purchase" = "recipes/views-per-purchase-example.md" },
-  ] },
-  { "Integrations" = [
-    { "RevenueCat" = "integrations/revenuecat.md" },
-    { "Superwall" = "integrations/superwall.md" },
-    { "Google Tag Manager" = "integrations/web-setup-google-tag-manager.md" },
-  ] },
-  { "Server-side Ingest" = [
-    { "Default parameters" = "ingest/default-parameters.md" },
-    { "Ingest API v2" = "ingest/v2.md" },
-    { "Ingest API v1 (legacy)" = "ingest/v1.md" },
-  ] },
-  { "Reference" = [
-    { "Signals API" = [
-      { "Signals reference" = "api/signals-reference.md" },
-      { "Insights reference" = "api/insights-reference.md" },
-      { "Run a query" = "api/api-run-query.md" },
-      { "Query from insight" = "api/api-query-from-insight.md" },
-      { "API tokens" = "api/api-token.md" },
+    { "TelemetryDeck Privacy" = [
+      { "Privacy FAQ" = "guides/privacy-faq.md" },
+      { "Anonymization of user data" = "articles/anonymization-how-it-works.md" },
+      { "Hosting Solutions at TelemetryDeck" = "articles/hosting-solutions.md" },
     ] },
-    { "TQL" = [
-      { "TQL guidelines" = "tql/firstGuideline.md" },
+    { "Apple Privacy" = [
+      { "Apple App Privacy" = "articles/apple-app-privacy.md" },
+      { "App Privacy Report" = "articles/app-privacy-report.md" },
+      { "App Tracking Transparency" = "articles/app-tracking-transparency.md" },
+    ] },
+  ] },
+  { "Usage" = [
+    { "Analyze data" = [
+      { "Dashboard" = [
+        { "Overview" = "basics/index.md" },
+        { "Custom dashboards" = "articles/create-custom-dashboards.md" },
+        { "Insights overview" = "articles/insights.md" },
+        { "Notebooks" = "articles/notebooks.md" },
+        { "Filters" = "articles/set-up-filters-insights.md" },
+        { "System version distribution" = "articles/insights-about-system-version.md" },
+      ] },
+      { "Analytics" = [
+        { "Acquisition" = "basics/acquisition.md" },
+        { "Activation" = "basics/activation.md" },
+        { "Retention" = "basics/retention.md" },
+        { "Metrics" = "basics/metrics.md" },
+        { "Pirate Metrics (AARRR)" = "basics/pirate-metrics.md" },
+        { "Built-in Presets" = [
+          { "Purchases" = "articles/preset-purchases.md" },
+          { "Errors" = "articles/preset-errors.md" },
+          { "Navigation signals" = "articles/navigation-signals.md" },
+          { "Duration signals" = "articles/duration-signals.md" },
+        ] },
+      { "TelemetryClient (legacy)" = "articles/telemetry-client.md" },
+      ] },
+      { "Integrations" = [
+        { "RevenueCat" = "integrations/revenuecat.md" },
+        { "Superwall" = "integrations/superwall.md" },
+        { "Google Tag Manager" = "integrations/web-setup-google-tag-manager.md" },
+      ] },
+    ] },
+    { "Send data" = [
+      { "Dashboard" = [
+        { "Test mode" = "articles/test-mode.md" },
+        { "Signal type naming" = "articles/signal-type-naming.md" },
+        { "Funnel insights" = "articles/how-to-funnel-insights.md" },
+        { "Referrers" = "articles/insights-about-referrers.md" },
+      ] },
+      { "Quick set-up" = [
+        { "Daily active users" = "articles/insights-about-daily-users.md" },
+        { "Monthly active users" = "articles/insights-about-monthly-users.md" },
+        { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
+      ] }
+    ] }
+  ] },
+  { "TQL" = [
+  "tql/firstGuideline.md",
+    { "TQL Reference" = [
       { "TQL query reference" = "tql/query.md" },
       { "Query context" = "tql/queryContext.md" },
       { "Query type" = "tql/queryType.md" },
@@ -167,8 +171,37 @@ nav = [
         { "Descending" = "tql/descending.md" },
       ] },
     ] },
+    { "Recipes" = [
+      { "Averaging numbers" = "recipes/averagaging-numbers.md" },
+      { "Listing events" = "recipes/listing-events.md" },
+      { "Views per purchase" = "recipes/views-per-purchase-example.md" },
+    ] },
   ] },
-  { "Glossary" = "glossary.md" },
+  { "API" = [
+    { "Reference" = [
+      { "Signals reference" = "api/signals-reference.md" },
+      { "Insights reference" = "api/insights-reference.md" },
+      { "Run a query" = "api/api-run-query.md" },
+      { "Query from insight" = "api/api-query-from-insight.md" },
+      { "API tokens" = "api/api-token.md" },
+    ] },
+    { "Server-side ingest API" = [
+      { "Default parameters" = "ingest/default-parameters.md" },
+      { "Ingest API v2" = "ingest/v2.md" },
+      { "Ingest API v1 (legacy)" = "ingest/v1.md" },
+    ] },
+  ] },
+  { "Community" = [
+    { "Glossary" = "glossary.md" },
+    { "FAQ" = "" },
+    { "Contribute" = [
+      { "Bug Report" = "" },
+      { "Documentation" = "articles/documentation.md"},
+      { "Change Request" = "" },
+      { "Pull Request" = "" },
+      { "Code of Conduct" = "" },
+    ] },
+  ] },
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
@@ -193,7 +226,6 @@ nav = [
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
-
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"
 
@@ -343,6 +375,8 @@ features = [
     # and always remain visible when scrolling down.
     # https://zensical.org/docs/setup/navigation/#sticky-navigation-tabs
     #"navigation.tabs.sticky",
+    "navigation.tabs",
+    "navigation.tabs.sticky",
 
     # A back-to-top button can be shown when the user, after scrolling down,
     # starts to scroll up again.
