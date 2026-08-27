@@ -46,6 +46,14 @@ The data collectd on our analytics servers includes the following:
 
 IP addresses are never stored on the TelemetryDeck server, neither in the database nor in log files or anywhere else.
 
+## How long is data stored?
+
+We currently have no schedule to delete cold-storage events as these events are not covered by GDPR and have no deletion requirement. We expect to delete these events after 7-10 years but will not guarantee it at this time.
+
+## What happens with data if an account is closed?
+
+When closing an account, we currently delete user data and and personally identifiable information. We're keeping organization metadata and analytics data, as these do not include personally identifiable information.
+
 ## Definitions
 
 - App Publisher: A natural or legal person who creates, publishes, or maintains an app or website that includes the TelemetryDeck SDK. You are responsible for ensuring that only anonymized data is passed to the TelemetryDeck SDK.
