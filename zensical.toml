@@ -46,6 +46,7 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
+  { "How To Docs" = "how-to-documentation.md"},
   { "Quick Start Guide" = "index.md" },
   { "Account & Organization" = [
     { "Create an account" = "articles/making-account.md" },
