@@ -1,14 +1,11 @@
 ---
-title: Making an account
+icon: fontawesome/solid/hat-wizard
+title: Create an account
 tags:
   - setup
   - quickstart
   - beginner
   - how-to
-description: Register an account and create an organization
-lead: Let's register for an account, create an app, and set up your application so you can get started with receiving signals from your app!
-searchEngineTitle: Create a TelemetryDeck account
-searchEngineDescription: Register an account now and create an organization in the TelemetryDeck dashboard.
 ---
 
 ## Step one: Register an account
@@ -30,4 +27,4 @@ In the dashboard, have a look at your left sidebar. Under the `SETTINGS`category
 
 That's it, you're now ready for the next step, in which you will learn to configure your first insight for analyzing your signals!
 
-<a href="/docs/" class="btn btn-secondary btn-large">Next Up: Setting up your application →</a>
+<a href="/docs" class="btn btn-secondary btn-large">Next Up: Setting up your application →</a>

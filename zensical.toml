@@ -46,14 +46,15 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
+  { "Home" = "https://telemetrydeck.com" },
   { "How To Docs" = "how-to-documentation.md"},
-  { "Quick Start Guide" = "index.md" },
-  { "Account & Organization" = [
-    { "Create an account" = "articles/making-account.md" },
+  { "Quick Start Guide" = [
+    "index.md",
+    { "Account" = "articles/create-an-account.md"},
     { "Namespaces" = "articles/namespaces.md" },
     { "Invite members" = "articles/invite-members-to-organization.md" },
     { "Authentication" = "articles/login-options.md" }
-  ] },
+  ]},
   { "SDK" = [
     "guides/sdk-setup/index.md",
     { "Official SDKs" = [
