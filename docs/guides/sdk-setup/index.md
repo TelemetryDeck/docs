@@ -18,7 +18,7 @@ tags:
 
     Configure the TelemetryDeck SDK in your Swift application for iOS, macOS, watchOS, and tvOS
 
-    [:fontawesome-solid-right-long: Getting started](../swift-setup.md)
+    [:fontawesome-solid-right-long: Getting started](../index.md)
 
 -   :fontawesome-brands-android:{ .lg .middle } __Android Setup Guide__
 
@@ -49,6 +49,14 @@ tags:
     ---
 
     How to include the TelemetryDeck SDK in your website or blog
+
+    [:fontawesome-solid-right-long: Getting started](../web-setup.md)
+
+-   :fontawesome-solid-file-code:{ .lg .middle } __Objective-C__
+
+    ---
+
+    How to include the TelemetryDeck Swift SDK with Objective-C interop
 
     [:fontawesome-solid-right-long: Getting started](../web-setup.md)
 

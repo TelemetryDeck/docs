@@ -37,8 +37,6 @@ This will download the newest version of the package that is compatible with you
 
 Instead, you can also update every single Swift Package in your project at once. To do this, open the **Files** menu, navigate to **Packages** and then click **Update to Latest Package Versions**. Afterwards, make sure to test your project to see if everything still works, especially in projects with a lot of package dependencies. See further down for more troubleshooting tips.
 
-{% callToAction "TelemetryDeck: Privacy-first analytics for Swift apps" "Make your app even more awesome" %}
-
 ## Updating to the next major version of a Swift Package
 
 By default, Xcode and Swift Package Manager will not update the Major version of a package automatically. (The major version is the first number in the version string, e.g. `1.2.3` has a major version of `1`.)

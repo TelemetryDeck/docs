@@ -1,11 +1,10 @@
 ---
 title: TelemetryClient (Legacy)
 tags:
-  - Swift
-  - SDK
+  - swift
+  - sdk
   - legacy
-description: Legacy reference for the TelemetryClient/TelemetryManager API. Replaced by the TelemetryDeck API in SwiftSDK 2.x and removed in 3.0.
-lead: This page documents the original TelemetryClient API, which was replaced by the TelemetryDeck static API. If you're still using these APIs, migrate to the current SDK.
+status: deprecated
 ---
 
 !!! warning "Outdated"
