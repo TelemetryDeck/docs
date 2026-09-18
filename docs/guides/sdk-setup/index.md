@@ -58,7 +58,7 @@ tags:
 
     How to include the TelemetryDeck Swift SDK with Objective-C interop
 
-    [:fontawesome-solid-right-long: Getting started](../web-setup.md)
+    [:fontawesome-solid-right-long: Getting started](../objective-c-setup.md)
 
 </div>
 
