@@ -47,38 +47,37 @@ Copyright &copy; 2026 TelemetryDeck GmbH
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Home" = "https://telemetrydeck.com" },
-  { "How To Docs" = "how-to-documentation.md"},
   { "Quick Start Guide" = [
     "index.md",
     { "Account" = "articles/create-an-account.md"},
     { "Namespaces" = "articles/namespaces.md" },
     { "Invite members" = "articles/invite-members-to-organization.md" },
-    { "Authentication" = "articles/authentication.md" }
-  ]},
+    { "Authentication" = "articles/authentication.md"},
+    ]},
   { "SDK" = [
-    "guides/sdk-setup/index.md",
+    "sdk/index.md",
     { "Official SDKs" = [
       { "Swift" = [
-        "guides/index.md",
-        { "Processors" = "articles/swift-processors.md" },
-        { "Custom Processors" = "articles/swift-custom-processors.md" },
-        { "User Identification" = "articles/swift-user-identification.md" },
-        { "Migrating from V2" = "guides/swift-migration-v3.md" },
+        "sdk/official-sdk/swift/index.md",
+        { "Processors" = "sdk/official-sdk/swift/swift-processors.md" },
+        { "Custom Processors" = "sdk/official-sdk/swift/swift-custom-processors.md" },
+        { "User Identification" = "sdk/official-sdk/swift/swift-user-identification.md" },
+        { "Migrating from V2" = "sdk/official-sdk/swift/swift-migration-v3.md" },
       ] },
-      { "Android (Kotlin)" = "guides/android-setup.md" },
-      { "Flutter" = "guides/flutter-setup.md" },
-      { "JavaScript" = "guides/javascript-setup.md" },
-      { "Web" = "guides/web-setup.md" },
-      { "Objective-C" = "guides/objective-c-setup.md" },
+      { "Android (Kotlin)" = "sdk/official-sdk/android-setup.md" },
+      { "Flutter" = "sdk/official-sdk/flutter-setup.md" },
+      { "JavaScript" = "sdk/official-sdk/javascript-setup.md" },
+      { "Web" = "sdk/official-sdk/web-setup.md" },
+      { "Objective-C" = "sdk/official-sdk/objective-c-setup.md" },
     ] },
     { "Community SDKs" = [
-      { "React" = "guides/react-setup.md" },
-      { "Vue" = "guides/vue-setup.md" },
+      { "React" = "sdk/community-sdk/react-setup.md" },
+      { "Vue" = "sdk/community-sdk/vue-setup.md" },
     ] },
     { "Guides" = [
-      { "Swift Client Reference" = "articles/telemetry-client.md" },
-      { "Update a Swift package" = "articles/update-package.md" },
-      { "TelemetryDeck's Grand Rename" = "articles/grand-rename.md" },
+      { "Swift Client Reference" = "sdk/guides/telemetry-client.md" },
+      { "Update a Swift package" = "sdk/guides/update-package.md" },
+      { "TelemetryDeck's Grand Rename" = "sdk/guides/grand-rename.md" },
     ] },
   ] },
   { "Privacy & Compliance" = [
@@ -124,11 +123,13 @@ nav = [
       ] },
     ] },
     { "Send data" = [
+      { "Dashboard" = [
         { "Test mode" = "articles/test-mode.md" },
         { "Signal type naming" = "articles/signal-type-naming.md" },
         { "Funnel insights" = "articles/how-to-funnel-insights.md" },
         { "Referrers" = "articles/insights-about-referrers.md" },
-      { "Custom Dashboards" = [
+      ] },
+      { "Quick set-up" = [
         { "Daily active users" = "articles/insights-about-daily-users.md" },
         { "Monthly active users" = "articles/insights-about-monthly-users.md" },
         { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
@@ -191,13 +192,13 @@ nav = [
   ] },
   { "Community" = [
     { "Glossary" = "glossary.md" },
-#    { "FAQ" = "" },
+    { "FAQ" = "" },
     { "Contribute" = [
-#      { "Bug Report" = "" },
+      { "Bug Report" = "" },
       { "Documentation" = "articles/documentation.md"},
-#      { "Change Request" = "" },
-#      { "Pull Request" = "" },
-#      { "Code of Conduct" = "" },
+      { "Change Request" = "" },
+      { "Pull Request" = "" },
+      { "Code of Conduct" = "" },
     ] },
   ] },
 ]

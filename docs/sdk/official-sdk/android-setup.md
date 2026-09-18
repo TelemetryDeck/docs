@@ -53,9 +53,9 @@ Build and run your app to verify that TelemetryDeck is properly integrated. The 
 
     If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), 
     your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. 
-    You'll see them show up in the TelemetryDeck Dashboard when [**Test Mode**](../articles/test-mode.md) is turned on.
+    You'll see them show up in the TelemetryDeck Dashboard when [**Test Mode**](../../articles/test-mode.md) is turned on.
 
-Open the TelemetryDeck Dashboard, navigate to **Explore -> Recent Signals** and make sure [Test Mode](../articles/test-mode.md) is enabled. 
+Open the TelemetryDeck Dashboard, navigate to **Explore -> Recent Signals** and make sure [Test Mode](../../articles/test-mode.md) is enabled. 
 You should see automatic signals appear after launching your app.
 
 Congratulations! With just the SDK integration you've completed, TelemetryDeck will automatically track 
@@ -66,7 +66,7 @@ You can now build and release your app. Once users start using it, your Telemetr
 
 ## Privacy Policy
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+You don't need to update your privacy policy, [but we recommend you do it anyway](../../guides/privacy-faq).
 
 ## Enhancing your analytics (optional)
 
@@ -120,5 +120,5 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>

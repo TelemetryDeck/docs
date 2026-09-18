@@ -144,7 +144,7 @@ TelemetryDeck auto-generates an anonymous user identifier per installation. If y
 await TelemetryDeck.setUserIdentifier("user@example.com")
 ```
 
-The identifier is hashed before it leaves the device. For details on how the default identifier is resolved per platform, cross-device tracking, and server-side usage, see [User Identification](/articles/swift-user-identification).
+The identifier is hashed before it leaves the device. For details on how the default identifier is resolved per platform, cross-device tracking, and server-side usage, see [User Identification](swift-user-identification.md).
 
 ## Configuration options
 
@@ -208,19 +208,19 @@ Apple requires you to disclose analytics usage in App Store Connect, even for pr
 
 <div class="grid cards" markdown>
 
--   **[Processors](/articles/swift-processors)**
+-   **[Processors](swift-processors.md)**
 
     Learn how events flow through the processor pipeline and what data is automatically collected.
 
--   **[Custom Processors](/articles/swift-custom-processors)**
+-   **[Custom Processors](swift-custom-processors)**
 
     Build your own processors to add domain-specific metadata to every event.
 
--   **[Analytics Walkthrough](/basics/index)**
+-   **[Analytics Walkthrough](../../../basics/index.md)**
 
     Navigate TelemetryDeck, interpret insights, and make data-driven decisions.
 
--   **[Migrating from V2](/guides/swift-migration-v3)**
+-   **[Migrating from V2](swift-migration-v3)**
 
     Upgrading from SwiftSDK 2.x? Here's what changed.
 

@@ -59,9 +59,9 @@ Build and run your app to verify that TelemetryDeck is properly integrated. The 
 
      If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), 
     your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. 
-    You'll see them show up in the TelemetryDeck Dashboard when [**Test Mode**](../articles/test-mode.md) is turned on.
+    You'll see them show up in the TelemetryDeck Dashboard when [**Test Mode**](../../articles/test-mode.md) is turned on.
 
-Open the TelemetryDeck Dashboard, navigate to **Explore -> Recent Signals** and make sure [Test Mode](../articles/test-mode.md) is enabled. 
+Open the TelemetryDeck Dashboard, navigate to **Explore -> Recent Signals** and make sure [Test Mode](../../articles/test-mode.md) is enabled. 
 You should see automatic signals appear after launching your app.
 
 Congratulations! With just the SDK integration you've completed, TelemetryDeck will automatically track 
@@ -148,7 +148,7 @@ When publishing your Flutter app, you'll need to address privacy requirements:
 - **iOS Apps**: Disclose analytics usage in Apple's App Store Connect privacy details. TelemetryDeck is privacy-focused, but disclosure is still required.
 - **All Platforms**: Consider updating your privacy policy to mention analytics collection.
 
-For guidance, see our [Apple App Privacy guide](/docs/articles/apple-app-privacy/) and [Privacy FAQ](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+For guidance, see our [Apple App Privacy guide](../../articles/apple-app-privacy.md) and [Privacy FAQ](../../guides/privacy-faq).
 
 ## What to do next
 
@@ -160,5 +160,5 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>

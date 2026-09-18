@@ -9,11 +9,11 @@ status: deprecated
 
 !!! warning "Outdated"
 
-    The APIs on this page (`TelemetryManager`, `TelemetryClient`, `TelemetryManagerConfiguration`) were removed in SwiftSDK 3.0. See the [Swift Setup Guide](/guides/swift-setup/) for current documentation or the [V3 Migration Guide](/guides/swift-migration-v3/) if upgrading.
+    The APIs on this page (`TelemetryManager`, `TelemetryClient`, `TelemetryManagerConfiguration`) were removed in SwiftSDK 3.0. See the [Swift Setup Guide](/guides/swift-setup) for current documentation or the [V3 Migration Guide](../official-sdk/swift/swift-migration-v3.md) if upgrading.
 
 ## Historical context
 
-The original Swift SDK (called "SwiftClient") used a `TelemetryManager` singleton with a `TelemetryManagerConfiguration` class. These were replaced by the `TelemetryDeck` static API in the [Grand Rename](/articles/grand-rename/) and formally removed in SwiftSDK 3.0.
+The original Swift SDK (called "SwiftClient") used a `TelemetryManager` singleton with a `TelemetryManagerConfiguration` class. These were replaced by the `TelemetryDeck` static API in the [Grand Rename](grand-rename.md) and formally removed in SwiftSDK 3.0.
 
 ## Quick migration reference
 

@@ -32,7 +32,7 @@ Once you have your App ID, edit the source code of your website and add the foll
 ></script>
 ```
 
-💡 If you use Google Tag Manager, please see our separate guide on [how to include TelemetryDeck in your website using Google Tag Manager](/docs/integrations/web-setup-google-tag-manager/).
+💡 If you use Google Tag Manager, please see our separate guide on [how to include TelemetryDeck in your website using Google Tag Manager](../../integrations/web-setup-google-tag-manager.md).
 
 ## Usage
 
@@ -60,7 +60,7 @@ To see test signals, you can enable **Test Mode** in the Dashboard.
 
 ## Privacy Policy and Opt-Out
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+You don't need to update your privacy policy, [but we recommend you do it anyway](../../guides/privacy-faq).
 
 ## What data is collected?
 
@@ -114,7 +114,7 @@ This means that the Web SDK will recognize recurring users on the same day on th
 
     There are different tutorials you should read depending on your use case.
 
-    - If you are building a **JavaScript application or PWA using node package manager**, you should read the [Node Package Setup Guide](/docs/guides/javascript-setup).
+    - If you are building a **JavaScript application or PWA using node package manager**, you should read the [Node Package Setup Guide](javascript-setup.md).
     - If you are building a **website or blog**, and want to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read this guide.
 
 ## What to do next
@@ -127,5 +127,5 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>

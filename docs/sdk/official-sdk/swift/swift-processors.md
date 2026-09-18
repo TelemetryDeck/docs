@@ -70,7 +70,7 @@ Determines whether the event should be marked as test data. In `DEBUG` builds, t
 
 ### UserIdentifierProcessor
 
-Attaches a user identifier to the event context. The SDK auto-resolves a default identifier per platform (IDFV on iOS, a persisted UUID on macOS). You can override it with `TelemetryDeck.setUserIdentifier(_:)` or pass a `customUserID` per event. See [User Identification](/articles/swift-user-identification/) for full details on resolution order, platform behavior, and hashing.
+Attaches a user identifier to the event context. The SDK auto-resolves a default identifier per platform (IDFV on iOS, a persisted UUID on macOS). You can override it with `TelemetryDeck.setUserIdentifier(_:)` or pass a `customUserID` per event. See [User Identification](swift-user-identification.md) for full details on resolution order, platform behavior, and hashing.
 
 ### SessionTrackingProcessor
 
