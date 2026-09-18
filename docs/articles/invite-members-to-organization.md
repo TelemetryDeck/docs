@@ -1,4 +1,5 @@
 ---
+icon: fontawesome/solid/users
 title: How to invite members to your organization
 tags:
   - beginner
@@ -6,13 +7,7 @@ tags:
   - quickstart
   - collaboration
   - user-cohorts
-testedOn:
-featured:
 description: A guide on how to add members to your organization and collaborate
-lead: You have more than one person working on your app and want them to have access to all the insights? Great! This guide will tell you everything you need to know about adding new members to your organization.
-searchEngineTitle:
-searchEngineDescription: Learn how to add new members to your organization. Share insights and important changes by inviting them easily.
-order:
 ---
 
 In TelemetryDeck, every member is part of an **organization**. If you are not working on your own and have at least one other person joining you on the work of your app, you might be interested in adding them to your organization. With separate accounts for each member, everyone will be able to get access to the insights whenever they need them.

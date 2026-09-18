@@ -1,4 +1,5 @@
 ---
+icon: fontawesome/solid/address-card
 title: Namespaces
 tags:
   - setup

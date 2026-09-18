@@ -1,5 +1,4 @@
 ---
-icon: lucide/plug
 tags:
     - Get started
     - Setup
@@ -68,7 +67,7 @@ After setting up the SDK and deploying your app, your most important next step i
 
 If you find an error or feel like the documentation could be improved somewhat, we'd love 
 to hear from you! Either directly submit a change request with the buttons on each page, 
-or open an issue in our <a href="https://github.com/TelemetryDeck/docs">Docs GitHub Repository</a>.
+or open an issue in our <a href="https://github.com/TelemetryDeck/docs">:fontawesome-brands-github: Docs GitHub Repository</a>.
 
 The [documentation guide](/articles/documentation) explains all markdown and 
 additional features you can use while writing documentation for TelemetryDeck.
