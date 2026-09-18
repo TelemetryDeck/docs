@@ -1,15 +1,11 @@
 ---
+icon: fontawesome/brands/android
 title: Android Setup Guide
 tags:
-  - Setup
-  - Quickstart
-  - Code
-  - Kotlin
-testedOn: Android Studio Meerkat
-featured: true
-description: Include the TelemetryDeck SDK in Your Android Application
-lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Kotlin Package in your application.
-order: 200
+  - setup
+  - quickstart
+  - code
+  - kotlin
 ---
 
 ## Include the SDK
@@ -53,19 +49,20 @@ Feel free to browse the [TelemetryDeck SDK's source code](https://github.com/Tel
 
 Build and run your app to verify that TelemetryDeck is properly integrated. The SDK automatically tracks user activity when the app starts or returns from the background.
 
-{% notewarning "When running from Android Studio, you're sending test signals" %}
-If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. You'll see them show up in the TelemetryDeck Dashboard when the **Test Mode** toggle under the tab bar is turned on.
-{% endnotewarning %}
+!!! warning "When running from Android Studio, you're sending test signals"
 
-Open the TelemetryDeck Dashboard, navigate to "Explore > Recent Signals" and make sure "Test Mode" is enabled. You should see automatic signals appear after launching your app.
+    If your app is configured with a debug build type (i.e. the default build variant running from Android Studio), 
+    your signals will be tagged as **Test Signals**, meaning that you can easily filter them out later. 
+    You'll see them show up in the TelemetryDeck Dashboard when [**Test Mode**](../articles/test-mode.md) is turned on.
+
+Open the TelemetryDeck Dashboard, navigate to **Explore -> Recent Signals** and make sure [Test Mode](../articles/test-mode.md) is enabled. 
+You should see automatic signals appear after launching your app.
+
+Congratulations! With just the SDK integration you've completed, TelemetryDeck will automatically track 
+user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code. 
+You can now build and release your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
 
 ---
-
-{% noteinfo "Ready for basic insights" %}
-Congratulations! With just the SDK integration you've completed, TelemetryDeck will automatically track user sessions, app launches, and device information. This basic setup provides valuable built-in insights without any additional code.
-
-You can now build and release your app. Once users start using it, your TelemetryDeck dashboard will begin showing data about user behavior, device types, and other key metrics.
-{% endnoteinfo %}
 
 ## Privacy Policy
 
@@ -95,11 +92,13 @@ You can also add a user identifier and parameters to your events:
 TelemetryDeck.signal("pizzaOrderConfirmed", myUser.emailAddress, mapOf("pizzaType" to "hawaii"))
 ```
 
-{% noteinfo "About Signal Data" %}
-A user identifier is any string that uniquely identifies a user of your application. We will _hash_ this string before sending it to the server, and there we'll salt+hash it again for privacy protection.
+!!! info "About Signal Data"
 
-The payload is a map of parameters to be sent with the signal. We'll automatically send information about the user's device, system version, and app version with each signal, but you can add custom parameters either with each call or by using [enrich providers](https://github.com/TelemetryDeck/KotlinSDK#custom-telemetry).
-{% endnoteinfo %}
+    A user identifier is any string that uniquely identifies a user of your application. 
+    We will _hash_ this string before sending it to the server, and there we'll salt+hash it again for privacy protection.
+    The payload is a map of parameters to be sent with the signal. We'll automatically send information 
+    about the user's device, system version, and app version with each signal, but you can add custom parameters 
+    either with each call or by using [enrich providers](https://github.com/TelemetryDeck/KotlinSDK#custom-telemetry).
 
 For more advanced configuration options, programmatic usage and information about signals, parameters and all other aspects of the SDK, check out the [README file](https://github.com/TelemetryDeck/KotlinSDK?tab=readme-ov-file#programmatic-usage).
 
@@ -115,21 +114,11 @@ The TelemetryDeck SDK requires Android SDK 21 or later. For a complete list of r
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 
-<div class="not-prose ">
-  <div class="my-10 grid grid-cols-1 gap-6">
-    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-lg text-mars-500">
-          <a href="/docs/basics/index">
-            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
-        </h2>
-        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
-        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
-          <span>Start here to get real value from your analytics</span>
-          <span>→</span>
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="grid cards" markdown>
+
+-   **📊 Analytics Walkthrough**
+
+    Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
+
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
 </div>

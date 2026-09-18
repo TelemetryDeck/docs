@@ -59,7 +59,7 @@ nav = [
     "guides/sdk-setup/index.md",
     { "Official SDKs" = [
       { "Swift" = [
-        { "Quick Start" = "guides/swift-setup.md" },
+        "guides/index.md",
         { "Processors" = "articles/swift-processors.md" },
         { "Custom Processors" = "articles/swift-custom-processors.md" },
         { "User Identification" = "articles/swift-user-identification.md" },
@@ -68,8 +68,6 @@ nav = [
       { "Android (Kotlin)" = "guides/android-setup.md" },
       { "Flutter" = "guides/flutter-setup.md" },
       { "JavaScript" = "guides/javascript-setup.md" },
-      { "React" = "guides/react-setup.md" },
-      { "Vue" = "guides/vue-setup.md" },
       { "Web" = "guides/web-setup.md" },
       { "Objective-C" = "guides/objective-c-setup.md" },
     ] },

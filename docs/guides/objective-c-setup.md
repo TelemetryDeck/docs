@@ -1,15 +1,11 @@
 ---
+icon: fontawesome/solid/file-code
 title: Objective-C Setup Guide
 tags:
-  - Setup
-  - iOS
-  - macOS
-  - ObjectiveC
-featured: false
-testedOn: Xcode 26 & SwiftSDK 3.0.0
-description: Configure the TelemetryDeck SDK in Your Objective-C Application for iOS and macOS
-lead: Include the TelemetryDeck Swift Package in your Objective-C application and send events.
-order: 1000
+  - setup
+  - ios
+  - macos
+  - objective c
 ---
 
 Objective-C apps (or mixed Swift/ObjC projects) can use the TelemetryDeck Swift SDK through Objective-C interop.
@@ -85,8 +81,9 @@ See our [Apple App Privacy guide](/articles/apple-app-privacy/) and [Privacy FAQ
 
 <div class="grid cards" markdown>
 
--   **[Analytics Walkthrough](/basics/index)**
+-   **📊 Analytics Walkthrough**
 
-    Navigate TelemetryDeck, interpret insights, and make data-driven decisions.
+    Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
 </div>

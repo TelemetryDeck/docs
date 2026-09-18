@@ -1,15 +1,12 @@
 ---
+icon: fontawesome/brands/js
 title: JavaScript App Setup Guide
 tags:
-  - Setup
-  - JavaScript
-  - Node
-  - NPM
-  - TypeScript
-featured: true
-description: How to include the TelemetryDeck SDK in Your JavaScript Application or Web App
-lead: You have an account, and you have an app ID. Now let's include the TelemetryClient Package in your JS application or web app
-order: 300
+  - setup
+  - javascript
+  - node
+  - npm
+  - typescript
 ---
 
 The TelemetryDeck SDK has no dependencies and supports **modern evergreen browsers** and **modern versions of Node.js** with support for [cryptography](https://caniuse.com/cryptography).
@@ -156,21 +153,11 @@ The default implementation can be found in `src/utils/store.js`.
 
 Now that you've integrated TelemetryDeck, learn how to use the analytics platform to gain valuable insights about your users:
 
-<div class="not-prose ">
-  <div class="my-10 grid grid-cols-1 gap-6">
-    <div class="group relative rounded-xl border-2 border-mars-300 bg-white flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-lg text-mars-500">
-          <a href="/docs/basics/index">
-            <span class="absolute -inset-px rounded-xl"></span>📊 Analytics Walkthrough</a>
-        </h2>
-        <p class="mt-2 text-sm text-slate-700">Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.</p>
-        <p class="mt-4 text-sm text-mars-500 font-semibold flex justify-between">
-          <span>Start here to get real value from your analytics</span>
-          <span>→</span>
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="grid cards" markdown>
+
+-   **📊 Analytics Walkthrough**
+
+    Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
+
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
 </div>

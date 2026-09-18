@@ -1,4 +1,5 @@
 ---
+icon: fontawesome/brands/swift
 title: Swift Setup Guide
 tags:
   - Setup
@@ -7,11 +8,6 @@ tags:
   - watchOS
   - tvOS
   - visionOS
-featured: true
-testedOn: Xcode 26 & Swift 6.2 & SwiftSDK 3.0.0
-description: Configure the TelemetryDeck SDK in Your Swift Application for iOS, macOS, watchOS, tvOS, and visionOS
-lead: Get the TelemetryDeck Swift SDK into your application and start sending events.
-order: 100
 ---
 
 ## Prerequisites
@@ -148,7 +144,7 @@ TelemetryDeck auto-generates an anonymous user identifier per installation. If y
 await TelemetryDeck.setUserIdentifier("user@example.com")
 ```
 
-The identifier is hashed before it leaves the device. For details on how the default identifier is resolved per platform, cross-device tracking, and server-side usage, see [User Identification](/articles/swift-user-identification/).
+The identifier is hashed before it leaves the device. For details on how the default identifier is resolved per platform, cross-device tracking, and server-side usage, see [User Identification](/articles/swift-user-identification).
 
 ## Configuration options
 
@@ -206,17 +202,17 @@ This flushes pending events, persists the cache, and stops all processors.
 
 ## App Store requirements
 
-Apple requires you to disclose analytics usage in App Store Connect, even for privacy-focused tools like TelemetryDeck. See our [Apple App Privacy guide](/articles/apple-app-privacy/) and [Privacy FAQ](/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+Apple requires you to disclose analytics usage in App Store Connect, even for privacy-focused tools like TelemetryDeck. See our [Apple App Privacy guide](/articles/apple-app-privacy) and [Privacy FAQ](/guides/privacy-faq#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
 ## What's next
 
 <div class="grid cards" markdown>
 
--   **[Processors](/articles/swift-processors/)**
+-   **[Processors](/articles/swift-processors)**
 
     Learn how events flow through the processor pipeline and what data is automatically collected.
 
--   **[Custom Processors](/articles/swift-custom-processors/)**
+-   **[Custom Processors](/articles/swift-custom-processors)**
 
     Build your own processors to add domain-specific metadata to every event.
 
@@ -224,7 +220,7 @@ Apple requires you to disclose analytics usage in App Store Connect, even for pr
 
     Navigate TelemetryDeck, interpret insights, and make data-driven decisions.
 
--   **[Migrating from V2](/guides/swift-migration-v3/)**
+-   **[Migrating from V2](/guides/swift-migration-v3)**
 
     Upgrading from SwiftSDK 2.x? Here's what changed.
 
