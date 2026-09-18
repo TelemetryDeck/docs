@@ -53,7 +53,7 @@ nav = [
     { "Account" = "articles/create-an-account.md"},
     { "Namespaces" = "articles/namespaces.md" },
     { "Invite members" = "articles/invite-members-to-organization.md" },
-    { "Authentication" = "articles/login-options.md" }
+    { "Authentication" = "articles/authentication.md" }
   ]},
   { "SDK" = [
     "guides/sdk-setup/index.md",
