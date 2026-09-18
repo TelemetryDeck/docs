@@ -75,7 +75,7 @@ With parameters:
 
 ## App Store requirements
 
-See our [Apple App Privacy guide](/articles/apple-app-privacy/) and [Privacy FAQ](/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+See our [Apple App Privacy guide](/articles/apple-app-privacy) and [Privacy FAQ](../../guides/privacy-faq).
 
 ## What's next
 
@@ -85,5 +85,5 @@ See our [Apple App Privacy guide](/articles/apple-app-privacy/) and [Privacy FAQ
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>

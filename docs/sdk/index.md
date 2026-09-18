@@ -18,7 +18,7 @@ tags:
 
     Configure the TelemetryDeck SDK in your Swift application for iOS, macOS, watchOS, and tvOS
 
-    [:fontawesome-solid-right-long: Getting started](../index.md)
+    [:fontawesome-solid-right-long: Getting started](official-sdk/swift/index.md)
 
 -   :fontawesome-brands-android:{ .lg .middle } __Android Setup Guide__
 
@@ -26,7 +26,7 @@ tags:
 
     Include the TelemetryDeck SDK in your Android application
 
-    [:fontawesome-solid-right-long: Getting started](../android-setup.md)
+    [:fontawesome-solid-right-long: Getting started](official-sdk/android-setup.md)
 
 -   :fontawesome-brands-flutter:{ .lg .middle } __Flutter Setup Guide__
 
@@ -34,7 +34,7 @@ tags:
 
     How to include the TelemetryDeck SDK in your Flutter and Dart app
 
-    [:fontawesome-solid-right-long: Getting started](../flutter-setup.md)
+    [:fontawesome-solid-right-long: Getting started](official-sdk/flutter-setup.md)
 
 -   :fontawesome-brands-js:{ .lg .middle } __JavaScript Setup Guide__
 
@@ -42,7 +42,7 @@ tags:
 
     How to include the TelemetryDeck SDK in your JavaScript application or web app
 
-    [:fontawesome-solid-right-long: Getting started](../javascript-setup.md)
+    [:fontawesome-solid-right-long: Getting started](official-sdk/javascript-setup.md)
 
 -   :fontawesome-solid-globe:{ .lg .middle } __Web Setup Guide__
 
@@ -50,7 +50,7 @@ tags:
 
     How to include the TelemetryDeck SDK in your website or blog
 
-    [:fontawesome-solid-right-long: Getting started](../web-setup.md)
+    [:fontawesome-solid-right-long: Getting started](official-sdk/web-setup.md)
 
 -   :fontawesome-solid-file-code:{ .lg .middle } __Objective-C__
 
@@ -58,7 +58,7 @@ tags:
 
     How to include the TelemetryDeck Swift SDK with Objective-C interop
 
-    [:fontawesome-solid-right-long: Getting started](../objective-c-setup.md)
+    [:fontawesome-solid-right-long: Getting started](official-sdk/objective-c-setup.md)
 
 </div>
 
@@ -72,7 +72,7 @@ tags:
 
     Include the TelemetryDeck SDK in your React or React Native app
 
-    [:fontawesome-solid-right-long: Getting started](../react-setup.md)
+    [:fontawesome-solid-right-long: Getting started](community-sdk/react-setup.md)
 
 -   :fontawesome-brands-vuejs:{ .lg .middle } __Vue.js Setup Guide__
 
@@ -80,6 +80,6 @@ tags:
 
     How to include the TelemetryDeck SDK in your Vue.js app
 
-    [:fontawesome-solid-right-long: Getting started](../vue-setup.md)
+    [:fontawesome-solid-right-long: Getting started](community-sdk/vue-setup.md)
 
 </div>

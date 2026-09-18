@@ -199,7 +199,7 @@ The old `[String: String]` overloads still compile but are deprecated.
 
 The V2 provider system (`register`, `stop`, `enrich`, `transform`) is replaced by the `EventProcessor` protocol. The new model is a middleware chain where each processor calls `next` to pass control downstream.
 
-If you wrote custom providers, see [Writing Custom Processors](/articles/swift-custom-processors/) for the new approach.
+If you wrote custom providers, see [Writing Custom Processors](swift-custom-processors) for the new approach.
 
 ## Data migration
 

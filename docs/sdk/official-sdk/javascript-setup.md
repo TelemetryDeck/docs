@@ -15,11 +15,11 @@ The TelemetryDeck SDK has no dependencies and supports **modern evergreen browse
 
     There are different tutorials you should read depending on your use case.
 
-    - The [TelemetryDeck Web SDK](/docs/guides/web-setup) is a quick and easy way to include web analytics into your website. This is fantastic for blogs, landing pages, static websites, and content-driven websites.
+    - The [TelemetryDeck Web SDK](web-setup.md) is a quick and easy way to include web analytics into your website. This is fantastic for blogs, landing pages, static websites, and content-driven websites.
     
     - If you are building a JavaScript application – a Progressive Web App written in React, Vue, Angular, Svelte, Ember, or mobile or desktop apps written with React Native, Electron, Ionic, and so on, you should read this guide.
     
-    [Our blog post](/blog/js-sdk-2-0/) explains the differences between the two SDKs in more detail.
+    [Our blog post](https://telemetrydeck.com/blog/js-sdk-2-0) explains the differences between the two SDKs in more detail.
 
 ## Set up
 
@@ -111,7 +111,7 @@ td.signal("Volume.Set", {
 
 ## Privacy Policy and Opt-Out
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+You don't need to update your privacy policy, [but we recommend you do it anyway](../../guides/privacy-faq).
 
 ## Advanced: Queueing Signals
 
@@ -159,5 +159,5 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>

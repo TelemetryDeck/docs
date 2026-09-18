@@ -55,7 +55,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 ## Basic usage
 
 To send events, use the `useTelemetryDeck` hook and destructure the various methods that can be used to modify the instance or send events to TelemetryDeck.
-For more information, see the [JS documentation](/docs/guides/javascript-setup/).
+For more information, see the [JS documentation](../official-sdk/javascript-setup.md).
 
 ```tsx
 import * as React from "react";
@@ -143,7 +143,7 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>
 
 ## Sponsors

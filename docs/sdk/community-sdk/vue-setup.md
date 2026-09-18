@@ -135,7 +135,7 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
     Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../basics/index.md)
+    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
 </div>
 
 ## Sponsors
