@@ -1,15 +1,10 @@
 ---
+icon: fontawesome/solid/gauge
 title: Analytics Overview
 tags:
   - setup
   - basics
   - analytics
-basics: true
-description: Learn how to navigate TelemetryDeck's dashboard to find the insights you need about your app's performance.
-lead: TelemetryDeck's dashboard is organized into intuitive sections that help you understand how users interact with your app. This guide walks you through each part of the interface.
-searchEngineTitle: TelemetryDeck Dashboard Guide | App Analytics
-searchEngineDescription: Learn how to navigate the TelemetryDeck dashboard to get the most out of your app analytics data.
-order: 10
 ---
 
 ## Dashboard navigation

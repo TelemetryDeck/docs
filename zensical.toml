@@ -124,13 +124,11 @@ nav = [
       ] },
     ] },
     { "Send data" = [
-      { "Dashboard" = [
         { "Test mode" = "articles/test-mode.md" },
         { "Signal type naming" = "articles/signal-type-naming.md" },
         { "Funnel insights" = "articles/how-to-funnel-insights.md" },
         { "Referrers" = "articles/insights-about-referrers.md" },
-      ] },
-      { "Quick set-up" = [
+      { "Custom Dashboards" = [
         { "Daily active users" = "articles/insights-about-daily-users.md" },
         { "Monthly active users" = "articles/insights-about-monthly-users.md" },
         { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
@@ -193,13 +191,13 @@ nav = [
   ] },
   { "Community" = [
     { "Glossary" = "glossary.md" },
-    { "FAQ" = "" },
+#    { "FAQ" = "" },
     { "Contribute" = [
-      { "Bug Report" = "" },
+#      { "Bug Report" = "" },
       { "Documentation" = "articles/documentation.md"},
-      { "Change Request" = "" },
-      { "Pull Request" = "" },
-      { "Code of Conduct" = "" },
+#      { "Change Request" = "" },
+#      { "Pull Request" = "" },
+#      { "Code of Conduct" = "" },
     ] },
   ] },
 ]
