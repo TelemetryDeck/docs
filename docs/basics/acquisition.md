@@ -19,13 +19,14 @@ User acquisition represents the entry point of your app's growth funnel – how 
 
 With TelemetryDeck's Acquisition dashboard, these insights are automatically collected and visualized with no additional code required beyond updating to the latest SDK version.
 
-{% noteinfo "How TelemetryDeck Detects New Users" %}
-New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` signal that is automatically sent on first app launch.
-{% endnoteinfo %}
+!!! info "How TelemetryDeck Detects New Users"
+   
+      New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` signal that is automatically sent on first app launch.
 
 ## User growth trends
 
 **Questions you can answer:**
+
 - Is my user base growing over time?
 - Are there patterns in my acquisition rate?
 - How effective are my marketing campaigns?
@@ -33,6 +34,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ![Daily, Weekly, and Monthly New Users](/assets/acquisition-new-users.png)
 
 **How to interpret the charts:**
+
 - **Consistent upward trend**: Your app is steadily gaining users – investigate what's working and double down
 - **Sudden spikes**: Often correlate with marketing campaigns, app updates, or press coverage – for example, the spike in February on the Weekly New Users chart might indicate a successful promotion
 - **Cyclical patterns**: May indicate seasonal interest or day-of-week effects - like potential weekend vs. weekday differences
@@ -43,6 +45,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ## New vs. active users ratio
 
 **Questions you can answer:**
+
 - What proportion of my users are new versus returning?
 - Is my app primarily attracting new users or maintaining existing ones?
 - How does acquisition compare to retention?
@@ -50,15 +53,17 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ![Active vs New Users Ratio](/assets/acquisition-active-vs-new.png)
 
 **How to interpret the chart:**
-- **High ratio (>0.5)**: Many new users compared to your active base - suggesting strong acquisition but possibly weak retention
-- **Low ratio (<0.2)**: Most of your active users are returning users - indicating strong retention but slower growth
-- **Fluctuating ratio**: May indicate inconsistent marketing or seasonal patterns
+
+* **High ratio (`>0.5`)**: Many new users compared to your active base - suggesting strong acquisition but possibly weak retention
+* **Low ratio (`<0.2`)**: Most of your active users are returning users - indicating strong retention but slower growth
+* **Fluctuating ratio**: May indicate inconsistent marketing or seasonal patterns
 
 **Action example:** In the Daily Active vs New Users chart, you can see the ratio fluctuating between approximately 0.1 and 0.5. When it drops to 0.1 (as seen around March 13th), it suggests that only about 7.69% of your active users that day were new installations - the rest were returning users, which indicates good retention but might signal a need to boost acquisition efforts.
 
 ## Temporal usage patterns
 
 **Questions you can answer:**
+
 - When during the day do users typically discover my app?
 - Which days of the week see the most new installations?
 - Do weekdays significantly outperform weekends for user acquisition?
@@ -66,6 +71,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ![Acquisition Time Patterns](/assets/acquisition-by-time.png)
 
 **How to interpret the charts:**
+
 - **Hour of day peaks**: Show prime discovery times (user-local)
 - **Day of week trends**: Reveal which days drive the most acquisitions
 - **Weekend vs. weekday balance**: Indicates usage context (work vs. leisure)
@@ -75,6 +81,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ## Recent temporal patterns
 
 **Questions you can answer:**
+
 - Are recent user acquisition patterns consistent with long-term trends?
 - Have specific events or campaigns created temporary spikes?
 - How can I differentiate between one-off events and genuine trends?
@@ -82,6 +89,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ![Recent Acquisition Time Patterns](/assets/acquisition-by-time-last-weeks.png)
 
 **How to interpret the charts:**
+
 - **Four-week hourly view**: Identifies specific days with unusual activity
 - **Weekly pattern comparison**: Shows consistency or variability week-to-week
 - **Recent weekend/weekday ratio**: Confirms if the overall pattern holds true
@@ -91,6 +99,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ## Device & platform distribution
 
 **Questions you can answer:**
+
 - What devices are my users using to access my app?
 - Should I prioritize specific hardware or screen sizes?
 - When can I safely drop support for older devices?
@@ -98,6 +107,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ![New Users by Device Type](/assets/acquisition-device-distribution.png)
 
 **How to interpret the chart:**
+
 - **Top device models**: Prioritize testing and optimization for these devices
 - **Age of devices**: Indicates how quickly your users upgrade hardware
 - **Platform distribution**: Helps inform development priorities
@@ -107,6 +117,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ## Geographic & language distribution
 
 **Questions you can answer:**
+
 - Where are my users located geographically?
 - What languages do my users speak?
 - Which markets should I prioritize for expansion?
@@ -114,6 +125,7 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 ![New Users by Country and Language](/assets/acquisition-geographic-distribution.png)
 
 **How to interpret the charts:**
+
 - **Dominant regions**: Countries with the largest segments indicate your strongest markets
 - **Unexpected regions**: Emerging segments may represent untapped opportunities
 - **Language distribution**: Helps prioritize localization efforts
@@ -125,18 +137,21 @@ New users are detected by the `TelemetryDeck.Acquisition.newInstallDetected` sig
 As you analyze your acquisition metrics, consider these key questions:
 
 1. **Marketing optimization**
-   - When should you schedule campaigns based on your users' discovery patterns?
-   - Which geographic markets show the strongest growth potential?
-   - How can you tailor your App Store presence for your most important regions?
+
+      * When should you schedule campaigns based on your users' discovery patterns?
+      * Which geographic markets show the strongest growth potential?
+      * How can you tailor your App Store presence for your most important regions?
 
 2. **Development priorities**
-   - Which devices and platforms deserve the most testing attention?
-   - What language localizations would benefit the most users?
-   - Are there seasonal patterns that should influence your feature roadmap?
+
+      * Which devices and platforms deserve the most testing attention?
+      * What language localizations would benefit the most users?
+      * Are there seasonal patterns that should influence your feature roadmap?
 
 3. **Growth opportunities**
-   - Are there unexpected regions or user segments showing organic growth?
-   - Does your user acquisition align with your marketing efforts and spend?
-   - How can you optimize the first-time experience for your most common user profiles?
+
+      * Are there unexpected regions or user segments showing organic growth?
+      * Does your user acquisition align with your marketing efforts and spend?
+      * How can you optimize the first-time experience for your most common user profiles?
 
 Remember that acquisition is just the first step in the user journey. Once you've optimized how users find your app, focus next on activation – ensuring they have a great first experience that turns them into engaged users.

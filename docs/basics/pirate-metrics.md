@@ -42,10 +42,11 @@ Most importantly, organizing analytics this way helps you identify your biggest 
 The great news? **TelemetryDeck has done all the hard work for you**. 
 
 Rather than requiring you to:
-- Research which metrics matter for each stage
-- Create custom tracking for each metric
-- Build visualizations and dashboards
-- Understand the intricacies of the framework
+
+* Research which metrics matter for each stage
+* Create custom tracking for each metric
+* Build visualizations and dashboards
+* Understand the intricacies of the framework
 
 TelemetryDeck automatically organizes analytics around the Pirate Metrics framework with built-in insights that require minimal setup. Just update to our latest SDK, and the built-in metrics start working immediately.
 
@@ -56,50 +57,55 @@ Here's what TelemetryDeck automatically tracks for each stage of the Pirate Metr
 ### Acquisition insights
 
 TelemetryDeck automatically tracks:
-- Daily, weekly, and monthly new user counts
-- Device and platform distribution (which devices are your new users using?)
-- Geographic distribution (where are your new users located?)
-- Acquisition time patterns (when do users typically discover your app?)
+
+* Daily, weekly, and monthly new user counts
+* Device and platform distribution (which devices are your new users using?)
+* Geographic distribution (where are your new users located?)
+* Acquisition time patterns (when do users typically discover your app?)
 
 All of these insights help you understand where your users come from and optimize your marketing efforts.
 
 ### Activation insights
 
 Our activation dashboard automatically tracks:
-- Daily, weekly, and monthly active user counts
-- Average session length distribution
-- Average sessions per active user
-- Usage patterns by time of day and day of week
-- First-time user experiences
+
+* Daily, weekly, and monthly active user counts
+* Average session length distribution
+* Average sessions per active user
+* Usage patterns by time of day and day of week
+* First-time user experiences
 
 These insights help you understand if users are successfully getting started with your app.
 
 ### Retention insights
 
 Our retention dashboard automatically tracks:
-- Distinct days used distribution (how often users return)
-- Engaged users metrics (session length > 2 minutes, 5+ days used per month)
-- Power users metrics (session length > 5 minutes, 12+ days used per month)
-- Long-term usage trends
+
+* Distinct days used distribution (how often users return)
+* Engaged users metrics (session length > 2 minutes, 5+ days used per month)
+* Power users metrics (session length > 5 minutes, 12+ days used per month)
+* Long-term usage trends
 
 These insights help you identify if users are finding ongoing value in your app.
 
 ### Referral insights (Coming Soon)
 
 Our upcoming referral dashboard will track:
-- Referral tracking metrics
-- Channel effectiveness comparison
-- Social sharing activity
+
+* Referral tracking metrics
+* Channel effectiveness comparison
+* Social sharing activity
 
 These insights help you understand how effectively your app generates word-of-mouth growth.
 
 ### Revenue insights (Coming Soon)
 
 Our upcoming revenue dashboard will track:
-- Purchase counts (trials and non-trials)
-- Free trial metrics
-- Trial conversion rates
-- Revenue trends over time
+
+* Purchase counts (trials and non-trials)
+* Free trial metrics
+* Trial conversion rates
+* Revenue trends over time
 
 These insights help you understand your app's financial performance and optimize monetization.
 
@@ -113,10 +119,10 @@ For some advanced metrics (particularly in the Referral and Revenue categories),
 
 By implementing Pirate Metrics as built-in dashboards, TelemetryDeck gives you the benefits of sophisticated growth analytics without requiring you to:
 
-- Become an expert in analytics theory
-- Build complex custom dashboards
-- Spend time deciphering what metrics matter
-- Manually track dozens of different events
+* Become an expert in analytics theory
+* Build complex custom dashboards
+* Spend time deciphering what metrics matter
+* Manually track dozens of different events
 
 Instead, you get clear, actionable insights organized in a way that naturally guides you toward your biggest growth opportunities.
 
@@ -132,17 +138,13 @@ As you navigate through these sections, you'll develop a comprehensive understan
 
 To dive deeper into specific parts of the framework, check out our dedicated guides:
 
-<div class="not-prose">
-  <div class="my-6 grid grid-cols-1 gap-6">
-    <div class="group relative rounded-xl border bg-white border-slate-200 flex">
-      <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
-      <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
-        <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/basics/acquisition">
-            <span class="absolute -inset-px rounded-xl"></span>Acquisition Analytics Guide</a>
-        </h2>
-        <p class="mt-1 text-sm text-slate-700">Learn how to interpret and act on acquisition metrics to optimize how users discover your app.</p>
-      </div>
-    </div>
-  </div>
+<div class="grid cards" markdown>
+
+-   :material-chart-bar:{ .lg .middle } __Acquisition Analytics Guide__
+
+    ---
+
+    Learn how to interpret and act on acquisition metrics to optimize how users discover your app.
+
+    [:fontawesome-solid-right-long: Learn more](acquisition.md)
 </div>

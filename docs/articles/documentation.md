@@ -1,120 +1,59 @@
 ---
-meta_title: "How To: TelemetryDeck Markup"
 title: How to write this Documentation
 tags: documentation
-lead: The TelemetryDeck documentation lives in a public Github repository. Here's how to contribute.
-description: Here's how to contribute to the public TelemetryDeck documentation.
-searchEngineDescription: The TelemetryDeck documentation lives in a public GitHub repository and is maintained by the TelemetryDeck team. Feel free to contribute & share your knowledge.
-order: 999999999
 ---
+
+# Get Started
+
+TelemetryDeck uses Zensical. For full documentation visit [zensical.org](https://zensical.org/docs/).
 
 ## Document Metadata
 
-All metadata for a documentation page is specified in the YAML header at the top of its markdown file (also called the `frontmatter` of the document). Most of the metadata is optional, but the `title` and `lead` are required:
+All metadata for a documentation page is specified in the YAML header at the top of its markdown file (also called the `front matter` of the document). Most of the metadata is optional, but the `title` is required:
 
 ```yaml
 ---
+icon: fontawesome/solid/icons
 title: How to write this Documentation
-lead: The TelemetryDeck documentation lives in a public GitHub repository. Here's how to contribute.
----
-```
-
-Here are examples for all possible metadata values:
-
-```yaml
----
-title: Setting up your application in SwiftUI
 tags:
-  - Setup
-  - Quickstart
-  - Code
-testedOn: Xcode 12.2 & Swift 5.3
-featured: true
-description: How to configure TelemetryClient in SwiftUI based applications
-lead: In Scene-based SwiftUI applications, this is how you configure TelemetryClient
-meta_title: Setting up your SwiftUI application with TelemetryDeck
-meta_description: How to configure TelemetryDeck SDK in SwiftUI based applications
-order: 1337
+  - tag 1
+  - ...
+  - tag n
+status: new
 ---
 ```
-
-### Title, Lead and Description
 
 The `title` string is how the page is titled in the left sidebar, at the top of the documentation page and in the "Getting Started" page, should it appear there.
 
-The `lead` string is shown on the documentation page, right underneath the title. It is a short description of the documentation page.
-
-The `description` is used to generate the short descriptive text shown in the "Getting Started" page for `featured` pages. If not specified, the `lead` string is used.
-
-### Search Engine Title and Description
-
-The `meta_title` string is used to generate the title of the search engine result for the doc page. If not specified, it defaults to the `title` string.
-
-The `meta_description` string is used to generate the description of the search engine result for the documentation page. If not specified, it defaults to the `description` string.
-
-### Tags
-
 Tags are used to organize documentation pages in the sidebar and to link related pages.
 
-One tag:
+__One tag:__
 
-```yaml
-tags: Swift
-```
+  ```yaml
+  tags: Swift
+  ```
 
-Multiple tags:
+__Multiple tags:__
 
-```yaml
-tags:
-  - Setup
-  - Quickstart
-  - Code
-  - Swift
-```
+  ```yaml
+  tags:
+    - Setup
+    - Quickstart
+    - Code
+    - Swift
+  ```
 
-Organizational tags like `docs` and `guides` are automatically applied. Use the `tags` metadata to add additional tags that link articles together, such as
+Use the `tags` metadata to add additional tags that link articles together, such as
 
 - The type of page (`setup`, `code`)
 - The software stack or language (`swiftui`, `android`, `kotlin` etc.)
 - The experience level of the reader (`beginner`, `intermediate`, `advanced`)
 - The type of query (`filter`, `cohorts`, etc.)
 
-!!! warning "You don't need to add 'docs' and 'articles' as tags"
+The `status` metadata is used to show the current status of a page. The following status identifiers are already defined:
 
-    All markdown files in the `docs` repository automatically get the `docs` tag applied to them (by `docs.11tydata.js`). In addition, the respective directories apply their own tags as well:
-
-    - Files in the `intro` directory get the `intro` tag applied.
-    - Files in the `guides` directory get the `guides` tag applied.
-    - Files in the `articles` directory get the `articles` tag applied.
-    - Files in the `api` directory get the `api` tag applied.
-
-### Order
-
-You can specify an `order` metadata value to tell the documentation system in which order to display pages. Pages are sorted within their category by `order` value ascending.
-
-The order value affects the display in the left sidebar as well as the "previous" and "next" links at the bottom of a page.
-
-```yaml
-order: 42
-```
-
-### Featured
-
-Documentation pages can be marked as `featured` to be displayed in the "Getting Started" page.
-
-```yaml
-featured: true
-```
-
-### Tested On
-
-If the documentation page deals with a specific version of an API or SDK, or something else that might change in the future, it is common courtesy to tell the reader what version of the software or SDK the documentation page or code examples were last tested on. If the value is older, readers can at least infer that they might have to update the code to make it work.
-
-```yaml
-testedOn: Xcode 12.2 & Swift 5.3
-```
-
-The string value of the `testedOn` field is displayed in the right sidebar.
+- :lucide-badge-alert: – `new`: for brand new pages that deserve to stand out
+- :lucide-trash: – `deprecated`: for pages that are not up to date anymore but still relevant to keep
 
 ### Compatibility and Contribution
 
@@ -135,12 +74,14 @@ We capitalize our Headings in **Sentence Case** (e.g., "This is a heading of our
 
 ### Date and Time Format
 For date formats we use either:
-- International/European date format: `DD/MM/YYYY` (e.g., 01.04.2026)
-- ISO 8601: `YYYY-MM-DD` (e.g., 2026-04-01)
+
+* International/European date format: `DD/MM/YYYY` (e.g., 01.04.2026)
+* ISO 8601: `YYYY-MM-DD` (e.g., 2026-04-01)
 
 For times we use either:
-- 24-Hour: `HH:mm:ss` (e.g., 14:30:05)
-- 12-Hour: `hh:mm:ss tt` (e.g., 02:30:05 PM). `AM/PM` is capitalized.
+
+* 24-Hour: `HH:mm:ss` (e.g., 14:30:05)
+* 12-Hour: `hh:mm:ss tt` (e.g., 02:30:05 PM). `AM/PM` is capitalized.
 
 ## Tables
 
@@ -158,16 +99,39 @@ Here is the markdown code for the previous table:
 | `title` | The title of the page. This is used in the left sidebar, at the top of the page and in the "Getting Started" page. |
 ```
 
-## Markdown
+## Formatting
 
 Documentation is written in [Markdown](https://www.markdownguide.org). This means you can write documentation in plain text, and it will be converted to HTML. All standard Markdown elements are supported, such as **bold text**, _italic text_, `inline code`, and [links](https://www.markdownguide.org/basic-syntax/#link).
 
-- Unordered lists
-- are just dashes
+> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
 
-1. And ordered
-1. lists
-1. are just numbers
+- ==This was marked (highlight)==
+- ^^This was inserted (underline)^^
+- ~~This was deleted (strikethrough)~~
+- H~2~O
+- A^T^A
+- ++ctrl+alt+del++
+
+### Icons, Emojis
+
+> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
+
+* :sparkles: `:sparkles:`
+* :rocket: `:rocket:`
+* :tada: `:tada:`
+* :memo: `:memo:`
+* :eyes: `:eyes:`
+
+### Unordered lists
+
+* are just
+* asteriks or dashes
+
+### Ordered lists
+
+1.  are
+1.  just
+3.  numbers
 
 Here is the markdown code for the previous paragraphs:
 
@@ -176,12 +140,16 @@ All standard Markdown elements are supported,
 such as **bold text**, _italic text_, `inline code`,
 and [links](https://www.markdownguide.org/basic-syntax/#link).
 
-- Unordered lists
-- are just dashes
+Unordered lists
 
-1. And ordered
-1. lists
-1. are just numbers
+* are just
+* asteriks or dashes
+
+and ordered lists
+
+1.  are
+1.  just
+3.  numbers
 ```
 
 ## Images
@@ -200,14 +168,16 @@ Here's what it looks like:
 
 ![A screenshot of Apple's Privacy Overview](/assets/privacy-overview.png)
 
-{% notewarning "Image File Locations" %}
+!!! warning "Image File Locations"
 
-Image files need to live in the `assets` directory inside `docs/`. Image files elsewhere in the file hierarchy will be ignored.
+    Image files need to live in the `assets` directory inside `docs/`. Image files elsewhere in the file hierarchy will be ignored.
 
-Prefix `/assets/` to the path when linking to the image — the path is resolved against the docs site root.
-{% endnotewarning %}
+    Prefix `/assets/` to the path when linking to the image — the path is resolved against the docs site root.
+
 
 ## Code Blocks
+
+> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
 
 Code blocks begin with three backticks (\`) and end with three backticks (\`). On the same line as the opening backticks, you **must** specify the programming language of the code block.
 
@@ -233,66 +203,81 @@ this is
 ```
 ````
 
-## Custom Shortcodes
+### Content tabs
 
-In addition to the standard shortcodes, you can also use custom shortcodes. These allow you to display info boxes and other custom elements.
+> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
 
-### Info Box
+=== "Python"
 
-Use the `noteinfo` shortcode to display a box giving the reader additional information .
+    ``` python
+    print("Hello from Python!")
+    ```
 
-```markdown
-{% raw %}{% noteinfo "Your pizza is ready 🍕" %}
-It is time. You can now take your pizza out of the oven.
-{% endnoteinfo %}{% endraw %}
-```
+=== "Rust"
 
-Here is how this looks like:
+    ``` rs
+    println!("Hello from Rust!");
+    ```
 
-{% noteinfo "Your pizza is ready 🍕" %}
-It is time. You can now take your pizza out of the oven.
-{% endnoteinfo %}
+## Admonitions
 
-### Warning Box
+> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
 
-Just as with `noteinfo`, you can also use `notewarning` to warn the readers of dangerous actions or consequences:
+!!! info
+    This is an **info** admonition. Use to provide additional information.
 
-```markdown
-{% raw %}{% notewarning "Take care of your pizza!" %}
-When removing your pizza out of the oven, please make sure to not burn your fingers. Also make sure your cat won't eat it while you look at this document.
-{% endnotewarning %}{% endraw %}
-```
+!!! note
 
-This is how the `notewarning` output looks like:
+    This is a **note** admonition. Use it to provide helpful information.
 
-{% notewarning "Take care of your pizza!" %}
-When removing your pizza out of the oven, please make sure to not burn your fingers. Also make sure your cat won't eat it while you look at this document.
-{% endnotewarning %}
+!!! warning
 
-### Buttons
+    This is a **warning** admonition. Be careful!
+
+### Details
+
+> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+
+??? info "Click to expand for more info"
+
+    This content is hidden until you click to expand it.
+    Great for FAQs or long explanations.
+
+## Buttons
 
 You can use button links to link to especially important pages or resources. Make a button by supplying
 
 - a label
 - an URL to link to
-- and a Boolean to indicate wether the button is a primary button (true) or a secondary button (false)
+- and a CSS class selector to indicate wether the button is a primary button or a secondary button
 
 ```markdown
-{% raw %}{% bigButton "All your base" "https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" true %}
-{% bigButton "Main screen turn on." "https://en.wikipedia.org/wiki/Zero_Wing" true %}{% endraw %}
+[Subscribe to our newsletter](https://telemetrydeck.com/newsletter/){ .md-button .md-button--primary }
+[Subscribe to our newsletter](https://telemetrydeck.com/newsletter/){ .md-button }
 ```
 
-{% bigButton "All your base" "https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" true %}
-{% bigButton "Main screen turn on." "https://en.wikipedia.org/wiki/Zero_Wing" false %}
+[Subscribe to our newsletter](https://telemetrydeck.com/newsletter/){ .md-button .md-button--primary }
+[Subscribe to our newsletter](https://telemetrydeck.com/newsletter/){ .md-button }
 
-### Call to Action
+## Diagrams
 
-In rare cases, we want to display a call to action to register for TelemetryDeck. This is done using the `callToAction` shortcode. It needs two `string` parameters for the first and second line of text respectively.
+> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
 
-```markdown
-{% raw %}{% callToAction "Let's make your app awesome!" "Get awesome privacy-first analytics for your app" %}{% endraw %}
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
 ```
 
-The shortcode will automatically link to the registration page and the docs:
+## Footnotes
 
-{% callToAction "Let's make your app awesome!" "Get awesome privacy-first analytics for your app" %}
+> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
+
+Here's a sentence with a footnote.[^1]
+
+Hover it, to see a tooltip.
+
+[^1]: This is the footnote.
