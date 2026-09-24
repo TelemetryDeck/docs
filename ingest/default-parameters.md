@@ -1,23 +1,23 @@
 ---
 title: Default Parameters
-description: A list of default parameters that our SDKs send with every signal.
-lead: A list of default parameters that our SDKs send with every signal.
+description: A list of default parameters that our SDKs send with every event.
+lead: A list of default parameters that our SDKs send with every event.
 ---
 
-Most of TelemetryDeck's SDKs send a set of default parameters with every signal. These are not required to be sent by the user, but are useful. Our default UI will use them to provide more context. All of these parameters are namespaced under `TelemetryDeck` to avoid conflicts.
+Most of TelemetryDeck's SDKs send a set of default parameters with every event. These are not required to be sent by the user, but are useful. Our default UI will use them to provide more context. All of these parameters are namespaced under `TelemetryDeck` to avoid conflicts.
 
 ## Main Parameters
 
-These parameters are sent with every signal and are currently not namespaced. Please avoid using them in your own code.
+These parameters are sent with every event and are currently not namespaced. Please avoid using them in your own code.
 
 - `appID` (String): The ID of the app.
 - `clientUser` (String): The ID of the user.
-- `type` (String): The type of the signal.
-- `receivedAt` (Date): The date and time the signal was received by TelemetryDeck.
-- `count` (Int): The number of events sent with the signal (automatically incremented by the server)
-- `isTestMode` (Bool): Whether the signal was sent in test mode.
+- `type` (String): The type of the event.
+- `receivedAt` (Date): The date and time of the event. Ingest API v1 and v2 default this to the time the server received the event and move older dates into the last 24 hours. Ingest API v3 stores the value as sent.
+- `count` (Int): The number of events sent with the event (automatically incremented by the server)
+- `isTestMode` (Bool): Whether the event was sent in test mode. Stored as the string `true` or `false`. Every dashboard query filters on this value.
 - `sessionID` (String): The ID of the session.
-- `floatValue` (Double): A float value that can be sent with the signal.
+- `floatValue` (Double): A float value that can be sent with the event.
 
 ## App Info
 
@@ -93,24 +93,31 @@ Information about the user's accessibility device settings to help make apps mor
 
 ## Web Analytics
 
-Web analytics have their own sets of parameters that are usually determined by the web ingest api when you send events from the Web SDK. However, you can send these with any SDK and they will show up in the web analytics dashboard.
+Web analytics have their own sets of parameters that are usually determined by the web ingest API when you send events from the Web SDK. The server derives them from the request on the [v3 web events endpoint](/docs/ingest/v3/#web-events-endpoint) (Web SDK 3.0 and later) and on the older `/v2/w/` endpoint. However, you can send these with any SDK and they will show up in the web analytics dashboard.
 
-By default the web SDK will send signals of type `pageView` with the following parameters:
+By default the Web SDK sends events of type `pageview` with the following parameters. Web SDK 3.0 and later also send one `TelemetryDeck.Web.pageLeave` event per page load, see [Page Engagement](#page-engagement) below.
 
 These parameters are currently not namespaced. Expect this to change in the future.
 
+#### Client Data
+
+The Web SDK sends these with every event:
+
+- `locale` (String): The locale of the visitor's browser, e.g. `en-US`.
+- `referrer` (String): The URL of the page that referred the visitor, e.g. `https://example.com`. Empty if there is none.
+- `TelemetryDeck.SDK.name`, `TelemetryDeck.SDK.version`, `TelemetryDeck.SDK.nameAndVersion` (String): See [SDK](#sdk) above. Web SDK 3.0 sends these instead of the deprecated `telemetryClientVersion`.
+
 #### URL Data
 
-- `url` (String): The URL of the page, e.g. `https://example.com/about`.
+- `url` (String): The URL of the page without query string and fragment, e.g. `https://example.com/about`.
 - `host` (String): The host portion of the URL, e.g. `example.com`.
 - `path` (String): The path portion of the URL, e.g. `/about` or `/blog/my-post`.
 - `scheme` (String): The scheme portion of the URL, e.g. `https`.
-- `referer` (String): The referrer of the page, e.g. `https://example.com`.
 - `TelemetryDeck.Navigation.identifier` (String): String that uniquely identifies the navigation in the format `referrer -> url`.
 
 #### URL Parameters
 
-TelemetryDeck will extract URL these URL parameters from the url and offer them as parameters attached to the signal:
+TelemetryDeck will extract these URL parameters from the URL and offer them as parameters attached to the event. All other query parameters are dropped.
 
 - `combinedSource` (String): The value of either `ref`, `source`, `utm_source` or `src` in that order of preference.
 - `ref`
@@ -137,7 +144,7 @@ TelemetryDeck will extract URL these URL parameters from the url and offer them 
 - `majorMinorSystemVersion` (String): The major and minor version of the operating system, extracted from the user agent string.
 - `platform` (String): The platform of the device (macOS, iOS, Windows, etc.), extracted from the user agent string.
 - `modelName` (String): The model name of the device, extracted from the user agent string.
-- `browserName` (String): The browser family, extracted from the user agent string.
+- `browser` (String): The browser family, extracted from the user agent string.
 - `browserVersion` (String): The browser version, extracted from the user agent string.
 - `device` (String): The type of device, extracted from the user agent string.
 - `isMobile` (Bool): Whether the device is a mobile device, extracted from the user agent string.
@@ -146,9 +153,19 @@ TelemetryDeck will extract URL these URL parameters from the url and offer them 
 - `isDesktop` (Bool): Whether the device is a desktop, extracted from the user agent string.
 - `isBot` (Bool): Whether the device is a bot, extracted from the user agent string and additional heuristics.
 
+Events from the v3 web endpoint store these booleans as `true` and `false`. Events from the older `/v2/w/` endpoint store them as `True` and `False`. Filter on both spellings when you query data from both.
+
+#### Page Engagement
+
+Web SDK 3.0 and later send one event of type `TelemetryDeck.Web.pageLeave` per page load, the first time the page is hidden or unloaded. It carries the URL, country, and browser parameters listed above plus these engagement parameters:
+
+- `TelemetryDeck.PageEngagement.scrollDepth` (Double): The deepest point of the page that has been in the viewport, as a percentage of the page height from `0` to `100`. A page that fits in the viewport reports `100`.
+- `TelemetryDeck.PageEngagement.scrollDepthMilestone` (String): The scroll depth rounded down to one of `0`, `25`, `50`, `75`, or `100`. Use this for grouping.
+- `TelemetryDeck.PageEngagement.engagedSeconds` (Double): Whole seconds the page was visible in the foreground. Time in a background tab is not counted.
+
 ## Navigation Analytics
 
-Navigation analytics signals have these parameters, which can be included in any signal type.
+Navigation analytics events have these parameters, which can be included in any event type.
 
 - `TelemetryDeck.Navigation.schemaVersion` (String): The schema version of the navigation. Must be `1`.
 - `TelemetryDeck.Navigation.sourcePath` (String): The source path of the navigation, e.g. `/host/info/about` or `app.settings.privacy`.
@@ -174,10 +191,10 @@ Navigation analytics signals have these parameters, which can be included in any
 
 ## API
 
-Information about which TelemetryDeck API this signal was sent to.
+Information about which TelemetryDeck API this event was sent to.
 
-- `TelemetryDeck.API.Ingest.version` (String): The Ingest API Version this signal was sent to. This will get overwritten by the ingest API server.
-- `TelemetryDeck.API.namespace` (String): The namespace in which to store your data. This usually gets set by the ingest API server when you call it via the `/v2/namespace/<namespace>/` endpoint.
+- `TelemetryDeck.API.Ingest.version` (String): The Ingest API version this event was sent to. The ingest API server always sets this value. It is `v1` for the v1 API, `v2` for the v2 API, `v2web` for the v2 web endpoint, `events.v3` for the [v3 events endpoint](/docs/ingest/v3/#events-endpoint), and `web.v3` for the [v3 web events endpoint](/docs/ingest/v3/#web-events-endpoint).
+- `TelemetryDeck.API.namespace` (String): The namespace in which to store your data. The ingest API server sets this from the URL when you call the `/v2/namespace/<namespace>/` or `/v3/<namespace>/` endpoint, and from the `namespace` property of an event sent to `/v3/w/`.
 
 ## RevenueCat Parameters
 
@@ -211,8 +228,8 @@ These parameters are deprecated because they are not yet namespaced, and will be
 - `region` (String): The region of the user.
 - `appLanguage` (String): The language of the app.
 - `preferredLanguage` (String): The preferred language of the user.
-- `telemetryClientVersion` (String): The version of the TelemetryDeck SDK.
-- `telemetryAPIVersion` (String): The API Version this signal was sent to.
+- `telemetryClientVersion` (String): The version of the TelemetryDeck SDK. Replaced by `TelemetryDeck.SDK.nameAndVersion`. The v2 ingest API copies the value over when the new key is missing.
+- `telemetryAPIVersion` (String): The API version this event was sent to. Replaced by `TelemetryDeck.API.Ingest.version`.
 
 ## Reserved Parameters
 
