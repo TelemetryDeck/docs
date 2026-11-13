@@ -32,7 +32,7 @@ Once you have your App ID, edit the source code of your website and add the foll
 ></script>
 ```
 
-💡 If you use Google Tag Manager, please see our separate guide on [how to include TelemetryDeck in your website using Google Tag Manager](../../integrations/web-setup-google-tag-manager.md).
+!!! info  ""
 
 ## Usage
 
@@ -59,7 +59,8 @@ It is also possible to mark all events as test events by setting the dataset att
   data-is-test-mode="true"
 ></script>
 ```
-To see test events, you can enable **Test Mode** in the Dashboard.
+!!! tip "Enable Test Mode"
+    To see test events, you can enable [**Test Mode**](../../articles/test-mode.md) in the Dashboard.
 
 ### Disable Engagement `data-page-engagement` (Optional)
 
@@ -80,7 +81,7 @@ Use the `data-api` parameter to point the Web SDK to a custom TelemetryDeck v3 i
 
 ## Privacy Policy and Opt-Out
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](../../guides/privacy-faq).
+You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
 
 ## What data is collected?
 
@@ -152,12 +153,17 @@ This means that the Web SDK will recognize recurring users on the same day on th
 
 ## If you're a developer
 
-!!! warning "There are multiple ways of adding TelemetryDeck to a web site"
+!!! info "There are multiple ways of adding TelemetryDeck to a web site"
 
     There are different tutorials you should read depending on your use case.
+    
+    !!! note "If you are building a JavaScript application or PWA using node package manager"
+        
+         you should read the [Node Package Setup Guide](/docs/guides/javascript-setup)
 
-    - If you are building a **JavaScript application or PWA using node package manager**, you should read the [Node Package Setup Guide](javascript-setup.md).
-    - If you are building a **website or blog**, and want to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read this guide.
+    !!! notw "If you are building a website or blog"
+      
+        and want to include TelemetryDeck with a simple script tag similar to Google Analytics or Plausible Analytics, you should read this guide.
 
 ## What's new in 3.0
 
@@ -173,9 +179,14 @@ Now that you've integrated TelemetryDeck, learn how to use the analytics platfor
 
 <div class="grid cards" markdown>
 
--   **📊 Analytics Walkthrough**
+-   :material-chart-bar:{ .lg .middle } __Analytics Walkthrough__
 
-    Learn how to navigate TelemetryDeck, interpret insights, and use analytics to make data-driven decisions that improve your app and grow your user base.
+    ---
 
-    [:fontawesome-solid-right-long: Start here to get real value from your analytics](../../basics/index.md)
+    Learn how to navigate TelemetryDeck, interpret `insights`,
+    and use analytics to make `data-driven decisions` that improve your app
+    and grow your user base.
+
+    [:fontawesome-solid-right-long: Getting started](/basics)
+
 </div>

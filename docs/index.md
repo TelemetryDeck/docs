@@ -56,7 +56,7 @@ After setting up the SDK and deploying your app, your most important next step i
     Test Mode helps you make sure that TelemetryDeck is set up `correctly` in your app
     and allows you to set up your `insights even during development`.
 
-    [:fontawesome-solid-right-long: Getting started](/articles/test-mode.md)
+    [:fontawesome-solid-right-long: Getting started](../../articles/test-mode.md)
 </div>
 
 !!! info "How we handle user data with double hashing"
