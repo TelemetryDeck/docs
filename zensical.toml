@@ -186,13 +186,13 @@ nav = [
     ] },
     { "Server-side ingest API" = [
       { "Default parameters" = "ingest/default-parameters.md" },
+      { "Ingest API v3" = "ingest/v3.md" },
       { "Ingest API v2" = "ingest/v2.md" },
-      { "Ingest API v1 (legacy)" = "ingest/v1.md" },
+      { "Ingest API v1" = "ingest/v1.md" },
     ] },
   ] },
   { "Community" = [
     { "Glossary" = "glossary.md" },
-    { "FAQ" = "" },
     { "Contribute" = [
       { "Bug Report" = "" },
       { "Documentation" = "articles/documentation.md"},
