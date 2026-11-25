@@ -1,16 +1,5 @@
 ---
 title: (Deprecated) Funnels
-tags:
-  - setup
-  - intermediate
-  - funnels
-  - insights
-testedOn: TelemetryDeck API v3
-description: How to create funnels, or click-stream funnels, using the TelemetryDeck Query Language.
-lead: This is a quick overview on how to create funnels, or click-stream funnels, using the TelemetryDeck Query Language.
-searchEngineTitle: How to extract funnels from your analytics data
-searchEngineDescription: This is a quick overview on how to create funnels, or click-stream funnels, using the TelemetryDeck Query Language.
-order: 1000
 status: deprecated
 ---
 

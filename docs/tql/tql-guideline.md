@@ -34,13 +34,13 @@ This page is intended to be short and easy to digest. Please follow the links at
   - `fieldName`: column you want to access
   - `name`: you can define the output name of your choice. One tip: if you use an aggregator only for calculation purposes you can hide the aggregated value by starting the name with an underscore (`"name": "_hiddenAggregatorXY"`). The elements returned through the aggregation are then not shown, but can be used in post-aggregations.
   - `type`: type of aggregation
-- An overview of different aggregators can be found [here](https://telemetrydeck.com/docs/tql/aggregators/).
+- An overview of different aggregators can be found [here](aggregators.md).
 
 ## Post-Aggregations
 
 - Here you can execute further calculations on the values created in the aggregations. This is optional.
 - The syntax of post-aggregations has some complexity to it, so we recommend to look up the syntax of a specific post-aggregator when you may need it until you are familiar with it.
-- Information regarding post-aggregators can be found [here](https://telemetrydeck.com/docs/tql/post-aggregators/). Post-aggregators are in general applicable as stated on the [Apache Druid Homepage](https://druid.apache.org/docs/latest/querying/post-aggregations) (exception: JavaScript post-aggregator).
+- Information regarding post-aggregators can be found [here](post-aggregators.md). Post-aggregators are in general applicable as stated on the [Apache Druid Homepage](https://druid.apache.org/docs/latest/querying/post-aggregations) (exception: JavaScript post-aggregator).
 
 ## Filters
 
@@ -59,6 +59,6 @@ This page is intended to be short and easy to digest. Please follow the links at
   }
 ```
 
-Afterwards, if you want you can compare the different buckets aggregated with e.g. the `intersect` function in the post-aggregations as shown with an example [here](https://telemetrydeck.com/docs/tql/post-aggregators/#theta-sketch-estimate-post-aggregator).
+Afterwards, if you want you can compare the different buckets aggregated with e.g. the `intersect` function in the post-aggregations as shown with an example [here](post-aggregators.md/#theta-sketch-estimate-post-aggregator).
 
-- An overview of different filters can be found [here](https://telemetrydeck.com/docs/tql/filters/).
+- An overview of different filters can be found [here](filters.md).
