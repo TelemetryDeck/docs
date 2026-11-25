@@ -210,11 +210,7 @@ nav = [
   { "Community" = [
     { "Glossary" = "glossary.md" },
     { "Contribute" = [
-      { "Bug Report" = "" },
       { "Documentation" = "articles/documentation.md"},
-      { "Change Request" = "" },
-      { "Pull Request" = "" },
-      { "Code of Conduct" = "" },
     ] },
   ] },
 ]
