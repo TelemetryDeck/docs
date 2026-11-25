@@ -82,7 +82,6 @@ nav = [
   ] },
   { "Privacy & Compliance" = [
     { "TelemetryDeck Privacy" = [
-      { "Privacy FAQ" = "guides/privacy-faq.md" },
       { "Anonymization of user data" = "articles/anonymization-how-it-works.md" },
       { "Hosting Solutions at TelemetryDeck" = "articles/hosting-solutions.md" },
     ] },
@@ -114,7 +113,6 @@ nav = [
           { "Navigation signals" = "articles/navigation-signals.md" },
           { "Duration signals" = "articles/duration-signals.md" },
         ] },
-      { "TelemetryClient (legacy)" = "articles/telemetry-client.md" },
       ] },
       { "Integrations" = [
         { "RevenueCat" = "integrations/revenuecat.md" },
