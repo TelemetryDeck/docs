@@ -148,7 +148,7 @@ When publishing your Flutter app, you'll need to address privacy requirements:
 - **iOS Apps**: Disclose analytics usage in Apple's App Store Connect privacy details. TelemetryDeck is privacy-focused, but disclosure is still required.
 - **All Platforms**: Consider updating your privacy policy to mention analytics collection.
 
-For guidance, see our [Apple App Privacy guide](../../articles/apple-app-privacy.md) and [Privacy FAQ](../../guides/privacy-faq).
+For guidance, see our [Apple App Privacy guide](../../articles/apple-app-privacy.md) and [Privacy FAQ](https://telemetrydeck.com/faq/).
 
 ## What to do next
 

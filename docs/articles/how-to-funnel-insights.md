@@ -49,4 +49,4 @@ Using filters to track each step of the funnel, you can see how many users make 
 ## Diving deeper into funnels
 You can already start using funnels in TelemetryDeck right now! And with this next step, you can learn more about how to extract funnels from your analytics data by using the **TelemetryDeck Query Language (TQL)**! 
 
-<a href="/docs/tql/funnel/" class="btn btn-secondary btn-large">Next Up: How to extract funnels from your analytics data →</a>
+<a href="../tql/query-types/funnel.md" class="btn btn-secondary btn-large">Next Up: How to extract funnels from your analytics data →</a>

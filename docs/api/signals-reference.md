@@ -15,7 +15,7 @@ Events are an indication that **an event** happened in your app, which is used b
 - **A Metadata Payload** – Metadata is a dictionary `[String: String]` of additional data about your app that might be interesting to analyze.<br>`TelemetryDeck` will always add the user's OS Version, Platform, Build Number and App Version to the metadata, but you can specify additional info like, `numberOfEntriesInDatabase` (an int cast to string) or `pizzaModeAnchoviesEnabled` (a Boolean cast to string).
 
 As TelemetryDeck is an analytics software, it analyzes events that occur in your apps' life cycles. Through aggregation and statistical analysis, your
-[Insights](/docs/api/insights-reference/) can then extract meaningful data out of the set of events you have received.
+[Insights](insights-reference.md) can then extract meaningful data out of the set of events you have received.
 
 Here is an example event:
 
@@ -50,7 +50,7 @@ recommended to use short, camel-cased half-sentences like these:
 - `App.enteredBackground`
 - `Settings.opened`
 
-When you're setting up your [Insights](/docs/api/insights-reference/) later, you'll be able to **filter** by Event Type.
+When you're setting up your [Insights](insights-reference.md) later, you'll be able to **filter** by Event Type.
 
 ## Client User
 

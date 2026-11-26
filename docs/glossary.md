@@ -45,7 +45,7 @@ Groups can be used to organize insights into logical categories or can be used a
 : How an _Insight_ displays the results of its _Query_. This will usually be a type of chart, or a table.
 
 **TelemetryDeck Query Language**
-: A JSON based language that is used to retrieve data from the TelemetryDeck API. The language is based on the [Query language for Apache Druid](hhttps://druid.apache.org/docs/latest/querying/querying.html), but we've made various additions and changes to it, such as the ability to use relative dates. You could say TQL is a **superset** of Druid's Query language.
+: A JSON based language that is used to retrieve data from the TelemetryDeck API. The language is based on the [Query language for Apache Druid](https://druid.apache.org/docs/latest/querying/querying.html), but we've made various additions and changes to it, such as the ability to use relative dates. You could say TQL is a **superset** of Druid's Query language.
 
 **Double Hashing**
 : TelemetryDeck uses a _Double Hashing_ algorithm to anonymize user data. On the device your user's app is running on, we salt and hash the user identifier you provide to TelemetryDeck. This way we can ensure that the TelemetryDeck API has no access to your actual user identifiers.  

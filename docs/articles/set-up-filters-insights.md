@@ -22,7 +22,7 @@ In your insight group, you can add filters to any insight you want. With advance
 
 ## Filter conditions
 
-You can use analytics filters to refine your data and obtain precise insights. Want to dive deeper into filter conditions? Take a look at our [filter conditions](/docs/tql/filters/) documentation!
+You can use analytics filters to refine your data and obtain precise insights. Want to dive deeper into filter conditions? Take a look at our [filter conditions](../tql/query-elements/filters.md) documentation!
 
 - These filters include the **Signal Type** filter, which allows you to filter data by signal type, such as page views, clicks, or conversions. Having Signal Type as a filter condition makes it easier to combine multiple signal types using the _boolean operations_. Nest your insights with `AND`, `OR`, and `NOTs`!
 - The **Selector** filter lets you compare any _payload key_ (also known as a dimension) to a value. For instance, if you send a `shouldUseHealthKit` parameter as part of your payload in signals, you can filter for `shouldUseHealthKit = “true”`.
@@ -34,4 +34,4 @@ You can use analytics filters to refine your data and obtain precise insights. W
 
 Filters are part of the **TelemetryDeck Query Language** (TQL), which means you don’t have to write them by hand. Instead you can just use them as described above! In case you want to customize your queries even more than the filter feature allows you to do, check out our TQL documentation! There you can further learn how to get the most out of your insights.
 
-<a href="/docs/tql/query/" class="btn btn-secondary btn-large">Next Up: Spice up your queries with TQL →</a>
+<a href="../tql/query-reference.md" class="btn btn-secondary btn-large">Next Up: Spice up your queries with TQL →</a>

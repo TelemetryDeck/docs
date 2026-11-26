@@ -96,7 +96,7 @@ If, for example, you use the same code base for the iOS and macOS versions of yo
 
 You can optionally convert your insight into a "custom query insight". This allows you to edit the database query in the insight directly, giving you more control.
 
-A custom query is a JSON object in the **TelemetryDeck Query Language (TQL)**, a superset of the Druid Query Language. See the [Druid Query Documentation](https://druid.apache.org/docs/latest/querying/querying.html) for a jump start. In addition to the Druid features, custom queries in the TelemetryDeck Query Language can contain a [relative time interval](/docs/tql/time-intervals/).
+A custom query is a JSON object in the **TelemetryDeck Query Language (TQL)**, a superset of the Druid Query Language. See the [Druid Query Documentation](https://druid.apache.org/docs/latest/querying/querying.html) for a jump start. In addition to the Druid features, custom queries in the TelemetryDeck Query Language can contain a [relative time interval](../tql/query-elements/time-intervals.md).
 
 During execution, we will automatically wrap your query in a filter that makes it apply to all your organization's apps. To query a single app, filter for that app's app ID.
 

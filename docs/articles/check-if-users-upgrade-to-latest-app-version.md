@@ -23,12 +23,12 @@ The bar chart displays the distribution of your app's versions by day. Are you i
 
 ## Create a custom insight
 
-A general summary often does not fit your individual needs. That is where custom insights come to play! You can show the distribution of all used app versions with custom insights. First, we must navigate to a group or [create a new one](/docs/articles/create-custom-dashboards/).
+A general summary often does not fit your individual needs. That is where custom insights come to play! You can show the distribution of all used app versions with custom insights. First, we must navigate to a group or [create a new one](create-custom-dashboards.md).
 
 
 ### Configuring your insight
 
-While in your group, create a new [insight field](/docs/articles/insights/). Choose `App Versions` from our templates. Now you can get started.
+While in your group, create a new [insight field](insights.md). Choose `App Versions` from our templates. Now you can get started.
 We recommend using the donut chart or the table view! If you’re not using our templates, make sure to configure the following fields accordingly to display app versions:
 
 **Granularity**

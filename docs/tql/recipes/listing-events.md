@@ -35,7 +35,7 @@ In this example we'll show a list of 200 most recent error messages. Since scan 
 }
 ```
 
-Replace `1.2.3` with your app version and `calculation-error` with your signal type. For more information, read the docs on [scan queries](/docs/tql/scan/).
+Replace `1.2.3` with your app version and `calculation-error` with your signal type. For more information, read the docs on [scan queries](../query-types/scan.md).
 
 ## How it works
 
@@ -51,4 +51,4 @@ The `limit` property is used to specify the maximum number of events to return. 
 
 The filter is used to filter the data by app id and signal type. You can also add more filters here, for example to filter by a specific version of your app.
 
-[Read more on filters in TQL](/docs/tql/filters/).
+[Read more on filters in TQL](../query-elements/filters.md).

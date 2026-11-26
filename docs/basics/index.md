@@ -45,7 +45,7 @@ Each tab focuses on a different stage of the user journey:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/basics/acquisition">
+          <a href="acquisition.md">
             <span class="absolute -inset-px rounded-xl"></span>Acquisition Analytics</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to interpret and act on acquisition metrics to optimize how users discover your app.</p>
@@ -55,7 +55,7 @@ Each tab focuses on a different stage of the user journey:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/basics/activation">
+          <a href="activation.md">
             <span class="absolute -inset-px rounded-xl"></span>Activation Analytics</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to interpret and act on activation metrics to optimize your app's first-time user experience.</p>
@@ -65,7 +65,7 @@ Each tab focuses on a different stage of the user journey:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/basics/retention">
+          <a href="retention.md">
             <span class="absolute -inset-px rounded-xl"></span>Retention Analytics</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to interpret and act on retention metrics to keep users engaged long-term.</p>
@@ -75,7 +75,7 @@ Each tab focuses on a different stage of the user journey:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/basics/pirate-metrics">
+          <a href="pirate-metrics.md">
             <span class="absolute -inset-px rounded-xl"></span>Understanding Pirate Metrics</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn about the AARRR framework that organizes analytics by acquisition, activation, retention, referral, and revenue.</p>
@@ -92,7 +92,7 @@ TelemetryDeck also provides built-in presets for tracking purchases and revenue 
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/preset-purchases">
+          <a href="../articles/preset-purchases.md">
             <span class="absolute -inset-px rounded-xl"></span>Purchase Tracking with Built-in Presets</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to track in-app purchases with TelemetryDeck's built-in purchase tracking system and dashboards.</p>
@@ -121,7 +121,7 @@ The Metrics section provides essential technical insights about your app across 
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/basics/metrics">
+          <a href="metrics.md">
             <span class="absolute -inset-px rounded-xl"></span>Complete Metrics Analytics Guide</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Explore our comprehensive guide to technical analytics, including detailed information on device types, app versions, error tracking, localization insights, and accessibility usage.</p>
@@ -144,7 +144,7 @@ Here you can examine all signal types your app has sent, explore parameters atta
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/signal-type-naming">
+          <a href="../articles/signal-type-naming.md">
             <span class="absolute -inset-px rounded-xl"></span>Event Naming Best Practices</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to name your signal types effectively for better organization and analysis.</p>
@@ -174,7 +174,7 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/insights">
+          <a href="../articles/insights.md">
             <span class="absolute -inset-px rounded-xl"></span>Understanding Insights</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn what insights are and how they help you understand your app's performance data.</p>
@@ -184,7 +184,7 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/create-custom-dashboards">
+          <a href="../articles/create-custom-dashboards.md">
             <span class="absolute -inset-px rounded-xl"></span>Creating Custom Dashboards</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to organize your insights into custom dashboard groups for better organization.</p>
@@ -194,7 +194,7 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/set-up-filters-insights">
+          <a href="../articles/set-up-filters-insights.md">
             <span class="absolute -inset-px rounded-xl"></span>Setting Up Filters</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to use the filter editor to refine your insights and focus on specific data.</p>
@@ -204,7 +204,7 @@ Each insight can be organized into groups (displayed in the sidebar) to keep rel
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/how-to-funnel-insights">
+          <a href="../articles/how-to-funnel-insights.md">
             <span class="absolute -inset-px rounded-xl"></span>Creating Funnel Charts</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to track user conversion through multi-step processes with funnel charts.</p>
@@ -233,7 +233,7 @@ See Notebooks in action in our [feature demo video](https://www.youtube.com/watc
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/notebooks">
+          <a href="../articles/notebooks.md">
             <span class="absolute -inset-px rounded-xl"></span>A Practical Guide to Notebooks</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to effectively use Notebooks to combine live charts and markdown text for better analytics insights and documentation.</p>
@@ -259,7 +259,7 @@ At the top of most dashboard pages, you'll find time filters that let you focus 
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/test-mode">
+          <a href="../articles/test-mode.md">
             <span class="absolute -inset-px rounded-xl"></span>Using Test Mode</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Understand how to use Test Mode to separate development events from production data.</p>
@@ -286,7 +286,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/invite-members-to-organization">
+          <a href="../articles/invite-members-to-organization.md">
             <span class="absolute -inset-px rounded-xl"></span>Inviting Team Members</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to invite colleagues to your TelemetryDeck organization and collaborate on analytics.</p>
@@ -303,7 +303,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/tql/firstGuideline">
+          <a href="../tql/tql-guideline.md">
             <span class="absolute -inset-px rounded-xl"></span>Using TQL for Advanced Queries</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn about TelemetryDeck Query Language for creating complex custom insights.</p>
@@ -313,7 +313,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/insights-about-referrers">
+          <a href="../articles/insights-about-referrers.md">
             <span class="absolute -inset-px rounded-xl"></span>Website Traffic Source Analysis</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">For web apps, learn how to track where your users are coming from before visiting your site.</p>
@@ -330,7 +330,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/integrations/revenuecat">
+          <a href="../integrations/revenuecat.md">
             <span class="absolute -inset-px rounded-xl"></span>RevenueCat Integration</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to integrate TelemetryDeck with RevenueCat to combine usage data with purchase data.</p>
@@ -340,7 +340,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/integrations/superwall">
+          <a href="../integrations/superwall.md">
             <span class="absolute -inset-px rounded-xl"></span>Superwall Integration</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to integrate TelemetryDeck with Superwall to get insights into your paywalls.</p>
@@ -357,7 +357,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/anonymization-how-it-works">
+          <a href="../articles/anonymization-how-it-works.md">
             <span class="absolute -inset-px rounded-xl"></span>How User Data Anonymization Works</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how TelemetryDeck protects user privacy while still providing valuable analytics.</p>
@@ -367,7 +367,7 @@ Many visualizations have interactive elements:
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/guides/privacy-faq">
+          <a href="https://telemetrydeck.com/faq/">
             <span class="absolute -inset-px rounded-xl"></span>Privacy FAQ</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Find answers to common questions about TelemetryDeck's privacy features and policies.</p>

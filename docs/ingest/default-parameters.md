@@ -93,7 +93,7 @@ Information about the user's accessibility device settings to help make apps mor
 
 ## Web Analytics
 
-Web analytics have their own sets of parameters that are usually determined by the web ingest API when you send events from the Web SDK. The server derives them from the request on the [v3 web events endpoint](/docs/ingest/v3/#web-events-endpoint) (Web SDK 3.0 and later) and on the older `/v2/w/` endpoint. However, you can send these with any SDK and they will show up in the web analytics dashboard.
+Web analytics have their own sets of parameters that are usually determined by the web ingest API when you send events from the Web SDK. The server derives them from the request on the [v3 web events endpoint](v3.md#web-events-endpoint) (Web SDK 3.0 and later) and on the older `/v2/w/` endpoint. However, you can send these with any SDK and they will show up in the web analytics dashboard.
 
 By default the Web SDK sends events of type `pageview` with the following parameters. Web SDK 3.0 and later also send one `TelemetryDeck.Web.pageLeave` event per page load, see [Page Engagement](#page-engagement) below.
 
@@ -193,7 +193,7 @@ Navigation analytics events have these parameters, which can be included in any 
 
 Information about which TelemetryDeck API this event was sent to.
 
-- `TelemetryDeck.API.Ingest.version` (String): The Ingest API version this event was sent to. The ingest API server always sets this value. It is `v1` for the v1 API, `v2` for the v2 API, `v2web` for the v2 web endpoint, `events.v3` for the [v3 events endpoint](/docs/ingest/v3/#events-endpoint), and `web.v3` for the [v3 web events endpoint](/docs/ingest/v3/#web-events-endpoint).
+- `TelemetryDeck.API.Ingest.version` (String): The Ingest API version this event was sent to. The ingest API server always sets this value. It is `v1` for the v1 API, `v2` for the v2 API, `v2web` for the v2 web endpoint, `events.v3` for the [v3 events endpoint](v3.md#events-endpoint), and `web.v3` for the [v3 web events endpoint](v3.md#web-events-endpoint).
 - `TelemetryDeck.API.namespace` (String): The namespace in which to store your data. The ingest API server sets this from the URL when you call the `/v2/namespace/<namespace>/` or `/v3/<namespace>/` endpoint, and from the `namespace` property of an event sent to `/v3/w/`.
 
 ## RevenueCat Parameters
@@ -208,7 +208,7 @@ Parameters related to RevenueCat.
 
 ## Deprecated Parameters
 
-These parameters are deprecated because they are not yet namespaced, and will be removed in a future release. All of them have replacements in some name spaces. See the [grand rename](/docs/articles/grand-rename/) article for a mapping of the old names to the new ones.
+These parameters are deprecated because they are not yet namespaced, and will be removed in a future release. All of them have replacements in some name spaces. See the [grand rename](../sdk/guides/grand-rename.md) article for a mapping of the old names to the new ones.
 
 - `platform` (String): The platform of the device.
 - `systemVersion` (String): The version of the operating system.

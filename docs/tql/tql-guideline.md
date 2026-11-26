@@ -13,12 +13,12 @@ This page is intended to be short and easy to digest. Please follow the links at
 
 - `query type`
 - `granularity`
-- Everything else is either mandatory for a certain query or serves a specific purpose as indicated [here](https://telemetrydeck.com/docs/tql/query/).
+- Everything else is either mandatory for a certain query or serves a specific purpose as indicated [here](query-reference.md).
 
 ## Query Type
 
 - Especially in the beginning we recommend to use the **Visual Query Editor** to set up queries with all elements required for that query type. Once the general structure is set you can change the query type to **Advanced Query** and from there work on details in the JSON format if necessary / more convenient.
-- Find an overview of the different query types and its characteristics [here](https://telemetrydeck.com/docs/tql/queryType/).
+- Find an overview of the different query types and its characteristics [here](query-reference.md).
 
 ## Granularity
 
@@ -34,13 +34,13 @@ This page is intended to be short and easy to digest. Please follow the links at
   - `fieldName`: column you want to access
   - `name`: you can define the output name of your choice. One tip: if you use an aggregator only for calculation purposes you can hide the aggregated value by starting the name with an underscore (`"name": "_hiddenAggregatorXY"`). The elements returned through the aggregation are then not shown, but can be used in post-aggregations.
   - `type`: type of aggregation
-- An overview of different aggregators can be found [here](aggregators.md).
+- An overview of different aggregators can be found [here](query-elements/aggregators.md).
 
 ## Post-Aggregations
 
 - Here you can execute further calculations on the values created in the aggregations. This is optional.
 - The syntax of post-aggregations has some complexity to it, so we recommend to look up the syntax of a specific post-aggregator when you may need it until you are familiar with it.
-- Information regarding post-aggregators can be found [here](post-aggregators.md). Post-aggregators are in general applicable as stated on the [Apache Druid Homepage](https://druid.apache.org/docs/latest/querying/post-aggregations) (exception: JavaScript post-aggregator).
+- Information regarding post-aggregators can be found [here](query-elements/post-aggregators.md). Post-aggregators are in general applicable as stated on the [Apache Druid Homepage](https://druid.apache.org/docs/latest/querying/post-aggregations) (exception: JavaScript post-aggregator).
 
 ## Filters
 
@@ -59,6 +59,6 @@ This page is intended to be short and easy to digest. Please follow the links at
   }
 ```
 
-Afterwards, if you want you can compare the different buckets aggregated with e.g. the `intersect` function in the post-aggregations as shown with an example [here](post-aggregators.md/#theta-sketch-estimate-post-aggregator).
+Afterwards, if you want you can compare the different buckets aggregated with e.g. the `intersect` function in the post-aggregations as shown with an example [here](query-elements/post-aggregators.md).
 
-- An overview of different filters can be found [here](filters.md).
+- An overview of different filters can be found [here](query-elements/filters.md).

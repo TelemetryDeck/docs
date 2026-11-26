@@ -20,7 +20,7 @@ To create a dashboard for your insights, go to your [TelemetryDeck dashboard](ht
 
 ## Share your dashboards with your organization
 
-Interested in how to add members to your organization? Check out our [helpful guide](/docs/articles/invite-members-to-organization/).
+Interested in how to add members to your organization? Check out our [helpful guide](invite-members-to-organization.md).
 
 You can add other members to your organization in a fly. Your members instantly get access to all created insight dashboards! They can add, edit and delete dashboards - making it easy to work on your goals.
 You can also share specific dashboards with the members of your organization. To do so, navigate to the dashboard you want to share, and copy the URL.

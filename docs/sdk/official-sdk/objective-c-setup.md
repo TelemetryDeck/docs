@@ -75,7 +75,7 @@ With parameters:
 
 ## App Store requirements
 
-See our [Apple App Privacy guide](/articles/apple-app-privacy) and [Privacy FAQ](../../guides/privacy-faq).
+See our [Apple App Privacy guide](../../articles/apple-app-privacy.md) and [Privacy FAQ](https://telemetrydeck.com/faq/).
 
 ## What's next
 

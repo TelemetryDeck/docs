@@ -49,4 +49,4 @@ The filter is used to filter the data by app id and signal type. You can also ad
 
 The aggregation is set to `doubleMean` in this example. This means that the average value of the `floatValue` metric will be calculated. You can also use `doubleSum` to get the sum of all values or `doubleMin` and `doubleMax` to get the minimum or maximum value.
 
-[Read more on aggregators in TQL](/docs/tql/aggregators/).
+[Read more on aggregators in TQL](../query-elements/aggregators.md).

@@ -17,13 +17,13 @@ order: 20
 
 ## Step one: Navigate to your app
 
-To create insights, you first need to create an app. If you have not created and linked your app yet, check out our guide [Making an Account](/docs/articles/making-account/) first.
+To create insights, you first need to create an app. If you have not created and linked your app yet, check out our guide [Making an Account](create-an-account.md) first.
 
 In your browser, navigate to the [dashboard](https://dashboard.telemetrydeck.com). There you will find a drop-down menu on the top left side, next to the TelemetryDeck logo. Choose your app from here.
 
 ## Step two: Select or create a new group
 
-Grouping your insights is a great way to give a better overview of related topics. For example, grouping operating systems with insights about device types and app versions. In case you have not already created a group where your new insight fits into [you can create a new one](/docs/articles/create-custom-dashboards/).
+Grouping your insights is a great way to give a better overview of related topics. For example, grouping operating systems with insights about device types and app versions. In case you have not already created a group where your new insight fits into [you can create a new one](create-custom-dashboards.md).
 
 ## Step three: Create a new insight
 

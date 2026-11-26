@@ -13,7 +13,7 @@ searchEngineTitle: How to analyze user retention from your analytics data
 searchEngineDescription: This is a quick overview on how to create retention analysis using the TelemetryDeck Query Language.
 ---
 
-A retention query analyzes how many users from an initial cohort return to use your app in subsequent time periods. It's compiled at runtime into a [groupBy](/docs/tql/groupBy/) query with sophisticated aggregations to track user cohorts over time.
+A retention query analyzes how many users from an initial cohort return to use your app in subsequent time periods. It's compiled at runtime into a [groupBy](../query-types/groupBy.md) query with sophisticated aggregations to track user cohorts over time.
 
 ## Example
 
@@ -65,7 +65,7 @@ For daily retention analysis over a week:
 
 ## Properties
 
-All [default properties](/docs/tql/query/) and the following properties are supported:
+All [default properties](../query-reference.md) and the following properties are supported:
 
 **intervals** or **relativeIntervals** (required)
 : The time period to analyze for retention. The query will split this period into smaller intervals based on the granularity setting.
@@ -81,8 +81,8 @@ All [default properties](/docs/tql/query/) and the following properties are supp
 
 Note: After compilation, the query's granularity is set to `all` for the actual Druid execution.
 
-[filter](/docs/tql/filters/) (optional)
-: A [Filter](/docs/tql/filters/) to apply to the data to be queried. The default is no filter apart from the [base filters](/docs/tql/baseFilters/).
+[filter](../query-elements/filters.md) (optional)
+: A [Filter](../query-elements/filters.md) to apply to the data to be queried. The default is no filter apart from the [base filters](../query-elements/base-filters.md).
 
 ## Output
 

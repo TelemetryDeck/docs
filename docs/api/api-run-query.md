@@ -13,11 +13,11 @@ order: 2
 
 ## Authorization
 
-You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](/docs/api/api-token/) explains how to generate one from your dashboard.
+You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](api-token.md) explains how to generate one from your dashboard.
 
 ## TelemetryDeck Query Language
 
-TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. You can either write a query by hand, or [generate a query from an insight](/docs/api/api-query-from-insight/).
+TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. You can either write a query by hand, or [generate a query from an insight](api-query-from-insight.md).
 
 ## Running the query
 

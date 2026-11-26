@@ -66,7 +66,7 @@ You can now build and release your app. Once users start using it, your Telemetr
 
 ## Privacy Policy
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](../../guides/privacy-faq).
+You don't need to update your privacy policy, [but we recommend you do it anyway](https://telemetrydeck.com/faq/).
 
 ## Enhancing your analytics (optional)
 

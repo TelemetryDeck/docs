@@ -203,7 +203,7 @@ Ready to level up your analytics workflow? Open the Notebooks tab and start expl
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/insights">
+          <a href="insights.md">
             <span class="absolute -inset-px rounded-xl"></span>Understanding Insights</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how insights work and how to create effective visualizations for your notebooks.</p>
@@ -213,7 +213,7 @@ Ready to level up your analytics workflow? Open the Notebooks tab and start expl
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/tql/firstGuideline">
+          <a href="../tql/tql-guideline.md">
             <span class="absolute -inset-px rounded-xl"></span>TQL Query Language</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Master the query language that powers notebook charts and enables advanced analytics.</p>
@@ -223,7 +223,7 @@ Ready to level up your analytics workflow? Open the Notebooks tab and start expl
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/articles/how-to-funnel-insights">
+          <a href="how-to-funnel-insights.md">
             <span class="absolute -inset-px rounded-xl"></span>Creating Funnel Charts</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Learn how to track user conversion through multi-step processes – a key technique for notebook analyses.</p>
@@ -233,7 +233,7 @@ Ready to level up your analytics workflow? Open the Notebooks tab and start expl
       <div class="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.mars.50)),var(--quick-links-hover-bg,theme(colors.mars.100)))_padding-box,linear-gradient(to_top,theme(colors.mars.400),theme(colors.mars.500))_border-box] group-hover:opacity-100"></div>
       <div class="shadow relative overflow-hidden rounded-xl p-6 h-full">
         <h2 class="font-semibold text-base text-mars-500">
-          <a href="/docs/guides/privacy-faq">
+          <a href="https://telemetrydeck.com/faq/">
             <span class="absolute -inset-px rounded-xl"></span>Privacy FAQ</a>
         </h2>
         <p class="mt-1 text-sm text-slate-700">Understand how TelemetryDeck's privacy-first approach aligns with the data minimization strategy notebooks encourage.</p>

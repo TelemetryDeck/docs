@@ -17,7 +17,7 @@ Superwall provides hooks that forward events to TelemetryDeck. This guide shows 
 
 Integrate both SDKs into your app:
 
-1. [Install and set up the TelemetryDeck SDK](/guides/swift-setup/)
+1. [Install and set up the TelemetryDeck SDK](../sdk/official-sdk/swift/index.md)
 2. [Install and set up the Superwall SDK](https://docs.superwall.com/docs/installation-via-spm)
 
 If you've already set up either SDK, skip that step. The initialization order doesn't matter.

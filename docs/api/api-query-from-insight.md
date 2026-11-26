@@ -12,11 +12,11 @@ lead: Using the TelemetryDeck API, you can retrieve the query that is used in an
 
 ## Authorization
 
-You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](/docs/api/api-token/) explains how to generate one from your dashboard.
+You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](api-token.md) explains how to generate one from your dashboard.
 
 ## TelemetryDeck Query Language
 
-TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. To get the data for an insight, we have to get its query first. You can then [execute the query](/docs/api/api-run-query/) and get the results.
+TelemetryDeck Query Language (TQL) is a JSON-based language for querying time-series data stored in TelemetryDeck. To get the data for an insight, we have to get its query first. You can then [execute the query](api-run-query.md) and get the results.
 
 ## Time intervals and relative time intervals
 
@@ -124,4 +124,4 @@ This will generate and return a complete query for the insight you specified:
 }
 ```
 
-You can [execute the query](/docs/api/api-run-query/) to get its results.
+You can [execute the query](api-run-query.md) to get its results.
