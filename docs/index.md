@@ -20,7 +20,7 @@ TelemetryDeck is a SaaS solution for privacy-focused analytics. We provide you w
 ### Install an SDK in 2 steps
 
 
-1. **[Choose and install](/sdk/index.md){ data-preview }** the SDK for your platform.
+1. **[Choose and install](sdk/index.md){ data-preview }** the SDK for your platform.
 2. **Deploy your app** to start collecting data
 
 Once your updated app is in users' hands, TelemetryDeck will begin collecting data. It may take some time before you see meaningful insights, depending on your app's usage.
