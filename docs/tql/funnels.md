@@ -5,7 +5,7 @@ status: deprecated
 
 !!! warning "Deprecated"
 
-    The content below is deprecated and will be removed in the future. Please refer to the [new documentation](/docs/tql/funnel/) instead.
+    The content below is deprecated and will be removed in the future. Please refer to the [new documentation](query-types/funnel.md) instead.
 
 This article explains the thought process on how to create funnel-type queries; scroll to the bottom for a complete example.
 

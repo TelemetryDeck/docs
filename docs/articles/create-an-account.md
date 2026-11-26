@@ -27,4 +27,4 @@ In the dashboard, have a look at your left sidebar. Under the `SETTINGS`category
 
 That's it, you're now ready for the next step, in which you will learn to configure your first insight for analyzing your signals!
 
-<a href="/docs" class="btn btn-secondary btn-large">Next Up: Setting up your application →</a>
+<a href="../sdk/index.md" class="btn btn-secondary btn-large">Next Up: Setting up your application →</a>

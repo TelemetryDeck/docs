@@ -81,7 +81,7 @@ Use the `data-api` parameter to point the Web SDK to a custom TelemetryDeck v3 i
 
 ## Privacy Policy and Opt-Out
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](/docs/guides/privacy-faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+You don't need to update your privacy policy, [but we recommend you do it anyway](https://telemetrydeck.com/faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy).
 
 ## What data is collected?
 
@@ -159,7 +159,7 @@ This means that the Web SDK will recognize recurring users on the same day on th
     
     !!! note "If you are building a JavaScript application or PWA using node package manager"
         
-         you should read the [Node Package Setup Guide](/docs/guides/javascript-setup)
+         you should read the [Node Package Setup Guide](javascript-setup.md)
 
     !!! notw "If you are building a website or blog"
       

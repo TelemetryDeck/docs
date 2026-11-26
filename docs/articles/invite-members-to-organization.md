@@ -17,7 +17,7 @@ You can collaborate with your team, giving them more insight on - well - insight
 
 ## Navigate to your organization settings
 
-To add someone to your organization, you first need to create an account. If you have not created an account and named your organization yet, check out our guide [Making an Account](/docs/articles/making-account/) first.
+To add someone to your organization, you first need to create an account. If you have not created an account and named your organization yet, check out our guide [Making an Account](create-an-account.md) first.
 
 In your browser, navigate to the [dashboard](https://dashboard.telemetrydeck.com). There you will find your name on the top right side. Click on it to open the menu. Choose `Organization Settings` next.
 

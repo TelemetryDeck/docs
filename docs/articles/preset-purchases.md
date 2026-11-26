@@ -30,7 +30,7 @@ See the sections below for a detailed description.
 
 ## Using TelemetryDeck with RevenueCat
 
-If you use [RevenueCat](https://revenuecat.com), you can use our [RevenueCat Setup Guide](/docs/integrations/revenuecat/).
+If you use [RevenueCat](https://revenuecat.com), you can use our [RevenueCat Setup Guide](../integrations/revenuecat.md).
 
 ## Using FreemiumKit
 

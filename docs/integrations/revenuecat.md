@@ -19,7 +19,7 @@ With this integration, RevenueCat events appear in your TelemetryDeck dashboard 
 
 ## Installing RevenueCat and TelemetryDeck
 
-1. [Install and set up TelemetryDeck](/guides/swift-setup/)
+1. [Install and set up TelemetryDeck](../sdk/official-sdk/swift/index.md)
 2. [Install and set up RevenueCat](https://www.revenuecat.com/docs/getting-started/installation)
 
 ## Configuring the RevenueCat SDK

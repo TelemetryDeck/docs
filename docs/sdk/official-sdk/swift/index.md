@@ -202,7 +202,7 @@ This flushes pending events, persists the cache, and stops all processors.
 
 ## App Store requirements
 
-Apple requires you to disclose analytics usage in App Store Connect, even for privacy-focused tools like TelemetryDeck. See our [Apple App Privacy guide](/articles/apple-app-privacy) and [Privacy FAQ](/guides/privacy-faq#do-i-need-to-add-telemetrydeck-to-my-privacy-policy%3F).
+Apple requires you to disclose analytics usage in App Store Connect, even for privacy-focused tools like TelemetryDeck. See our [Apple App Privacy guide](../../../articles/apple-app-privacy.md) and [Privacy FAQ](https://telemetrydeck.com/faq/#do-i-need-to-add-telemetrydeck-to-my-privacy-policy).
 
 ## What's next
 
@@ -212,7 +212,7 @@ Apple requires you to disclose analytics usage in App Store Connect, even for pr
 
     Learn how events flow through the processor pipeline and what data is automatically collected.
 
--   **[Custom Processors](swift-custom-processors)**
+-   **[Custom Processors](swift-custom-processors.md)**
 
     Build your own processors to add domain-specific metadata to every event.
 
@@ -220,7 +220,7 @@ Apple requires you to disclose analytics usage in App Store Connect, even for pr
 
     Navigate TelemetryDeck, interpret insights, and make data-driven decisions.
 
--   **[Migrating from V2](swift-migration-v3)**
+-   **[Migrating from V2](swift-migration-v3.md)**
 
     Upgrading from SwiftSDK 2.x? Here's what changed.
 

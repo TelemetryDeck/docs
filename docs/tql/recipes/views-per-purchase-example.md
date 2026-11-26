@@ -21,12 +21,12 @@ We want to know how many times a user opens the upgrade detail screen before com
 At a high level, we want to do these three things:
 
 1. **Only consider signals of type `upgradeDetailViewDidLoad` and `purchaseSuccessful` in our query.** We can achieve that with an `and` filter.
-2. Count the number of occurrences of each signal. We'll use [filtered aggregators](/docs/tql/aggregators/#filtered) for that.
-3. Calculate the average number of views per purchase. We'll use the [arithmetic post-aggregator](/docs/tql/post-aggregators/#arithmetic-post-aggregator) for that.
+2. Count the number of occurrences of each signal. We'll use [filtered aggregators](../query-elements/aggregators.md) for that.
+3. Calculate the average number of views per purchase. We'll use the [arithmetic post-aggregator](../query-elements/post-aggregators.md) for that.
 
 Let's look at the various parts of our query in detail. If you just want the finished query, you can find it at the bottom of this article.
 
-If you're new to TQL, you can read more about [queries](/docs/tql/query/) and [filters](/docs/tql/filters/) in the documentation.
+If you're new to TQL, you can read more about [queries](../query-reference.md) and [filters](../query-elements/filters.md) in the documentation.
 
 ## Boilerplate
 
@@ -68,7 +68,7 @@ We only want to consider the signals of type `upgradeDetailViewDidLoad` and `pur
 
 ## Aggregation
 
-We want to count the number of occurrences of each signal. We'll use [filtered aggregators](/docs/tql/aggregators/#filtered) for that.
+We want to count the number of occurrences of each signal. We'll use [filtered aggregators](../query-elements/aggregators.md) for that.
 
 ```json
 "aggregations": [
@@ -109,7 +109,7 @@ We're prepending our field names with underscores. This is because they are inte
 
 ## Post-Aggregation
 
-We now have the number of views and the number of purchases. To get the average number of views per purchase, we'll use the [arithmetic post-aggregator](/docs/tql/post-aggregators/#arithmetic-post-aggregator) to divide the number of views by the number of purchases, resulting in the average number of views per purchase.
+We now have the number of views and the number of purchases. To get the average number of views per purchase, we'll use the [arithmetic post-aggregator](../query-elements/post-aggregators.md) to divide the number of views by the number of purchases, resulting in the average number of views per purchase.
 
 ```json
 "postAggregations": [
@@ -130,7 +130,7 @@ We now have the number of views and the number of purchases. To get the average 
 
 ## Optional: Grouping
 
-If we want to group the results by a dimension, we can specify a [dimension](/docs/tql/dimensionSpec/) in our query. This can help us track improvements in the numbers made over time, or compare the numbers between different versions of our app.
+If we want to group the results by a dimension, we can specify a [dimension](../query-elements/dimension-spec.md) in our query. This can help us track improvements in the numbers made over time, or compare the numbers between different versions of our app.
 
 For example, if we want to group the results by `appVersion`, we can add the following to our query:
 

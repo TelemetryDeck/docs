@@ -9,7 +9,7 @@ status: deprecated
 
 !!! warning "Outdated"
 
-    The APIs on this page (`TelemetryManager`, `TelemetryClient`, `TelemetryManagerConfiguration`) were removed in SwiftSDK 3.0. See the [Swift Setup Guide](/guides/swift-setup) for current documentation or the [V3 Migration Guide](../official-sdk/swift/swift-migration-v3.md) if upgrading.
+    The APIs on this page (`TelemetryManager`, `TelemetryClient`, `TelemetryManagerConfiguration`) were removed in SwiftSDK 3.0. See the [Swift Setup Guide](../official-sdk/swift/index.md) for current documentation or the [V3 Migration Guide](../official-sdk/swift/swift-migration-v3.md) if upgrading.
 
 ## Historical context
 

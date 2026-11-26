@@ -23,14 +23,14 @@ We will help you set up your insight so you can track your users right away, pri
 
 ## Navigate to your app
 
-To create insights, you first need to create an app. If you have not created and linked your app yet, check out our guide [Making an Account](/docs/articles/making-account/) first.
+To create insights, you first need to create an app. If you have not created and linked your app yet, check out our guide [Making an Account](create-an-account.md) first.
 
 In your browser, navigate to the [dashboard](https://dashboard.telemetrydeck.com). There you will find a drop-down menu on the top left side, next to the TelemetryDeck logo. Choose your app from here.
 
 ## Select or create a new group
 
 A great tool for all your insights is grouping! They help you group your insights the way you like them. We provide you with a row of display options so that your groups become a quick way to get information about your app's data in a single click.
-Let’s navigate to an existing group or [create a new one](/docs/articles/create-custom-dashboards/).
+Let’s navigate to an existing group or [create a new one](create-custom-dashboards.md).
 
 ## Creating a new insight
 
@@ -40,7 +40,7 @@ Click on _+ Create new Insight_.
 ### Use templates or create your own insight
 The fastest way to get insights about your daily users is by using our templates.
 Choose `Daily Active Users` and a new insight card will be created. The default display type is a line chart that will show you the daily active user count at a specific time.
-Learn how to configure your [insight](/docs/articles/insights/) to your needs.
+Learn how to configure your [insight](insights.md) to your needs.
 
 The most common display types for `Daily Active Users` are the line chart, the bar chart, or the table. Choose the one that fits your needs the best.
 You can always adjust the parameters of your insight at any time. You want to change from daily active users to monthly active users? Just change the granularity from displaying users per day to users per week, month, or even per year.
@@ -49,4 +49,4 @@ You can always adjust the parameters of your insight at any time. You want to ch
 
 Did you know that there is a lot more you can do with your insights? Check out the following article:
 
-<a href="/docs/articles/insights-about-system-version/" class="btn btn-secondary btn-large">Next Up: How to Find Out Which Operating System Your Users Are Using →</a>
+<a href="insights-about-system-version.md" class="btn btn-secondary btn-large">Next Up: How to Find Out Which Operating System Your Users Are Using →</a>

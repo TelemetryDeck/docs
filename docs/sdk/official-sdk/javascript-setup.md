@@ -111,7 +111,7 @@ td.signal("Volume.Set", {
 
 ## Privacy Policy and Opt-Out
 
-You don't need to update your privacy policy, [but we recommend you do it anyway](../../guides/privacy-faq).
+You don't need to update your privacy policy, [but we recommend you do it anyway](https://telemetrydeck.com/faq/).
 
 ## Advanced: Queueing Signals
 

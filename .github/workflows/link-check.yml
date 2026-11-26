@@ -1,0 +1,37 @@
+name: Check links
+on:
+  pull_request:
+  push:
+    branches:
+      - feature/zensible
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      - run: pip install zensical==0.1.3
+      # Fails on broken links to .md files and on missing anchors.
+      - run: zensical build --strict --clean 2>&1 | tee build.log
+        shell: bash
+      - if: ${{ !cancelled() }}
+        run: python3 scripts/zensical_annotations.py build.log
+      # Checks all links in the built HTML, also absolute paths and raw HTML links.
+      - uses: lycheeverse/lychee-action@v2
+        if: ${{ !cancelled() }}
+        with:
+          args: >-
+            --offline
+            --no-progress
+            --root-dir ${{ github.workspace }}/site
+            'site/**/*.html'
+          format: json
+          output: lychee/out.json
+          jobSummary: false
+          fail: false
+      - if: ${{ !cancelled() }}
+        run: python3 scripts/lychee_annotations.py lychee/out.json
