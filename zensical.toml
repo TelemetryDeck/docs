@@ -131,6 +131,7 @@ nav = [
         { "Daily active users" = "articles/insights-about-daily-users.md" },
         { "Monthly active users" = "articles/insights-about-monthly-users.md" },
         { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
+        { "Update behavior analytics" = "articles/update-behavior-analytics.md" },
       ] }
     ] }
   ] },
