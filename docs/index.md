@@ -4,14 +4,6 @@ tags:
     - Setup
 ---
 
-!!! warning
-
-    This is a test for a new documentation system. Trust nothing and no one. The original TelemetryDeck 
-    documentation still lives at https://telemetrydeck.com/docs/ for now.
-
-
----
-
 # Get Started
 
 TelemetryDeck helps you understand how users interact with your application through privacy-focused analytics. With just an SDK integration, you'll get valuable insights automatically – no complex configuration required.
