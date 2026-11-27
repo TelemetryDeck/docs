@@ -40,179 +40,182 @@ copyright = """
 Copyright &copy; 2026 TelemetryDeck GmbH
 """
 
-# Zensical supports both implicit navigation and explicitly defined navigation.
+nav = [
+    { "Home" = "https://telemetrydeck.com" },
+    { "Quick Start Guide" = [
+        "index.md",
+        { "Account" = "articles/create-an-account.md" },
+        { "Namespaces" = "articles/namespaces.md" },
+        { "Invite members" = "articles/invite-members-to-organization.md" },
+        { "Authentication" = "articles/authentication.md" },
+    ] },
+    { "SDK" = [
+        "sdk/index.md",
+        { "Official SDKs" = [
+            { "Swift" = [
+                "sdk/official-sdk/swift/index.md",
+                { "Processors" = "sdk/official-sdk/swift/swift-processors.md" },
+                { "Custom Processors" = "sdk/official-sdk/swift/swift-custom-processors.md" },
+                { "User Identification" = "sdk/official-sdk/swift/swift-user-identification.md" },
+                { "Migrating from V2" = "sdk/official-sdk/swift/swift-migration-v3.md" },
+            ] },
+            { "Android (Kotlin)" = "sdk/official-sdk/android-setup.md" },
+            { "Flutter" = "sdk/official-sdk/flutter-setup.md" },
+            { "JavaScript" = "sdk/official-sdk/javascript-setup.md" },
+            { "Web" = "sdk/official-sdk/web-setup.md" },
+            { "Objective-C" = "sdk/official-sdk/objective-c-setup.md" },
+        ] },
+        { "Community SDKs" = [
+            { "React" = "sdk/community-sdk/react-setup.md" },
+            { "Vue" = "sdk/community-sdk/vue-setup.md" },
+        ] },
+        { "Guides" = [
+            { "Swift Client Reference" = "sdk/guides/telemetry-client.md" },
+            { "Update a Swift package" = "sdk/guides/update-package.md" },
+            { "TelemetryDeck's Grand Rename" = "sdk/guides/grand-rename.md" },
+        ] },
+    ] },
+    { "Privacy & Compliance" = [
+        { "TelemetryDeck Privacy" = [
+            { "Anonymization of user data" = "articles/anonymization-how-it-works.md" },
+            { "Hosting Solutions at TelemetryDeck" = "articles/hosting-solutions.md" },
+        ] },
+        { "Apple Privacy" = [
+            { "Apple App Privacy" = "articles/apple-app-privacy.md" },
+            { "App Privacy Report" = "articles/app-privacy-report.md" },
+            { "App Tracking Transparency" = "articles/app-tracking-transparency.md" },
+        ] },
+    ] },
+    { "Usage" = [
+        { "Analyze data" = [
+            { "Dashboard" = [
+                { "Overview" = "basics/index.md" },
+                { "Custom dashboards" = "articles/create-custom-dashboards.md" },
+                { "Insights overview" = "articles/insights.md" },
+                { "Notebooks" = "articles/notebooks.md" },
+                { "Filters" = "articles/set-up-filters-insights.md" },
+                { "System version distribution" = "articles/insights-about-system-version.md" },
+            ] },
+            { "Analytics" = [
+                { "Pirate Metrics (AARRR)" = "basics/pirate-metrics.md" },
+                { "Acquisition" = "basics/acquisition.md" },
+                { "Activation" = "basics/activation.md" },
+                { "Retention" = "basics/retention.md" },
+                { "Metrics" = "basics/metrics.md" },
+                { "Built-in Presets" = [
+                    { "Purchases" = "articles/preset-purchases.md" },
+                    { "Errors" = "articles/preset-errors.md" },
+                    { "Navigation signals" = "articles/navigation-signals.md" },
+                    { "Duration signals" = "articles/duration-signals.md" },
+                ] },
+            ] },
+            { "Integrations" = [
+                { "RevenueCat" = "integrations/revenuecat.md" },
+                { "Superwall" = "integrations/superwall.md" },
+                { "Google Tag Manager" = "integrations/web-setup-google-tag-manager.md" },
+            ] },
+        ] },
+        { "Send data" = [
+            { "Dashboard" = [
+                { "Test mode" = "articles/test-mode.md" },
+                { "Signal type naming" = "articles/signal-type-naming.md" },
+                { "Funnel insights" = "articles/how-to-funnel-insights.md" },
+                { "Referrers" = "articles/insights-about-referrers.md" },
+            ] },
+            { "Quick set-up" = [
+                { "Daily active users" = "articles/insights-about-daily-users.md" },
+                { "Monthly active users" = "articles/insights-about-monthly-users.md" },
+                { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
+                { "Update behavior analytics" = "articles/update-behavior-analytics.md" },
+            ] },
+        ] },
+    ] },
+    { "TQL" = [
+        { "Introduction" = [
+            { "Guideline" = "tql/tql-guideline.md " },
+            { "TQL Query Reference" = "tql/query-reference.md" },
+        ] },
+        { "Default Parameters" = [
+            { "User preference Parameters" = "tql/default-parameters/user-preference-parameters.md" },
+            { "SDK Parameters" = "tql/default-parameters/sdk-parameters.md" },
+            { "Run Context Parameters" = "tql/default-parameters/run-context-parameters.md" },
+            { "Revenue Cat Parameters" = "tql/default-parameters/revenue-cat-parameters.md" },
+            { "AARRR Pirate Metrics Parameters" = "tql/default-parameters/aarrr-pirate-metrics-parameters.md" },
+            { "Navigation Analytics Parameters" = "tql/default-parameters/navigation-analytics-parameters.md" },
+            { "Main Parameters" = "tql/default-parameters/main-parameters.md" },
+            { "Device Parameters" = "tql/default-parameters/device-parameters.md" },
+            { "Deprecated Parameters" = "tql/default-parameters/deprecated-parameters.md" },
+            { "Accessibility Parameters" = "tql/default-parameters/accessibility-parameters.md" },
+            { "API Parameters" = "tql/default-parameters/api-parameters.md" },
+            { "Reserved Parameters" = "tql/default-parameters/reserved-parameters.md" },
+            { "App Info Parameters" = "tql/default-parameters/app-info-parameters.md" },
+            { "Country & Region Parameters" = "tql/default-parameters/country-region-parameters.md" },
+            { "URL Parameters" = "tql/default-parameters/url-parameters.md" },
+            { "User Agent Parameters" = "tql/default-parameters/user-agent-parameters.md" },
+        ] },
+        { "Query Elements" = [
+            { "Aggregators" = "tql/query-elements/aggregators.md" },
+            { "Base filters" = "tql/query-elements/base-filters.md" },
+            { "Context" = "tql/query-elements/query-context.md" },
+            { "Data Source" = "tql/query-elements/data-source.md" },
+            { "Dimension Spec" = "tql/query-elements/dimension-spec.md" },
+            { "Expressions" = "tql/query-elements/expressions.md" },
+            { "Extraction Function" = "tql/query-elements/extraction-function.md" },
+            { "Filters" = "tql/query-elements/filters.md" },
+            { "Granularity" = "tql/query-elements/granularity.md" },
+            { "Graphical Display" = "tql/query-elements/graphical-display.md" },
+            { "Post-Aggregators" = "tql/query-elements/post-aggregators.md" },
+            { "Time Intervals" = "tql/query-elements/time-intervals.md" },
+            { "Relative Intervals" = "tql/query-elements/relative-intervals.md" },
+            { "Value Formatter" = "tql/query-elements/value-formatter.md" },
+            { "Virtual Columns" = "tql/query-elements/virtual-columns.md" },
+        ] },
+        { "Query Types" = [
+            { "Funnel" = "tql/query-types/funnel.md" },
+            { "Experiment" = "tql/query-types/experiment.md" },
+            { "groupBy" = "tql/query-types/groupBy.md" },
+            { "Scan" = "tql/query-types/scan.md" },
+            { "Time Boundary" = "tql/query-types/timeBoundary.md" },
+            { "Timeseries" = "tql/query-types/timeseries.md" },
+            { "topN" = "tql/query-types/topN.md" },
+        ] },
+        { "Recipes" = [
+            { "Averaging numbers" = "tql/recipes/averagaging-numbers.md" },
+            { "Listing events" = "tql/recipes/listing-events.md" },
+            { "Views per purchase" = "tql/recipes/views-per-purchase-example.md" },
+            { "Retention" = "tql/recipes/retention.md" },
+        ] },
+    ] },
+    { "API" = [
+        { "Query API" = [
+            { "API tokens" = "api/api-token.md" },
+            { "Running TQL queries" = "api/api-run-query.md" },
+            { "Running SQL queries" = "api/api-run-query-sql.md" },
+            { "Converting SQL to TQL" = "api/api-convert-sql-to-tql.md" },
+            { "Query from insight" = "api/api-query-from-insight.md" },
+        ] },
+        { "Ingest API" = [
+            { "Ingest API v3" = "ingest/v3.md" },
+            { "Ingest API v2" = "ingest/v2.md" },
+            { "Ingest API v1" = "ingest/v1.md" },
+            { "Default Parameters" = "ingest/default-parameters.md" },
+        ] },
+        { "Reference" = [
+            { "Events reference" = "api/signals-reference.md" },
+            { "Insights reference" = "api/insights-reference.md" },
+        ] },
+    ] },
+    { "Community" = [
+        { "Glossary" = "glossary.md" },
+        { "Contribute" = [
+            { "Documentation" = "articles/documentation.md" },
+        ] },
+    ] },
+] # Zensical supports both implicit navigation and explicitly defined navigation.
 # Pages are grouped thematically below; group titles map to TOML inline tables,
 # and a value can be either a path (single page) or an array (collapsible group).
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-nav = [
-  { "Home" = "https://telemetrydeck.com" },
-  { "Quick Start Guide" = [
-    "index.md",
-    { "Account" = "articles/create-an-account.md"},
-    { "Namespaces" = "articles/namespaces.md" },
-    { "Invite members" = "articles/invite-members-to-organization.md" },
-    { "Authentication" = "articles/authentication.md"},
-    ]},
-  { "SDK" = [
-    "sdk/index.md",
-    { "Official SDKs" = [
-      { "Swift" = [
-        "sdk/official-sdk/swift/index.md",
-        { "Processors" = "sdk/official-sdk/swift/swift-processors.md" },
-        { "Custom Processors" = "sdk/official-sdk/swift/swift-custom-processors.md" },
-        { "User Identification" = "sdk/official-sdk/swift/swift-user-identification.md" },
-        { "Migrating from V2" = "sdk/official-sdk/swift/swift-migration-v3.md" },
-      ] },
-      { "Android (Kotlin)" = "sdk/official-sdk/android-setup.md" },
-      { "Flutter" = "sdk/official-sdk/flutter-setup.md" },
-      { "JavaScript" = "sdk/official-sdk/javascript-setup.md" },
-      { "Web" = "sdk/official-sdk/web-setup.md" },
-      { "Objective-C" = "sdk/official-sdk/objective-c-setup.md" },
-    ] },
-    { "Community SDKs" = [
-      { "React" = "sdk/community-sdk/react-setup.md" },
-      { "Vue" = "sdk/community-sdk/vue-setup.md" },
-    ] },
-    { "Guides" = [
-      { "Swift Client Reference" = "sdk/guides/telemetry-client.md" },
-      { "Update a Swift package" = "sdk/guides/update-package.md" },
-      { "TelemetryDeck's Grand Rename" = "sdk/guides/grand-rename.md" },
-    ] },
-  ] },
-  { "Privacy & Compliance" = [
-    { "TelemetryDeck Privacy" = [
-      { "Anonymization of user data" = "articles/anonymization-how-it-works.md" },
-      { "Hosting Solutions at TelemetryDeck" = "articles/hosting-solutions.md" },
-    ] },
-    { "Apple Privacy" = [
-      { "Apple App Privacy" = "articles/apple-app-privacy.md" },
-      { "App Privacy Report" = "articles/app-privacy-report.md" },
-      { "App Tracking Transparency" = "articles/app-tracking-transparency.md" },
-    ] },
-  ] },
-  { "Usage" = [
-    { "Analyze data" = [
-      { "Dashboard" = [
-        { "Overview" = "basics/index.md" },
-        { "Custom dashboards" = "articles/create-custom-dashboards.md" },
-        { "Insights overview" = "articles/insights.md" },
-        { "Notebooks" = "articles/notebooks.md" },
-        { "Filters" = "articles/set-up-filters-insights.md" },
-        { "System version distribution" = "articles/insights-about-system-version.md" },
-      ] },
-      { "Analytics" = [
-        { "Pirate Metrics (AARRR)" = "basics/pirate-metrics.md" },
-        { "Acquisition" = "basics/acquisition.md" },
-        { "Activation" = "basics/activation.md" },
-        { "Retention" = "basics/retention.md" },
-        { "Metrics" = "basics/metrics.md" },
-        { "Built-in Presets" = [
-          { "Purchases" = "articles/preset-purchases.md" },
-          { "Errors" = "articles/preset-errors.md" },
-          { "Navigation signals" = "articles/navigation-signals.md" },
-          { "Duration signals" = "articles/duration-signals.md" },
-        ] },
-      ] },
-      { "Integrations" = [
-        { "RevenueCat" = "integrations/revenuecat.md" },
-        { "Superwall" = "integrations/superwall.md" },
-        { "Google Tag Manager" = "integrations/web-setup-google-tag-manager.md" },
-      ] },
-    ] },
-    { "Send data" = [
-      { "Dashboard" = [
-        { "Test mode" = "articles/test-mode.md" },
-        { "Signal type naming" = "articles/signal-type-naming.md" },
-        { "Funnel insights" = "articles/how-to-funnel-insights.md" },
-        { "Referrers" = "articles/insights-about-referrers.md" },
-      ] },
-      { "Quick set-up" = [
-        { "Daily active users" = "articles/insights-about-daily-users.md" },
-        { "Monthly active users" = "articles/insights-about-monthly-users.md" },
-        { "Latest version adoption" = "articles/check-if-users-upgrade-to-latest-app-version.md" },
-        { "Update behavior analytics" = "articles/update-behavior-analytics.md" },
-      ] }
-    ] }
-  ] },
-  { "TQL" = [
-    { "Introduction" = [
-      { "Guideline" = "tql/tql-guideline.md " },
-      { "TQL Query Reference" = "tql/query-reference.md" },
-    ] },
-    { "Default Parameters" = [
-      { "User preference Parameters" = "tql/default-parameters/user-preference-parameters.md" },
-      { "SDK Parameters" = "tql/default-parameters/sdk-parameters.md" },
-      { "Run Context Parameters" = "tql/default-parameters/run-context-parameters.md" },
-      { "Revenue Cat Parameters" = "tql/default-parameters/revenue-cat-parameters.md" },
-      { "AARRR Pirate Metrics Parameters" = "tql/default-parameters/aarrr-pirate-metrics-parameters.md" },
-      { "Navigation Analytics Parameters" = "tql/default-parameters/navigation-analytics-parameters.md" },
-      { "Main Parameters" = "tql/default-parameters/main-parameters.md" },
-      { "Device Parameters" = "tql/default-parameters/device-parameters.md" },
-      { "Deprecated Parameters" = "tql/default-parameters/deprecated-parameters.md" },
-      { "Accessibility Parameters" = "tql/default-parameters/accessibility-parameters.md" },
-      { "API Parameters" = "tql/default-parameters/api-parameters.md" },
-      { "Reserved Parameters" = "tql/default-parameters/reserved-parameters.md" },
-      { "App Info Parameters" = "tql/default-parameters/app-info-parameters.md" },
-      { "Country & Region Parameters" = "tql/default-parameters/country-region-parameters.md" },
-      { "URL Parameters" = "tql/default-parameters/url-parameters.md" },
-      { "User Agent Parameters" = "tql/default-parameters/user-agent-parameters.md" },
-    ] },
-    { "Query Elements" = [
-      { "Aggregators" = "tql/query-elements/aggregators.md" },
-      { "Base filters" = "tql/query-elements/base-filters.md" },
-      { "Context" = "tql/query-elements/query-context.md" },
-      { "Data Source" = "tql/query-elements/data-source.md" },
-      { "Dimension Spec" = "tql/query-elements/dimension-spec.md" },
-      { "Expressions" = "tql/query-elements/expressions.md" },
-      { "Extraction Function" = "tql/query-elements/extraction-function.md" },
-      { "Filters" = "tql/query-elements/filters.md" },
-      { "Granularity" = "tql/query-elements/granularity.md" },
-      { "Graphical Display" = "tql/query-elements/graphical-display.md" },
-      { "Post-Aggregators" = "tql/query-elements/post-aggregators.md" },
-      { "Time Intervals" = "tql/query-elements/time-intervals.md" },
-      { "Relative Intervals" = "tql/query-elements/relative-intervals.md" },
-      { "Value Formatter" = "tql/query-elements/value-formatter.md" },
-      { "Virtual Columns" = "tql/query-elements/virtual-columns.md" },
-    ]},
-    { "Query Types" = [
-      { "Funnel" = "tql/query-types/funnel.md" },
-      { "Experiment" = "tql/query-types/experiment.md" },
-      { "groupBy" = "tql/query-types/groupBy.md" },
-      { "Scan" = "tql/query-types/scan.md" },
-      { "Time Boundary" = "tql/query-types/timeBoundary.md" },
-      { "Timeseries" = "tql/query-types/timeseries.md" },
-      { "topN" = "tql/query-types/topN.md" },
-    ]},
-    { "Recipes" = [
-      { "Averaging numbers" = "tql/recipes/averagaging-numbers.md" },
-      { "Listing events" = "tql/recipes/listing-events.md" },
-      { "Views per purchase" = "tql/recipes/views-per-purchase-example.md" },
-      { "Retention" = "tql/recipes/retention.md" },
-    ] },
-  ] },
-  { "API" = [
-    { "Reference" = [
-      { "Signals reference" = "api/signals-reference.md" },
-      { "Insights reference" = "api/insights-reference.md" },
-      { "Run a query" = "api/api-run-query.md" },
-      { "Query from insight" = "api/api-query-from-insight.md" },
-      { "API tokens" = "api/api-token.md" },
-    ] },
-    { "Server-side ingest API" = [
-      { "Default Parameters" = "ingest/default-parameters.md" },
-      { "Ingest API v3" = "ingest/v3.md" },
-      { "Ingest API v2" = "ingest/v2.md" },
-      { "Ingest API v1" = "ingest/v1.md" },
-    ] },
-  ] },
-  { "Community" = [
-    { "Glossary" = "glossary.md" },
-    { "Contribute" = [
-      { "Documentation" = "articles/documentation.md"},
-    ] },
-  ] },
-]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -519,7 +522,7 @@ pygments_lang_class = true
 [project.markdown_extensions.pymdownx.smartsymbols]
 [project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
 [project.markdown_extensions.pymdownx.tabbed]
 alternate_style = true

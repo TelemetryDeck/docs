@@ -1,19 +1,16 @@
 ---
-title: Run Query
+title: Running TQL Queries
 tags: Advanced
-testedOn: Query API v4
-description: Using the TelemetryDeck API, you can run a query and retrieve its results
-lead: Using the TelemetryDeck API, you can run a query and retrieve its results
-order: 2
+description: Using the TelemetryDeck API, you can run a TQL query and retrieve its results
 ---
 
-!!! warning "Paid plans only"
+??? warning "Paid plans only"
 
     API access — including running queries — is available on TelemetryDeck's paid plans. If your organization is on the free plan, upgrade your plan first and you'll be able to generate a personal access token and run queries.
 
-## Authorization
+??? note "Authorization"
 
-You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](api-token.md) explains how to generate one from your dashboard.
+    You need a personal access token to authenticate against the TelemetryDeck API. Our article [Getting a Personal Access Token](api-token.md) explains how to generate one from your dashboard.
 
 ## TelemetryDeck Query Language
 
